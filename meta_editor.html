@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Meta Editor &mdash; Sigil v0.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.2.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Sigil v0.2.0 documentation" href="index.html" />
+    <link rel="next" title="Table Of Contents Editor" href="toc_editor.html" />
+    <link rel="prev" title="Book Browser" href="book_browser.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="toc_editor.html" title="Table Of Contents Editor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="book_browser.html" title="Book Browser"
+             accesskey="P">previous</a> |</li>
+        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="contents.html">
+              <img class="logo" src="_static/small_logo.png" alt="Logo"/>
+            </a></p>
+            <h3><a href="contents.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="#">Meta Editor</a><ul>
+<li><a class="reference external" href="#collapsed-ui">Collapsed UI</a></li>
+<li><a class="reference external" href="#expanded-ui">Expanded UI</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="book_browser.html"
+                                  title="previous chapter">Book Browser</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="toc_editor.html"
+                                  title="next chapter">Table Of Contents Editor</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/meta_editor.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="meta-editor">
+<span id="id1"></span><h1>Meta Editor<a class="headerlink" href="#meta-editor" title="Permalink to this headline">¶</a></h1>
+<p>The Meta Editor is what you use when you want to add or edit metadata for your <abbr>EPUB</abbr> book. As the <a class="reference external" href="epub_overview.html#epub-overview"><em>EPUB Overview</em></a> explains, the standard allows for hundreds of different metadata entries to be added to any book.</p>
+<div class="section" id="collapsed-ui">
+<h2>Collapsed UI<a class="headerlink" href="#collapsed-ui" title="Permalink to this headline">¶</a></h2>
+<p>When you first open the Meta Editor, it will be in its collapsed state, as shown in <a class="reference internal" href="#fig-metacol"><em>Meta Editor, collapsed</em></a>. This allows you to add the minimum metadata elements that <em>all</em> <abbr>EPUB</abbr> books need to have: the <strong>Title</strong> of the work, the <strong>Author</strong> and the <strong>Language</strong> in which it is written. If you don&#8217;t include these elements, then tools like <a class="reference external" href="glossary.html#term-epubcheck"><em class="xref">epubcheck</em></a> will complain that your book has errors (rightfully so).</p>
+<p>This information is the bare minimum you should provide. You can always go the extra mile though. The expanded version of the dialog enables you to do just that.</p>
+<div class="figure" id="fig-metacol">
+<img alt="_images/meta_small.png" src="_images/meta_small.png" />
+<p class="caption">Meta Editor, collapsed</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">You can list several authors of a book by separating the names with a semicolon. Like this: <tt class="docutils literal"><span class="pre">Smith,</span> <span class="pre">John;</span> <span class="pre">Doe,</span> <span class="pre">Jane</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="expanded-ui">
+<h2>Expanded UI<a class="headerlink" href="#expanded-ui" title="Permalink to this headline">¶</a></h2>
+<p>If you click on the <strong>More</strong> button, the dialog will expand; see <a class="reference internal" href="#fig-metaex"><em>Meta Editor, expanded</em></a>. You now have a table listing all the other types of metadata present in your <abbr>EPUB</abbr> book. You can remove an item by selecting it and clicking the <strong>Remove</strong> button, or add new items with the <strong>Add Basic</strong> and <strong>Add Adv[anced]</strong> buttons.</p>
+<div class="figure" id="fig-metaex">
+<img alt="_images/meta_large.png" src="_images/meta_large.png" />
+<p class="caption">Meta Editor, expanded</p>
+</div>
+<p>The basic metadata items (see <a class="reference internal" href="#fig-basicmeta"><em>Basic metadata list</em></a>) are things like the dates of publication, creation and modification; description; content coverage; intellectual property rights; the <abbr>ISBN</abbr>, <abbr>ISSN</abbr> and <abbr>DOI</abbr> numbers etc. You don&#8217;t need to use any of these, the only ones that are required are the aforementioned title, author and language. But if you do know any of this information, do add it to your books.</p>
+<div class="figure" id="fig-basicmeta">
+<img alt="_images/add_basic_meta.png" src="_images/add_basic_meta.png" />
+<p class="caption">Basic metadata list</p>
+</div>
+<p>While there are only a few basic metadata items, there&#8217;s more than two hundred advanced entries (see <a class="reference internal" href="#fig-advmeta"><em>Advanced metadata list</em></a>), ranging from <em>Illustrator</em> to <em>Patent holder</em> to <em>Performer</em>. These all describe the various contributors to a work, and are terms defined and used by the Library of Congress.</p>
+<div class="figure" id="fig-advmeta">
+<img alt="_images/add_adv_meta.png" src="_images/add_adv_meta.png" />
+<p class="caption">Advanced metadata list</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Do you see the line that divides the list of metadata entries and the description text? Put your mouse cursor over it. Yes, it can be dragged to increase/decrease the amount of space for the description area.</p>
+</div>
+<p>In any field where you are expected to enter the name of a person (like <em>Author</em> or <em>Performer</em>), try to write the name in a &#8220;normalized&#8221; form. For instance, instead of <tt class="docutils literal"><span class="pre">John</span> <span class="pre">Smith</span></tt>, write <tt class="docutils literal"><span class="pre">Smith,</span> <span class="pre">John</span></tt>. Why? Because the <abbr>EPUB</abbr> standard provides alternate ways of storing the metadata information for people involved with the work. If you use <tt class="docutils literal"><span class="pre">John</span> <span class="pre">Smith</span></tt>, Sigil will store this information as just <tt class="docutils literal"><span class="pre">John</span> <span class="pre">Smith</span></tt> and nothing else. But if you use <tt class="docutils literal"><span class="pre">Smith,</span> <span class="pre">John</span></tt> (notice the comma), then the name will be stored in <em>two</em> ways. People who read your book will then see <tt class="docutils literal"><span class="pre">John</span> <span class="pre">Smith</span></tt>, but the <a class="reference external" href="glossary.html#term-reading-system"><em class="xref">Reading System</em></a> will categorize the book under <tt class="docutils literal"><span class="pre">Smith,</span> <span class="pre">John</span></tt>.</p>
+<p>This makes machine processing easier, and also makes more sense for anyone searching through their book collection.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">For the technical details regarding the storage of metadata, see <a class="reference external" href="epub_overview.html#opf"><em>The OPF file</em></a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="toc_editor.html" title="Table Of Contents Editor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="book_browser.html" title="Book Browser"
+             >previous</a> |</li>
+        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Strahinja Marković.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>

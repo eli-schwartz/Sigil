@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Find & Replace &mdash; Sigil v0.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.2.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Sigil v0.2.0 documentation" href="index.html" />
+    <link rel="next" title="Book Browser" href="book_browser.html" />
+    <link rel="prev" title="The main user interface" href="main_ui.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="book_browser.html" title="Book Browser"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="main_ui.html" title="The main user interface"
+             accesskey="P">previous</a> |</li>
+        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="contents.html">
+              <img class="logo" src="_static/small_logo.png" alt="Logo"/>
+            </a></p>
+            <h3><a href="contents.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="#">Find &amp; Replace</a><ul>
+<li><a class="reference external" href="#wildcard-mode">Wildcard mode</a></li>
+<li><a class="reference external" href="#regular-expression-mode">Regular expression mode</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="main_ui.html"
+                                  title="previous chapter">The main user interface</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="book_browser.html"
+                                  title="next chapter">Book Browser</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/searching.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="find-replace">
+<h1>Find &amp; Replace<a class="headerlink" href="#find-replace" title="Permalink to this headline">¶</a></h1>
+<p>Sigil includes a powerful Find &amp; Replace (F&amp;R) dialog. By default, it opens in its collapsed state; see <a class="reference internal" href="#fig-search-small"><em>Find &amp; Replace, collapsed</em></a>. To see and modify the available options, press the <strong>More</strong> button. The dialog would then expand (see <a class="reference internal" href="#fig-search-large"><em>Find &amp; Replace, expanded</em></a>) and show you the following options:</p>
+<dl class="docutils">
+<dt>Match whole word only</dt>
+<dd>Available only for the <em>Normal</em> search mode. Using <tt class="docutils literal"><span class="pre">car</span></tt> with this option selected would match <tt class="docutils literal"><span class="pre">car</span></tt>, but not <tt class="docutils literal"><span class="pre">carpet</span></tt>.</dd>
+<dt>Match case</dt>
+<dd>All matching is by default case-insensitive. Using <tt class="docutils literal"><span class="pre">John</span></tt> with this option selected would match <tt class="docutils literal"><span class="pre">John</span></tt>, but not <tt class="docutils literal"><span class="pre">john</span></tt>.</dd>
+<dt>Minimal matching</dt>
+<dd>Available only for the <em>Wildcard</em> and <em>Regular expression</em> search modes. Makes the search string match as little as possible.</dd>
+<dt>Direction Up</dt>
+<dd>Searches from the <a class="reference external" href="glossary.html#term-caret"><em class="xref">caret</em></a> upwards.</dd>
+<dt>Direction Down</dt>
+<dd>Searches from the <a class="reference external" href="glossary.html#term-caret"><em class="xref">caret</em></a> downwards.</dd>
+<dt>Direction All</dt>
+<dd>Searches from the <a class="reference external" href="glossary.html#term-caret"><em class="xref">caret</em></a> downwards, but loops back and starts from the beginning when the end is reached.</dd>
+</dl>
+<p>The <strong>Look in</strong> combo-box offers various places where Sigil should search. Currently, it can only search in the currently open file or all the <abbr>HTML</abbr> files <a class="footnote-reference" href="#id2" id="id1">[1]</a>. In the future it will be able to search across all the <abbr>CSS</abbr> files and all the files of any type in the <abbr>EPUB</abbr> book.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>And only in the <a class="reference external" href="main_ui.html#code-view"><em>Code View</em></a>, not in the <a class="reference external" href="main_ui.html#book-view"><em>Book View</em></a>. This limitation exists because of technical restrictions, and will be removed in time.</td></tr>
+</tbody>
+</table>
+<p>This leads us to the various search modes, which represent the true power of the Find &amp; Replace dialog; the <em>Normal</em> search mode just matches every character you typed exactly as it is, but the other modes are more involved.</p>
+<div class="figure" id="fig-search-small">
+<img alt="_images/search_small.png" src="_images/search_small.png" />
+<p class="caption">Find &amp; Replace, collapsed</p>
+</div>
+<div class="figure" id="fig-search-large">
+<img alt="_images/search_large.png" src="_images/search_large.png" />
+<p class="caption">Find &amp; Replace, expanded</p>
+</div>
+<div class="section" id="wildcard-mode">
+<h2>Wildcard mode<a class="headerlink" href="#wildcard-mode" title="Permalink to this headline">¶</a></h2>
+<p>One of the available advanced matching modes is the <em>Wildcard</em> mode. It should be familiar to anyone who&#8217;s used file globbing in <tt class="docutils literal"><span class="pre">bash</span></tt> or Windows&#8217; <tt class="docutils literal"><span class="pre">cmd</span></tt>. It is fairly straightforward:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Character</th>
+<th class="head">Matches</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal"><span class="pre">a</span></tt></td>
+<td>Any character represents itself by default. <tt class="docutils literal"><span class="pre">a</span></tt> would match <tt class="docutils literal"><span class="pre">a</span></tt>.</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">?</span></tt></td>
+<td>Matches <em>any</em> single character.</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">*</span></tt></td>
+<td>Matches <em>zero or more</em> of <em>any</em> characters.</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">[...]</span></tt></td>
+<td>Any character in the set; <tt class="docutils literal"><span class="pre">[abc]</span></tt> would match <tt class="docutils literal"><span class="pre">a</span></tt> <em>or</em> <tt class="docutils literal"><span class="pre">b</span></tt> <em>or</em> <tt class="docutils literal"><span class="pre">c</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+<p>So if for example you used the search string <tt class="docutils literal"><span class="pre">[123]abc?dd*</span></tt> with the <em>Wildcard</em> mode selected, it would match any of the following: <tt class="docutils literal"><span class="pre">1abceddertert</span></tt>, <tt class="docutils literal"><span class="pre">3abc9dd--.!</span></tt>, <tt class="docutils literal"><span class="pre">2abc_dd!#$79840sd</span>&nbsp; <span class="pre">12adad</span> <span class="pre">ad</span></tt> and many more.</p>
+</div>
+<div class="section" id="regular-expression-mode">
+<h2>Regular expression mode<a class="headerlink" href="#regular-expression-mode" title="Permalink to this headline">¶</a></h2>
+<p>The regular expression (<em>regex</em>) engine used in Sigil is very &#8220;Perl-like&#8221; <a class="footnote-reference" href="#id4" id="id3">[2]</a>. A general introduction to regular expressions is beyond the scope of this manual. There are many good overviews on the internet; one of which is available <a class="reference external" href="http://www.regular-expressions.info/tutorialcnt.html">here</a>. That site will help you get started with regexes.</p>
+<p>Here are <em>some</em> of the differences from Perl:</p>
+<ul class="simple">
+<li>In Sigil <tt class="docutils literal"><span class="pre">^</span></tt> always signifies the start of the string (apart from within character classes), so carets should be escaped unless used in this way. The same applies to <tt class="docutils literal"><span class="pre">$</span></tt> which in Sigil always signifies the end of the string.</li>
+<li>Non-greedy matching cannot be applied to individual quantifiers. Expressions like <tt class="docutils literal"><span class="pre">abc*?dd</span></tt> are not allowed. Use the <em>Minimal matching</em> option to set minimal matching on the whole expression.</li>
+<li>Back-reference syntax is <tt class="docutils literal"><span class="pre">sed</span></tt>-like, that is in the form of <tt class="docutils literal"><span class="pre">\#</span></tt>, e.g. <tt class="docutils literal"><span class="pre">\1</span></tt>, <tt class="docutils literal"><span class="pre">\2</span></tt>, <tt class="docutils literal"><span class="pre">\3</span></tt> etc. (<tt class="docutils literal"><span class="pre">\0</span></tt> is the whole matched string).</li>
+<li>While zero-width positive and zero-width negative lookahead assertions (in the form of <tt class="docutils literal"><span class="pre">(?=pattern)</span></tt> and <tt class="docutils literal"><span class="pre">(?!pattern)</span></tt>) are supported, Perl&#8217;s look-behind assertions, &#8220;independent&#8221; subexpressions and conditional expressions are <strong>not</strong> supported.</li>
+</ul>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>The current regex engine used is actually Qt&#8217;s QRegExp. It will eventually be replaced with <a class="reference external" href="http://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions">PCRE</a> because of the latter&#8217;s advanced features and performance.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="book_browser.html" title="Book Browser"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="main_ui.html" title="The main user interface"
+             >previous</a> |</li>
+        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Strahinja Marković.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+    </div>
+  </body>
+</html>
