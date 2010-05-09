@@ -121,23 +121,23 @@
 <li>Add semantic information.</li>
 </ul>
 <p>If you select <strong>Add existing items</strong>, then an <strong>Open file</strong> dialog will be shown. From here, you&#8217;ll be able to add any type of file that can be embedded inside an <abbr>EPUB</abbr>, and they&#8217;ll be automatically routed to the correct folder. If you pick an <abbr>HTM</abbr>, <abbr>HTML</abbr> or <abbr>XHTML</abbr> file (or several), Sigil will also import all the resources that those files reference, like <abbr>CSS</abbr> stylesheets or images (but <em>not</em> other <abbr>XHTML</abbr> files). Using this technique, you can build up your <abbr>EPUB</abbr> file from several <abbr>HTML</abbr> files prepared in advance.</p>
-<p>The <strong>Add Semantics</strong> sub-menu is special. It is only displayed for <abbr>XHTML</abbr> files and images, and the contents differ. When invoked on an <abbr>XHTML</abbr> file, it enables you to indicate that that file contains the book&#8217;s dedication section, the glossary, the foreword, the preface and many more <a class="footnote-reference" href="#id3" id="id2">[1]</a>. Some (but few) Reading Systems will then use this information and display it to the user.</p>
-<table class="docutils footnote" frame="void" id="id3" rules="none">
+<p>The <strong>Add Semantics</strong> sub-menu is special. It is only displayed for <abbr>XHTML</abbr> files and images, and the contents differ. When invoked on an <abbr>XHTML</abbr> file, it enables you to indicate that that file contains the book&#8217;s dedication section, the glossary, the foreword, the preface and many more <a class="footnote-reference" href="#id4" id="id2">[1]</a>. Some (but few) Reading Systems will then use this information and display it to the user.</p>
+<p>For images, a different semantic action is offered. You can mark an image as a <em>cover</em>. This bit of semantic information is important for several <em>Reading Systems</em>, the most prominent of which is the <em>iBooks</em> application for the <em>iPad</em>. If an image is not marked as a cover, the book won&#8217;t have a cover set in the iBooks &#8220;bookshelf&#8221;.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Sigil has heuristics that will mark the appropriate image as the cover if you don’t do it yourself. If the first file in the reading order is “very small” and has only one image in it <a class="footnote-reference" href="#id5" id="id3">[2]</a>, that image will be selected as the cover.</p>
+<p class="last">So if you follow best practices, Sigil helps you out. Still, mark it by hand if you can. You will always know better than the machine.</p>
+</div>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>For those interested in the technical details, this information is stored in <a class="reference external" href="epub_overview.html#opf"><em>The OPF file</em></a>&#8216;s <tt class="docutils literal"><span class="pre">&lt;guide&gt;</span></tt> element.</td></tr>
 </tbody>
 </table>
-<p>For images, a different semantic action is offered. You can mark an image as a <em>cover</em>. This bit of semantic information is important for several <em>Reading Systems</em>, the most prominent of which is the <em>iBooks</em> application for the <em>iPad</em>. If an image is not marked as a cover, the book won&#8217;t have a cover set in the iBooks &#8220;bookshelf&#8221;.</p>
-<div class="admonition hint">
-<p class="first admonition-title">Hint</p>
-<p>Sigil has heuristics that will mark the appropriate image as the cover if you don’t do it yourself. If the first file in the reading order is “very small” and has only one image in it <a class="footnote-reference" href="#id5" id="id4">[2]</a>, that image will be selected as the cover.</p>
-<p class="last">So if you follow best practices, Sigil helps you out. Still, mark it by hand if you can. You will always know better than the machine.</p>
-</div>
 <table class="docutils footnote" frame="void" id="id5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[2]</a></td><td>Sigil looks for a normal <tt class="docutils literal"><span class="pre">&lt;img&gt;</span></tt> tag or an <abbr>SVG</abbr> <tt class="docutils literal"><span class="pre">&lt;image&gt;</span></tt> one.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Sigil looks for a normal <tt class="docutils literal"><span class="pre">&lt;img&gt;</span></tt> tag or an <abbr>SVG</abbr> <tt class="docutils literal"><span class="pre">&lt;image&gt;</span></tt> one.</td></tr>
 </tbody>
 </table>
 </div>

@@ -102,13 +102,7 @@
 <dt>Direction All</dt>
 <dd>Searches from the <a class="reference external" href="glossary.html#term-caret"><em class="xref">caret</em></a> downwards, but loops back and starts from the beginning when the end is reached.</dd>
 </dl>
-<p>The <strong>Look in</strong> combo-box offers various places where Sigil should search. Currently, it can only search in the currently open file or all the <abbr>HTML</abbr> files <a class="footnote-reference" href="#id2" id="id1">[1]</a>. In the future it will be able to search across all the <abbr>CSS</abbr> files and all the files of any type in the <abbr>EPUB</abbr> book.</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>And only in the <a class="reference external" href="main_ui.html#code-view"><em>Code View</em></a>, not in the <a class="reference external" href="main_ui.html#book-view"><em>Book View</em></a>. This limitation exists because of technical restrictions, and will be removed in time.</td></tr>
-</tbody>
-</table>
+<p>The <strong>Look in</strong> combo-box offers various places where Sigil should search. Currently, it can only search in the currently open file or all the <abbr>HTML</abbr> files <a class="footnote-reference" href="#id3" id="id1">[1]</a>. In the future it will be able to search across all the <abbr>CSS</abbr> files and all the files of any type in the <abbr>EPUB</abbr> book.</p>
 <p>This leads us to the various search modes, which represent the true power of the Find &amp; Replace dialog; the <em>Normal</em> search mode just matches every character you typed exactly as it is, but the other modes are more involved.</p>
 <div class="figure" id="fig-search-small">
 <img alt="_images/search_small.png" src="_images/search_small.png" />
@@ -150,7 +144,7 @@
 </div>
 <div class="section" id="regular-expression-mode">
 <h2>Regular expression mode<a class="headerlink" href="#regular-expression-mode" title="Permalink to this headline">¶</a></h2>
-<p>The regular expression (<em>regex</em>) engine used in Sigil is very &#8220;Perl-like&#8221; <a class="footnote-reference" href="#id4" id="id3">[2]</a>. A general introduction to regular expressions is beyond the scope of this manual. There are many good overviews on the internet; one of which is available <a class="reference external" href="http://www.regular-expressions.info/tutorialcnt.html">here</a>. That site will help you get started with regexes.</p>
+<p>The regular expression (<em>regex</em>) engine used in Sigil is very &#8220;Perl-like&#8221; <a class="footnote-reference" href="#id4" id="id2">[2]</a>. A general introduction to regular expressions is beyond the scope of this manual. There are many good overviews on the internet; one of which is available <a class="reference external" href="http://www.regular-expressions.info/tutorialcnt.html">here</a>. That site will help you get started with regexes.</p>
 <p>Here are <em>some</em> of the differences from Perl:</p>
 <ul class="simple">
 <li>In Sigil <tt class="docutils literal"><span class="pre">^</span></tt> always signifies the start of the string (apart from within character classes), so carets should be escaped unless used in this way. The same applies to <tt class="docutils literal"><span class="pre">$</span></tt> which in Sigil always signifies the end of the string.</li>
@@ -158,10 +152,16 @@
 <li>Back-reference syntax is <tt class="docutils literal"><span class="pre">sed</span></tt>-like, that is in the form of <tt class="docutils literal"><span class="pre">\#</span></tt>, e.g. <tt class="docutils literal"><span class="pre">\1</span></tt>, <tt class="docutils literal"><span class="pre">\2</span></tt>, <tt class="docutils literal"><span class="pre">\3</span></tt> etc. (<tt class="docutils literal"><span class="pre">\0</span></tt> is the whole matched string).</li>
 <li>While zero-width positive and zero-width negative lookahead assertions (in the form of <tt class="docutils literal"><span class="pre">(?=pattern)</span></tt> and <tt class="docutils literal"><span class="pre">(?!pattern)</span></tt>) are supported, Perl&#8217;s look-behind assertions, &#8220;independent&#8221; subexpressions and conditional expressions are <strong>not</strong> supported.</li>
 </ul>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>And only in the <a class="reference external" href="main_ui.html#code-view"><em>Code View</em></a>, not in the <a class="reference external" href="main_ui.html#book-view"><em>Book View</em></a>. This limitation exists because of technical restrictions, and will be removed in time.</td></tr>
+</tbody>
+</table>
 <table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>The current regex engine used is actually Qt&#8217;s QRegExp. It will eventually be replaced with <a class="reference external" href="http://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions">PCRE</a> because of the latter&#8217;s advanced features and performance.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>The current regex engine used is actually Qt&#8217;s QRegExp. It will eventually be replaced with <a class="reference external" href="http://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions">PCRE</a> because of the latter&#8217;s advanced features and performance.</td></tr>
 </tbody>
 </table>
 </div>
