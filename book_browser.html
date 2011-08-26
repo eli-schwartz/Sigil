@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -5,24 +7,25 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Book Browser &mdash; Sigil v0.2.0 documentation</title>
+    <title>Book Browser &mdash; Sigil v0.4.1 documentation</title>
     <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '#',
-        VERSION:     '0.2.0',
-        COLLAPSE_MODINDEX: false,
+        URL_ROOT:    '',
+        VERSION:     '0.4.1',
+        COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/app_16.ico"/>
-    <link rel="top" title="Sigil v0.2.0 documentation" href="index.html" />
+    <link rel="top" title="Sigil v0.4.1 documentation" href="index.html" />
     <link rel="next" title="Meta Editor" href="meta_editor.html" />
-    <link rel="prev" title="Find & Replace" href="searching.html" />
+    <link rel="prev" title="Find &amp; Replace" href="searching.html" />
  
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -42,9 +45,9 @@
           <a href="meta_editor.html" title="Meta Editor"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="searching.html" title="Find & Replace"
+          <a href="searching.html" title="Find &amp; Replace"
              accesskey="P">previous</a> |</li>
-        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+        <li><a href="contents.html">Sigil v0.4.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -52,39 +55,39 @@
             <p class="logo"><a href="contents.html">
               <img class="logo" src="_static/small_logo.png" alt="Logo"/>
             </a></p>
-            <h3><a href="contents.html">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="#">Book Browser</a><ul>
-<li><a class="reference external" href="#content-folders">Content folders</a></li>
-<li><a class="reference external" href="#context-menu">Context menu</a></li>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Book Browser</a><ul>
+<li><a class="reference internal" href="#content-folders">Content folders</a></li>
+<li><a class="reference internal" href="#context-menu">Context menu</a></li>
 </ul>
 </li>
 </ul>
 
-            <h4>Previous topic</h4>
-            <p class="topless"><a href="searching.html"
-                                  title="previous chapter">Find &amp; Replace</a></p>
-            <h4>Next topic</h4>
-            <p class="topless"><a href="meta_editor.html"
-                                  title="next chapter">Meta Editor</a></p>
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="_sources/book_browser.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="searching.html"
+                        title="previous chapter">Find &amp; Replace</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="meta_editor.html"
+                        title="next chapter">Meta Editor</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/book_browser.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -95,13 +98,13 @@
             
   <div class="section" id="book-browser">
 <span id="id1"></span><h1>Book Browser<a class="headerlink" href="#book-browser" title="Permalink to this headline">¶</a></h1>
-<p>The Book Browser (<abbr>BB</abbr>) offers a view into the structure of your <abbr>EPUB</abbr> book. You can see all the different files that make up the archive, from <a class="reference external" href="glossary.html#term-xhtml"><em class="xref">XHTML</em></a> files to images.</p>
+<p>The Book Browser (<abbr>BB</abbr>) offers a view into the structure of your <abbr>EPUB</abbr> book. You can see all the different files that make up the archive, from <a class="reference internal" href="glossary.html#term-xhtml"><em class="xref std std-term">XHTML</em></a> files to images.</p>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
-<p class="last">If your not familiar with the internal structure of an <abbr>EPUB</abbr> file, see the <a class="reference external" href="epub_overview.html#epub-overview"><em>EPUB Overview</em></a> chapter.</p>
+<p class="last">If your not familiar with the internal structure of an <abbr>EPUB</abbr> file, see the <a class="reference internal" href="epub_overview.html#epub-overview"><em>EPUB Overview</em></a> chapter.</p>
 </div>
 <p>The Book Browser pane can be either docked, or undocked. A docked <abbr>BB</abbr> can be undocked by clicking on the little window icon in the top right corner, and docked by simply dragging the new window to the edge of the main Sigil window and then releasing the mouse button. An image of it undocked can be see in <a class="reference internal" href="#fig-bb"><em>Book Browser, undocked</em></a>.</p>
-<p>You can also open and close the Book Browser through the <strong>View</strong> menu.</p>
+<p>You can also open and close the Book Browser through the <em class="guilabel">View</em> menu.</p>
 <div class="figure" id="fig-bb">
 <img alt="_images/book_browser.png" src="_images/book_browser.png" />
 <p class="caption">Book Browser, undocked</p>
@@ -128,8 +131,8 @@
 <li>Rename the file,</li>
 <li>Add semantic information.</li>
 </ul>
-<p>If you select <strong>Add existing items</strong>, then an <strong>Open file</strong> dialog will be shown. From here, you&#8217;ll be able to add any type of file that can be embedded inside an <abbr>EPUB</abbr>, and they&#8217;ll be automatically routed to the correct folder. If you pick an <abbr>HTM</abbr>, <abbr>HTML</abbr> or <abbr>XHTML</abbr> file (or several), Sigil will also import all the resources that those files reference, like <abbr>CSS</abbr> stylesheets or images (but <em>not</em> other <abbr>XHTML</abbr> files). Using this technique, you can build up your <abbr>EPUB</abbr> file from several <abbr>HTML</abbr> files prepared in advance.</p>
-<p>The <strong>Add Semantics</strong> sub-menu is special. It is only displayed for <abbr>XHTML</abbr> files and images, and the contents differ. When invoked on an <abbr>XHTML</abbr> file, it enables you to indicate that that file contains the book&#8217;s dedication section, the glossary, the foreword, the preface and many more <a class="footnote-reference" href="#id4" id="id2">[1]</a>. Some (but few) Reading Systems will then use this information and display it to the user.</p>
+<p>If you select <em class="guilabel">Add existing items</em>, then an <em class="guilabel">Open file</em> dialog will be shown. From here, you&#8217;ll be able to add any type of file that can be embedded inside an <abbr>EPUB</abbr>, and they&#8217;ll be automatically routed to the correct folder. If you pick an <abbr>HTM</abbr>, <abbr>HTML</abbr> or <abbr>XHTML</abbr> file (or several), Sigil will also import all the resources that those files reference, like <abbr>CSS</abbr> stylesheets or images (but <em>not</em> other <abbr>XHTML</abbr> files). Using this technique, you can build up your <abbr>EPUB</abbr> file from several <abbr>HTML</abbr> files prepared in advance.</p>
+<p>The <em class="guilabel">Add Semantics</em> sub-menu is special. It is only displayed for <abbr>XHTML</abbr> files and images, and the contents differ. When invoked on an <abbr>XHTML</abbr> file, it enables you to indicate that that file contains the book&#8217;s dedication section, the glossary, the foreword, the preface and many more <a class="footnote-reference" href="#id4" id="id2">[1]</a>. Some (but few) Reading Systems will then use this information and display it to the user.</p>
 <p>For images, a different semantic action is offered. You can mark an image as a <em>cover</em>. This bit of semantic information is important for several <em>Reading Systems</em>, the most prominent of which is the <em>iBooks</em> application for the <em>iPad</em>. If an image is not marked as a cover, the book won&#8217;t have a cover set in the iBooks &#8220;bookshelf&#8221;.</p>
 <div class="admonition hint">
 <p class="first admonition-title">Hint</p>
@@ -139,7 +142,7 @@
 <table class="docutils footnote" frame="void" id="id4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>For those interested in the technical details, this information is stored in <a class="reference external" href="epub_overview.html#opf"><em>The OPF file</em></a>&#8216;s <tt class="docutils literal"><span class="pre">&lt;guide&gt;</span></tt> element.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>For those interested in the technical details, this information is stored in <a class="reference internal" href="epub_overview.html#opf"><em>The OPF file</em></a>&#8216;s <tt class="docutils literal"><span class="pre">&lt;guide&gt;</span></tt> element.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id5" rules="none">
@@ -167,15 +170,15 @@
           <a href="meta_editor.html" title="Meta Editor"
              >next</a> |</li>
         <li class="right" >
-          <a href="searching.html" title="Find & Replace"
+          <a href="searching.html" title="Find &amp; Replace"
              >previous</a> |</li>
-        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+        <li><a href="contents.html">Sigil v0.4.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer">
-      &copy; Copyright 2009-2010, Strahinja Marković.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+        &copy; Copyright 2009-2011, Strahinja Marković.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
 <script type="text/javascript">
   (function() {

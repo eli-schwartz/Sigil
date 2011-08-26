@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -5,22 +7,23 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Table Of Contents Editor &mdash; Sigil v0.2.0 documentation</title>
+    <title>Table of Contents Editor &mdash; Sigil v0.4.1 documentation</title>
     <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '#',
-        VERSION:     '0.2.0',
-        COLLAPSE_MODINDEX: false,
+        URL_ROOT:    '',
+        VERSION:     '0.4.1',
+        COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/app_16.ico"/>
-    <link rel="top" title="Sigil v0.2.0 documentation" href="index.html" />
+    <link rel="top" title="Sigil v0.4.1 documentation" href="index.html" />
     <link rel="next" title="EPUB Overview" href="epub_overview.html" />
     <link rel="prev" title="Meta Editor" href="meta_editor.html" />
  
@@ -44,7 +47,7 @@
         <li class="right" >
           <a href="meta_editor.html" title="Meta Editor"
              accesskey="P">previous</a> |</li>
-        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+        <li><a href="contents.html">Sigil v0.4.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -52,40 +55,44 @@
             <p class="logo"><a href="contents.html">
               <img class="logo" src="_static/small_logo.png" alt="Logo"/>
             </a></p>
-            <h3><a href="contents.html">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="#">Table Of Contents Editor</a><ul>
-<li><a class="reference external" href="#building-the-toc">Building the TOC</a></li>
-<li><a class="reference external" href="#the-editor-interface">The editor interface</a></li>
-<li><a class="reference external" href="#advanced-uses">Advanced uses</a></li>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Table of Contents Editor</a><ul>
+<li><a class="reference internal" href="#building-the-toc">Building the TOC</a><ul>
+<li><a class="reference internal" href="#creating-headings">Creating Headings</a></li>
+<li><a class="reference internal" href="#generating-the-toc">Generating the <abbr>TOC</abbr></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#previewing-and-testing-the-toc">Previewing and Testing the <abbr>TOC</abbr></a></li>
+<li><a class="reference internal" href="#displaying-different-text">Displaying Different Text</a></li>
 </ul>
 </li>
 </ul>
 
-            <h4>Previous topic</h4>
-            <p class="topless"><a href="meta_editor.html"
-                                  title="previous chapter">Meta Editor</a></p>
-            <h4>Next topic</h4>
-            <p class="topless"><a href="epub_overview.html"
-                                  title="next chapter">EPUB Overview</a></p>
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="_sources/toc_editor.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="meta_editor.html"
+                        title="previous chapter">Meta Editor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="epub_overview.html"
+                        title="next chapter">EPUB Overview</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/toc_editor.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -95,52 +102,72 @@
           <div class="body">
             
   <div class="section" id="table-of-contents-editor">
-<span id="toc-editor"></span><h1>Table Of Contents Editor<a class="headerlink" href="#table-of-contents-editor" title="Permalink to this headline">¶</a></h1>
-<p>Every book needs a Table of Contents (<abbr>TOC</abbr>). It makes navigation simpler, and also provides a quick overview of the book&#8217;s structure. With Sigil, one can create a hierarchical <abbr>TOC</abbr> with ease. The user interface is illustrated in <a class="reference internal" href="#fig-toc"><em>TOC editor</em></a>.</p>
-<p>You can open the <abbr>TOC</abbr> Editor by selecting <em>Tools ‣ TOC Editor</em>.</p>
-<div class="figure" id="fig-toc">
-<img alt="_images/toc_editor.png" src="_images/toc_editor.png" />
-<p class="caption"><abbr>TOC</abbr> editor</p>
-</div>
-<p>You should provide your books with a <abbr>TOC</abbr>, since clicking on an item in it in a <a class="reference external" href="glossary.html#term-reading-system"><em class="xref">Reading System</em></a> &#8220;jumps&#8221; the user to that point in the book. This can be very useful.</p>
+<span id="toc-editor"></span><h1>Table of Contents Editor<a class="headerlink" href="#table-of-contents-editor" title="Permalink to this headline">¶</a></h1>
+<p>A Table of Contents (<abbr>TOC</abbr>) makes navigation simpler and provides a quick overview of a book&#8217;s structure. Clicking on a <abbr>TOC</abbr> item in a <a class="reference internal" href="glossary.html#term-reading-system"><em class="xref std std-term">Reading System</em></a> &#8220;jumps&#8221; the user to that point in the book. With Sigil, you can easily create a hierarchical <abbr>TOC</abbr>.</p>
 <div class="section" id="building-the-toc">
 <span id="tocbuild"></span><h2>Building the TOC<a class="headerlink" href="#building-the-toc" title="Permalink to this headline">¶</a></h2>
-<p>Sigil follows standard word-processor practice by creating a <abbr>TOC</abbr> from the headings used in the text. The <a class="reference external" href="main_ui.html#book-view"><em>Book View</em></a> provides a drop-down box for changing normal text into a heading level, from one to six. Headings of a lower level (&#8220;bigger&#8221; headings) become the parents of headings of a higher level (&#8220;smaller&#8221; headings) that succeed them.</p>
-<p>Let&#8217;s look at an example. If the headings that are used in your book are in the level order of <tt class="docutils literal"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">3</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">3</span></tt>, they would be ordered in the <abbr>TOC</abbr> like this:</p>
+<p>Sigil follows standard word-processor practice by creating a <abbr>TOC</abbr> from the headings used in the text. The hierarchy of your <abbr>TOC</abbr> is determined by the &#8220;level&#8221; of each heading. <em class="guilabel">Heading 1</em> produces the largest text and <em class="guilabel">Heading 6</em> the smallest. In terms of hierarchy, a higher number is the child of a lower number.</p>
+<p>For example if the headings in your book are in the level order of <tt class="docutils literal"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">3</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">4</span></tt>, they will appear like this in the <abbr>TOC</abbr>:</p>
 <div class="highlight-python"><pre>Heading 1
-    Heading 2
-    Heading 2
-        Heading 3
-        Heading 3
+  Heading 2
+  Heading 2
+    Heading 3
+    Heading 3
 Heading 1
-    Heading 2
-        Heading 4
-        Heading 3</pre>
+  Heading 2
+    Heading 3
+      Heading 4</pre>
 </div>
-<p>Usually, the &#8220;natural&#8221; <abbr>TOC</abbr> that Sigil creates using this technique will be enough for 90% of the books you&#8217;ll want to make. But you can always make changes directly.</p>
-<div class="admonition hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">For the technical details regarding the storage of the Table of Contents, see <a class="reference external" href="epub_overview.html#ncx"><em>The NCX file</em></a>.</p>
+<div class="section" id="creating-headings">
+<h3>Creating Headings<a class="headerlink" href="#creating-headings" title="Permalink to this headline">¶</a></h3>
+<p>While in <a class="reference internal" href="main_ui.html#book-view"><em>Book View</em></a>, select the text you want to use in your <abbr>TOC</abbr>. Use the heading drop-down to apply a heading level.</p>
+<div class="figure" id="fig-heading-dropdown">
+<img alt="_images/heading_dropdown.png" src="_images/heading_dropdown.png" />
+<p class="caption">Heading Drop-Down</p>
 </div>
-</div>
-<div class="section" id="the-editor-interface">
-<h2>The editor interface<a class="headerlink" href="#the-editor-interface" title="Permalink to this headline">¶</a></h2>
-<p>The editor shows you what the <abbr>TOC</abbr> will look like on a <em>Reading System</em>. Double-clicking on the text of a heading makes the text editable. Note that any changes here will also change the heading in the text of the book.</p>
-<p>Every entry also has a checkbox next to it. Unchecking the box removes that heading from the <abbr>TOC</abbr>, but the heading itself remains in the text. Checking the box includes the heading back in.</p>
-<p>Notice the <strong>TOC items only</strong> checkbox at the bottom of the dialog. If the option is checked, the list shows <em>only</em> the items that will be included in the final <abbr>TOC</abbr>: the headings that will be ignored (those that were unchecked) are not shown. Checking this <em>TOC items only</em> option shows them again.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Unchecking a heading while the <em>TOC items only</em> option is selected will make it &#8220;disappear&#8221; from the list. You can see it again by deselecting the <em>TOC items only</em> option.</p>
-</div>
-</div>
-<div class="section" id="advanced-uses">
-<h2>Advanced uses<a class="headerlink" href="#advanced-uses" title="Permalink to this headline">¶</a></h2>
-<p>Advanced users may want to show a different value in the <abbr>TOC</abbr> than what the actual heading text is. This can be easily achieved by locating the heading element in the <a class="reference external" href="main_ui.html#code-view"><em>Code View</em></a> and adding a <tt class="docutils literal"><span class="pre">title</span></tt> attribute to it.</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1</span> <span class="na">title=</span><span class="s">&quot;Alternate text&quot;</span><span class="nt">&gt;</span>Normal text<span class="nt">&lt;/h1&gt;</span>
+<p>You can also define a heading in <a class="reference internal" href="main_ui.html#code-view"><em>Code View</em></a> by placing text in heading tags. For example:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>HEADING 1<span class="nt">&lt;/h1&gt;</span>
 </pre></div>
 </div>
-<p>The attribute should hold the alternate text that should be used for the <abbr>TOC</abbr>.</p>
-<p>You can also use this functionality to have images as the targets of the <abbr>TOC</abbr> entries:</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">For the technical details regarding the storage of the Table of Contents, see <a class="reference internal" href="epub_overview.html#ncx"><em>The NCX file</em></a>.</p>
+</div>
+</div>
+<div class="section" id="generating-the-toc">
+<h3>Generating the <abbr>TOC</abbr><a class="headerlink" href="#generating-the-toc" title="Permalink to this headline">¶</a></h3>
+<p>At any time you can click the <em class="guilabel">Generate |toc| from headings</em> button in the Table of Contents pane (<em class="menuselection">View ‣ Table of Contents</em>) to update your <abbr>TOC</abbr>.</p>
+<div class="figure" id="fig-generate-toc">
+<img alt="_images/generate_toc.png" src="_images/generate_toc.png" />
+<p class="caption">The Generate <abbr>TOC</abbr> from headings button</p>
+</div>
+<p>When you do this the <em class="guilabel">Heading Selector</em> window will open. This window allows you to uncheck any headings you want to exclude from your <abbr>TOC</abbr>. As you uncheck headings they will be removed from the list, but not from the text.</p>
+<p>Notice the <em class="guilabel">TOC items only</em> checkbox at the bottom of the dialog. If this option is checked, the list will show <em>only</em> the items that will be included in the final <abbr>TOC</abbr>. The headings that will be excluded (those that were unchecked) are not shown. Checking <em class="guilabel">TOC items only</em> shows them again.</p>
+<p>Click <em class="guilabel">OK</em> to generate your <abbr>TOC</abbr>.</p>
+<div class="figure" id="fig-heading-selector">
+<img alt="_images/heading_selector.png" src="_images/heading_selector.png" />
+<p class="caption">Heading Selector Dialog</p>
+</div>
+</div>
+</div>
+<div class="section" id="previewing-and-testing-the-toc">
+<h2>Previewing and Testing the <abbr>TOC</abbr><a class="headerlink" href="#previewing-and-testing-the-toc" title="Permalink to this headline">¶</a></h2>
+<p>By default a preview of the <abbr>TOC</abbr> is displayed in a pane on the right-hand side of the Sigil window. You can toggle this pane on and off by navigating to <em class="menuselection">View ‣ Table of Contents</em> or with Alt + F3 on your keyboard.</p>
+<div class="figure" id="fig-toc-preview">
+<img alt="_images/toc_preview.png" src="_images/toc_preview.png" />
+<p class="caption"><abbr>TOC</abbr> Preview</p>
+</div>
+<p>This pane allows you to see how your <abbr>TOC</abbr> is structured. If you double-click on any entry you will jump to that location in your text.</p>
+</div>
+<div class="section" id="displaying-different-text">
+<h2>Displaying Different Text<a class="headerlink" href="#displaying-different-text" title="Permalink to this headline">¶</a></h2>
+<p>You may want to display a different value in the <abbr>TOC</abbr> than the actual heading text. For example, your heading may be &#8220;HEADING 1&#8221; but in the <abbr>TOC</abbr> you want it to display as &#8220;Heading 1&#8221;.</p>
+<p>You can do this by locating the heading element in the <a class="reference internal" href="main_ui.html#code-view"><em>Code View</em></a> and adding a <tt class="docutils literal"><span class="pre">title</span></tt> attribute to it.</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1</span> <span class="na">title=</span><span class="s">&quot;Chapter I&quot;</span><span class="nt">&gt;</span>CHAPTER I<span class="nt">&lt;/h1&gt;</span>
+</pre></div>
+</div>
+<p>The attribute <tt class="docutils literal"><span class="pre">title</span></tt> should contain the text as you want it displayed in the <abbr>TOC</abbr>.</p>
+<p>You can use the same functionality if you want an image to be the target of a <abbr>TOC</abbr> entry:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1</span> <span class="na">title=</span><span class="s">&quot;Text in TOC&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;../Images/some_image.png&quot;</span> <span class="nt">/&gt;&lt;/h1&gt;</span>
 </pre></div>
 </div>
@@ -165,13 +192,13 @@ Heading 1
         <li class="right" >
           <a href="meta_editor.html" title="Meta Editor"
              >previous</a> |</li>
-        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+        <li><a href="contents.html">Sigil v0.4.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer">
-      &copy; Copyright 2009-2010, Strahinja Marković.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+        &copy; Copyright 2009-2011, Strahinja Marković.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
 <script type="text/javascript">
   (function() {

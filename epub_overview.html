@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -5,24 +7,25 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>EPUB Overview &mdash; Sigil v0.2.0 documentation</title>
+    <title>EPUB Overview &mdash; Sigil v0.4.1 documentation</title>
     <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '#',
-        VERSION:     '0.2.0',
-        COLLAPSE_MODINDEX: false,
+        URL_ROOT:    '',
+        VERSION:     '0.4.1',
+        COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/app_16.ico"/>
-    <link rel="top" title="Sigil v0.2.0 documentation" href="index.html" />
+    <link rel="top" title="Sigil v0.4.1 documentation" href="index.html" />
     <link rel="next" title="Glossary" href="glossary.html" />
-    <link rel="prev" title="Table Of Contents Editor" href="toc_editor.html" />
+    <link rel="prev" title="Table of Contents Editor" href="toc_editor.html" />
  
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -42,9 +45,9 @@
           <a href="glossary.html" title="Glossary"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="toc_editor.html" title="Table Of Contents Editor"
+          <a href="toc_editor.html" title="Table of Contents Editor"
              accesskey="P">previous</a> |</li>
-        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+        <li><a href="contents.html">Sigil v0.4.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -52,44 +55,44 @@
             <p class="logo"><a href="contents.html">
               <img class="logo" src="_static/small_logo.png" alt="Logo"/>
             </a></p>
-            <h3><a href="contents.html">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="#">EPUB Overview</a><ul>
-<li><a class="reference external" href="#open-publication-structure">Open Publication Structure</a></li>
-<li><a class="reference external" href="#open-packaging-format">Open Packaging Format</a><ul>
-<li><a class="reference external" href="#the-opf-file">The OPF file</a></li>
-<li><a class="reference external" href="#the-ncx-file">The NCX file</a></li>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">EPUB Overview</a><ul>
+<li><a class="reference internal" href="#open-publication-structure">Open Publication Structure</a></li>
+<li><a class="reference internal" href="#open-packaging-format">Open Packaging Format</a><ul>
+<li><a class="reference internal" href="#the-opf-file">The OPF file</a></li>
+<li><a class="reference internal" href="#the-ncx-file">The NCX file</a></li>
 </ul>
 </li>
-<li><a class="reference external" href="#oebps-container-format">OEBPS Container Format</a></li>
+<li><a class="reference internal" href="#oebps-container-format">OEBPS Container Format</a></li>
 </ul>
 </li>
 </ul>
 
-            <h4>Previous topic</h4>
-            <p class="topless"><a href="toc_editor.html"
-                                  title="previous chapter">Table Of Contents Editor</a></p>
-            <h4>Next topic</h4>
-            <p class="topless"><a href="glossary.html"
-                                  title="next chapter">Glossary</a></p>
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="_sources/epub_overview.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="toc_editor.html"
+                        title="previous chapter">Table of Contents Editor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="glossary.html"
+                        title="next chapter">Glossary</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/epub_overview.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -109,7 +112,7 @@
 <p>This chapter will provide a brief overview of the format aimed at beginners.</p>
 <div class="section" id="open-publication-structure">
 <h2>Open Publication Structure<a class="headerlink" href="#open-publication-structure" title="Permalink to this headline">¶</a></h2>
-<p>This specification describes what the different content files of the book should look like. The basis of the content files is <a class="reference external" href="glossary.html#term-xhtml"><em class="xref">XHTML</em></a> 1.1. An example document follows:</p>
+<p>This specification describes what the different content files of the book should look like. The basis of the content files is <a class="reference internal" href="glossary.html#term-xhtml"><em class="xref std std-term">XHTML</em></a> 1.1. An example document follows:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot;</span>
 <span class="cp">    &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;</span>
@@ -132,11 +135,11 @@
 <span class="nt">&lt;/html&gt;</span>
 </pre></div>
 </div>
-<p>You would see something very similar to this if you switched to <a class="reference external" href="main_ui.html#code-view"><em>Code View</em></a> in the main Sigil <a class="reference external" href="glossary.html#term-ui"><em class="xref">UI</em></a>. Notice the pattern: content is <em>marked up</em> between the start and end <em>tags</em> of an <em>element</em>. This is how <a class="reference external" href="glossary.html#term-xml"><em class="xref">XML</em></a> (on which <abbr>XHTML</abbr> is based) works. The <tt class="docutils literal"><span class="pre">&lt;p&gt;</span></tt> element is a good example; it delimits the words and sentences that should be regarded as making up a single paragraph. There are many more elements in <abbr>XHTML</abbr>.</p>
-<p>With <abbr>XHTML</abbr>, the user semantically marks up the content of the document and specifies its structure. Usually, a <a class="reference external" href="glossary.html#term-css"><em class="xref">CSS</em></a> stylesheet is &#8220;applied&#8221; to the document. In this example, it is linked with the <tt class="docutils literal"><span class="pre">&lt;link&gt;</span></tt> element; this tells any <abbr>XHTML</abbr> renderer to use this stylesheet when rendering the document.</p>
+<p>You would see something very similar to this if you switched to <a class="reference internal" href="main_ui.html#code-view"><em>Code View</em></a> in the main Sigil <a class="reference internal" href="glossary.html#term-ui"><em class="xref std std-term">UI</em></a>. Notice the pattern: content is <em>marked up</em> between the start and end <em>tags</em> of an <em>element</em>. This is how <a class="reference internal" href="glossary.html#term-xml"><em class="xref std std-term">XML</em></a> (on which <abbr>XHTML</abbr> is based) works. The <tt class="docutils literal"><span class="pre">&lt;p&gt;</span></tt> element is a good example; it delimits the words and sentences that should be regarded as making up a single paragraph. There are many more elements in <abbr>XHTML</abbr>.</p>
+<p>With <abbr>XHTML</abbr>, the user semantically marks up the content of the document and specifies its structure. Usually, a <a class="reference internal" href="glossary.html#term-css"><em class="xref std std-term">CSS</em></a> stylesheet is &#8220;applied&#8221; to the document. In this example, it is linked with the <tt class="docutils literal"><span class="pre">&lt;link&gt;</span></tt> element; this tells any <abbr>XHTML</abbr> renderer to use this stylesheet when rendering the document.</p>
 <p>What does the renderer do? It looks at the marked-up document and the linked stylesheets and determines how this content should be displayed on the user&#8217;s screen. The <abbr>XHTML</abbr> document describes <em>what</em> is the content, and the <abbr>CSS</abbr> stylesheet describes <em>how</em> it should be laid out and formatted. <abbr>XHTML</abbr> answers questions like: &#8220;What is a paragraph? What is a list of items? What is a table?&#8221;, and <abbr>CSS</abbr> answers questions like: &#8220;How much should the paragraphs be indented? What color is the text? What fonts should be used? How big is the text?&#8221;.</p>
 <p>You create many <abbr>XHTML</abbr> documents <a class="footnote-reference" href="#id3" id="id2">[1]</a> for one <abbr>EPUB</abbr> file. Customarily, you create one per book chapter, but you can do it differently if you want to (but do so only if you have a good reason). For novels, one stylesheet is usually enough and is used in all the <abbr>XHTML</abbr> files.</p>
-<p>Now you may be wondering, why should readers of an <abbr>EPUB</abbr> have to jump from one <abbr>XHTML</abbr> file to the next? Why can&#8217;t they just see the book as one text &#8220;flow&#8221;? The answer is that they do. The readers are <em>not</em> aware that an <abbr>EPUB</abbr> file is an archive of several different files since their <a class="reference external" href="glossary.html#term-reading-system"><em class="xref">Reading System</em></a> always displays everything in it as one text flow. Even when every chapter is actually a separate file, when the user pages through their book, they see one chapter ending, and on the next page, the next chapter starting. They are <em>never</em> aware that their <em>Reading System</em> has actually transitioned them from one file to the next.</p>
+<p>Now you may be wondering, why should readers of an <abbr>EPUB</abbr> have to jump from one <abbr>XHTML</abbr> file to the next? Why can&#8217;t they just see the book as one text &#8220;flow&#8221;? The answer is that they do. The readers are <em>not</em> aware that an <abbr>EPUB</abbr> file is an archive of several different files since their <a class="reference internal" href="glossary.html#term-reading-system"><em class="xref std std-term">Reading System</em></a> always displays everything in it as one text flow. Even when every chapter is actually a separate file, when the user pages through their book, they see one chapter ending, and on the next page, the next chapter starting. They are <em>never</em> aware that their <em>Reading System</em> has actually transitioned them from one file to the next.</p>
 <p>You may be surprised, but Microsoft Word&#8217;s new <abbr>DOCX</abbr> format is also several marked-up files inside a <abbr>ZIP</abbr> archive. And yet you see it as &#8220;one&#8221; document.</p>
 </div>
 <div class="section" id="open-packaging-format">
@@ -242,7 +245,7 @@
 </pre></div>
 </div>
 <p>The <tt class="docutils literal"><span class="pre">&lt;navPoint&gt;</span></tt> elements point either to whole documents, or to the specific elements within those documents. They can be nested to create a hierarchical <abbr>TOC</abbr>.</p>
-<p>Sigil creates this file from the headings present in your <abbr>XHTML</abbr> documents. Every heading is referenced by a <tt class="docutils literal"><span class="pre">navPoint</span></tt>, and headings of different levels interact to create a hierarchy. More details of this behaviour can be found in the <a class="reference external" href="toc_editor.html#tocbuild"><em>Building the TOC</em></a> section. As with the <abbr>OPF</abbr> file, future versions of Sigil will enable direct editing of this file for those who want it.</p>
+<p>Sigil creates this file from the headings present in your <abbr>XHTML</abbr> documents. Every heading is referenced by a <tt class="docutils literal"><span class="pre">navPoint</span></tt>, and headings of different levels interact to create a hierarchy. More details of this behaviour can be found in the <a class="reference internal" href="toc_editor.html#tocbuild"><em>Building the TOC</em></a> section. As with the <abbr>OPF</abbr> file, future versions of Sigil will enable direct editing of this file for those who want it.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If your heading is &#8220;near&#8221; the beginning of your <abbr>XHTML</abbr> file, Sigil will link directly to that file and not to the heading element. This is because on some <em>Reading Systems</em>, linking directly to an element slows down the display of the <abbr>TOC</abbr>.</p>
@@ -278,15 +281,15 @@
           <a href="glossary.html" title="Glossary"
              >next</a> |</li>
         <li class="right" >
-          <a href="toc_editor.html" title="Table Of Contents Editor"
+          <a href="toc_editor.html" title="Table of Contents Editor"
              >previous</a> |</li>
-        <li><a href="contents.html">Sigil v0.2.0 documentation</a> &raquo;</li> 
+        <li><a href="contents.html">Sigil v0.4.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
 
     <div class="footer">
-      &copy; Copyright 2009-2010, Strahinja Marković.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+        &copy; Copyright 2009-2011, Strahinja Marković.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
 <script type="text/javascript">
   (function() {

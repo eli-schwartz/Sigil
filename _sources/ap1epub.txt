@@ -1,4 +1,0 @@
-Appendix 1: EPUB Overview
-=========================
-
-THis appendix will present a short overview of the EPUB e-book format.
