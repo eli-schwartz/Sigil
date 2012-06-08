@@ -1,0 +1,313 @@
+.author {
+    display: block;
+    font-size: 1.375em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5em;
+    text-align: center;
+    text-indent: 0
+    }
+.calibre {
+    display: block;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0
+    }
+.calibre1 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-indent: 0
+    }
+.calibre10 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre11 {
+    display: block
+    }
+.calibre12 {
+    display: block;
+    margin-left: 40px
+    }
+.calibre13 {
+    font-weight: bolder
+    }
+.calibre14 {
+    height: 456px;
+    max-width: 100%;
+    width: 650px
+    }
+.calibre15 {
+    height: 484px;
+    max-width: 100%;
+    width: 645px
+    }
+.calibre16 {
+    font-style: italic
+    }
+.calibre2 {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline
+    }
+.calibre3 {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center
+    }
+.calibre4 {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.375em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center
+    }
+.calibre5 {
+    display: block;
+    list-style-type: disc;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre6 {
+    display: list-item
+    }
+.calibre7 {
+    height: auto;
+    max-width: 100%;
+    width: auto
+    }
+.calibre8 {
+    display: block;
+    list-style-type: circle;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0
+    }
+.calibre9 {
+    display: block;
+    page-break-after: always
+    }
+.dropcap {
+    float: left;
+    font-size: 1.5em;
+    line-height: 0.8em;
+    margin-bottom: -0.1em;
+    margin-right: 3pt
+    }
+.example {
+    font-family: courier, sans-serif;
+    font-size: 0.875em;
+    line-height: 1.2
+    }
+.example1 {
+    display: block;
+    font-family: courier, sans-serif;
+    font-size: 0.875em;
+    line-height: 1.2;
+    margin-bottom: 1.5em;
+    margin-left: 2em;
+    margin-right: 0;
+    margin-top: 1em;
+    white-space: pre
+    }
+.example2 {
+    font-family: courier, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.2
+    }
+.first {
+    display: list-item;
+    margin-top: 1em
+    }
+.h1subheading {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.125em;
+    font-variant: small-caps;
+    line-height: 1.2;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.5em;
+    text-align: center;
+    text-indent: 0
+    }
+.h2subheading {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1em;
+    font-variant: small-caps;
+    line-height: 1.2;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.5em;
+    text-align: center;
+    text-indent: 0
+    }
+.heading {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.25em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.7em;
+    text-align: left
+    }
+.heading1 {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.5em;
+    text-indent: 0
+    }
+.image {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    page-break-inside: avoid;
+    text-align: center
+    }
+.indent {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 0;
+    margin-top: 1em;
+    text-indent: 0
+    }
+.indent1 {
+    display: block;
+    margin-left: 1em
+    }
+.listheading {
+    font-weight: bold
+    }
+.logo {
+    display: block;
+    margin-top: 6em;
+    text-align: center
+    }
+.menuitem {
+    font-family: monotype, courier, sans-serif;
+    font-size: 0.875em;
+    line-height: 1.2
+    }
+.menuitem1 {
+    font-family: monotype, courier, sans-serif;
+    font-size: 0.85714em
+    }
+.rights {
+    display: block;
+    margin-top: 4em;
+    text-align: center
+    }
+.sigilNotInTOC {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.125em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.5em;
+    text-align: left
+    }
+.subscript {
+    font-size: 0.75em;
+    vertical-align: sub
+    }
+.superscript {
+    font-size: 0.75em;
+    vertical-align: super
+    }
+.tip {
+    display: block;
+    page-break-inside: avoid
+    }
+.tipheader {
+    display: block;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-indent: 0
+    }
+.tiptext {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 0;
+    margin-top: 0;
+    text-indent: 0
+    }
+.title {
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2em;
+    text-align: center;
+    text-indent: 0
+    }
+.toolbar {
+    display: block;
+    margin-top: 2em;
+    page-break-inside: avoid
+    }
+.version {
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.125em;
+    line-height: 1.2;
+    margin-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center;
+    text-indent: 0
+    }

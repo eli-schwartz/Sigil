@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Links and Footnotes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="tutorial_regex.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="tutorial_stylesheets.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="links" class="calibre4">Create Links and Footnotes</h2>
+
+  <p class="h2subheading">— Linking your Text —</p>
+
+  <p class="calibre1">This tutorial describes how to create links or footnotes in Sigil.</p>
+
+  <p class="calibre1">Sigil provides a couple of ways to link text to other parts of your book, such as chapter names and footnotes, so that readers can select the link and jump to the identified text.</p>
+
+  <h3 class="heading" id="heading_id_2">IDs and Links</h3>
+
+  <p class="calibre1">In order for Sigil to create a link from certain words in your book to other words in your book, you first need to give an ID or a name to the words you want to link to. You can then link text like a footnote reference to that ID (sometimes called an anchor ID).</p>
+
+  <p class="calibre1">An ID is just a unique name, like <span class="example">footnote1</span> that you will assign to a part of your text so that you can refer to it. ID names must be unique within an HTML file, but its best if they are unique throughout the whole EPUB in case you move text around.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">If you want the destination to be the top of a file, then you don't need to create a special ID – you just need to know the filename.</p>
+  </div>
+
+  <p class="calibre1">A link is a way to refer to your ID. It could just be <span class="example">footnote1</span> if the ID is in the same file as your link. Or if the link and ID are in different files it could look like <span class="example">filename#footnote1</span> – the <span class="example">#</span> character is just used to separate your filename from the ID name. The link could also include directory names like <span class="example">../Text/filename2#footnote7</span> but still just refer to a filename and ID.</p>
+
+  <p class="tipheader">Note</p>
+
+  <p class="tiptext">Links to websites or other pages outside of your EPUB will not work if you click on them in Sigil, even though they may work on some ereaders.</p>
+
+  <h3 class="heading" id="heading_id_3">Create Linked Text in Book View</h3>
+
+  <p class="calibre1">The Book View editor provides some basic functions to allow you to edit IDs and links.</p>
+
+  <h4 class="sigilNotInTOC">Create an ID</h4>
+
+  <p class="calibre1">In Book View, you can create or assign an ID to text so that you can point to it:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6">Select the text you want to link to, e.g. <span class="example">[1] This is a footnote</span></li>
+
+    <li class="calibre6">Click on the Anchor icon (<img alt="" src="../Images/links_anchor_icon.png" class="calibre7"/>) to open the anchor properties window:
+
+      <div class="image"><img alt="" src="../Images/links_anchor_properties.png" class="calibre7"/></div>
+    </li>
+
+    <li class="calibre6">Enter a name for the anchor – names must be unique in the file</li>
+
+    <li class="calibre6">The text is marked as an anchor: <img alt="" src="../Images/links_anchor_in_book_view.png" class="calibre7"/></li>
+
+    <li class="calibre6">You can double click the text to view or edit the anchor's ID name</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can remove an anchor tag and its ID in Book View by right clicking on it and selecting Remove.</p>
+  </div>
+
+  <h4 class="sigilNotInTOC" id="heading_id_4">Create a Link</h4>
+
+  <p class="calibre1">In Book View you can create a link to text you have already marked with an ID as follows:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6">Select the text you want to be linked, e.g. <span class="example">[1]</span></li>
+
+    <li class="calibre6">Click on the Link icon (<img alt="" src="../Images/links_link_icon_in_book_view.png" class="calibre7"/>)</li>
+
+    <li class="calibre6">In the Link dialog change the URL type to &lt;other&gt; and enter the ID to point to your destination, e.g. <span class="example">footnotes.xhtml#footnote1</span> (you can leave out the filename if the ID is in the same file):
+
+      <div class="image"><img alt="" src="../Images/links_link_properties.png" class="calibre7"/></div>
+    </li>
+
+    <li class="calibre6">The text is now marked as a link: <img alt="" src="../Images/links_link_in_book_view.png" class="calibre7"/></li>
+  </ul>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can remove a link in Book View by right clicking on it and selecting Unlink or use the unlink icon.</p>
+  </div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">Most of the other options in the Link properties window are not used. For instance you could change the Link Type to "Link to anchor in the text" but this is only useful if you used anchor tags in the current file that you want to link to. Target and Advanced options are also generally not used.</p>
+  </div>
+
+  <h4 class="sigilNotInTOC">Create Linked Text in Code View</h4>
+
+  <p class="calibre1">In Code View IDs and links are created as with any HTML document.</p>
+
+  <p class="calibre1">Create an ID</p>
+
+  <p class="calibre1">In Code View you can create two types of IDs that can be used for links.</p>
+
+  <ul class="calibre5">
+    <li class="calibre6">Anchor IDs like in Book View: just use an <span class="example">a</span> tag around the destination text, e.g. <span class="example">&lt;a id="footnote_1"&gt;This is a footnote&lt;/a&gt;</span></li>
+
+    <li class="calibre6">ID names assigned to existing HTML tags, e.g. <span class="example">&lt;h3 id="chapter1"&gt;Chapter 1&lt;h3&gt;</span>, or <span class="example">&lt;p id="id7"&gt;text&lt;/p&gt;</span></li>
+  </ul>
+
+  <p class="calibre1">Which form you use is up to you, although Chapters should always use IDs in the heading tag.</p>
+
+  <h4 class="sigilNotInTOC">Create a Link</h4>
+
+  <p class="calibre1">In Code View use the following syntax:</p>
+  <pre class="example1">
+&lt;a href="file2.xhtml"&gt;Linked to file&lt;/a&gt;
+&lt;a href="file2.xhtml#footnote1"&gt;Linked to a footnote&lt;/a&gt;
+&lt;a href="#samepage" id="id7"&gt;Linked to text on the same page&lt;/a&gt;
+</pre>
+  <pre class="example1">
+&lt;a href="../Text/file2.xhtml#footnote2"&gt;Linked to a note in another file&lt;/a&gt;</pre>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">You can point directly to a text file without a path since text files are in the same directory in the EPUB, but you can also prepend the filename with "../Text/".</p>
+  </div>
+
+  <h3 class="heading">Reverse Linking</h3>
+
+  <p class="calibre1">Most ereaders have a Back button that you can click once you follow a link to take you back to the original linked text. But for those that don't, you can create a link from your destination text back to your original source text. This is often called reverse linking</p>
+
+  <p class="calibre1">Reverse linking is just like any other kind of linking – it just means you have to create a link from your destination text back to your source text – so both source and destination will have an <span class="example">href</span> and <span class="example">id</span> tag and will be mirror versions of each other.</p>
+
+  <p class="calibre1">In Book View, assign an ID to your source text just like you did to your destination. Then create a link from your destination text back to your source text in the same way you created the original link.</p>
+
+  <p class="calibre1">In Code View an example would be:</p>
+  <pre class="example1">
+&lt;a href="file2.xhtml#footnote1" id="text1"&gt;See footnote1&lt;/a&gt;
+&lt;a href="file1.xhtml#text1"     id="footnote1"&gt;This is footnote1&lt;/a&gt;
+
+</pre>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.xhtml">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.xhtml">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.xhtml#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.xhtml">Features</a>
+      <ul>
+        <li>
+          <a href="overview.xhtml">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.xhtml">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.xhtml">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.xhtml">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.xhtml">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.xhtml">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.xhtml">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="tutorial_regex.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="tutorial_stylesheets.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

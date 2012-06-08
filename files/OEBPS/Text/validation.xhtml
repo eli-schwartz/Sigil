@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Validate and Clean</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="spellcheck.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="preferences.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="validation" class="calibre4">Validate and Clean</h2>
+
+  <p class="h2subheading">— Making sure your EPUB is valid —</p>
+
+  <h3 class="heading" id="validate_validate">Validate</h3>
+
+  <p class="calibre1">In order to be considered a valid EPUB, your ebook must meet the standards defined for EPUBs. This means it must include certain files and must contain certain information. To help ensure your EPUB meets these standards, Sigil includes the EPUB validation program FlightCrew.</p>
+
+  <p class="calibre1">You can create a report showing any issues in your EPUB by using the menu option <span class="menuitem">File→Validate EPUB</span>:</p>
+
+  <div class="image"><img alt="" src="../Images/validation_window.png" class="calibre7"/></div>
+
+  <p class="calibre1">Once you have run Validate to produce a report, look at each of the issues listed and then edit your document to correct them.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can double click on most entries to be taken to the relevant part of the book.</p>
+  </div>
+
+  <p class="calibre1">You should validate your document each time you correct it to verify there are no more errors.</p>
+
+  <p class="calibre1">Common issues include:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6">
+      <span class="example">This resource is present in the OPF &lt;manifest&gt;, but it's not reachable (it's unused).</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This warning means you have included the listed file in your EPUB, but you have not used it anywhere in your book. If you intended to use it, you should link to it, otherwise you can delete the file.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6">
+      <span class="example">This OPS document is reachable but not present in the OPF &lt;manifest or spine&gt;. "Reachable" means that a reference of some kind that points to this resource exists in the epub.</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This error means you have a reference or a link to a file or image in your EPUB, but that file is not included in the EPUB. You need to add the file to the EPUB or correct the name of the file used in your text. You can usually find these by searching for the filename listed in all the HTML files. You may also have to re-generate or update your TOC.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6">
+      <span class="example">ID value 'SOMEIDNAME' is not unique</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This error means you have an ID named SOMEIDNAME in your EPUB that is defined more than once. Typically these are in headers or footnotes and can be caused by copying and pasting or merging. You can find these by searching all HTML files for the ID name that is listed and changing them so all IDs are different from all other IDs. If the issue is in a heading and you have auto-generated your headings, you can delete the ID and they will be re-generated the next time you create your TOC.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6">
+      <span class="example">attribute 'INVALIDATTRIBUTE' is not declared for element 'SOMEELEMENT'</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This error means you have an HTML tag named SOMEELEMENT that contains an attribute INVALIDATTRIBUTE, but INVALIDATTRIBUTE is not valid for that tag. For instance <span class="example">&lt;h2 invalidattribute="test"&gt;</span>. This can be caused by typos or by old versions of HTML. You need to search for INVALIDATTRIBUTE in all HTML files and remove, correct, or replace each occurrence.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6">
+      <span class="example">no declaration found for element 'INVALIDELEMENT'</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This error means you have an HTML tag named INVALIDELEMENT that has not been defined. Typically this is simply because it is invalid and is old HTML syntax that need updating. You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace these with valid HTML.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6">
+      <span class="example">element 'INVALIDELEMENT' is not allowed for content model '(p|d|h2|h3|h4|h5|h6|div|ul|ol|...'</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This error means you have an HTML tag named INVALIDELEMENT that is not valid HTML for an EPUB. Typically this is old HTML syntax that needs updating (such as the <span class="example">&lt;center&gt;</span> tag which should be implemented using a style). You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace each occurrence with valid HTML.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6">
+      <span class="example">value 'SOMENAME' is invalid NCName</span>
+
+      <ul class="calibre8">
+        <li class="calibre6">This error means you have an ID name that is invalid. It probably contains a space or other invalid character. You need to search for SOMENAME and change it.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can also use online EPUB validation programs, in particular:</p>
+
+    <div class="indent1">
+      <ul class="calibre5">
+        <li class="calibre6"><a href="http://validator.idpf.org" class="calibre2">IDPF EPUB Validator</a> [http://validator.idpf.org/]</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="heading" id="tidy">Automatic Code Cleaning</h3>
+
+  <p class="calibre1">Sigil can automatically clean your HTML code when you save by using the included HTML Tidy software. This does not correct any errors but attempts to normalize your code by adjusting spacing or consolidating styles.</p>
+
+  <p class="calibre1">The <span class="menuitem">Edit→Clean Source</span> menu option allows you to set several levels of automatic cleaning:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6"><span class="listheading">Off:</span> HTML Tidy will not be used. No automatic cleaning of code will be done – your code will be left formatted exactly the way you typed it.</li>
+
+    <li class="calibre6"><span class="listheading">Pretty Print:</span> HTML Tidy will be used to remove any unnecessary spaces or blank lines in your code and will indent HTML tags to make it easier to read the code. No code will be changed – only spacing.</li>
+
+    <li class="calibre6"><span class="listheading">Tidy:</span> HTML Tidy will be used to clean your code – this will include pretty printing plus converting some of your tags into styles and some of your styles into an internal stylesheet. It is possible under rare circumstances that Tidy will clean too much and delete text, so you may want to carefully consider using this option.</li>
+  </ul>
+
+  <p class="calibre1">When using Tidy, it will often convert tags or style attributes you have applied into a style tag and create a class name for the style (see the <a href="../Text/tutorial_stylesheets.xhtml" class="calibre2">Stylesheets</a> chapter for more information). If this has happened you will see the new stylesheet at the top of your file, e.g.</p>
+  <pre class="example1">
+&lt;style type="text/css"&gt;
+/*&lt;![CDATA[*/
+
+p.sgc-1 {font-weight: bold}
+
+/*]]&gt;*/
+&lt;/style&gt;</pre>
+
+  <p class="calibre1">This is a perfectly valid stylesheet (the <span class="example">sgc</span> stands for Sigil class), although if you prefer to keep your tags exactly as typed, or use external stylesheets to manage your styles as most people do, you may want to set Clean Source to the Pretty Print option to prevent the conversion of styles to internal stylesheets.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">Tidy is only run when you save your book, so save often to see the changes Tidy makes as you edit.</p>
+  </div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.xhtml">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.xhtml">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.xhtml#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.xhtml">Features</a>
+      <ul>
+        <li>
+          <a href="overview.xhtml">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.xhtml">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.xhtml">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.xhtml">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.xhtml">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.xhtml">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.xhtml">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="spellcheck.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="preferences.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

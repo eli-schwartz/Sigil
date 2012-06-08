@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Metadata Editor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="table_of_contents.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="find_replace.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="metadata_editor" class="calibre4">Metadata Editor</h2>
+
+  <p class="h2subheading">— Edit details about your book —</p>
+
+  <p class="calibre1">The Metadata Editor allows you to add or edit details about your book – like Author, Title and Language, as well as hundreds of other entries defined by the EPUB standard.</p>
+
+  <p class="calibre1">All of the details about the book (called metadata) are stored in the <span class="example">contents.opf</span> file in the Book Browser. You can edit this information manually, but the Metadata Editor allows you to edit it more easily.</p>
+
+  <p class="calibre1">You can open the Metadata Editor by selecting <span class="menuitem">Edit→Metadata Editor</span> or its keyboard shortcut:</p>
+
+  <div class="image"><img alt="" src="../Images/metadata_editor_window.png" class="calibre7"/></div>
+
+  <h3 class="heading" id="metadata_required">Required Metadata Details</h3>
+
+  <p class="calibre1">The Metadata Editor shows the 3 fields required for an EPUB at the top – you must fill these in in order to create a valid EPUB:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6">Title of the book</li>
+
+    <li class="calibre6">Author of the book</li>
+
+    <li class="calibre6">Language the book is written in</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">If you write a person's name as <span class="example">Lastname, Firstname</span> then Sigil will automatically add it as <span class="example">Lastname, Firstname</span> for filing purposes, and also add it as <span class="example">Firstname Lastname</span> which is what is usually displayed to readers.</p>
+
+    <p class="tiptext">You can list several authors of a book by separating the names with a semicolon, e.g. <span class="example">Smith, John; Doe, Jane</span> (they will appear in the table at the bottom of the Metadata window once you save and re-open the Metadata Editor).</p>
+  </div>
+
+  <h3 class="heading" id="metadata_optional">Optional Metadata Details</h3>
+
+  <p class="calibre1">You can add optional details using the <span class="example">Add Basic</span> or <span class="example">Add Role</span> buttons. These will be added to the table below the required fields. The table allows you to provide the following values for each entry:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6"><span class="listheading">Name:</span> the name of the field</li>
+
+    <li class="calibre6"><span class="listheading">Value:</span> the contents of the field</li>
+
+    <li class="calibre6"><span class="listheading">File As:</span> some fields like author can or date have alternative values</li>
+
+    <li class="calibre6"><span class="listheading">Role Type:</span> all roles, like author, can be either a creator or contributor</li>
+  </ul>
+
+  <p class="calibre1">The Add Basic metadata items include about 30 items such as:</p>
+
+  <ul class="calibre5">
+    <li class="calibre6"><span class="listheading">Date: Publication</span></li>
+
+    <li class="calibre6"><span class="listheading">Date: Creation</span></li>
+
+    <li class="calibre6"><span class="listheading">Date (custom):</span> you can enter your own date type in the "File As" column</li>
+
+    <li class="calibre6"><span class="listheading">Identifier:</span> ISBN</li>
+
+    <li class="calibre6"><span class="listheading">Identifier (custom):</span> you can enter your own identifier type in the "File As" column</li>
+
+    <li class="calibre6"><span class="listheading">Rights:</span> copyright information such as Copyright 2012 An Author</li>
+  </ul>
+
+  <div class="image"><img alt="" src="../Images/metadata_basic.png" class="calibre7"/></div>
+
+  <p class="calibre1">The Add Role metadata contains hundreds of possible activities that people may have performed in the creation of this book such as Authors, Editor, Proofreader, etc.:</p>
+
+  <div class="image"><img alt="" src="../Images/metadata_role.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can add the same type of field multiple times.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can copy an entry by selecting it and clicking the <span class="example">Copy</span> button. You can then modify it as needed.</p>
+
+    <p class="tiptext">You can re-arrange the order of the entries (which may affect how ereaders display the information) by selecting the entries and clicking on the <span class="example">Up</span> or <span class="example">Down</span> buttons.</p>
+  </div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.xhtml">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.xhtml">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.xhtml#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.xhtml">Features</a>
+      <ul>
+        <li>
+          <a href="overview.xhtml">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.xhtml">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.xhtml">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.xhtml">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.xhtml">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.xhtml">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.xhtml">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="table_of_contents.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="find_replace.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

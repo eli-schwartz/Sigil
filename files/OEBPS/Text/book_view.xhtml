@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Book View</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="open_and_save_files.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="code_view.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <div class="calibre9"></div><h2 id="book_view" class="calibre4">Book View</h2>
+
+  <p class="h2subheading">— WYSIWYG Editing —</p>
+
+  <p class="calibre1">Book View (or WYSIWYG mode – what you see is what you get) is one of two ways you can edit your book in Sigil. Book View is what most people use when they start to use Sigil since its the closest to a standard word processor. Its a good way to make basic changes to your book when you aren't too concerned about the underlying HTML code. However, when you want more control over the format of your EPUB or to use Sigil's advanced features then you can use Code View. You can switch between Book View and Code View at any time.</p>
+
+  <p class="calibre1">To switch to Book View use <span class="menuitem">View→Book View</span> or its toolbar icon or keyboard shortcut:</p>
+
+  <div class="image"><img alt="" src="../Images/book_view_window.png" class="calibre7"/></div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">Certain features, like advanced Find &amp; Replace and Spell Check are only available in Code View.</p>
+
+    <p class="tiptext">Book View will do its best to apply the style you intended, but occasionally it will guess wrong and you will need to reformat it. It may even be necessary to use Code View to adjust the formatting.</p>
+
+    <p class="tiptext">If you delete a blank line in Book View, you should click at the end of the previous paragraph then press the Delete key, or use the Backspace key – this is because you will lose the formatting of the following paragraph or header if you press Delete on the blank line.</p>
+
+    <p class="tiptext">Sometimes parts of the text are highlighted even though they are not selected. This is a bug in the Qt libraries used by Sigil and cannot be avoided.</p>
+
+    <p class="tiptext">If you edit some text and the style looks completely wrong, try switching to Code View and back to Book View as this may help refresh the screen.</p>
+
+    <p class="tiptext">If you change styles using stylesheets then you may need to save and re-open your book to see the new styles.</p>
+  </div>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">At the bottom of the Book View window you can see the HTML formatting tags that are applied to the text you have selected.</p>
+  </div>
+
+  <h3 class="heading" id="toolbar_icons">Toolbar Icons</h3>
+
+  <p class="calibre1">In addition to the standard main toolbar icons like Undo, Copy and Paste, the Book View Editor has its own toolbar:</p>
+
+  <div class="image"><img alt="" src="../Images/book_view_toolbar_all.png" class="calibre7"/></div>
+
+  <p class="calibre1">Details of each what each icon is used for is below:</p>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_paste.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Paste as plain text:</span> standard paste of text</li>
+
+      <li class="calibre6"><span class="listheading">Paste from Word:</span> removes certain styling from text copied from Word to avoid issues</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_bold.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">B:</span> make text bold</li>
+
+      <li class="calibre6"><span class="listheading">I:</span> make text italic</li>
+
+      <li class="calibre6"><span class="listheading">U:</span> make text underlined</li>
+
+      <li class="calibre6"><span class="listheading">abc:</span> make text striked through</li>
+
+      <li class="calibre6"><span class="listheading">X<span class="subscript">2</span>:</span> make text subscript</li>
+
+      <li class="calibre6"><span class="listheading">X<span class="superscript">2</span>:</span> make text superscript, useful for footnotes (but harder to use on touch screens)</li>
+
+      <li class="calibre6"><span class="listheading">Erase:</span> remove basic formatting (styles, classes but not ids) from selected text</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_list.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Numbered List:</span> change text into a list of items preceded by numbers</li>
+
+      <li class="calibre6"><span class="listheading">Bullet List:</span> change text into a list of items preceded by dots</li>
+
+      <li class="calibre6"><span class="listheading">Outdent:</span> remove an indent from the text</li>
+
+      <li class="calibre6"><span class="listheading">Indent:</span> move text to the right</li>
+
+      <li class="calibre6"><span class="listheading">Block Quote:</span> change text into a separate paragraph that may be treated as a quotation</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_justify.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Left Justify:</span> align text to the left margin</li>
+
+      <li class="calibre6"><span class="listheading">Center:</span> align text centered on the screen</li>
+
+      <li class="calibre6"><span class="listheading">Right Justify:</span> align text to the right margin</li>
+
+      <li class="calibre6"><span class="listheading">Normal:</span> reset to unjustified text</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_direction.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Left to Right:</span> set the direction of text from left to right</li>
+
+      <li class="calibre6"><span class="listheading">Right to Left:</span> set the direction of text from right to left</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_links.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Link:</span> create or edit a link for the selected text – see the <a href="../Text/tutorial_links.xhtml" class="calibre2">Links and Footnotes</a> chapter</li>
+
+      <li class="calibre6"><span class="listheading">Unlink:</span> remove a link from the selected text</li>
+
+      <li class="calibre6"><span class="listheading">Anchor:</span> create an anchor tag with an ID using the selected text – to use the text as the destination for a link</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_special.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Table:</span> insert simple tables, best used for data not for formatting text</li>
+
+      <li class="calibre6"><span class="listheading">Insert horizontal line:</span> insert a line in the text</li>
+
+      <li class="calibre6"><span class="listheading">Insert special character:</span> choose from special characters like Æ, ©, →, £, ½, É to insert</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_format.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Format:</span> contains formats to use for Chapter Headings (use Normal to change back to a standard paragraph and the erase icon to remove old formatting or style classes)</li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/book_view_toolbar_color.png" class="calibre7"/></p>
+
+    <ul class="calibre5">
+      <li class="calibre6"><span class="listheading">Text Color:</span> set the color of the text</li>
+
+      <li class="calibre6"><span class="listheading">Background Color:</span> set the color of the text background</li>
+    </ul>
+  </div>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">Double click on an image to show the image's filename.</p>
+  </div>
+
+  <h3 class="heading" id="customising_toolbar">Customizing the Toolbar</h3>
+
+  <p class="calibre1">The Book View editor uses the open-source CKEditor software. This is an extremely flexible editor that can be customized by advanced users.</p>
+
+  <div class="tip">
+    <p class="tipheader">Warning</p>
+
+    <p class="tiptext">Customizing the CKEditor settings is not supported, and it could result in some things breaking. If you are willing to customize the look of the Book View editor, then it may be better if you considering using Code View instead where you can control even more of what formats are used.</p>
+  </div>
+
+  <p class="calibre1">To modify the look and functionality of the Book View editor in Sigil you need to create a custom configuration file that Sigil will read when it starts. You can use this file to change what buttons are displayed, what menu items are shown for the editor, and what formats are applied when you select the icons or menu entries.</p>
+
+  <p class="calibre1">The official CKEditor documentation listing all the available configuration options is available at:</p>
+
+  <p class="indent"><a href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html" class="calibre2">CKEditor Documentation</a> [http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html]</p>
+
+  <p class="calibre1">In Sigil, you need to create this file</p>
+  <pre class="example1">
+ckeditor_config.js</pre>
+
+  <p class="calibre1">and store it in Sigil's user directory (on linux this is '$HOME/.local/share/data/sigil-ebook/sigil/. You can find it by going to Spell Check in Preferences and selecting Open Dictionary Directory, then going up one level once the directory is open.</p>
+
+  <p class="calibre1">Here is a configuration file as an example:</p>
+  <pre class="example1">
+CKEDITOR.editorConfig = function(config)
+{
+    // Toolbar example - commenting some icons out from default settings
+    config.toolbarCanCollapse = false;
+    config.toolbar = 'Full';
+    config.toolbar_Full =
+    [
+        { name: 'clipboard', items : [ 'PasteText','PasteFromWord' ] },
+        { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+        { name: 'format', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv', ] },
+        { name: 'align', items : ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+        //{ name: 'direction', items : [ 'BidiLtr','BidiRtl' ] },
+        { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+        { name: 'insert', items : [ 'Table','HorizontalRule','SpecialChar','PageBreak' ] },
+        { name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
+        //{ name: 'colors', items : [ 'TextColor','BGColor' ] },
+    ]
+
+    // Size Menu
+    config.fontSize_sizes = '80%/80%;90%/90%;100%/;110%/110%;120%/120%;1 em/1em; 2em/2em';
+
+    config.font_names =
+        'Arial/Arial, Helvetica, sans-serif;';
+
+    // Styles Menu - class names must be defined in your CSS in order to be useful
+    config.stylesSet = [
+        { name : 'Strong', element : 'strong' },
+        { name : 'Emphasis', element : 'em' },
+        { name : 'Span Class Example', 
+            element : 'span', 
+            attributes : { 'class' : 'example' } },
+    ];
+
+};
+
+</pre>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.xhtml">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.xhtml">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.xhtml#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.xhtml">Features</a>
+      <ul>
+        <li>
+          <a href="overview.xhtml">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.xhtml">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.xhtml">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.xhtml">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.xhtml">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.xhtml">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.xhtml">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="open_and_save_files.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="code_view.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

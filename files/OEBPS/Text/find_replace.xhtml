@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Find &amp; Replace</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="metadata_editor.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="images.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="find_and_replace" class="calibre4">Find &amp; Replace</h2>
+
+  <p class="h2subheading">— Searching In Code View —</p>
+
+  <p class="calibre1">Finding text and updating it is one of the most common tasks in Sigil – to look for words, to remove unwanted text in one file, or to change the formatting of specific items in the entire book. In fact, if you ever need to make lots of changes to your text you will almost certainly want to use Find &amp; Replace since it allows you to quickly make a large number of edits across all your files.</p>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">Most Find &amp; Replace functions are only available in Code View. In fact, Book View only supports finding text in the current file. This chapter assumes you will use Find &amp; Replace in Code View.</p>
+  </div>
+
+  <p class="calibre1">To open the Find &amp; Replace dialog, use the menu option <span class="menuitem">Search→Find/Replace:</span> or the keyboard shortcut <span class="example">Ctrl+F</span>:</p>
+
+  <div class="image"><img alt="" src="../Images/find_code_view_window.png" class="calibre7"/></div>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">Keyboard shortcuts exist for many find and replace operations – such as <span class="example">Ctrl+G</span> to find again. See the <span class="menuitem">Search</span> menu for a list of shortcuts.</p>
+  </div>
+
+  <p class="calibre1">You can set various modes (Normal, Case-Sensitive, search some or all HTML files, search down, etc.) to modify the behavior of the actions you select (count, find, replace, etc.).</p>
+
+  <p class="calibre1">When open, the Find &amp; Replace dialog is always positioned at the bottom of the editing windows for easy access.</p>
+
+  <h3 class="heading" id="find_actions">Actions</h3>
+
+  <p class="calibre1">The four buttons on the right are used to run your search commands.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">After you run a find, replace or count, the text you entered in either the Find or Replace box is saved and is available for you to select later. Click the down-arrow to the right of the Find (or Replace) text box to show the list of items in the search histories.</p>
+
+    <p class="tiptext">Whenever you run a search, the results are shown in the Find &amp; Replace status bar.</p>
+  </div>
+
+  <h4 class="sigilNotInTOC" id="heading_id_20">Find</h4>
+
+  <p class="calibre1">Finds the next occurrence of your search term and highlights it.</p>
+
+  <p class="calibre1">To search for text, enter it in in the Find text box and press the <span class="example">Find</span> button. Any text in the Replace box is ignored if you are just doing a Find.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">If you select text and then use <span class="example">Ctrl+F</span> to open or re-open the Find box, your selected text will be placed in the Find box.</p>
+  </div>
+
+  <h4 class="sigilNotInTOC" id="count_all">Count All</h4>
+
+  <p class="calibre1">Displays a count of the number of times the search term you entered in the Find text box occurs in the selected files.</p>
+
+  <p class="calibre1">Count All always counts from the start of a file.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">Its a good idea to run Count All before doing a Replace to check the number of replacements are what you expect. And you should run it after a Replace All in case the particular search and replace created new matches.</p>
+  </div>
+
+  <h4 class="sigilNotInTOC" id="heading_id_4">Replace</h4>
+
+  <p class="calibre1">Replaces one occurrence of your search term in your text at a time.</p>
+
+  <p class="calibre1">To replace text, enter the old text in the Find box, and the new text in the Replace box. Then select <span class="example">Replace</span>.</p>
+
+  <p class="calibre1">The first time you do a Replace the first match will be highlighted. Subsequent Replaces will replace the highlighted matched text and then highlight the next match.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can use the Undo icon or right-click in the editing window and select Undo to change the text back. But if you are replacing across files and your next match is on a different page, you need to switch back to the file containing the replaced text before selecting undo.</p>
+
+    <p class="tiptext">You can safely use Replace instead of Find if no text is selected since it will act just like Find until a match is highlighted.</p>
+  </div>
+
+  <h4 class="sigilNotInTOC" id="heading_id_5">Replace All</h4>
+
+  <p class="calibre1">Replaces all text matching your search term with your replace term in all the selected files. This is done all at once automatically.</p>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">You cannot undo a Replace All.</p>
+  </div>
+
+  <p class="calibre1">Replace All always replaces from the start of a file.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">Test your find and replace strings using Replace a few times before using Replace All to avoid surprises.</p>
+
+    <p class="tiptext">Save your book before a Replace All and check it after the replace in case of issues.</p>
+
+    <p class="tiptext">Check if your mode is set for <span class="example">Current File</span> or <span class="example">All HTML Files</span>.</p>
+  </div>
+
+  <h3 class="heading" id="find_what">Mode – What to Search</h3>
+
+  <p class="calibre1">You can control what type of text to search for using these options.</p>
+
+  <h4 class="sigilNotInTOC">Normal</h4>
+
+  <p class="calibre1">This mode will search for exactly what you type except that it will ignore case, e.g. “A” and “a” will be considered the same letter.</p>
+
+  <h4 class="sigilNotInTOC" id="heading_id_10">Case Sensitive</h4>
+
+  <p class="calibre1">This mode will search for exactly what you type.</p>
+
+  <h4 class="sigilNotInTOC" id="heading_id_11">Regex</h4>
+
+  <p class="calibre1">Regex is an abbreviation of “Regular Expression”. This mode allows you to search for patterns instead of exact words or characters.</p>
+
+  <p class="calibre1">For instance, you can search for “Page [0-9]+” which will find "Page" followed by one or more numbers.</p>
+
+  <p class="calibre1">Regex is very powerful and one of the main benefits of using Sigil to work with ebooks.</p>
+
+  <p class="calibre1">See the <a href="../Text/tutorial_regex.xhtml" class="calibre2">Regular Expressions</a> chapter for more details about using regex.</p>
+
+  <h4 class="sigilNotInTOC" id="heading_id_12">Spell Check</h4>
+
+  <p class="calibre1">In Spell Check mode, Find can be used to find the next misspelled word.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">In Code View you can set your preferences to show misspelled words with a wavy red underline, but this means you have to scroll through the document to find each misspelled word. Using Spell Check mode in Find &amp; Replace allows you to find misspelled words one by one.</p>
+  </div>
+
+  <p class="calibre1">To use Spell Check mode, make sure the Find text box is empty, then click Find to find the next misspelled word.</p>
+
+  <p class="calibre1">You can then edit the word in the text or use replace. If automatic spell checking is on you can also right-click the misspelled word to select an alternative.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can use Count All to easily count the number of misspelled words.</p>
+
+    <p class="tiptext">You can also use a regex expression in the Find box if you need to find specific misspelled words or patterns.</p>
+  </div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">See the <a href="../Text/spellcheck.xhtml" class="calibre2">Spell Check</a> chapter for more information about spell checking.</p>
+  </div>
+
+  <h3 class="heading" id="find_where">Mode – Where to Search</h3>
+
+  <p class="calibre1">You can control which files to search with these options making it easy to search all or just some of your files.</p>
+
+  <h4 class="sigilNotInTOC">Current File</h4>
+
+  <p class="calibre1">This restricts your search to just the file you are viewing. You can search HTML files and Style files.</p>
+
+  <p class="calibre1">If your search reaches the end of the file it will automatically wrap around and search from the other end of the file. You will see a small picture of an arrow flash on the screen to indicate the search wrapped around.</p>
+
+  <h4 class="sigilNotInTOC" id="heading_id_15">All HTML Files</h4>
+
+  <p class="calibre1">This searches in every HTML file.</p>
+
+  <p class="calibre1">When a search reaches the end or beginning of the book it will automatically move to the next or previous file (in the order listed in the book browser), and it will loop around when all files have been searched.</p>
+
+  <h4 class="sigilNotInTOC" id="heading_id_16">Selected HTML Files</h4>
+
+  <p class="calibre1">This searches only the HTML files that you selected in the Book Browser.</p>
+
+  <p class="calibre1">When a search reaches the end of a file it will automatically move to the next or previous selected file (in the order listed in the book browser), and it will loop around when all files have been searched.</p>
+
+  <h3 class="heading">Mode – Search Direction</h3>
+
+  <p class="calibre1">You can control the direction of searching with these options.</p>
+
+  <h4 class="sigilNotInTOC">Up</h4>
+
+  <p class="calibre1">Searches from your position in the document upwards – finds the previous occurrence of your search.</p>
+
+  <h4 class="sigilNotInTOC" id="heading_id_19">Down</h4>
+
+  <p class="calibre1">Searches from your position in the document downwards – finds the next occurrence of your search.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.xhtml">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.xhtml">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.xhtml#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.xhtml">Features</a>
+      <ul>
+        <li>
+          <a href="overview.xhtml">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.xhtml">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.xhtml">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.xhtml">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.xhtml">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.xhtml">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.xhtml">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="metadata_editor.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="images.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

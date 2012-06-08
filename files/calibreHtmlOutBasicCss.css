@@ -1,0 +1,59 @@
+body{
+  margin:0px;
+  padding: 0.5em;
+}
+
+.calibreMeta{
+  background-color:#c0e0e0;
+  color:darkblue;
+  font-family: arial, helvetica, serif;
+  padding:10px;
+}
+
+.calibreMeta a, .calibreEbNav a, .calibreEbNavTop a, .calibreToc a{
+  color:darkblue;
+  font-family: arial, helvetica, serif;
+}
+
+.calibreMeta h1{
+  margin:0px;
+  font-size:18px;
+  background-color:#c0e0e0;
+}
+
+.calibreEbookContent{
+  padding:20px;
+}
+
+.calibreEbNav, .calibreEbNavTop{
+  clear:both;
+  background-color:#c0e0e0;
+  padding:10px;
+  text-align:center;
+}
+
+.calibreEbNavTop{
+  margin-bottom:20px;
+}
+
+.calibreEbNav a, .calibreEbNavTop a{
+  padding:0px 5px;
+}
+
+.calibreTocIndex{
+  line-height:18px;
+}
+
+.calibreToc{
+  float:left;
+  margin:20px;
+  width:300px;
+  background-color:#c0e0e0;
+  color:black;
+  padding:10px;
+  font-size:smaller;
+}
+.calibreEbookContent{
+  width:600px;
+  float:left;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Embedding Fonts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="tutorial_stylesheets.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="tutorial_tips.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="fonts" class="calibre4">Embed Fonts</h2>
+
+  <p class="h2subheading">— Using Custom Fonts In Your Book —</p>
+
+  <p class="calibre1">This tutorial shows you how to use custom fonts in your EPUB.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">One of the benefits of ereaders is that you can choose your own font, so its usually best to just use embedded fonts to highlight specific types of text such as chapter headings, quotes, etc. and not to change the font of the entire book.</p>
+  </div>
+
+  <p class="calibre1">To use a font in an EPUB you must first load the font into the EPUB, define a style for the font, and then apply the style to your text.</p>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">You will need to know about stylesheets to embed fonts so you should read through the <a href="../Text/tutorial_stylesheets.xhtml" class="calibre2">Stylesheets</a> chapter first.</p>
+  </div>
+
+  <h3 class="heading">Adding Fonts to your EPUB</h3>
+
+  <p class="calibre1">To add fonts to your book, use <span class="menuitem">File→New→Add Existing Files</span>, or right click in the Book Browser and select Add Existing Files from the context menu. This will display a dialog allowing you to select one or more files from your computer. Select as many font files as you want.</p>
+
+  <p class="calibre1">The fonts will be added to the Fonts folder in the Book Browser. However, they are not yet actually used anywhere in your book – they are just available to use.</p>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">Many fonts are not free. Before you include fonts in your EPUB please make sure that you have a license or permission to use them. There are many free fonts available online if you search for them.</p>
+
+    <p class="tiptext">Fonts files must be either OpenType (<span class="example">.otf</span>) or TrueType (<span class="example">.ttf</span>) format. All ereaders should support <span class="example">otf</span> but most will likely support both formats.</p>
+  </div>
+
+  <h3 class="heading" id="inserting_images">Defining Styles for Your Font</h3>
+
+  <p class="calibre1">Once the fonts are in your EPUB, you must define a style that includes them.</p>
+
+  <p class="calibre1">Open a stylesheet that you will use to include your fonts (see the <a href="../Text/tutorial_stylesheets.xhtml" class="calibre2">Stylesheets</a> chapter for more details).</p>
+
+  <p class="calibre1">Add a definition of the font, e.g.:</p>
+  <pre class="example1">
+@font-face {
+    font-family: 'MyFont';
+    font-weight: normal;
+    font-style: normal;
+    src: url(MyFont.ttf);
+}
+
+@font-face {
+    font-family: 'MyFontBold';
+    font-weight: bold;
+    font-style: normal;
+    src: url(MyFontBold.ttf);
+}
+</pre>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">You must define one @font-face rule for each style of font (normal, bold, italics, etc.).</p>
+
+    <p class="tiptext">When using font-family in @font-face and later, the font name must either be quoted or unquoted every time you use it, but not both. Always using quotes around the font name makes things more consistent and avoids having to check if a name is valid without quotes.</p>
+  </div>
+
+  <p class="calibre1">The font still isn't actually being used in the book yet, that's the next step.</p>
+
+  <h3 class="heading">Apply Your Font to Text</h3>
+
+  <p class="calibre1">To make use of the font you need to create another style that you will then assign to sections of your text.</p>
+
+  <p class="calibre1">So, for example, to use your new font for headings, define the style for the heading tag as follows:</p>
+  <pre class="example1">
+h1 { 
+    font-family: 'MyFontBold', serif 
+}</pre>
+
+  <p class="calibre1">Or to certain paragraphs:</p>
+  <pre class="example1">
+p.longhand { 
+    font-family: 'MyScriptFontItalic', serif 
+}</pre>
+
+  <p class="calibre1">Or if you want, although its not recommended, you can apply the font to all text in the book:</p>
+  <pre class="example1">
+body { 
+    font-family: 'MyFont', serif 
+}</pre>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">The font-family rule above says to use your font if possible for the text, but if its not possible use a generic serif font.</p>
+  </div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">You may need to save your EPUB and then re-open it in Sigil to make sure Sigil reads your new style.</p>
+
+    <p class="tiptext">Due to a bug in the Qt libraries used by Sigil, fonts may not display correctly in Sigil so you will may have to test them on your target ereaders.</p>
+  </div>
+
+  <h3 class="heading" id="heading_id_3">Font Obfuscation</h3>
+
+  <p class="calibre1">When you use a font in an EPUB, the font file could be extracted by someone and used somewhere else. If your fonts are licensed you may want to prevent this.</p>
+
+  <p class="calibre1">You can use Sigil's font obfuscation menu to scramble the font file using one of two standard methods, Adobe or IDPF – which one is up to you, but you should test on your target ereader to make sure the font is still readable. Obfuscation is not encryption – it just modifies the font file making it hard to use elsewhere while still being useable by readers to display fonts.</p>
+
+  <p class="calibre1">To use font obfuscation, right click on your fonts in the Book Browser window, right-click and select Font Obfuscation from the menu and choose a method to use for obfuscation.</p>
+
+  <div class="image"><img alt="" src="../Images/fonts_obfuscation_menu.png" class="calibre7"/></div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.xhtml">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.xhtml">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.xhtml#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.xhtml#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.xhtml">Features</a>
+      <ul>
+        <li>
+          <a href="overview.xhtml">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.xhtml">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.xhtml">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.xhtml">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.xhtml">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.xhtml">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.xhtml">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="tutorial_stylesheets.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="tutorial_tips.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>
