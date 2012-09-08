@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>User Interface</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="overview.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="open_and_save_files.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="user_interface" class="calibre5">User Interface</h2>
+
+  <p class="h2subheading">— Windows, Menus and Toolbars —</p>
+
+  <p class="calibre1">Sigil provides several ways to use its features and run commands: main menu entries (like <span class="menuitem">File→Open</span>), icons on toolbars, keyboard shortcuts (like <span class="example">Ctrl+S</span> to save your file), and Context Menus (shown when you right click on something like a filename).</p>
+
+  <p class="calibre1">The main actions are shown below, but you should refer to individual chapters in the guide for more details, including Book View icons and context menu options.</p>
+
+  <div class="image"><img alt="" src="../Images/interface_empty_window.png" class="calibre8"/></div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">Since Sigil runs on many OS's the screenshots in the User Guide may not exactly match what you see on your computer.</p>
+  </div>
+
+  <h3 class="heading" id="windows">Windows</h3>
+
+  <p class="calibre1">Sigil uses various windows in the main interface to present information: a window to show your files, to edit your book, to view your table of contents, etc.</p>
+
+  <p class="calibre1">Certain windows can be moved. For example, you can move the Table of Contents window to the left under the Book Browser instead of on the right, and you can even undock some windows (separate them from the main Sigil window):</p>
+
+  <div class="image"><img alt="" src="../Images/interface_rearranged_window.png" class="calibre8"/></div>
+
+  <p class="calibre1">To move, dock or undock a window click on the heading of the window and drag it to its new location. (In some OS's you can also undock and re-dock the windows by clicking on the little icon in the top right corner of the Book Browser or TOC window.)</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">To re-dock a separate window, double click on its title bar.</p>
+
+    <p class="tiptext">To hide or show specific windows use the <span class="menuitem">View</span> menu.</p>
+  </div>
+
+  <h3 class="heading" id="main_menu">Main Menu</h3>
+
+  <p class="calibre1">This is the list of menu items that is always at the top of Sigil's window or your screen:</p>
+
+  <div class="image"><img alt="Sigil's main menu" src="../Images/main_menu.png" class="calibre8"/></div>
+
+  <p class="heading1">File</p>
+
+  <ul class="calibre4">
+    <li class="calibre6">
+      <span class="listheading">New:</span>
+
+      <ul class="calibre7">
+        <li class="calibre6"><span class="listheading">New Book:</span> create a new, empty EPUB</li>
+
+        <li class="calibre6"><span class="listheading">Blank Section:</span> create a new HTML file in the book</li>
+
+        <li class="calibre6"><span class="listheading">Blank Stylesheet:</span> create a new CSS Stylesheet in the book</li>
+
+        <li class="calibre6"><span class="listheading">Add Existing File(s):</span> add HTML files, images, etc. from your computer</li>
+      </ul>
+    </li>
+
+    <li class="calibre6"><span class="listheading">Open:</span> open an EPUB or HTML file from your computer – see the <a href="../Text/open_and_save_files.html" class="calibre2">Open and Save Files</a> chapter</li>
+
+    <li class="first"><span class="listheading">Save:</span> save your file (use often!)</li>
+
+    <li class="calibre6"><span class="listheading">Save As:</span> save your file under a different name</li>
+
+    <li class="first"><span class="listheading">Print Preview:</span> preview the printing of the current tab</li>
+
+    <li class="calibre6"><span class="listheading">Print:</span> print the current tab</li>
+
+    <li class="first"><span class="listheading">Validate EPUB:</span> check if your book meets EPUB standards (see <a href="../Text/validation.html" class="calibre2">Validate and Clean</a>)</li>
+
+    <li class="first">List of recently opened files</li>
+
+    <li class="first"><span class="listheading">Quit:</span> exit Sigil, asking if you want to save your file first if it hasn't been saved</li>
+  </ul>
+
+  <p class="heading1">Edit</p>
+
+  <ul class="calibre4">
+    <li class="calibre6"><span class="listheading">Undo:</span> restore text just deleted, inserted or replaced</li>
+
+    <li class="calibre6"><span class="listheading">Redo:</span> reverse the last Undo</li>
+
+    <li class="first"><span class="listheading">Cut:</span> remove the selected text and store it for paste</li>
+
+    <li class="calibre6"><span class="listheading">Copy:</span> copy the selected text and store it for paste</li>
+
+    <li class="calibre6"><span class="listheading">Paste:</span> insert previously cut or copied text into your document</li>
+
+    <li class="first"><span class="listheading">Metadata Editor:</span> open the Metadata Editor – see the <a href="../Text/metadata_editor.html" class="calibre2">Metadata Editor</a> chapter</li>
+
+    <li class="calibre6"><span class="listheading">Insert Image:</span> insert an image in the EPUB into the text – see the <a href="../Text/images.html" class="calibre2">Images</a> chapter</li>
+
+    <li class="first"><span class="listheading">Split Chapter:</span> split the current file into 2 files at the end of the paragraph – see the <a href="../Text/splitting_and_merging.html" class="calibre2">Splitting and Merging</a> chapter</li>
+
+    <li class="calibre6"><span class="listheading">Insert Chapter Marker:</span> insert a chapter marker to use for splitting</li>
+
+    <li class="calibre6"><span class="listheading">Split at Chapter Markers:</span> split the current file at inserted chapter markers</li>
+
+    <li class="first">
+      <span class="listheading">Clean Source:</span> see the <a href="../Text/validation.html" class="calibre2">Validate and Clean</a> chapter (you must restart Sigil for new settings to take effect)
+
+      <ul class="calibre7">
+        <li class="calibre6"><span class="listheading">Off:</span> no automatic cleaning of code will be done</li>
+
+        <li class="calibre6"><span class="listheading">Pretty Print:</span> clean up spacing and layout of code but do not change any code</li>
+
+        <li class="calibre6"><span class="listheading">Tidy:</span> clean up code, convert some formats to inline styles, etc.</li>
+      </ul>
+    </li>
+
+    <li class="calibre6"><span class="listheading">Check For Well-Formed Errors:</span> check for invalid HTML – see the <a href="../Text/validation.html" class="calibre2">Validate and Clean</a> chapter</li>
+
+    <li class="first"><span class="listheading">Preferences:</span> open the Preferences window – see the <a href="../Text/preferences.html" class="calibre2">Preferences</a> chapter</li>
+  </ul>
+
+  <p class="heading1">Search</p>
+
+  <ul class="calibre4">
+    <li class="calibre6"><span class="listheading">Find / Replace:</span> open the Find &amp; Replace window – see the <a href="../Text/find_replace.html" class="calibre2">Find &amp; Replace</a> chapter</li>
+
+    <li class="first"><span class="listheading">Find Next:</span> search forwards for the next matching text</li>
+
+    <li class="calibre6"><span class="listheading">Find Previous:</span> search backwards for the next matching text</li>
+
+    <li class="first"><span class="listheading">Replace Next:</span> replace any matched text and search forwards for the next matching text</li>
+
+    <li class="calibre6"><span class="listheading">Replace Previous:</span> replace any matched text and search backwards for the next matching text</li>
+
+    <li class="calibre6"><span class="listheading">Replace All:</span> replace every matching text according to the Find &amp; Replace settings</li>
+
+    <li class="first"><span class="listheading">Count All:</span> count every matching text according to the Find &amp; Replace settings</li>
+
+    <li class="first"><span class="listheading">Go to Line:</span> jump to a specific line number in Code View</li>
+  </ul>
+
+  <p class="heading1">View</p>
+
+  <ul class="calibre4">
+    <li class="calibre6">
+      <span class="listheading">Toolbars</span>
+
+      <ul class="calibre7">
+        <li class="calibre6"><span class="listheading">File:</span> show or hide the open and save icons</li>
+
+        <li class="calibre6"><span class="listheading">Edit:</span> show or hide the undo and cut icons</li>
+
+        <li class="calibre6"><span class="listheading">View:</span> show or hide the Book and Code view icons</li>
+
+        <li class="calibre6"><span class="listheading">Insert:</span> show or hide the insert chapter and image icons</li>
+
+        <li class="calibre6"><span class="listheading">Donate:</span> show or hide the Donate icon</li>
+
+        <li class="calibre6"><span class="listheading">Quick Settings:</span> show or hide the quick settings icons</li>
+      </ul>
+    </li>
+
+    <li class="first"><span class="listheading">Book View:</span> switch to Book View for editing</li>
+
+    <li class="calibre6"><span class="listheading">Preview View:</span> switch to Preview View for reviewing</li>
+
+    <li class="calibre6"><span class="listheading">Code View:</span> switch to Code View for editing</li>
+
+    <li class="first"><span class="listheading">Zoom In:</span> increase the size of text and images in the view</li>
+
+    <li class="calibre6"><span class="listheading">Zoom Out:</span> decrease the size of text and images in the view</li>
+
+    <li class="calibre6"><span class="listheading">Zoom Reset:</span> reset the window zoom to 100%</li>
+
+    <li class="first"><span class="listheading">Book Browser:</span> open or close the book browser window</li>
+
+    <li class="calibre6"><span class="listheading">Validation Results:</span> open or close the validation window</li>
+
+    <li class="calibre6"><span class="listheading">Table of Contents:</span> open or close the TOC window</li>
+  </ul>
+
+  <p class="heading1">Window</p>
+
+  <ul class="calibre4">
+    <li class="calibre6"><span class="listheading">Next Tab:</span> change view to the following tab</li>
+
+    <li class="calibre6"><span class="listheading">Previous Tab:</span> change view to the preceding tab</li>
+
+    <li class="calibre6"><span class="listheading">Close Tab:</span> close the current tab</li>
+
+    <li class="calibre6"><span class="listheading">Close Other Tabs:</span> close all tabs other than the current tab</li>
+
+    <li class="first"><span class="listheading">Open Previous File:</span> open the file above the selected file in the Book Browser</li>
+
+    <li class="calibre6"><span class="listheading">Open Next File:</span> open the file below the selected file in the Book Browser</li>
+  </ul>
+
+  <p class="heading1">Help</p>
+
+  <ul class="calibre4">
+    <li class="calibre6"><span class="listheading">User Guide:</span> the official Sigil User Guide</li>
+
+    <li class="calibre6"><span class="listheading">Frequently Asked Questions:</span> common questions about Sigil</li>
+
+    <li class="calibre6"><span class="listheading">Tutorials:</span> step by step guides to using Sigil</li>
+
+    <li class="first"><span class="listheading">Donate:</span> how to donate to ongoing development</li>
+
+    <li class="calibre6"><span class="listheading">Report an Issue:</span> how to submit a bug report</li>
+
+    <li class="calibre6"><span class="listheading">Sigil DevBlog:</span> occasional updates about development</li>
+
+    <li class="calibre6"><span class="listheading">About:</span> Sigil version and author information</li>
+  </ul>
+
+  <h3 class="heading" id="main_toolbar">Main Toolbar</h3>
+
+  <p class="calibre1">This is the list of icons that are always at the top of Sigil's window:</p>
+
+  <div class="image"><img alt="Main toolbar" src="../Images/main_toolbar.png" class="calibre8"/></div>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can move sets of icons around to change their order or to place them to the left or right of the main window. Click and hold on the small bar to the left of each group of icons, then drag it to where you want it.</p>
+
+    <p class="tiptext">Right click on the toolbar to easily select which icons or windows to show.</p>
+  </div>
+
+  <p class="calibre1">The icons are listed below with their equivalent menu entry.</p>
+
+  <div class="toolbar">
+    <img alt="" src="../Images/main_toolbar_file.png" class="calibre8"/>
+
+    <ul class="calibre4">
+      <li class="calibre6"><span class="listheading">New:</span> <span class="menuitem">File→New→New Book</span></li>
+
+      <li class="calibre6"><span class="listheading">Open:</span> <span class="menuitem">File→Open</span></li>
+
+      <li class="calibre6"><span class="listheading">Save:</span> <span class="menuitem">File→Save</span></li>
+
+      <li class="calibre6"><span class="listheading">Save As:</span> <span class="menuitem">File→Save As</span></li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/main_toolbar_edit.png" class="calibre8"/></p>
+
+    <ul class="calibre4">
+      <li class="calibre6"><span class="listheading">Undo:</span> <span class="menuitem">Edit→Undo</span></li>
+
+      <li class="calibre6"><span class="listheading">Redo:</span> <span class="menuitem">Edit→Redo</span></li>
+
+      <li class="first"><span class="listheading">Cut:</span> <span class="menuitem">Edit→Cut</span></li>
+
+      <li class="calibre6"><span class="listheading">Copy:</span> <span class="menuitem">Edit→Copy</span></li>
+
+      <li class="calibre6"><span class="listheading">Paste:</span> <span class="menuitem">Edit→Paste</span></li>
+
+      <li class="first"><span class="listheading">Find &amp; Replace:</span> <span class="menuitem">Search→Find / Replace</span></li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/main_toolbar_view.png" class="calibre8"/></p>
+
+    <ul class="calibre4">
+      <li class="calibre6"><span class="listheading">Book View:</span> <span class="menuitem">View→Book View</span></li>
+
+      <li class="calibre6"><span class="listheading">Preview View:</span> <span class="menuitem">View→Preview View</span></li>
+
+      <li class="calibre6"><span class="listheading">Code View:</span> <span class="menuitem">View→Code View</span></li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/main_toolbar_insert.png" class="calibre8"/></p>
+
+    <ul class="calibre4">
+      <li class="calibre6"><span class="listheading">Split Chapter:</span> <span class="menuitem">Edit→Split Chapter</span></li>
+
+      <li class="calibre6"><span class="listheading">Insert Image:</span> <span class="menuitem">Edit→Insert Image</span></li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/main_toolbar_donate.png" class="calibre8"/></p>
+
+    <ul class="calibre4">
+      <li class="calibre6"><span class="listheading">Donate:</span> <span class="menuitem">Help→Donate</span></li>
+    </ul>
+  </div>
+
+  <div class="toolbar">
+    <p class="calibre1"><img alt="" src="../Images/main_toolbar_quick.png" class="calibre8"/></p>
+
+    <ul class="calibre4">
+      <li class="calibre6"><span class="listheading">Check For Well-Formed Errors:</span> <span class="menuitem">Edit→Check For Well-formed errors</span></li>
+
+      <li class="calibre6"><span class="listheading">Validate:</span> <span class="menuitem">File→Validate Epub</span></li>
+    </ul>
+  </div>
+
+  <h3 class="heading" id="keyboard_shortcuts">Keyboard Shortcuts</h3>
+
+  <p class="calibre1">Keyboard shortcuts (e.g. <span class="example">Ctrl+S</span> for Save) are shown next to menu entries and in Keyboard Shortcuts in <span class="menuitem">Edit→Preferences</span>.</p>
+
+  <p class="calibre1">You can change the default keyboard shortcuts in Preferences.</p>
+
+  <h3 class="heading" id="context_menus">Context Menus</h3>
+
+  <p class="calibre1">Context Menus are menus that appear when you right-click on something – like a file in the Book Browser or a misspelled word in Code View. Context menu items are discussed in related chapters.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">When in doubt, right-click on something to see if there are additional actions available!</p>
+  </div>
+
+  <h3 class="heading" id="zoom">Zoom</h3>
+
+  <p class="calibre1">On the lower right of the main window is a zoom control that lets you shrink or enlarge the text and images in the main view:</p>
+
+  <div class="image"><img alt="" src="../Images/main_zoom.png" class="calibre8"/></div>
+
+  <p class="calibre1">The 100% indicates the zoom level of the view and this percentage will increase or decrease when you click on the + or – icons.</p>
+
+  <h3 class="heading" id="status_bar">Status Bar</h3>
+
+  <p class="calibre1">The bottom area on the main window (to the left of the zoom control) will occasionally list status information when an action is completed, like <span class="example">File Saved</span>.</p>
+
+  <p class="calibre1">The status bar can also show information about the currently opened file, such as Line and Column in Code View.</p>
+
+  <h3 class="heading" id="tooltips">Tooltips</h3>
+
+  <p class="calibre1">Many of the buttons, dropdown boxes, labels and fields have tooltips that provide information on how they are used.</p>
+
+  <p class="calibre1">To see a tooltip just hover your mouse over the button or other item and the help text should be displayed.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.html">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.html">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.html#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.html#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.html#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
+      <ul>
+        <li>
+          <a href="overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.html">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.html">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.html">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.html">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.html">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.html">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.html">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="overview.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="open_and_save_files.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

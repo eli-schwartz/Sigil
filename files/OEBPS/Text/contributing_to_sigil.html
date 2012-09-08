@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Overview</title>
+    <title>Contributing to Sigil</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
@@ -40,55 +40,65 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="features.html" class="calibreAPrev">previous page</a>
+          <a href="faq.html" class="calibreAPrev">previous page</a>
         
 
         
-          <a href="user_interface.html" class="calibreANext"> next page</a>
+          <a href="end.html" class="calibreANext"> next page</a>
         
       </div>
     
 
     
-  <h2 id="overview" class="calibre5">Overview</h2>
+  <h1 id="developer" class="calibre3">Contributing to Sigil</h1>
 
-  <p class="h2subheading">— Sigil Highlights —</p>
+  <p class="h2subheading">— Helping Development —</p>
 
-  <p class="calibre1">This is a quick summary of features in Sigil.</p>
+  <p class="calibre1">Sigil is free and open-source, and it is developed and supported entirely by volunteers. Your contributions can help improve Sigil.</p>
 
-  <div class="image"><img alt="" src="../Images/overview_window_with_book.png" class="calibre8"/></div>
+  <h3 class="heading" id="translating">Translating Sigil</h3>
 
-  <h3 class="heading" id="overview_editing">Editing</h3>
+  <p class="calibre1">Translating Sigil into other languages is highly encouraged. There is an active community of volunteers who translate Sigil already, and new languages can always be added.</p>
 
-  <p class="calibre1">Sigil provides two ways to edit your book – Book View and Code View. The Book View editor is a WYSIWYG editor (based on <a href="http://ckeditor.com/" class="calibre2">CKEditor</a>) which is useful when you need to make basic changes. The Code View editor on the other hand allows you to directly edit the HTML formatting of your files when you want complete control over your book or you want to use Sigil's advanced features. There is also a read-only Preview View which allows you to test modifying styles and to inspect your code in detail. Tabs are opened for each of the files in the EPUB that you edit, and you can even magnify the text. Spell checking with multiple dictionaries is also available.</p>
+  <p class="calibre1">The best way to translate Sigil is to use the web based translation system provided by Transifex. Translations done using Transifex are downloaded just before releasing a new version:</p>
 
-  <h3 class="heading" id="overview_find_and_replace">Find &amp; Replace</h3>
+  <ul class="calibre4">
+    <li class="indent"><a href="http://www.transifex.net/projects/p/sigil/" class="calibre2">Sigil translations @ Transifex</a></li>
+  </ul>
 
-  <p class="calibre1">The ability to search for or replace text is one of the most powerful functions in Sigil. Book View provides a basic find function, but Find &amp; Replace is usually used in Code View where all its features are available and it can be used to change or correct formatting and styles. You can search or replace in one file or in all the files at once, and you can search for simple text or use Regular Expressions.</p>
+  <p class="calibre1">Alternatively you can use local Desktop tools for translation. Sigil uses Qt's Linguist tool for creating and editing translations. You can either download Qt and compile the tools manually or use the pre-built packages:</p>
 
-  <h3 class="heading" id="overview_files">Managing Files</h3>
+  <ul class="calibre4">
+    <li class="indent"><a href="http://code.google.com/p/photivo/downloads/detail?name=translator-tools-win32.zip" class="calibre2">Pre-built Translation tools</a></li>
+  </ul>
 
-  <p class="calibre1">The Book Browser organizes all your files by type and gives you quick access to open files or to modify them. Double-click a file to open it in the editing window, or right-click on selected files to see options for renaming, deleting, merging, adding, linking stylesheets, etc. The HTML files are listed in the order they appear in your book – and you can drag and drop them to reorder them.</p>
+  <p class="calibre1">Updating and creating new translation files using the Desktop tools is the same process:</p>
 
-  <h3 class="heading" id="overview_toc">Table of Contents</h3>
+  <ul class="calibre4">
+    <li class="calibre6">Open a terminal and change to the <span class="example">src/Sigil/Resource_Files/ts</span> directory. This holds all of the raw translation files.</li>
 
-  <p class="calibre1">The Table of Contents (TOC) window shows you exactly what your TOC will look like, and allows you to jump to specific chapters by clicking on chapter names. You can also generate a new TOC based on headings in your book at any time, and create an HTML version of your TOC.</p>
+    <li class="calibre6">Run <span class="example">lupdate ../../ * -ts out.ts</span> to either generate a new translation file or to update an existing one with any new strings that have been added.</li>
 
-  <h3 class="heading" id="overview_metadata">Modifying Book Details</h3>
+    <li class="calibre6">Use Linguist to write translations for the strings in a given ts file.</li>
+  </ul>
 
-  <p class="calibre1">The Metadata Editor provides a quick way to update book details like Title, Author, and Language. You can add any of the hundreds of standard EPUB metadata entries like publication date, co-authors, copyright information, etc.</p>
+  <p class="calibre1">All translations files should have the form <span class="example">sigil_lang.ts</span>. Where lang is a two letter language code. For example the Polish translation will have the filename <span class="example">sigil_pl.ts</span>.</p>
 
-  <h3 class="heading" id="overview_preferences">Preferences</h3>
+  <h3 class="heading" id="heading_id_3">Assisting Users</h3>
 
-  <p class="calibre1">Many settings in Sigil can be customised by opening the Preferences window. In particular you can set Sigil's user interface language, keyboard shortcuts and dictionaries.</p>
+  <p class="calibre1">If you are an experienced Sigil user you can help development by helping to answer user questions – primarily at the official Sigil Forum at MobileRead. You can also check issues on the development website and add comments.</p>
 
-  <h3 class="heading" id="overview_validation">Validation</h3>
+  <h3 class="heading">Coding</h3>
 
-  <p class="calibre1">Sigil performs automatic checking of your code to highlight errors when saving, and it includes the <a href="http://code.google.com/p/flightcrew/" class="calibre2">FlightCrew EPUB validator</a> to help ensure your book conforms to EPUB standards. Sigil can also automatically clean and format your code using <a href="http://tidy.sourceforge.net/" class="calibre2">HTML Tidy</a>.</p>
+  <p class="calibre1">If you are a C++ programmer and have suggestions for improvements or bug fixes you are welcome to submit patches for consideration.</p>
 
-  <h3 class="heading" id="overview_language">Language Support</h3>
+  <h3 class="heading">Donations</h3>
 
-  <p class="calibre1">Sigil has been translated into over 15 languages and makes it easy to change the user interface language as needed. It is written in C++ for high performance and includes full Unicode UTF-16 support.</p>
+  <p class="calibre1">Sigil is free software, but your donations are greatly appreciated.</p>
+
+  <p class="calibre1">Please use <span class="menuitem">Help→Donate</span> to say thanks and to help Sigil development continue.</p>
+
+  <p class="calibre1">The Sigil User Guide is also free. If you've found it useful, please say thanks by <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=UEAZTDD8CBSZQ" class="calibre2">donating directly to the author</a>.</p>
 
 
 
@@ -232,13 +242,13 @@
 
   <div class="calibreEbNav">
     
-      <a href="features.html" class="calibreAPrev">previous page</a>
+      <a href="faq.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="user_interface.html" class="calibreANext"> next page</a>
+      <a href="end.html" class="calibreANext"> next page</a>
     
   </div>
 

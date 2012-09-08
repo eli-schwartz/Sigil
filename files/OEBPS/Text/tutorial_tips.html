@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Overview</title>
+    <title>Tips</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
@@ -40,55 +40,71 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="features.html" class="calibreAPrev">previous page</a>
+          <a href="tutorial_embed_fonts.html" class="calibreAPrev">previous page</a>
         
 
         
-          <a href="user_interface.html" class="calibreANext"> next page</a>
+          <a href="faq.html" class="calibreANext"> next page</a>
         
       </div>
     
 
     
-  <h2 id="overview" class="calibre5">Overview</h2>
+  <h2 id="tips" class="calibre5">Tips</h2>
 
-  <p class="h2subheading">— Sigil Highlights —</p>
+  <p class="h2subheading">— Advice On Using Sigil —</p>
 
-  <p class="calibre1">This is a quick summary of features in Sigil.</p>
+  <p class="calibre1">This chapter is a list of tips from experienced users of Sigil.</p>
 
-  <div class="image"><img alt="" src="../Images/overview_window_with_book.png" class="calibre8"/></div>
+  <p class="calibre1">Everyone uses Sigil differently but the tips may still be helpful to you. Keep in mind that Sigil is used by people making only a few occasional updates to books as well as people converting or cleaning up books professionally on a daily basis.</p>
 
-  <h3 class="heading" id="overview_editing">Editing</h3>
+  <p class="calibre1">When you start to use Sigil more often you may find some of these suggestions useful:</p>
 
-  <p class="calibre1">Sigil provides two ways to edit your book – Book View and Code View. The Book View editor is a WYSIWYG editor (based on <a href="http://ckeditor.com/" class="calibre2">CKEditor</a>) which is useful when you need to make basic changes. The Code View editor on the other hand allows you to directly edit the HTML formatting of your files when you want complete control over your book or you want to use Sigil's advanced features. There is also a read-only Preview View which allows you to test modifying styles and to inspect your code in detail. Tabs are opened for each of the files in the EPUB that you edit, and you can even magnify the text. Spell checking with multiple dictionaries is also available.</p>
+  <ul class="calibre4">
+    <li class="calibre6">Save often to allow automatic error checking and cleanup to run – to catch issues before they become larger.</li>
 
-  <h3 class="heading" id="overview_find_and_replace">Find &amp; Replace</h3>
+    <li class="calibre6">Make backup copies of your file as you edit, especially before doing major changes.</li>
 
-  <p class="calibre1">The ability to search for or replace text is one of the most powerful functions in Sigil. Book View provides a basic find function, but Find &amp; Replace is usually used in Code View where all its features are available and it can be used to change or correct formatting and styles. You can search or replace in one file or in all the files at once, and you can search for simple text or use Regular Expressions.</p>
+    <li class="calibre6">Learn about stylesheets (CSS) and use them to control formatting instead of inline styles. This will make formatting your book much easier in the long run.</li>
 
-  <h3 class="heading" id="overview_files">Managing Files</h3>
+    <li class="calibre6">Use Code View for editing. Book View works great, especially for quick word corrections and some basic styling like headers, but if you want to format a lot of text or to control the exact styles used, then use Code View to avoid Book View using its own styles or inserting extra blank spaces, etc. And since many of Sigil's advanced functions are only available in Code View you should become familiar with it sooner rather than later.</li>
 
-  <p class="calibre1">The Book Browser organizes all your files by type and gives you quick access to open files or to modify them. Double-click a file to open it in the editing window, or right-click on selected files to see options for renaming, deleting, merging, adding, linking stylesheets, etc. The HTML files are listed in the order they appear in your book – and you can drag and drop them to reorder them.</p>
+    <li class="calibre6">Set Clean Source to Pretty Print instead of the default Tidy setting. Then exit and restart Sigil. This will help to clean up the spacing of code without changing styles or the code itself. Using Tidy can be helpful for a lot of people, but once you start editing your HTML code directly you won't want it creating inline style tags or making other changes. If you really don't want your code changed at all, then turn Clean Source off.</li>
 
-  <h3 class="heading" id="overview_toc">Table of Contents</h3>
+    <li class="calibre6">Keep the Well-Formed check turned on. If this is turned off then Sigil will automatically correct errors when you switch views or save – which could mean deleting some of your text. Leaving it on means you will be prompted to fix any errors.</li>
+  </ul>
 
-  <p class="calibre1">The Table of Contents (TOC) window shows you exactly what your TOC will look like, and allows you to jump to specific chapters by clicking on chapter names. You can also generate a new TOC based on headings in your book at any time, and create an HTML version of your TOC.</p>
+  <p class="calibre1">When you have finished editing, consider following this checklist:</p>
 
-  <h3 class="heading" id="overview_metadata">Modifying Book Details</h3>
+  <ul class="calibre4">
+    <li class="calibre6">Validate to check for errors then fix them.</li>
 
-  <p class="calibre1">The Metadata Editor provides a quick way to update book details like Title, Author, and Language. You can add any of the hundreds of standard EPUB metadata entries like publication date, co-authors, copyright information, etc.</p>
+    <li class="calibre6">Spell Check, and consider creating a separate dictionary for your book if it has lots of unique words.</li>
 
-  <h3 class="heading" id="overview_preferences">Preferences</h3>
+    <li class="calibre6">Set Title, Author, Language, Copyright and, if you want, Publication Date, Subject, Description, Copyright and ISBN if there is one.</li>
 
-  <p class="calibre1">Many settings in Sigil can be customised by opening the Preferences window. In particular you can set Sigil's user interface language, keyboard shortcuts and dictionaries.</p>
+    <li class="calibre6">Use Add Semantics to set your cover image and cover file (if you have one) as type Cover.</li>
 
-  <h3 class="heading" id="overview_validation">Validation</h3>
+    <li class="calibre6">Set your first text file (where the book will open) as semantic type Text.</li>
 
-  <p class="calibre1">Sigil performs automatic checking of your code to highlight errors when saving, and it includes the <a href="http://code.google.com/p/flightcrew/" class="calibre2">FlightCrew EPUB validator</a> to help ensure your book conforms to EPUB standards. Sigil can also automatically clean and format your code using <a href="http://tidy.sourceforge.net/" class="calibre2">HTML Tidy</a>.</p>
+    <li class="calibre6">Test your text links or footnote links work as expected.</li>
 
-  <h3 class="heading" id="overview_language">Language Support</h3>
+    <li class="calibre6">Regenerate your TOC or check that it's up to date and working, and regenerate your inline TOC if there is one.</li>
 
-  <p class="calibre1">Sigil has been translated into over 15 languages and makes it easy to change the user interface language as needed. It is written in C++ for high performance and includes full Unicode UTF-16 support.</p>
+    <li class="calibre6">Test your TOC links work as expected.</li>
+
+    <li class="calibre6">Link your stylesheets to all files that need them.</li>
+
+    <li class="calibre6">Search for and remove or update text like &amp;nbsp;, &amp;quot;, &lt;br /&gt;, empty paragraphs &lt;p&gt;&amp;nbsp;&lt;/p&gt;, empty &lt;div&gt; tags, src="", href="", - to ndash, etc..</li>
+
+    <li class="calibre6">Search for sgc- classes, &lt;style&gt; tags or style= attributes and convert them CSS files.</li>
+
+    <li class="calibre6">Scan your book in Code View line by line for unexpected formatting, especially if you've used Book View to make updates.</li>
+
+    <li class="calibre6">Validate again.</li>
+
+    <li class="calibre6">Proofread on actual ereaders. Sigil can only give an approximation of what your book will look like. There are lots of ereaders and not all software or devices support all EPUB features and formatting in the same way.</li>
+  </ul>
 
 
 
@@ -232,13 +248,13 @@
 
   <div class="calibreEbNav">
     
-      <a href="features.html" class="calibreAPrev">previous page</a>
+      <a href="tutorial_embed_fonts.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="user_interface.html" class="calibreANext"> next page</a>
+      <a href="faq.html" class="calibreANext"> next page</a>
     
   </div>
 

@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Overview</title>
+    <title>Images</title>
+    <meta content="1" name="qrichtext"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
@@ -40,55 +41,75 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="features.html" class="calibreAPrev">previous page</a>
+          <a href="find_replace.html" class="calibreAPrev">previous page</a>
         
 
         
-          <a href="user_interface.html" class="calibreANext"> next page</a>
+          <a href="splitting_and_merging.html" class="calibreANext"> next page</a>
         
       </div>
     
 
     
-  <h2 id="overview" class="calibre5">Overview</h2>
+  <h2 id="images" class="calibre5">Images</h2>
 
-  <p class="h2subheading">— Sigil Highlights —</p>
+  <p class="h2subheading">— Inserting pictures into your book —</p>
 
-  <p class="calibre1">This is a quick summary of features in Sigil.</p>
+  <p class="calibre1">You can insert images and pictures into your book – but first you must add them to your EPUB and then tell Sigil where they should be used in the ebook.</p>
 
-  <div class="image"><img alt="" src="../Images/overview_window_with_book.png" class="calibre8"/></div>
+  <h3 class="heading" id="adding_images">Adding Images to Your EPUB</h3>
 
-  <h3 class="heading" id="overview_editing">Editing</h3>
+  <p class="calibre1">To add images to your book, use <span class="menuitem">File→New→Add Existing Files</span>, or right click in the Book Browser and select <span class="menuitem">Add Existing Files</span> from the context menu. This will display a dialog allowing you to select one or more files from your computer. Select as many images as you want.</p>
 
-  <p class="calibre1">Sigil provides two ways to edit your book – Book View and Code View. The Book View editor is a WYSIWYG editor (based on <a href="http://ckeditor.com/" class="calibre2">CKEditor</a>) which is useful when you need to make basic changes. The Code View editor on the other hand allows you to directly edit the HTML formatting of your files when you want complete control over your book or you want to use Sigil's advanced features. There is also a read-only Preview View which allows you to test modifying styles and to inspect your code in detail. Tabs are opened for each of the files in the EPUB that you edit, and you can even magnify the text. Spell checking with multiple dictionaries is also available.</p>
+  <p class="calibre1">The images will be added to the Images folder in the Book Browser. However, they are not yet actually used anywhere in your book – they are just available to use.</p>
 
-  <h3 class="heading" id="overview_find_and_replace">Find &amp; Replace</h3>
+  <p class="tipheader">Tip</p>
 
-  <p class="calibre1">The ability to search for or replace text is one of the most powerful functions in Sigil. Book View provides a basic find function, but Find &amp; Replace is usually used in Code View where all its features are available and it can be used to change or correct formatting and styles. You can search or replace in one file or in all the files at once, and you can search for simple text or use Regular Expressions.</p>
+  <p class="tiptext">To view an image's details double click on it in the Book Browser. The Width and Height in pixels, size of the file in kilobytes, and whether or not the image has any color defined are shown:</p>
 
-  <h3 class="heading" id="overview_files">Managing Files</h3>
+  <div class="image"><img alt="" src="../Images/image_tab_example.png" class="calibre8"/></div>
 
-  <p class="calibre1">The Book Browser organizes all your files by type and gives you quick access to open files or to modify them. Double-click a file to open it in the editing window, or right-click on selected files to see options for renaming, deleting, merging, adding, linking stylesheets, etc. The HTML files are listed in the order they appear in your book – and you can drag and drop them to reorder them.</p>
+  <div class="tip">
+    <p class="tipheader">Note</p>
 
-  <h3 class="heading" id="overview_toc">Table of Contents</h3>
+    <p class="tiptext">If you delete and re-add an image you will need to save and re-open Sigil to display the new image.</p>
+  </div>
 
-  <p class="calibre1">The Table of Contents (TOC) window shows you exactly what your TOC will look like, and allows you to jump to specific chapters by clicking on chapter names. You can also generate a new TOC based on headings in your book at any time, and create an HTML version of your TOC.</p>
+  <h3 class="heading" id="inserting_images">Inserting Images Into Your Book</h3>
 
-  <h3 class="heading" id="overview_metadata">Modifying Book Details</h3>
+  <p class="calibre1">Once the images are in your EPUB, you can insert them anywhere in your files.</p>
 
-  <p class="calibre1">The Metadata Editor provides a quick way to update book details like Title, Author, and Language. You can add any of the hundreds of standard EPUB metadata entries like publication date, co-authors, copyright information, etc.</p>
+  <p class="calibre1">Click on the location in your file where you want the image to be located (in either Book View or Code View) and then use <span class="menuitem">Edit→Insert Image</span> or the Insert Image icon in the main toolbar.</p>
 
-  <h3 class="heading" id="overview_preferences">Preferences</h3>
+  <div class="image"><img alt="" src="../Images/insert_image_window.png" class="calibre8"/></div>
 
-  <p class="calibre1">Many settings in Sigil can be customised by opening the Preferences window. In particular you can set Sigil's user interface language, keyboard shortcuts and dictionaries.</p>
+  <p class="calibre1">Select the image you want to insert.</p>
 
-  <h3 class="heading" id="overview_validation">Validation</h3>
+  <div class="tip">
+    <p class="tipheader">Tip</p>
 
-  <p class="calibre1">Sigil performs automatic checking of your code to highlight errors when saving, and it includes the <a href="http://code.google.com/p/flightcrew/" class="calibre2">FlightCrew EPUB validator</a> to help ensure your book conforms to EPUB standards. Sigil can also automatically clean and format your code using <a href="http://tidy.sourceforge.net/" class="calibre2">HTML Tidy</a>.</p>
+    <p class="tiptext">You can insert the same image into your text as many times as you want.</p>
 
-  <h3 class="heading" id="overview_language">Language Support</h3>
+    <p class="tiptext">In Book View you can double click on an image or right click and select Image Properties to see information on the image link.</p>
+  </div>
 
-  <p class="calibre1">Sigil has been translated into over 15 languages and makes it easy to change the user interface language as needed. It is written in C++ for high performance and includes full Unicode UTF-16 support.</p>
+  <h3 class="heading" id="cover_images">Cover Images</h3>
+
+  <p class="calibre1">Images for covers are special in that you must tell the EPUB which image should be used for the cover. Different ereaders use different methods to identify the cover, so you should use both methods:</p>
+
+  <ul class="calibre4">
+    <li class="calibre6">Create a <span class="example">cover.html</span> file at the start of your book and then insert your image into it.</li>
+
+    <li class="calibre6">Mark the <span class="example">cover.html</span> file as a cover file by right clicking on it in the Book Browser Text folder, selecting Add Semantics and choosing Cover.</li>
+
+    <li class="calibre6">Mark your actual cover image file as a Cover by right clicking on it's file in the Book Browser Images folder, selecting Add Semantics and choosing Cover.</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">Please make sure you have permission to use any images in your book as most images are copyright and their use may require a license.</p>
+  </div>
 
 
 
@@ -232,13 +253,13 @@
 
   <div class="calibreEbNav">
     
-      <a href="features.html" class="calibreAPrev">previous page</a>
+      <a href="find_replace.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="user_interface.html" class="calibreANext"> next page</a>
+      <a href="splitting_and_merging.html" class="calibreANext"> next page</a>
     
   </div>
 

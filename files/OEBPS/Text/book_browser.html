@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Book Browser</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    Dave Heiland
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="preview_view.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="table_of_contents.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <div class="calibre9"></div><h2 id="book_browser" class="calibre5">Book Browser</h2>
+
+  <p class="h2subheading">— Managing your files —</p>
+
+  <p class="calibre1">All of the files that make up an EPUB can be accessed by the Book Browser. Your HTML text files, images, as well as any fonts or stylesheets, are organized into folders allowing easy access to open them or right-click on them to perform actions on them.</p>
+
+  <p class="calibre1">You can open the Book Browser using the menu <span class="menuitem">View→Book Browser</span> or its keyboard shortcut:</p>
+
+  <div class="image"><img alt="book_browser_window.png" src="../Images/book_browser_window.png" class="calibre8"/></div>
+
+  <h3 class="heading" id="folders_and_files">Folders &amp; Files</h3>
+
+  <p class="calibre1">The Book Browser organizes your files into several folders which can be expanded or collapsed by clicking on the little arrow icon to the left of the folder’s name. The folders and files include:</p>
+
+  <ul class="calibre4">
+    <li class="calibre6"><span class="listheading">Text:</span> the XHTML, HTML, XML, HTM files that make up the text of the book</li>
+
+    <li class="calibre6"><span class="listheading">Styles:</span> the CSS and XPGT stylesheets that control the formatting of the book</li>
+
+    <li class="calibre6"><span class="listheading">Images:</span> the PNG, JPG, GIF image types in the book</li>
+
+    <li class="calibre6"><span class="listheading">Fonts:</span> the TTF and OTF embedded fonts that might be in the book</li>
+
+    <li class="calibre6"><span class="listheading">Misc:</span> other files, which are not typically used by EPUB readers even though they can be stored with the book</li>
+
+    <li class="calibre6"><span class="listheading">toc.ncx:</span> the file containing the table of contents of the book (usually not edited manually)</li>
+
+    <li class="calibre6"><span class="listheading">content.opf:</span> the file containing the list of files in the book (usually not edited manually)</li>
+  </ul>
+
+  <p class="calibre1">To open a file just double-click on it. If the file was not already open in a tab, a new tab will be created for it. If it was already open in a tab the view will switch to the tab containing the file.</p>
+
+  <h3 class="heading" id="selecting_multiple_files">Selecting Multiple Files</h3>
+
+  <p class="calibre1">You can select multiple files in the Book Browser by clicking on one entry, and then holding the <span class="example">Shift</span> key while clicking another entry to select all entries between and including the two entries. You can also hold down the <span class="example">Ctrl</span> key while clicking to add individual files to your selection. You can also use the right-click context menu to select all entries easily. Once you've selected your files you can then use menu options or the right-click context menu to perform actions on all the selected files.</p>
+
+  <p class="calibre1">You can only select multiple items within the same folder.</p>
+
+  <h3 class="heading" id="re-ordering_files">Re-Ordering Files</h3>
+
+  <p class="calibre1">The order of the files in the Text folder is important since it is the order in which the files will be displayed to readers.</p>
+
+  <p class="calibre1">You can drag a file in the Text folder and move it up or down if you need to re-arrange the order in which the chapters or files appear in your book.</p>
+
+  <div class="tip">
+    <p class="tipheader">Tip</p>
+
+    <p class="tiptext">You can also use the context menu to rename or re-sort the files.</p>
+  </div>
+
+  <p class="calibre1">All other folders are automatically sorted alphabetically and cannot be re-arranged (the order of their files does not affect how your book is displayed).</p>
+
+  <h3 class="heading" id="context_menu">Context Menu</h3>
+
+  <p class="calibre1">Right-clicking on one or more items in the Book Browser brings up a context menu with relevant actions:</p>
+
+  <div class="image"><img alt="_images/book_browser_context_menu.png" src="../Images/book_browser_context_menu.png" class="calibre8"/></div>
+
+  <p class="calibre1">The following sections describe the available context menu actions.</p>
+
+  <h3 class="heading" id="context_add_existing">Add Existing Files</h3>
+
+  <p class="calibre1">Opens a dialog window to allow you to choose one or more files from your computer to add to your EPUB.</p>
+
+  <p class="calibre1">Files will be added to the appropriate folder based on their file extension regardless of what file you right-clicked on.</p>
+
+  <p class="calibre1">This is the same as the main menu option <span class="menuitem">File→New→Add Existing File(s)</span></p>
+
+  <h3 class="heading" id="context_add_blank">Add Blank Section/Stylesheet</h3>
+
+  <p class="calibre1">For HTML or Style files.</p>
+
+  <p class="calibre1">Adds a blank HTML document or CSS Stylesheet to the folder just below the file you right-clicked on, or at the bottom of the appropriate folder if you right-clicked on the folder name.</p>
+
+  <p class="calibre1">This is the same as the main menu option <span class="menuitem">File→New→Add Blank Section</span> if you right-clicked on an HTML file, or <span class="menuitem">File→New→Add Blank Stylesheet</span> if you right-clicked a stylesheet.</p>
+
+  <h3 class="heading" id="context_remove">Remove</h3>
+
+  <p class="calibre1">Delete the selected files. You will be prompted to confirm you want to delete since the action cannot be undone. You cannot delete the last remaining HTML file.</p>
+
+  <p class="calibre1">Remember to update the TOC if your file was included in the Table of Contents.</p>
+
+  <h3 class="heading" id="context_rename">Rename</h3>
+
+  <p class="calibre1">If you select a single file to rename, then the name of the file is highlighted so that you can type in its new name. By default the extension is not highlighted to make renaming easier, but you can also change the extension if necessary.</p>
+
+  <p class="calibre1">If you select multiple files, then a new dialog is displayed asking you how you want to rename the files. Enter the name the first file should have, including numbers at the end of the name. Sigil will then name each of your files sequentially using the name you provided and starting at the number you provided. A file will not be renamed if a file already exists with the new name.</p>
+
+  <div class="image"><img alt="_images/book_browser_rename_selected.png" src="../Images/book_browser_rename_files_window.png" class="calibre8"/></div>
+
+  <p class="calibre1">For example:</p>
+
+  <div class="indent1">
+    <dl class="calibre10">
+      <dt class="calibre11"><span class="example">Chapter 1</span></dt>
+
+      <dd class="calibre12">will rename the files to: <span class="example">Chapter 1, Chapter 2, Chapter 3 ...</span></dd>
+
+      <dt class="calibre11"><span class="example">Section_0099</span></dt>
+
+      <dd class="calibre12">will rename the files to: <span class="example">Section_0099, Section 0100, Section_0101 ...</span></dd>
+
+      <dt class="calibre11"><span class="example">Part 2 - Section 08</span></dt>
+
+      <dd class="calibre12">will rename the files to: <span class="example">Part 2 - Section 08, Part 2 - Section 09, Part 2 - Section 10 ...</span></dd>
+    </dl>
+  </div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">When you rename a file any links pointing to the file in your EPUB will be updated.</p>
+  </div>
+
+  <h3 class="heading" id="context_sort">Sort</h3>
+
+  <p class="calibre1">For HTML files.</p>
+
+  <p class="calibre1">Sort the selected files alpha-numerically. This means filenames containing numbers will be sorted in their expected numerical order, e.g. “1 3 2 10” will be resorted as “1 2 3 10” instead of the default “1 10 2 3”.</p>
+
+  <h3 class="heading" id="context_merge">Merge</h3>
+
+  <p class="calibre1">For HTML files.</p>
+
+  <p class="calibre1">If you select a single file, then the file will be merged into the previous HTML file in the list.</p>
+
+  <p class="calibre1">If you select multiple files, then all files will be merged into the first HTML file you selected.</p>
+
+  <p class="calibre1">You can also use the Merge keyboard shortcut.</p>
+
+  <h3 class="heading" id="context_link">Link Stylesheets</h3>
+
+  <p class="calibre1">For HTML files.</p>
+
+  <p class="calibre1">Link Stylesheets to the selected files. Choose the stylesheets to link from the dialog window – only stylesheets marked with a checkmark will be linked, others will be unlinked from the HTML file.</p>
+
+  <div class="image"><img alt="" src="../Images/book_browser_link_stylesheets_window.png" class="calibre8"/></div>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext">When the dialog is first opened a checkmark is shown against stylesheets only if all selected files are linked to that stylesheet.</p>
+
+    <p class="tiptext">Stylesheets are applied in order.</p>
+  </div>
+
+  <h3 class="heading" id="context_semantic">Add Semantic Information</h3>
+
+  <p class="calibre1">For HTML and Image files.</p>
+
+  <p class="calibre1">This sub-menu allows you to designate the semantic 'type' for selected files. EPUB ereaders may use this information (stored in the <span class="example">content.opf</span> file) to guide them in how to present these files to readers.</p>
+
+  <p class="calibre1">For Image files, the only option is “Cover” – to indicate that this image is the cover image of the book.</p>
+
+  <p class="calibre1">For HTML files you can select from any of the following options – but each file can have only one type:</p>
+
+  <ul class="calibre4">
+    <li class="calibre6">Cover</li>
+
+    <li class="calibre6">TitlePage</li>
+
+    <li class="calibre6">Table Of Contents</li>
+
+    <li class="calibre6">Index</li>
+
+    <li class="calibre6">Glossary</li>
+
+    <li class="calibre6">Acknowledgements</li>
+
+    <li class="calibre6">Bibliography</li>
+
+    <li class="calibre6">Colophon</li>
+
+    <li class="calibre6">Copyright Page</li>
+
+    <li class="calibre6">Dedication</li>
+
+    <li class="calibre6">Epigraph</li>
+
+    <li class="calibre6">Foreword</li>
+
+    <li class="calibre6">List Of Illustrations</li>
+
+    <li class="calibre6">List Of Tables</li>
+
+    <li class="calibre6">Notes</li>
+
+    <li class="calibre6">Preface</li>
+
+    <li class="calibre6">Text</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tipheader">Note</p>
+
+    <p class="tiptext"><span class="menuitem">Text</span> should indicate the page of the book that should be shown when the book is first opened, but not all ereaders follow this convention.</p>
+  </div>
+
+  <h3 class="heading" id="select_all">Select All</h3>
+
+  <p class="calibre1">A quick way to select all of the files in the current folder so you can rename, link, etc. all of them at once.</p>
+
+  <h3 class="heading" id="heading_id_17">Font Obfuscation</h3>
+
+  <p class="calibre1">For Font files.</p>
+
+  <p class="calibre1">If you are using custom fonts in your ebook, then this sub-menu allows you to define how the embedded fonts are stored in the EPUB. Normally when fonts are added to the EPUB the fonts are stored in a readable form. In some cases you may not want to make the fonts available for the readers to access directly. In these cases you can obfuscate or scramble the fonts in the ebook so that readers cannot access the fonts, but the fonts will still be useable by EPUB ereaders. The details of obfuscation and its implications are beyond the scope of Sigil, but there are many references to it on the web.</p>
+
+  <p class="calibre1">The options are:</p>
+
+  <ul class="calibre4">
+    <li class="calibre6">Use Adobe’s method</li>
+
+    <li class="calibre6">Use IDPF’s method</li>
+  </ul>
+
+  <h3 class="heading" id="heading_id_16">Renumber TOC Entries</h3>
+
+  <p class="calibre1">For the <span class="example">toc.ncx</span> file.</p>
+
+  <p class="calibre1">An advanced feature that sequentially renumbers the playOrder and navPoint id numbers of the Table of Content entries in the <span class="example">toc.ncx</span> file starting from 1. This feature is intended to clean up the TOC numbering if you have to manually add or delete an entry in the TOC.</p>
+
+  <p class="calibre1">Any navList or pageList items in the file are not saved – only the Table of Contents entries are saved after renumbering.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="introduction_about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="introduction_about_epub.html">About EPUB</a>
+        </li>
+        <li>
+          <a href="introduction_contents.html">Contents</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+      <ul>
+        <li>
+          <a href="installation.html#installation_windows">Windows</a>
+        </li>
+        <li>
+          <a href="installation.html#installation_mac">Mac</a>
+        </li>
+        <li>
+          <a href="installation.html#installation_linux">Linux</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
+      <ul>
+        <li>
+          <a href="overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="open_and_save_files.html">Open and Save Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview_view.html">Preview View</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents (TOC)</a>
+        </li>
+        <li>
+          <a href="metadata_editor.html">Metadata Editor</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spell Check</a>
+        </li>
+        <li>
+          <a href="validation.html">Validate and Clean</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_create_epub.html">Create an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.html">Edit an EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_regex.html">Use Regular Expressions</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Embed Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="preview_view.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="table_of_contents.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>
