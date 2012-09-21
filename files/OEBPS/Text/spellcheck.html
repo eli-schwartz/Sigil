@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide
+      <a href="../../../index.html">Sigil User Guide - Beta
 </a>
     </h1>
     
@@ -50,7 +50,7 @@
     
 
     
-  <h2 id="spellcheck" class="calibre5">Spell Check</h2>
+  <h2 id="spellcheck" class="calibre7">Spell Check</h2>
 
   <p class="h2subheading">— Checking and Correcting Spelling —</p>
 
@@ -62,9 +62,11 @@
     <p class="tiptext">Spell Check is only available in Code View.</p>
   </div>
 
-  <h3 class="heading" id="spellcheck_configuration">Configuring Spell Checking</h3>
+  <h3 class="sigilNotInTOC" id="spellcheck_configuration">Configuring Spell Checking</h3>
 
-  <p class="calibre1">You can set the spell checking preferences that you want – including whether or not to use automatic spell checking, which main dictionary to use, and which custom dictionary to use if any. See Spell Checking under <span class="menuitem">Edit→Preferences</span> to change the available options.</p>
+  <p class="calibre1">You can set the spell checking preferences that you want – including which main dictionary to use, and which custom dictionary to use if any. See Spell Checking under <span class="menuitem">Edit→Preferences</span> to change the available options.  </p>
+
+  <p class="calibre1">You can also enable or disable automatic highlighting of misspelled words in Code View using Tools-&gt;Spellcheck-&gt;Highlight Misspelled Words.</p>
 
   <div class="tip">
     <p class="tipheader">Tip</p>
@@ -72,41 +74,29 @@
     <p class="tiptext">Since you can use multiple user dictionaries, you can setup user dictionaries for different types of books or individual books. Then you can change user dictionaries as necessary.</p>
   </div>
 
-  <h3 class="heading" id="spellcheck_automatic">Automatic Spell Checking</h3>
+  <h3 class="sigilNotInTOC" id="spellcheck_automatic">Automatic Spell Checking</h3>
 
-  <p class="calibre1">Code View will highlight any misspelled words with a wavy red underline when automatic spell checking is enabled in Preferences:</p>
+  <p class="calibre1">Code View will highlight any misspelled words with a wavy red underline when automatic spell checking is enabled using Tools-&gt;Spellcheck-&gt;Highlight Misspelled Words:</p>
 
-  <p class="calibre1"><img alt="" src="../Images/spellcheck_misspelled.png" class="calibre8"/></p>
+  <div class="image"><img alt="" src="../Images/spellcheck_misspelled.png" class="calibre6"/></div>
 
   <p class="calibre1">You can then right-click on the misspelled word to bring up a list of choices:</p>
 
-  <div class="image"><img alt="" src="../Images/spellcheck_choices.png" class="calibre8"/></div>
+  <div class="image"><img alt="" src="../Images/spellcheck_choices.png" class="calibre6"/></div>
 
-  <ul class="calibre4">
-    <li class="calibre6"><span class="listheading">Suggested Words:</span> a list of alternative words to choose from – selecting one will replace the misspelled word</li>
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Suggested Words:</span> a list of alternative words to choose from – selecting one will replace the misspelled word</li>
 
-    <li class="calibre6"><span class="listheading">Add to Dictionary:</span> add this word to your current user dictionary</li>
+    <li class="calibre4"><span class="listheading">Add to Dictionary:</span> add this word to your current user dictionary</li>
 
-    <li class="calibre6"><span class="listheading">Ignore:</span> ignores the spelling of this word in the entire document until you restart Sigil</li>
+    <li class="calibre4"><span class="listheading">Ignore:</span> ignores the spelling of this word in the entire document until you restart Sigil</li>
   </ul>
 
-  <h3 class="heading" id="spellcheck_manual">Finding Misspelled Words</h3>
+  <h3 class="sigilNotInTOC" id="spellcheck_manual">Finding Misspelled Words</h3>
 
-  <p class="calibre1">You can also search for misspelled words one at a time in order to make finding them easier.</p>
+  <p class="calibre1">You can also search for misspelled words one at a time in order to make finding them easier - just click the Find Next Misspelled Word button in the toolbar or Tools→Spellcheck-&gt;Find Next Misspelled Word.  You will be switched to Code View automatically if you are not in it already and the next misspelled word will be highlighted.</p>
 
-  <p class="calibre1">In Code View, open the Find &amp; Replace window and change the mode to Spell Check and clear any text in the Find box:</p>
-
-  <div class="image"><img alt="" src="../Images/spellcheck_find.png" class="calibre8"/></div>
-
-  <p class="calibre1">To search for misspelled words:</p>
-
-  <ul class="calibre4">
-    <li class="calibre6">Click on Count All to display the number of misspelled words in your selected files.</li>
-
-    <li class="calibre6">Click on Find to highlight the next misspelled word. You can then right-click on it as above to change it or add it to the dictionary.</li>
-  </ul>
-
-  <p class="calibre1">You can also enter a Regex search pattern in the Find box to find misspelled words that match the pattern you entered in the Find box.</p>
+  <p class="calibre1">In order to use the context menu list of alternative words you must have Tools→Spellcheck→Highlight Misspelled Words enabled.</p>
 
 
 
@@ -125,9 +115,6 @@
         </li>
         <li>
           <a href="introduction_about_epub.html">About EPUB</a>
-        </li>
-        <li>
-          <a href="introduction_contents.html">Contents</a>
         </li>
       </ul>
     </li>
@@ -149,10 +136,10 @@
       <a href="features.html">Features</a>
       <ul>
         <li>
-          <a href="overview.html">Overview</a>
+          <a href="user_interface.html">User Interface</a>
         </li>
         <li>
-          <a href="user_interface.html">User Interface</a>
+          <a href="preferences.html">Preferences</a>
         </li>
         <li>
           <a href="open_and_save_files.html">Open and Save Files</a>
@@ -179,7 +166,22 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
+          <a href="search_editor.xhtml">Search Editor</a>
+        </li>
+        <li>
+          <a href="clip_editor.xhtml">Clip Editor &amp; Clipboard History</a>
+        </li>
+        <li>
+          <a href="index_editor.xhtml">Index Editor</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
           <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
         </li>
         <li>
           <a href="splitting_and_merging.html">Splitting and Merging</a>
@@ -190,13 +192,10 @@
         <li>
           <a href="validation.html">Validate and Clean</a>
         </li>
-        <li>
-          <a href="preferences.html">Preferences</a>
-        </li>
       </ul>
     </li>
     <li>
-      <a href="tutorials.xhtml">Tutorials</a>
+      <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
           <a href="tutorial_create_epub.html">Create an EPUB</a>

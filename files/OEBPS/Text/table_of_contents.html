@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide
+      <a href="../../../index.html">Sigil User Guide - Beta
 </a>
     </h1>
     
@@ -50,17 +50,17 @@
     
 
     
-  <h2 id="table_of_contents" class="calibre5">Table of Contents (TOC)</h2>
+  <h2 id="table_of_contents" class="calibre7">Table of Contents (TOC)</h2>
 
   <p class="h2subheading">— A Map Of Your Book —</p>
 
   <p class="calibre1">EPUB supports a Table of Contents (abbreviated as TOC) to help readers navigate their way around your book. The Table of Contents window in Sigil gives you a dynamic view of your TOC – you can view exactly what your TOC looks like, select entries to jump to, and generate new versions of your TOC automatically.</p>
 
-  <h3 class="heading" id="heading_id_17">View the TOC</h3>
+  <h3 class="sigilNotInTOC" id="heading_id_17">View the TOC</h3>
 
   <p class="calibre1">To open the TOC window use <span class="menuitem">View→Table of Contents</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/toc_window.png" class="calibre8"/></div>
+  <div class="image"><img alt="" src="../Images/table_of_contents.png" class="calibre6"/></div>
 
   <div class="tip">
     <p class="tipheader">Tip</p>
@@ -74,21 +74,21 @@
 
   <p class="calibre1">An EPUB Table of Contents is stored in the <span class="example">toc.ncx</span> file, which is listed in the Book Browser. You can edit this information manually, but Sigil provides a way to generate its contents automatically.</p>
 
-  <h3 class="heading" id="heading_id_14">Create Headings</h3>
+  <h3 class="sigilNotInTOC" id="heading_id_14">Create Headings</h3>
 
   <p class="calibre1">In order to create a Table of Contents automatically you first need to define the headings or chapters in your book.</p>
 
-  <p class="calibre1">In Book View you can create the your headings by selecting the text you want to make into a heading, and then selecting the level of the heading you want from the Paragraph Format drop-down menu.</p>
+  <p class="calibre1">In Book View you can create the your headings by selecting the text you want to make into a heading, and then selecting the level of the heading you want from the Format→Heading menu, or more easily using the buttons on the toolbar, in Book View or Code View:</p>
 
-  <div class="image"><img alt="" src="../Images/toc_select_heading.png" class="calibre8"/></div>
+  <div class="image">
+    <img alt="" src="../Images/toolbar_format_headings.png" class="calibre6"/><br class="calibre5"/>
+  </div>
 
-  <p class="calibre1">In Code View, use the standard <span class="example">h1</span>, <span class="example">h2</span>, etc. tags.</p>
+  <p class="calibre1"><span class="sgc">Generate Table of Contents</span><br class="calibre5"/></p>
 
-  <h3 class="heading" id="generate_toc">Generate TOC From Headings</h3>
+  <p class="calibre1">You can use the <span class="example">Generate Table of Contents </span>button to select the headings you want included in the book's Table of Contents (which is stored in the <span class="example">toc.ncx</span> file).</p>
 
-  <p class="calibre1">You can use the <span class="example">Generate TOC from headings</span> button to select the headings you want included in the book's Table of Contents (which is stored in the <span class="example">toc.ncx</span> file).</p>
-
-  <div class="image"><img alt="" src="../Images/toc_generate_toc_window.png" class="calibre8"/></div>
+  <div class="image"><img alt="" src="../Images/toc_generate_toc_window.png" class="calibre6"/></div>
 
   <p class="calibre1">Check any name that you want to be included in the Table of Contents, and uncheck any entry that you don't want included. You can use the <span class="example">TOC Items Only</span> field to show or hide entries that will not be included in the TOC.</p>
 
@@ -114,9 +114,9 @@
     <p class="tiptext">Generating the TOC automatically will overwrite any existing TOC in the <span class="example">toc.ncx</span> file.</p>
   </div>
 
-  <h3 class="heading" id="generate_inline_toc">Generate Inline HTML TOC</h3>
+  <h3 class="sigilNotInTOC" id="generate_inline_toc">Generate HTML Table of Contents</h3>
 
-  <p class="calibre1">You can use the button <span class="example">Generate TOC from headings</span> to create an Inline HTML TOC for your EPUB. An inline TOC is just another HTML page in the EPUB that contains the Table of Contents in text format.</p>
+  <p class="calibre1">You can use the button <span class="example">Generate HTML Table of Contents</span> to create an Inline HTML TOC for your EPUB. An inline TOC is just another HTML page in the EPUB that contains the Table of Contents in text format.</p>
 
   <p class="calibre1">For most EPUB ereaders, the TOC that is automatically generated from <span class="example">Generate TOC from headings</span> or stored in <span class="example">toc.ncx</span> is used to display the TOC. However, there are times when an inline TOC is desired in an EPUB or when it is needed because the EPUB will be converted to another ebook format that does not use the TOC file.</p>
 
@@ -154,9 +154,6 @@
         <li>
           <a href="introduction_about_epub.html">About EPUB</a>
         </li>
-        <li>
-          <a href="introduction_contents.html">Contents</a>
-        </li>
       </ul>
     </li>
     <li>
@@ -177,10 +174,10 @@
       <a href="features.html">Features</a>
       <ul>
         <li>
-          <a href="overview.html">Overview</a>
+          <a href="user_interface.html">User Interface</a>
         </li>
         <li>
-          <a href="user_interface.html">User Interface</a>
+          <a href="preferences.html">Preferences</a>
         </li>
         <li>
           <a href="open_and_save_files.html">Open and Save Files</a>
@@ -207,7 +204,22 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
+          <a href="search_editor.xhtml">Search Editor</a>
+        </li>
+        <li>
+          <a href="clip_editor.xhtml">Clip Editor &amp; Clipboard History</a>
+        </li>
+        <li>
+          <a href="index_editor.xhtml">Index Editor</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
           <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
         </li>
         <li>
           <a href="splitting_and_merging.html">Splitting and Merging</a>
@@ -218,13 +230,10 @@
         <li>
           <a href="validation.html">Validate and Clean</a>
         </li>
-        <li>
-          <a href="preferences.html">Preferences</a>
-        </li>
       </ul>
     </li>
     <li>
-      <a href="tutorials.xhtml">Tutorials</a>
+      <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
           <a href="tutorial_create_epub.html">Create an EPUB</a>

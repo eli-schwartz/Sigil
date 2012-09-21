@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide
+      <a href="../../../index.html">Sigil User Guide - Beta
 </a>
     </h1>
     
@@ -50,37 +50,59 @@
     
 
     
-  <h2 id="code_view" class="calibre5">Code View</h2>
+  <h2 id="code_view" class="calibre7">Code View</h2>
 
   <p class="h2subheading">— Direct HTML Editing —</p>
 
   <p class="calibre1">Code View allows you to directly edit the HTML code that makes up your EPUB.</p>
 
-  <p class="calibre1">To switch to Code View use <span class="menuitem">View→Code View</span> or its toolbar icon or keyboard shortcut:</p>
+  <p class="calibre1">You can switch between Book View and Code View at any time - using the buttons on the toolbar, the View-&gt;Toggle View State menu entry, the keyboard shortcut for toggle, and by double clicking on the tab name of the current tab.</p>
 
-  <div class="image"><img alt="" src="../Images/code_view_window.png" class="calibre8"/></div>
+  <div class="image">
+    <img alt="" src="../Images/code_view.png" class="calibre6"/><br class="calibre5"/>
+  </div>
 
-  <p class="calibre1">In addition to displaying your HTML code exactly as it is stored, Code View highlights tags and elements in colors to make it easier to read and identify issues. Code View will remember your cursor position for your file if you switch to another file or if you change to another view and back to Code View.</p>
+  <p class="calibre1">In addition to displaying your HTML code exactly as it is in your EPUB, Code View highlights tags and elements in colors to make it easier to read and identify issues. Code View will remember your cursor position in your file if you switch to another file or if you change to another view and back to Code View.</p>
+
+  <div class="tip">
+    <p class="tipheader"><span class="calibre17">Code View gives you access to several advanced features described elsewhere in the User Guide such as Replace in Find &amp; Replace, Spell Check highlighting of misspelled words, Clip Editor text snippets, etc.</span><br class="calibre5"/></p>
+  </div>
 
   <div class="tip">
     <p class="tipheader">Tip</p>
 
-    <p class="tiptext">When switching to Code View from Book View or Preview View you can quickly find the same location in the text by highlighting the text in Book View, using <span class="example">Ctrl-F</span> to save the text into Find &amp; Replace, switch to Code View and then use <span class="example">Ctrl-G</span> to find the text.</p>
+    <p class="tiptext">When switching from Code View to another window or saving your file, Sigil will check if your code has any major errors if the Well-Formed Check is enabled.  You should almost always have this feature enabled or the errors will be corrected automatically which could result in lost data.   When enabled, if there are any errors you will be prompted to correct them Manually or Automatically. You should usually choose Manually to fix the issue to avoid any chance of the Automatic correction deleting text.</p>
   </div>
 
-  <p class="calibre1">Code View gives you access to several features described elsewhere in the User Guide such as Replace in Find &amp; Replace and Spell Check (words that are misspelled are underlined in red if this feature is active.</p>
+  <h4 class="sigilNotInTOC1">Context Menu</h4>
 
-  <div class="tip">
-    <p class="tipheader">Tip</p>
+  <p class="calibre1">The Code View context menu can include a number of useful features.</p>
 
-    <p class="tiptext">When switching from Code View to another window or saving your file, Sigil will check if your code has any major errors if the Well-Formed Check is enabled. If there are any errors you will be prompted to correct them Manually or Automatically. You should usually choose Manually to fix the issue to avoid any chance of the Automatic correction deleting text.</p>
-  </div>
+  <ul class="calibre3">
+    <li class="calibre4">Clip text: insert text stored on the Clip Editor</li>
 
-  <div class="tip">
-    <p class="tipheader">Note</p>
+    <li class="calibre4">Add to Clip Editor: add the selected text to the Clip Editor</li>
 
-    <p class="tiptext">If you have any entities in your code, e.g. <span class="example">&amp;#257;</span> and you make any changes while in Book View, then when you switch back to Code View you will see that Book View converted most of those entities into their actual character, e.g. <span class="example">ā</span>. So after editing in Book View your entities will be shown as characters even when viewed in Code View.</p>
-  </div>
+    <li class="calibre4">Go to Link or Style: same as Search→Go to Link or Style</li>
+  </ul>
+
+  <p class="calibre1">Plus the usual</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">Undo</li>
+
+    <li class="calibre4">Redo</li>
+
+    <li class="calibre4">Cut</li>
+
+    <li class="calibre4">Copy</li>
+
+    <li class="calibre4">Paste</li>
+
+    <li class="calibre4">Delete</li>
+
+    <li class="calibre4">Select All</li>
+  </ul>
 
 
 
@@ -99,9 +121,6 @@
         </li>
         <li>
           <a href="introduction_about_epub.html">About EPUB</a>
-        </li>
-        <li>
-          <a href="introduction_contents.html">Contents</a>
         </li>
       </ul>
     </li>
@@ -123,10 +142,10 @@
       <a href="features.html">Features</a>
       <ul>
         <li>
-          <a href="overview.html">Overview</a>
+          <a href="user_interface.html">User Interface</a>
         </li>
         <li>
-          <a href="user_interface.html">User Interface</a>
+          <a href="preferences.html">Preferences</a>
         </li>
         <li>
           <a href="open_and_save_files.html">Open and Save Files</a>
@@ -153,7 +172,22 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
+          <a href="search_editor.xhtml">Search Editor</a>
+        </li>
+        <li>
+          <a href="clip_editor.xhtml">Clip Editor &amp; Clipboard History</a>
+        </li>
+        <li>
+          <a href="index_editor.xhtml">Index Editor</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
           <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
         </li>
         <li>
           <a href="splitting_and_merging.html">Splitting and Merging</a>
@@ -164,13 +198,10 @@
         <li>
           <a href="validation.html">Validate and Clean</a>
         </li>
-        <li>
-          <a href="preferences.html">Preferences</a>
-        </li>
       </ul>
     </li>
     <li>
-      <a href="tutorials.xhtml">Tutorials</a>
+      <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
           <a href="tutorial_create_epub.html">Create an EPUB</a>

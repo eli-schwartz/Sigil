@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide
+      <a href="../../../index.html">Sigil User Guide - Beta
 </a>
     </h1>
     
@@ -44,25 +44,25 @@
         
 
         
-          <a href="preferences.html" class="calibreANext"> next page</a>
+          <a href="tutorials.html" class="calibreANext"> next page</a>
         
       </div>
     
 
     
-  <h2 id="validation" class="calibre5">Validate and Clean</h2>
+  <h2 id="validation" class="calibre7">Validate and Clean</h2>
 
   <p class="h2subheading">— Making sure your EPUB is Error Free —</p>
 
-  <h3 class="heading" id="validate_validate">Validation</h3>
+  <h3 class="sigilNotInTOC" id="validate_validate">Validation</h3>
 
   <p class="calibre1">In order to be considered a valid EPUB, your ebook must meet the standards defined for EPUBs. This means it must include certain files and information and not contain any errors as defined by the EPUB specification. To help you check if your EPUB is valid you can use the built-in FlightCrew software or the EpubCheck software.</p>
 
-  <h4 class="sigilNotInTOC" id="heading_id_2">FlightCrew</h4>
+  <h4 class="sigilNotInTOC1" id="heading_id_2">FlightCrew</h4>
 
   <p class="calibre1">To use the built-in FlightCrew validation program to create a report showing any issues in your EPUB use the menu option <span class="menuitem">File→Validate EPUB</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/validation_window.png" class="calibre8"/></div>
+  <div class="image"><img alt="" src="../Images/validation_window.png" class="calibre6"/></div>
 
   <p class="calibre1">Once you have run Validate to produce a report, look at each of the issues listed and then edit your document to correct them.</p>
 
@@ -76,89 +76,89 @@
 
   <p class="calibre1">Common issues include:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6">
+  <ul class="calibre3">
+    <li class="calibre4">
       <span class="example">This resource is present in the OPF &lt;manifest&gt;, but it's not reachable (it's unused).</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This warning means you have included the listed file in your EPUB, but you have not used it anywhere in your book. If you intended to use it, you should link to it, otherwise you can delete the file.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This warning means you have included the listed file in your EPUB, but you have not used it anywhere in your book. If you intended to use it, you should link to it, otherwise you can delete the file.</li>
       </ul>
     </li>
 
-    <li class="calibre6">
+    <li class="calibre4">
       <span class="example">This OPS document is reachable but not present in the OPF &lt;manifest or spine&gt;. "Reachable" means that a reference of some kind that points to this resource exists in the epub.</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This error means you have a reference or a link to a file or image in your EPUB, but that file is not included in the EPUB. You need to add the file to the EPUB or correct the name of the file used in your text. You can usually find these by searching for the filename listed in all the HTML files. You may also have to re-generate or update your TOC.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This error means you have a reference or a link to a file or image in your EPUB, but that file is not included in the EPUB. You need to add the file to the EPUB or correct the name of the file used in your text. You can usually find these by searching for the filename listed in all the HTML files. You may also have to re-generate or update your TOC.</li>
       </ul>
     </li>
 
-    <li class="calibre6">
+    <li class="calibre4">
       <span class="example">ID value 'SOMEIDNAME' is not unique</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This error means you have an ID named SOMEIDNAME in your EPUB that is defined more than once. Typically these are in headers or footnotes and can be caused by copying and pasting or merging. You can find these by searching all HTML files for the ID name that is listed and changing them so all IDs are different from all other IDs. If the issue is in a heading and you have auto-generated your headings, you can delete the ID and they will be re-generated the next time you create your TOC.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This error means you have an ID named SOMEIDNAME in your EPUB that is defined more than once. Typically these are in headers or footnotes and can be caused by copying and pasting or merging. You can find these by searching all HTML files for the ID name that is listed and changing them so all IDs are different from all other IDs. If the issue is in a heading and you have auto-generated your headings, you can delete the ID and they will be re-generated the next time you create your TOC.</li>
       </ul>
     </li>
 
-    <li class="calibre6">
+    <li class="calibre4">
       <span class="example">attribute 'INVALIDATTRIBUTE' is not declared for element 'SOMEELEMENT'</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This error means you have an HTML tag named SOMEELEMENT that contains an attribute INVALIDATTRIBUTE, but INVALIDATTRIBUTE is not valid for that tag. For instance <span class="example">&lt;h2 invalidattribute="test"&gt;</span>. This can be caused by typos or by old versions of HTML. You need to search for INVALIDATTRIBUTE in all HTML files and remove, correct, or replace each occurrence.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This error means you have an HTML tag named SOMEELEMENT that contains an attribute INVALIDATTRIBUTE, but INVALIDATTRIBUTE is not valid for that tag. For instance <span class="example">&lt;h2 invalidattribute="test"&gt;</span>. This can be caused by typos or by old versions of HTML. You need to search for INVALIDATTRIBUTE in all HTML files and remove, correct, or replace each occurrence.</li>
       </ul>
     </li>
 
-    <li class="calibre6">
+    <li class="calibre4">
       <span class="example">no declaration found for element 'INVALIDELEMENT'</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This error means you have an HTML tag named INVALIDELEMENT that has not been defined. Typically this is simply because it is invalid and is old HTML syntax that need updating. You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace these with valid HTML.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This error means you have an HTML tag named INVALIDELEMENT that has not been defined. Typically this is simply because it is invalid and is old HTML syntax that need updating. You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace these with valid HTML.</li>
       </ul>
     </li>
 
-    <li class="calibre6">
+    <li class="calibre4">
       <span class="example">element 'INVALIDELEMENT' is not allowed for content model '(p|d|h2|h3|h4|h5|h6|div|ul|ol|...'</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This error means you have an HTML tag named INVALIDELEMENT that is not valid HTML for an EPUB. Typically this is old HTML syntax that needs updating (such as the <span class="example">&lt;center&gt;</span> tag which should be implemented using a style). You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace each occurrence with valid HTML.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This error means you have an HTML tag named INVALIDELEMENT that is not valid HTML for an EPUB. Typically this is old HTML syntax that needs updating (such as the <span class="example">&lt;center&gt;</span> tag which should be implemented using a style). You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace each occurrence with valid HTML.</li>
       </ul>
     </li>
 
-    <li class="calibre6">
+    <li class="calibre4">
       <span class="example">value 'SOMENAME' is invalid NCName</span>
 
-      <ul class="calibre7">
-        <li class="calibre6">This error means you have an ID name that is invalid. It probably contains a space or other invalid character. You need to search for SOMENAME and change it.</li>
+      <ul class="calibre8">
+        <li class="calibre4">This error means you have an ID name that is invalid. It probably contains a space or other invalid character. You need to search for SOMENAME and change it.</li>
       </ul>
     </li>
   </ul>
 
-  <h4 class="sigilNotInTOC" id="heading_id_3">EpubCheck</h4>
+  <h4 class="sigilNotInTOC1" id="heading_id_3">EpubCheck</h4>
 
   <p class="calibre1">FlightCrew identifies a lot of typical issues with EPUBs, but it may not catch everything.</p>
 
   <p class="calibre1">You should also run your EPUB through the EpubCheck program. You can use it online or download a local version of the program:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6"><a href="http://validator.idpf.org" class="calibre2">IDPF EPUB Validator</a></li>
+  <ul class="calibre3">
+    <li class="calibre4"><a href="http://validator.idpf.org">IDPF EPUB Validator</a></li>
   </ul>
 
-  <h3 class="heading" id="tidy">Automatic Code Cleaning</h3>
+  <h3 class="sigilNotInTOC" id="tidy">Automatic Code Cleaning</h3>
 
   <p class="calibre1">Sigil can automatically clean your HTML code when you save by using the included HTML Tidy software. This does not correct any errors but attempts to normalize your code by adjusting spacing or consolidating styles.</p>
 
   <p class="calibre1">The <span class="menuitem">Edit→Clean Source</span> menu option allows you to set several levels of automatic cleaning:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6"><span class="listheading">Off:</span> HTML Tidy will not be used. No automatic cleaning of code will be done – your code will be left formatted exactly the way you typed it.</li>
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Off:</span> HTML Tidy will not be used. No automatic cleaning of code will be done – your code will be left formatted exactly the way you typed it.</li>
 
-    <li class="calibre6"><span class="listheading">Pretty Print:</span> HTML Tidy will be used to remove any unnecessary spaces or blank lines in your code and will indent HTML tags to make it easier to read the code. No code will be changed – only spacing.</li>
+    <li class="calibre4"><span class="listheading">Pretty Print:</span> HTML Tidy will be used to remove any unnecessary spaces or blank lines in your code and will indent HTML tags to make it easier to read the code. No code will be changed – only spacing.</li>
 
-    <li class="calibre6"><span class="listheading">Tidy:</span> HTML Tidy will be used to clean your code – this will include pretty printing plus converting some of your tags into styles and some of your styles into an internal stylesheet. It is possible under rare circumstances that Tidy will clean too much and delete text, so you may want to carefully consider using this option.</li>
+    <li class="calibre4"><span class="listheading">Tidy:</span> HTML Tidy will be used to clean your code – this will include pretty printing plus converting some of your tags into styles and some of your styles into an internal stylesheet. It is possible under rare circumstances that Tidy will clean too much and delete text, so you may want to carefully consider using this option.</li>
   </ul>
 
-  <p class="calibre1">When using Tidy, it will often convert tags or style attributes you have applied into a style tag and create a class name for the style (see the <a href="../Text/tutorial_stylesheets.html" class="calibre2">Stylesheets</a> chapter for more information). If this has happened you will see the new stylesheet at the top of your file, e.g.</p>
+  <p class="calibre1">When using Tidy, it will often convert tags or style attributes you have applied into a style tag and create a class name for the style (see the <a href="../Text/tutorial_stylesheets.html">Stylesheets</a> chapter for more information). If this has happened you will see the new stylesheet at the top of your file, e.g.</p>
   <pre class="example1">&lt;style type="text/css"&gt;
 /*&lt;![CDATA[*/
 
@@ -193,9 +193,6 @@ p.sgc-1 {font-weight: bold}
         <li>
           <a href="introduction_about_epub.html">About EPUB</a>
         </li>
-        <li>
-          <a href="introduction_contents.html">Contents</a>
-        </li>
       </ul>
     </li>
     <li>
@@ -216,10 +213,10 @@ p.sgc-1 {font-weight: bold}
       <a href="features.html">Features</a>
       <ul>
         <li>
-          <a href="overview.html">Overview</a>
+          <a href="user_interface.html">User Interface</a>
         </li>
         <li>
-          <a href="user_interface.html">User Interface</a>
+          <a href="preferences.html">Preferences</a>
         </li>
         <li>
           <a href="open_and_save_files.html">Open and Save Files</a>
@@ -246,7 +243,22 @@ p.sgc-1 {font-weight: bold}
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
+          <a href="search_editor.xhtml">Search Editor</a>
+        </li>
+        <li>
+          <a href="clip_editor.xhtml">Clip Editor &amp; Clipboard History</a>
+        </li>
+        <li>
+          <a href="index_editor.xhtml">Index Editor</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
           <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
         </li>
         <li>
           <a href="splitting_and_merging.html">Splitting and Merging</a>
@@ -257,13 +269,10 @@ p.sgc-1 {font-weight: bold}
         <li>
           <a href="validation.html">Validate and Clean</a>
         </li>
-        <li>
-          <a href="preferences.html">Preferences</a>
-        </li>
       </ul>
     </li>
     <li>
-      <a href="tutorials.xhtml">Tutorials</a>
+      <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
           <a href="tutorial_create_epub.html">Create an EPUB</a>
@@ -323,7 +332,7 @@ p.sgc-1 {font-weight: bold}
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="preferences.html" class="calibreANext"> next page</a>
+      <a href="tutorials.html" class="calibreANext"> next page</a>
     
   </div>
 

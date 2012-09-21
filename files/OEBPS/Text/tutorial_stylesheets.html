@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide
+      <a href="../../../index.html">Sigil User Guide - Beta
 </a>
     </h1>
     
@@ -50,7 +50,7 @@
     
 
     
-  <h2 id="heading_id_2" class="calibre5">Use Stylesheets</h2>
+  <h2 id="heading_id_2" class="calibre7">Use Stylesheets</h2>
 
   <p class="h2subheading">— Formatting with Style —</p>
 
@@ -60,14 +60,14 @@
 
   <p class="calibre1">You can find other introductions to CSS online, including:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6"><a href="http://www.w3schools.com/css/" class="calibre2">W3Schools CSS Guide</a></li>
+  <ul class="calibre3">
+    <li class="calibre4"><a href="http://www.w3schools.com/css/">W3Schools CSS Guide</a></li>
   </ul>
 
   <p class="calibre1">And if you really need to dig into the details, the CSS2 technical specification is available:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6"><a href="http://www.w3.org/TR/CSS2/" class="calibre2">CSS 2.1 Specification</a></li>
+  <ul class="calibre3">
+    <li class="calibre4"><a href="http://www.w3.org/TR/CSS2/">CSS 2.1 Specification</a></li>
   </ul>
 
   <div class="tip">
@@ -82,7 +82,7 @@
     <p class="tiptext">This chapter assumes you are familiar with Code View since you need to use Code View to see the details of styles.</p>
   </div>
 
-  <h3 class="heading" id="style_definition">What is a Style?</h3>
+  <h3 class="sigilNotInTOC" id="style_definition">What is a Style?</h3>
 
   <p class="calibre1">Styles are used in a book to say things like “make this text blue”, or “make text centered”, or leave a little more space above this text. A style definition is just text that looks like:</p>
   <pre class="example1">color: blue;</pre>
@@ -93,17 +93,17 @@
 
   <p class="calibre1">There are 3 ways styles can be used for HTML tags in an EPUB:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6"><span class="listheading">Style Attribute:</span> a style applied directly to one specific HTML element in the document</li>
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Style Attribute:</span> a style applied directly to one specific HTML element in the document</li>
 
-    <li class="calibre6"><span class="listheading">Style Element:</span> a group of styles in one document that can only be used by that document</li>
+    <li class="calibre4"><span class="listheading">Style Element:</span> a group of styles in one document that can only be used by that document</li>
 
-    <li class="calibre6"><span class="listheading">Stylesheet:</span> a separate CSS or stylesheet file that can be used by many HTML files</li>
+    <li class="calibre4"><span class="listheading">Stylesheet:</span> a separate CSS or stylesheet file that can be used by many HTML files</li>
   </ul>
 
   <p class="calibre1">A separate stylesheet file is the recommended way to use styles. The descriptions below of each approach will help you understand why.</p>
 
-  <h3 class="heading" id="inline_styles">Style Attributes</h3>
+  <h3 class="sigilNotInTOC" id="inline_styles">Style Attributes</h3>
 
   <p class="calibre1">To apply a style directly to an HTML tag, you can use the <span class="example">style</span> attribute in the tag. For example, to apply the style <span class="example">color: blue</span> to a paragraph you would change</p>
   <pre class="example1">&lt;p&gt;Hello&lt;/p&gt;</pre>
@@ -120,7 +120,7 @@
 
   <p class="calibre1">There is a much better way to manage styles: using style selectors.</p>
 
-  <h3 class="heading" id="style_classes">Style Selectors</h3>
+  <h3 class="sigilNotInTOC" id="style_classes">Style Selectors</h3>
 
   <p class="calibre1">A style selector is a way to give a particular style a name, and then use the style in the document just by referring to its name. More specifically the style selector is used to select which elements in your document should use the style you define.</p>
 
@@ -156,7 +156,7 @@
 
   <p class="calibre1">In an EPUB you can store your stylesheet in the same file as your text (using the <span class="example">style</span> element), or in separate files (external stylesheets or CSS files).</p>
 
-  <h3 class="heading" id="internal_stylesheets">Style Elements</h3>
+  <h3 class="sigilNotInTOC" id="internal_stylesheets">Style Elements</h3>
 
   <p class="calibre1">When you store style selectors and rules in the same file as your text they can only be applied to the HTML file they are in and cannot be shared by other HTML files.</p>
 
@@ -193,7 +193,7 @@
     <p class="tiptext">You can convert your inline styles and your internal stylesheets into a separate stylesheet file. Just remember to assign the appropriate classes to your tags and to delete the old style attributes and elements.</p>
   </div>
 
-  <h3 class="heading" id="external_stylesheets">External Stylesheets</h3>
+  <h3 class="sigilNotInTOC" id="external_stylesheets">External Stylesheets</h3>
 
   <p class="calibre1">If you create a separate file to hold all your style rules, they can apply to the entire book. They are also much easier to find and edit, and updates are much easier to manage as you add and remove files. It also helps to ensure your book is formatted consistently as you can see all your styles in one place.</p>
 
@@ -207,7 +207,7 @@
 
   <p class="calibre1">For example, if you open the <span class="example">styles.css</span> file in a simple EPUB you might see something like this:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_stylesheets_file.png" class="calibre8"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_stylesheets_file.png" class="calibre6"/></div>
 
   <div class="tip">
     <p class="tipheader">Warning</p>
@@ -219,22 +219,22 @@
 
   <p class="calibre1">To use it, you need to tell your HTML files to use the stylesheet – by linking to them as described below.</p>
 
-  <h3 class="heading">Link your HTML files to a Stylesheet File</h3>
+  <h3 class="sigilNotInTOC">Link your HTML files to a Stylesheet File</h3>
 
   <p class="calibre1">To tell your HTML files which stylesheet file to use you need to link the stylesheet to your HTML file:</p>
 
-  <ul class="calibre4">
-    <li class="calibre6">Select one or more files in the Book Browser</li>
+  <ul class="calibre3">
+    <li class="calibre4">Select one or more files in the Book Browser</li>
 
-    <li class="calibre6">Right-click on the selection</li>
+    <li class="calibre4">Right-click on the selection</li>
 
-    <li class="calibre6">Choose Link Stylesheets from the context menu</li>
+    <li class="calibre4">Choose Link Stylesheets from the context menu</li>
   </ul>
 
-  <div class="image"><img alt="" src="../Images/book_browser_link_stylesheets_window.png" class="calibre8"/></div>
+  <div class="image"><img alt="" src="../Images/book_browser_link_stylesheets_window.png" class="calibre6"/></div>
 
-  <ul class="calibre4">
-    <li class="calibre6">Click on the stylesheets you want to be used for the files and select OK.</li>
+  <ul class="calibre3">
+    <li class="calibre4">Click on the stylesheets you want to be used for the files and select OK.</li>
   </ul>
 
   <p class="calibre1">You can link multiple stylesheets to one page if separate CSS files help you organize styles better, but most EPUBs use just one stylesheet.</p>
@@ -245,7 +245,7 @@
     <p class="tiptext">If you link multiple stylesheets they will be applied in order so the styles in the last stylesheet will override the styles in the preceding stylesheets.</p>
   </div>
 
-  <h3 class="heading">What Styles Should Be Used?</h3>
+  <h3 class="sigilNotInTOC">What Styles Should Be Used?</h3>
 
   <p class="calibre1">The styles you use for your text are entirely up to you.</p>
 
@@ -269,9 +269,6 @@
         <li>
           <a href="introduction_about_epub.html">About EPUB</a>
         </li>
-        <li>
-          <a href="introduction_contents.html">Contents</a>
-        </li>
       </ul>
     </li>
     <li>
@@ -292,10 +289,10 @@
       <a href="features.html">Features</a>
       <ul>
         <li>
-          <a href="overview.html">Overview</a>
+          <a href="user_interface.html">User Interface</a>
         </li>
         <li>
-          <a href="user_interface.html">User Interface</a>
+          <a href="preferences.html">Preferences</a>
         </li>
         <li>
           <a href="open_and_save_files.html">Open and Save Files</a>
@@ -322,7 +319,22 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
+          <a href="search_editor.xhtml">Search Editor</a>
+        </li>
+        <li>
+          <a href="clip_editor.xhtml">Clip Editor &amp; Clipboard History</a>
+        </li>
+        <li>
+          <a href="index_editor.xhtml">Index Editor</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
           <a href="images.html">Images</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
         </li>
         <li>
           <a href="splitting_and_merging.html">Splitting and Merging</a>
@@ -333,13 +345,10 @@
         <li>
           <a href="validation.html">Validate and Clean</a>
         </li>
-        <li>
-          <a href="preferences.html">Preferences</a>
-        </li>
       </ul>
     </li>
     <li>
-      <a href="tutorials.xhtml">Tutorials</a>
+      <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
           <a href="tutorial_create_epub.html">Create an EPUB</a>
