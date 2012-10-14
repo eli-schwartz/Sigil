@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide - Beta
+      <a href="../../../index.html">Sigil User Guide
 </a>
     </h1>
     
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    Dave Heiland
+    version 0.6.0 draft
 
   </div>
 </div>
@@ -50,7 +50,7 @@
     
 
     
-  <h2 id="fonts" class="calibre7">Embed Fonts</h2>
+  <h2 id="fonts" class="calibre8">Embed Fonts</h2>
 
   <p class="h2subheading">— Using Custom Fonts In Your Book —</p>
 
@@ -70,7 +70,7 @@
     <p class="tiptext">You will need to know about stylesheets to embed fonts so you should read through the <a href="../Text/tutorial_stylesheets.html">Stylesheets</a> chapter first.</p>
   </div>
 
-  <h3 class="sigilNotInTOC">Adding Fonts to your EPUB</h3>
+  <h3 class="sigilnotintoc">Adding Fonts to your EPUB</h3>
 
   <p class="calibre1">To add fonts to your book, use <span class="menuitem">File→New→Add Existing Files</span>, or right click in the Book Browser and select Add Existing Files from the context menu. This will display a dialog allowing you to select one or more files from your computer. Select as many font files as you want.</p>
 
@@ -84,7 +84,7 @@
     <p class="tiptext">Fonts files must be either OpenType (<span class="example">.otf</span>) or TrueType (<span class="example">.ttf</span>) format. All ereaders should support <span class="example">otf</span> but most will likely support both formats.</p>
   </div>
 
-  <h3 class="sigilNotInTOC" id="inserting_images">Defining Styles for Your Font</h3>
+  <h3 class="sigilnotintoc" id="inserting_images">Defining Styles for Your Font</h3>
 
   <p class="calibre1">Once the fonts are in your EPUB, you must define a style that includes them.</p>
 
@@ -116,7 +116,7 @@
 
   <p class="calibre1">The font still isn't actually being used in the book yet, that's the next step.</p>
 
-  <h3 class="sigilNotInTOC">Apply Your Font to Text</h3>
+  <h3 class="sigilnotintoc">Apply Your Font to Text</h3>
 
   <p class="calibre1">To make use of the font you need to create another style that you will then assign to sections of your text.</p>
 
@@ -149,7 +149,7 @@
     <p class="tiptext">Due to a bug in the Qt libraries used by Sigil, fonts may not display correctly in Sigil so you will may have to test them on your target ereaders.</p>
   </div>
 
-  <h3 class="sigilNotInTOC" id="heading_id_3">Font Obfuscation</h3>
+  <h3 class="sigilnotintoc">Font Obfuscation</h3>
 
   <p class="calibre1">When you use a font in an EPUB, the font file could be extracted by someone and used somewhere else. If your fonts are licensed you may want to prevent this.</p>
 
@@ -157,9 +157,9 @@
 
   <p class="calibre1">To use font obfuscation, right click on your fonts in the Book Browser window, right-click and select Font Obfuscation from the menu and choose a method to use for obfuscation.</p>
 
-  <div class="image"><img alt="" src="../Images/fonts_obfuscation_menu.png" class="calibre6"/></div>
+  <div class="image"><img alt="" src="../Images/fonts_obfuscation_menu.png" class="calibre7"/></div>
 
-  <h3 class="sigilNotInTOC">Testing Your Font</h3>
+  <h3 class="sigilnotintoc">Testing Your Font</h3>
 
   <p class="calibre1">Not all devices will show embedded fonts. Even Sigil may not show all your embedded fonts. Its best to test on your target device to check if your fonts are displayed as you expect.</p>
 
@@ -175,6 +175,9 @@
     <li>
       <a href="introduction.html">Introduction</a>
       <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
         <li>
           <a href="introduction_about_sigil.html">About Sigil</a>
         </li>
@@ -231,10 +234,10 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="search_editor.html">Search Editor</a>
+          <a href="saved_searches.html">Saved Searches</a>
         </li>
         <li>
-          <a href="clip_editor.html">Clip Editor &amp; Clipboard History</a>
+          <a href="clips.html">Clips</a>
         </li>
         <li>
           <a href="index_editor.html">Index Editor</a>
@@ -272,22 +275,25 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
+          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html">Tips</a>
+          <a href="tutorial_tips.html#tips">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html">FAQ</a>
+      <a href="faq.html#faq">FAQ</a>
       <ul>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Most Common</a>
+        </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
         </li>
@@ -303,7 +309,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
     </li>
   </ul>
 </div>

@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide - Beta
+      <a href="../../../index.html">Sigil User Guide
 </a>
     </h1>
     
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    Dave Heiland
+    version 0.6.0 draft
 
   </div>
 </div>
@@ -58,39 +58,39 @@
 
   <p class="calibre1">You can also read the <a href="../Text/tutorials.html">Tutorials</a> chapter for step-by-step instructions on common tasks in Sigil, and then refer back to this section for additional details.</p>
 
-  <p class="calibre1"><span class="sgc">Editing</span><br class="calibre5"/></p>
+  <p class="calibre1"><span class="sgc">Editing</span><br class="calibre4"/></p>
 
   <p class="calibre1">You can edit your book using either Book View or Code View. The Book View editor is a WYSIWYG editor which displays your book as it might appear to users and is useful when you need to make basic changes. The Code View editor allows you to directly edit the HTML formatting of your files when you want complete control over your book or you want to use Sigil's advanced features. There is also a read-only Preview View which allows you to test modifying styles and to inspect your code in detail. Tabs are opened for each of the files in the EPUB that you edit, and you can even magnify the text. Spell checking with multiple dictionaries is also available.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_find_and_replace">Find &amp; Replace</h3>
+  <h3 class="sigilnotintoc" id="overview_find_and_replace">Find &amp; Replace</h3>
 
   <p class="calibre1">The ability to search for or replace text is one of the most powerful functions in Sigil. Book View provides a basic find function, but Find &amp; Replace is usually used in Code View where all its features are available and it can be used to change or correct formatting and styles. You can search or replace in one file or in all the files at once, and you can search for simple text or use Regular Expressions.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_files">Managing Files</h3>
+  <h3 class="sigilnotintoc" id="overview_files">Managing Files</h3>
 
   <p class="calibre1">The Book Browser organizes all your files by type and gives you quick access to open files or to modify them. Double-click a file to open it in the editing window, or right-click on selected files to see options for renaming, deleting, merging, adding, linking stylesheets, etc. The HTML files are listed in the order they appear in your book – and you can drag and drop them to reorder them.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_toc">Table of Contents</h3>
+  <h3 class="sigilnotintoc" id="overview_toc">Table of Contents</h3>
 
   <p class="calibre1">The Table of Contents (TOC) window shows you exactly what your TOC will look like, and allows you to jump to specific chapters by clicking on chapter names. You can also generate a new TOC based on headings in your book at any time, and create an HTML version of your TOC.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_metadata">Modifying Book Details</h3>
+  <h3 class="sigilnotintoc" id="overview_metadata">Modifying Book Details</h3>
 
   <p class="calibre1">The Metadata Editor provides a quick way to update book details like Title, Author, and Language. You can add any of the hundreds of standard EPUB metadata entries like publication date, co-authors, copyright information, etc.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_preferences">Preferences</h3>
+  <h3 class="sigilnotintoc" id="overview_preferences">Preferences</h3>
 
   <p class="calibre1">Many settings in Sigil can be customised by opening the Preferences window. In particular you can set Sigil's user interface language, keyboard shortcuts, text appearance and dictionaries.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_validation">Validation</h3>
+  <h3 class="sigilnotintoc" id="overview_validation">Validation</h3>
 
   <p class="calibre1">Sigil performs automatic checking of your code to highlight errors when saving, and it includes the <a href="http://code.google.com/p/flightcrew/">FlightCrew EPUB validator</a> to help ensure your book conforms to EPUB standards. Sigil can also automatically clean and format your code using <a href="http://tidy.sourceforge.net/">HTML Tidy</a>.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_tools">Advanced Tools</h3>
+  <h3 class="sigilnotintoc" id="overview_tools">Advanced Tools</h3>
 
   <p class="calibre1">Sigil also provides additional tools to assist with editing - including an Index Editor, a Search Editor to save your Find &amp; Replace searches, a Clip Editor and Clipboard History to save text.  Several reports are also available to display details about your files and styles.</p>
 
-  <h3 class="sigilNotInTOC" id="overview_language">Language Support</h3>
+  <h3 class="sigilnotintoc" id="overview_language">Language Support</h3>
 
   <p class="calibre1">Sigil has been translated into over 15 languages and makes it easy to change the user interface language as needed. It is written in C++ for high performance and includes full Unicode UTF-16 support.</p>
 
@@ -106,6 +106,9 @@
     <li>
       <a href="introduction.html">Introduction</a>
       <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
         <li>
           <a href="introduction_about_sigil.html">About Sigil</a>
         </li>
@@ -162,10 +165,10 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="search_editor.html">Search Editor</a>
+          <a href="saved_searches.html">Saved Searches</a>
         </li>
         <li>
-          <a href="clip_editor.html">Clip Editor &amp; Clipboard History</a>
+          <a href="clips.html">Clips</a>
         </li>
         <li>
           <a href="index_editor.html">Index Editor</a>
@@ -203,22 +206,25 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
+          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html">Tips</a>
+          <a href="tutorial_tips.html#tips">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html">FAQ</a>
+      <a href="faq.html#faq">FAQ</a>
       <ul>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Most Common</a>
+        </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
         </li>
@@ -234,7 +240,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
     </li>
   </ul>
 </div>

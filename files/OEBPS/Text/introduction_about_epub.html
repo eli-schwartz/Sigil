@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide - Beta
+      <a href="../../../index.html">Sigil User Guide
 </a>
     </h1>
     
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    Dave Heiland
+    version 0.6.0 draft
 
   </div>
 </div>
@@ -50,13 +50,13 @@
     
 
     
-  <h2 id="about_epub" class="calibre7">About EPUB</h2>
+  <h2 id="about_epub" class="calibre8">About EPUB</h2>
 
-  <p class="calibre1">The EPUB (electronic publication) format is one of the most popular formats for ebooks. It is an open and freely available format that can be used by anyone.</p>
+  <p class="calibre1">The EPUB (electronic publication) format is one of the most popular file formats for ebooks. It is an open and freely available format that can be used by anyone.</p>
 
-  <p class="calibre1">An EPUB ebook is just a file containing several other files stored together using the common zip format. These files include your words, images, Table of Contents, stylesheets, fonts and details about your book like author or title. EPUB's standard format means your book can be read on many ereaders.</p>
+  <p class="calibre1">An EPUB ebook is just a file containing several other files stored together using the common zip format. These files include your words, images, Table of Contents, stylesheets, fonts and details about your book like author or title. EPUB's standard format means your book can be read on many ereaders or converted easily for others.</p>
 
-  <p class="calibre1">Words and text are actually stored in the EPUB book using the HTML format (Hyper Text Markup Language – the same code used by web pages to display text and images). HTML files contain your text along with markup codes and tags (like <span class="example">&lt;h1&gt;</span> or <span class="example">&lt;p&gt;</span>) which tell ereaders how to format and display the text – some words could be bold or italic, others could be a paragraph or a heading, etc.</p>
+  <p class="calibre1">Your words and text are actually stored in the EPUB book using the HTML format (Hyper Text Markup Language – the same code used by web pages to display text and images).  This just means that the files contain your text along with markup codes and tags (like <span class="example">&lt;h1&gt;</span> or <span class="example">&lt;p&gt;</span>) which tell ereaders how to format and display the text – some words could be bold or italic, others could be a paragraph or a heading, etc.</p>
 
   <p class="calibre1">Although you can use only HTML tags to control or style the layout, EPUB books typically make use of stylesheets to help organize the use of styles used by the HTML file. A stylesheet is another file in the EPUB that contains a list of HTML tags along with instructions on how to display any text using that tag, e.g. <span class="example">&lt;h1&gt;</span> (heading level 1) should be larger and centered. This allows you to separate the content of your book from its layout and allows you to easily adjust the look of the EPUB.</p>
 
@@ -67,33 +67,33 @@
   <div class="tip">
     <p class="tipheader">Note</p>
 
-    <p class="tiptext">Technically the text files are in XHTML format (an XML compliant version of HTML), but to keep things simpler we'll use HTML to refer to either HTML or XHTML in this guide.</p>
+    <p class="tiptext">Technically text files are stored in XHTML format (an XML compliant version of HTML), but to keep things simpler we'll use HTML to refer to either HTML or XHTML in this guide.</p>
   </div>
 
   <p class="calibre1">To learn more about HTML you can read various online guides, including:</p>
 
-  <ul class="calibre3">
-    <li class="calibre4"><a href="http://www.w3schools.com/html/">W3Schools HTML Guide</a></li>
+  <ul class="calibre5">
+    <li class="calibre6"><a href="http://www.w3schools.com/html/">W3Schools HTML Guide</a></li>
   </ul>
 
-  <p class="calibre1">Help with EPUB is available from EPUB users at MobileRead:</p>
+  <p class="calibre1">Help with on the EPUB format is available from EPUB users at MobileRead:</p>
 
-  <ul class="calibre3">
-    <li class="calibre4"><a href="http://www.mobileread.com/forums/forumdisplay.php?f=179">EPUB Forum @ MobileRead</a></li>
+  <ul class="calibre5">
+    <li class="calibre6"><a href="http://www.mobileread.com/forums/forumdisplay.php?f=179">EPUB Forum @ MobileRead</a></li>
   </ul>
 
   <p class="calibre1">If you really want to dig into the details of the official EPUB standard on which Sigil is built you can read the original technical specifications:</p>
 
-  <ul class="calibre3">
-    <li class="calibre4">
+  <ul class="calibre5">
+    <li class="calibre6">
       <a href="http://idpf.org/epub/201">Official EPUB 2.0.1 IDPF Standard</a>
 
-      <ul class="calibre8">
-        <li class="calibre4"><span class="listheading">OPS (Open Publication Structure):</span> the key specification which describes everything in an EPUB file</li>
+      <ul class="calibre9">
+        <li class="calibre6"><span class="listheading">OPS (Open Publication Structure):</span> the key specification which describes everything in an EPUB file</li>
 
-        <li class="calibre4"><span class="listheading">OPF (Open Packaging Format):</span> how the EPUB files relate to each other, metadata details (<span class="example">content.opf</span>)</li>
+        <li class="calibre6"><span class="listheading">OPF (Open Packaging Format):</span> how the EPUB files relate to each other, metadata details (<span class="example">content.opf</span>)</li>
 
-        <li class="calibre4"><span class="listheading">OCF (OEBPS Container Format):</span> how files are packaged into a <span class="example">.epub</span></li>
+        <li class="calibre6"><span class="listheading">OCF (OEBPS Container Format):</span> how files are packaged into a <span class="example">.epub</span></li>
       </ul>
     </li>
   </ul>
@@ -112,6 +112,9 @@
     <li>
       <a href="introduction.html">Introduction</a>
       <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
         <li>
           <a href="introduction_about_sigil.html">About Sigil</a>
         </li>
@@ -168,10 +171,10 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="search_editor.html">Search Editor</a>
+          <a href="saved_searches.html">Saved Searches</a>
         </li>
         <li>
-          <a href="clip_editor.html">Clip Editor &amp; Clipboard History</a>
+          <a href="clips.html">Clips</a>
         </li>
         <li>
           <a href="index_editor.html">Index Editor</a>
@@ -209,22 +212,25 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
+          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html">Tips</a>
+          <a href="tutorial_tips.html#tips">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html">FAQ</a>
+      <a href="faq.html#faq">FAQ</a>
       <ul>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Most Common</a>
+        </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
         </li>
@@ -240,7 +246,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
     </li>
   </ul>
 </div>
