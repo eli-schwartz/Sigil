@@ -21,7 +21,7 @@
   
     
     <h1>
-      <a href="../../../index.html">Sigil User Guide - Beta
+      <a href="../../../index.html">Sigil User Guide
 </a>
     </h1>
     
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    Dave Heiland
+    version 0.6.0 draft
 
   </div>
 </div>
@@ -50,17 +50,17 @@
     
 
     
-  <h2 id="table_of_contents" class="calibre7">Table of Contents (TOC)</h2>
+  <h2 id="table_of_contents" class="calibre8">Table of Contents (TOC)</h2>
 
   <p class="h2subheading">— A Map Of Your Book —</p>
 
   <p class="calibre1">EPUB supports a Table of Contents (abbreviated as TOC) to help readers navigate their way around your book. The Table of Contents window in Sigil gives you a dynamic view of your TOC – you can view exactly what your TOC looks like, select entries to jump to, and generate new versions of your TOC automatically.</p>
 
-  <h3 class="sigilNotInTOC" id="heading_id_17">View the TOC</h3>
+  <h3 class="sigilnotintoc">View the TOC</h3>
 
   <p class="calibre1">To open the TOC window use <span class="menuitem">View→Table of Contents</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/table_of_contents.png" class="calibre6"/></div>
+  <div class="image"><img alt="" src="../Images/table_of_contents.png" class="calibre7"/></div>
 
   <div class="tip">
     <p class="tipheader">Tip</p>
@@ -74,21 +74,21 @@
 
   <p class="calibre1">An EPUB Table of Contents is stored in the <span class="example">toc.ncx</span> file, which is listed in the Book Browser. You can edit this information manually, but Sigil provides a way to generate its contents automatically.</p>
 
-  <h3 class="sigilNotInTOC" id="heading_id_14">Create Headings</h3>
+  <h3 class="sigilnotintoc">Create Headings</h3>
 
   <p class="calibre1">In order to create a Table of Contents automatically you first need to define the headings or chapters in your book.</p>
 
   <p class="calibre1">In Book View you can create the your headings by selecting the text you want to make into a heading, and then selecting the level of the heading you want from the Format→Heading menu, or more easily using the buttons on the toolbar, in Book View or Code View:</p>
 
   <div class="image">
-    <img alt="" src="../Images/toolbar_format_headings.png" class="calibre6"/><br class="calibre5"/>
+    <img alt="" src="../Images/toolbar_format_headings.png" class="calibre7"/><br class="calibre4"/>
   </div>
 
-  <p class="calibre1"><span class="sgc">Generate Table of Contents</span><br class="calibre5"/></p>
+  <p class="calibre1"><span class="sgc">Generate Table of Contents</span><br class="calibre4"/></p>
 
   <p class="calibre1">You can use the <span class="example">Generate Table of Contents </span>button to select the headings you want included in the book's Table of Contents (which is stored in the <span class="example">toc.ncx</span> file).</p>
 
-  <div class="image"><img alt="" src="../Images/toc_generate_toc_window.png" class="calibre6"/></div>
+  <div class="image"><img alt="" src="../Images/toc_generate_toc_window.png" class="calibre7"/></div>
 
   <p class="calibre1">Check any name that you want to be included in the Table of Contents, and uncheck any entry that you don't want included. You can use the <span class="example">TOC Items Only</span> field to show or hide entries that will not be included in the TOC.</p>
 
@@ -114,7 +114,7 @@
     <p class="tiptext">Generating the TOC automatically will overwrite any existing TOC in the <span class="example">toc.ncx</span> file.</p>
   </div>
 
-  <h3 class="sigilNotInTOC" id="generate_inline_toc">Generate HTML Table of Contents</h3>
+  <h3 class="sigilnotintoc" id="generate_inline_toc">Generate HTML Table of Contents</h3>
 
   <p class="calibre1">You can use the button <span class="example">Generate HTML Table of Contents</span> to create an Inline HTML TOC for your EPUB. An inline TOC is just another HTML page in the EPUB that contains the Table of Contents in text format.</p>
 
@@ -148,6 +148,9 @@
     <li>
       <a href="introduction.html">Introduction</a>
       <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
         <li>
           <a href="introduction_about_sigil.html">About Sigil</a>
         </li>
@@ -204,10 +207,10 @@
           <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="search_editor.html">Search Editor</a>
+          <a href="saved_searches.html">Saved Searches</a>
         </li>
         <li>
-          <a href="clip_editor.html">Clip Editor &amp; Clipboard History</a>
+          <a href="clips.html">Clips</a>
         </li>
         <li>
           <a href="index_editor.html">Index Editor</a>
@@ -245,22 +248,25 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
+          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html">Tips</a>
+          <a href="tutorial_tips.html#tips">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html">FAQ</a>
+      <a href="faq.html#faq">FAQ</a>
       <ul>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Most Common</a>
+        </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
         </li>
@@ -276,7 +282,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
     </li>
   </ul>
 </div>

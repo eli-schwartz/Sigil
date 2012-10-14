@@ -33,48 +33,19 @@
     font-weight: bolder
     }
 .calibre11 {
-    font-weight: normal
-    }
-.calibre12 {
-    font-family: Arial;
-    font-size: 1.14286em;
-    line-height: 1.2
-    }
-.calibre13 {
-    font-size: 0.875em;
-    line-height: 1.2
-    }
-.calibre14 {
-    font-family: SmallCaps, sans-serif;
-    font-size: 1.125em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibre15 {
-    display: block;
-    line-height: 1.2
-    }
-.calibre16 {
     display: block;
     page-break-after: always
     }
-.calibre17 {
-    font-style: normal
-    }
-.calibre18 {
-    font-family: Arial;
-    font-size: 1em;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.calibre19 {
+.calibre12 {
     display: block;
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
     margin-top: 1em
+    }
+.calibre13 {
+    display: block;
+    margin-left: 40px
     }
 .calibre2 {
     display: block;
@@ -89,11 +60,14 @@
     margin-top: 1em;
     text-align: center
     }
-.calibre20 {
-    display: block;
-    margin-left: 40px
-    }
 .calibre3 {
+    display: block;
+    line-height: 1.2
+    }
+.calibre4 {
+    display: block
+    }
+.calibre5 {
     display: block;
     list-style-type: disc;
     margin-bottom: 1em;
@@ -101,18 +75,15 @@
     margin-right: 0;
     margin-top: 1em
     }
-.calibre4 {
+.calibre6 {
     display: list-item
     }
-.calibre5 {
-    display: block
-    }
-.calibre6 {
+.calibre7 {
     height: auto;
     max-width: 100%;
     width: auto
     }
-.calibre7 {
+.calibre8 {
     display: block;
     font-family: "SmallCaps", sans-serif;
     font-size: 1.375em;
@@ -122,10 +93,10 @@
     margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1em;
+    margin-top: 2em;
     text-align: center
     }
-.calibre8 {
+.calibre9 {
     display: block;
     list-style-type: circle;
     margin-bottom: 0;
@@ -133,8 +104,14 @@
     margin-right: 0;
     margin-top: 0
     }
-.calibre9 {
-    font-style: italic
+.caption {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    page-break: before;
+    text-indent: 0
     }
 .dropcap {
     float: left;
@@ -249,13 +226,29 @@
     line-height: 1.2
     }
 .sgc1 {
+    font-style: italic
+    }
+.sgc10 {
     line-height: 1.2
     }
-.sgc2 {
+.sgc11 {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.375em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center
+    }
+.sgc12 {
     display: block;
     text-align: -webkit-auto
     }
-.sgc3 {
+.sgc13 {
     display: block;
     font-family: SmallCaps, sans-serif;
     margin-bottom: 0.5em;
@@ -265,26 +258,32 @@
     text-align: center;
     text-indent: 0
     }
-.sgc4 {
+.sgc14 {
     font-variant: small-caps;
     font-weight: normal
     }
-.sigilNotInTOC {
-    display: block;
-    font-family: "SmallCaps", sans-serif;
-    font-size: 1.25em;
+.sgc2 {
+    font-weight: normal
+    }
+.sgc3 {
+    font-family: Arial;
+    font-size: 1.14286em;
+    line-height: 1.2
+    }
+.sgc4 {
+    font-size: 0.875em;
+    line-height: 1.2
+    }
+.sgc5 {
+    font-family: SmallCaps, sans-serif;
+    font-size: 1.125em;
     font-variant: small-caps;
     font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1.7em;
-    text-align: left
+    line-height: 1.2
     }
-.sigilNotInTOC1 {
+.sgc6 {
     display: block;
-    font-family: "SmallCaps", sans-serif;
+    font-family: SmallCaps, sans-serif;
     font-size: 1.125em;
     font-variant: small-caps;
     font-weight: bold;
@@ -295,14 +294,51 @@
     margin-top: 1.5em;
     text-align: left
     }
-.sigilNotInTOC2 {
+.sgc7 {
+    font-style: normal
+    }
+.sgc8 {
+    font-family: Arial;
+    font-size: 1em;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.2
+    }
+.sgc9 {
     display: block;
-    font-family: SmallCaps, sans-serif;
-    font-size: 1.125em;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.25em;
     font-variant: small-caps;
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.7em;
+    text-align: left;
+    text-indent: 0
+    }
+.sigilnotintoc {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.25em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.7em;
+    text-align: left
+    }
+.sigilnotintoc1 {
+    display: block;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.125em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5 em;
     margin-left: 0;
     margin-right: 0;
     margin-top: 1.5em;
