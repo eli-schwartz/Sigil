@@ -6,9 +6,29 @@
     margin-bottom: 2em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 5em;
+    margin-top: 4em;
     text-align: center;
     text-indent: 0
+    }
+.buttonbox {
+    border-color: #777;
+    border-style: solid;
+    border-width: 1px
+    }
+.buttontext {
+    font-family: monotype, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-left: 0.5em;
+    margin-right: 0.5em
+    }
+.buttontext1 {
+    font-family: monotype, sans-serif;
+    font-size: 0.85714em;
+    font-weight: bold;
+    margin-left: 0.5em;
+    margin-right: 0.5em
     }
 .calibre {
     display: block;
@@ -30,22 +50,36 @@
     text-indent: 0
     }
 .calibre10 {
-    font-weight: bolder
+    font-style: italic
     }
 .calibre11 {
-    display: block;
-    page-break-after: always
-    }
-.calibre12 {
     display: block;
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
     margin-top: 1em
     }
-.calibre13 {
+.calibre12 {
     display: block;
     margin-left: 40px
+    }
+.calibre13 {
+    display: block;
+    font-family: monospace;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    white-space: pre
+    }
+.calibre14 {
+    display: block;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center;
+    text-indent: 0
     }
 .calibre2 {
     display: block;
@@ -61,13 +95,11 @@
     text-align: center
     }
 .calibre3 {
-    display: block;
-    line-height: 1.2
+    height: auto;
+    max-width: 100%;
+    width: auto
     }
 .calibre4 {
-    display: block
-    }
-.calibre5 {
     display: block;
     list-style-type: disc;
     margin-bottom: 1em;
@@ -75,28 +107,26 @@
     margin-right: 0;
     margin-top: 1em
     }
-.calibre6 {
+.calibre5 {
     display: list-item
     }
-.calibre7 {
-    height: auto;
-    max-width: 100%;
-    width: auto
-    }
-.calibre8 {
+.calibre6 {
     display: block;
     font-family: "SmallCaps", sans-serif;
-    font-size: 1.375em;
+    font-size: 1.5em;
     font-variant: small-caps;
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.7em;
     margin-left: 0;
     margin-right: 0;
     margin-top: 2em;
     text-align: center
     }
-.calibre9 {
+.calibre7 {
+    display: block
+    }
+.calibre8 {
     display: block;
     list-style-type: circle;
     margin-bottom: 0;
@@ -104,14 +134,13 @@
     margin-right: 0;
     margin-top: 0
     }
-.caption {
+.calibre9 {
     display: block;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
-    page-break: before;
-    text-indent: 0
+    page-break-after: always
+    }
+.coverimage {
+    display: block;
+    text-align: center
     }
 .dropcap {
     float: left;
@@ -138,6 +167,10 @@
     white-space: pre
     }
 .example2 {
+    font-family: courier, sans-serif;
+    font-size: 0.85714em
+    }
+.example3 {
     font-family: courier, sans-serif;
     font-size: 0.9em;
     line-height: 1.2
@@ -183,7 +216,7 @@
     }
 .image {
     display: block;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     margin-top: 1em;
     page-break-inside: avoid;
     text-align: center
@@ -193,130 +226,49 @@
     margin-left: 1em
     }
 .indent1 {
-    display: block;
-    margin-left: 1em
+    display: block
     }
 .listheading {
     font-weight: bold
     }
-.logo {
-    display: block;
-    margin-top: 6em;
-    text-align: center
-    }
 .menuitem {
     font-family: monotype, courier, sans-serif;
-    font-size: 0.875em;
-    line-height: 1.2
-    }
-.menuitem1 {
-    font-family: monotype, courier, sans-serif;
     font-size: 0.85714em
+    }
+.narrow {
+    border: 1px inset;
+    color: gray;
+    display: block;
+    height: 2px;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    text-align: center;
+    width: 25%
+    }
+.nodisplay {
+    display: none;
+    font-family: "SmallCaps", sans-serif;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center
     }
 .rights {
     display: block;
     margin-top: 4em;
     text-align: center
     }
-.sgc {
-    font-family: SmallCaps, sans-serif;
-    font-size: 1.25em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.sgc1 {
-    font-style: italic
-    }
-.sgc10 {
-    line-height: 1.2
-    }
-.sgc11 {
-    display: block;
-    font-family: "SmallCaps", sans-serif;
-    font-size: 1.375em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
-    text-align: center
-    }
-.sgc12 {
-    display: block;
-    text-align: -webkit-auto
-    }
-.sgc13 {
-    display: block;
-    font-family: SmallCaps, sans-serif;
-    margin-bottom: 0.5em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
-    text-align: center;
-    text-indent: 0
-    }
-.sgc14 {
-    font-variant: small-caps;
-    font-weight: normal
-    }
-.sgc2 {
-    font-weight: normal
-    }
-.sgc3 {
-    font-family: Arial;
-    font-size: 1.14286em;
-    line-height: 1.2
-    }
-.sgc4 {
+.shortcut {
+    font-family: monotype, courier, sans-serif;
     font-size: 0.875em;
     line-height: 1.2
-    }
-.sgc5 {
-    font-family: SmallCaps, sans-serif;
-    font-size: 1.125em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.sgc6 {
-    display: block;
-    font-family: SmallCaps, sans-serif;
-    font-size: 1.125em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1.5em;
-    text-align: left
-    }
-.sgc7 {
-    font-style: normal
-    }
-.sgc8 {
-    font-family: Arial;
-    font-size: 1em;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1.2
-    }
-.sgc9 {
-    display: block;
-    font-family: "SmallCaps", sans-serif;
-    font-size: 1.25em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1.7em;
-    text-align: left;
-    text-indent: 0
     }
 .sigilnotintoc {
     display: block;
@@ -345,24 +297,25 @@
     text-align: left
     }
 .tip {
+    background-color: #f0f0f0;
+    border-style: solid;
+    border-width: 1px;
     display: block;
-    page-break-inside: avoid
-    }
-.tipheader {
-    display: block;
-    font-style: italic;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
-    text-indent: 0
+    margin-bottom: 2em;
+    margin-right: 1em;
+    margin-top: 2em;
+    page-break-inside: avoid;
+    text-align: center
     }
 .tiptext {
     display: block;
+    font-size: 0.875em;
+    line-height: 1.2;
     margin-bottom: 1em;
-    margin-left: 2em;
-    margin-right: 0;
-    margin-top: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    text-align: center;
     text-indent: 0
     }
 .title {
@@ -374,7 +327,7 @@
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 2em;
+    margin-top: 1em;
     text-align: center;
     text-indent: 0
     }
@@ -382,4 +335,16 @@
     display: block;
     margin-top: 2em;
     page-break-inside: avoid
+    }
+.version {
+    display: block;
+    font-size: 1.375em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    text-align: center;
+    text-indent: 0
     }

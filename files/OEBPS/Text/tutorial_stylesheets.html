@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Stylesheets (CSS)</title>
+    <title>Use Stylesheets</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    version 0.6.0 draft
+    0.6.0 draft
 
   </div>
 </div>
@@ -50,7 +50,7 @@
     
 
     
-  <h2 id="sigil_toc_id_3" class="calibre8">Use Stylesheets</h2>
+  <h2 id="sigil_toc_id_5" class="calibre6">Use Stylesheets</h2>
 
   <p class="h2subheading">— Formatting with Style —</p>
 
@@ -60,25 +60,21 @@
 
   <p class="calibre1">You can find other introductions to CSS online, including:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6"><a href="http://www.w3schools.com/css/">W3Schools CSS Guide</a></li>
+  <ul class="calibre4">
+    <li class="calibre5"><a href="http://www.w3schools.com/css/">W3Schools CSS Guide</a></li>
   </ul>
 
   <p class="calibre1">And if you really need to dig into the details, the CSS2 technical specification is available:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6"><a href="http://www.w3.org/TR/CSS2/">CSS 2.1 Specification</a></li>
+  <ul class="calibre4">
+    <li class="calibre5"><a href="http://www.w3.org/TR/CSS2/">CSS 2.1 Specification</a></li>
   </ul>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">Using CSS can get quite complicated, but if you become familiar with the basics it will make it much easier to understand why your book looks the way it does and how to modify its layout.</p>
   </div>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">This chapter assumes you are familiar with Code View since you need to use Code View to see the details of styles.</p>
   </div>
 
@@ -93,12 +89,12 @@
 
   <p class="calibre1">There are 3 ways styles can be used for HTML tags in an EPUB:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6"><span class="listheading">Style Attribute:</span> a style applied directly to one specific HTML element in the document</li>
+  <ul class="calibre4">
+    <li class="calibre5"><span class="listheading">Style Attribute:</span> a style applied directly to one specific HTML element in the document</li>
 
-    <li class="calibre6"><span class="listheading">Style Element:</span> a group of styles in one document that can only be used by that document</li>
+    <li class="calibre5"><span class="listheading">Style Element:</span> a group of styles in one document that can only be used by that document</li>
 
-    <li class="calibre6"><span class="listheading">Stylesheet:</span> a separate CSS or stylesheet file that can be used by many HTML files</li>
+    <li class="calibre5"><span class="listheading">Stylesheet:</span> a separate CSS or stylesheet file that can be used by many HTML files</li>
   </ul>
 
   <p class="calibre1">A separate stylesheet file is the recommended way to use styles. The descriptions below of each approach will help you understand why.</p>
@@ -144,12 +140,10 @@
 
   <p class="calibre1">The great advantage in this abstraction is that you can now update the values of the style (to change the indentation or other settings) without having to update your text.</p>
 
-  <div class="tip">
-    <p class="tipheader">Tip</p>
-  </div>
+  <div class="tip"></div>
 
   <div class="tip">
-    <p class="tiptext">It is common practice to use class names that refer to the purpose of the style and not what the style does in case you change the styling later. For instance, use <span class="example">span.placename</span> instead of <span class="example">span.bold</span> in case you want to change your place names to italic later.</p>
+    <p class="tiptext">It is common practice to use class names that refer to the purpose of the style and not what the style does in case you change the styling later. For instance, use <span class="example2">span.placename</span> instead of <span class="example2">span.bold</span> in case you want to change your place names to italic later.</p>
   </div>
 
   <p class="calibre1">Now you need to actually store your styles somewhere in order to use them.</p>
@@ -188,8 +182,6 @@
   <p class="calibre1">The best way to manage styles is to use a separate stylesheet file to hold your style rules.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">You can convert your inline styles and your internal stylesheets into a separate stylesheet file. Just remember to assign the appropriate classes to your tags and to delete the old style attributes and elements.</p>
   </div>
 
@@ -200,19 +192,17 @@
   <p class="calibre1">In Sigil, external stylesheets are stored in the Book Browser in the <span class="example">Styles</span> folder. You can double click on the stylesheet file to add and edit your styles as necessary.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
-    <p class="tiptext">If there isn’t a <span class="example">.css</span> stylesheet file in the folder already, you can create a blank one by right clicking on <span class="example">Styles</span> and selecting <span class="menuitem">Add Blank Section</span>.</p>
+    <p class="tiptext">If there isn’t a <span class="example2">.css</span> stylesheet file in the folder already, you can create a blank one by right clicking on <span class="example2">Styles</span> and selecting <span class="menuitem">Add Blank Section</span>.</p>
   </div>
 
   <p class="calibre1">For example, if you open the <span class="example">styles.css</span> file in a simple EPUB you might see something like this:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_stylesheets_file.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_stylesheets_file.png" class="calibre3"/></div>
 
   <div class="tip">
-    <p class="tipheader">Warning</p>
+    <p class="tiptext">Warning</p>
 
-    <p class="tiptext">If you have any errors in your style definitions they will silently be ignored. You can use Preview View to check for errors.</p>
+    <p class="tiptext">If you have any errors in your style definitions they will silently be ignored. You can use Validate CSS With W3C to check for errors.</p>
   </div>
 
   <p class="calibre1">Even though you've created the external stylesheet, its not actually used by anything yet.</p>
@@ -223,25 +213,23 @@
 
   <p class="calibre1">To tell your HTML files which stylesheet file to use you need to link the stylesheet to your HTML file:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6">Select one or more files in the Book Browser</li>
+  <ul class="calibre4">
+    <li class="calibre5">Select one or more files in the Book Browser</li>
 
-    <li class="calibre6">Right-click on the selection</li>
+    <li class="calibre5">Right-click on the selection</li>
 
-    <li class="calibre6">Choose Link Stylesheets from the context menu</li>
+    <li class="calibre5">Choose Link Stylesheets from the context menu</li>
   </ul>
 
-  <div class="image"><img alt="" src="../Images/book_browser_link_stylesheets_window.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/book_browser_link_stylesheets_window.png" class="calibre3"/></div>
 
-  <ul class="calibre5">
-    <li class="calibre6">Click on the stylesheets you want to be used for the files and select OK.</li>
+  <ul class="calibre4">
+    <li class="calibre5">Click on the stylesheets you want to be used for the files and select OK.</li>
   </ul>
 
   <p class="calibre1">You can link multiple stylesheets to one page if separate CSS files help you organize styles better, but most EPUBs use just one stylesheet.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">If you link multiple stylesheets they will be applied in order so the styles in the last stylesheet will override the styles in the preceding stylesheets.</p>
   </div>
 
@@ -261,16 +249,25 @@
      <div>
   <ul>
     <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Titlepage</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
           <a href="whats_new.html">What's New</a>
         </li>
         <li>
-          <a href="introduction_about_sigil.html">About Sigil</a>
+          <a href="about_sigil.html">About Sigil</a>
         </li>
         <li>
-          <a href="introduction_about_epub.html">About EPUB</a>
+          <a href="about_epub.html">About EPUB</a>
         </li>
       </ul>
     </li>
@@ -298,7 +295,7 @@
           <a href="preferences.html">Preferences</a>
         </li>
         <li>
-          <a href="open_and_save_files.html">Open and Save Files</a>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
         </li>
         <li>
           <a href="book_view.html">Book View</a>
@@ -316,22 +313,13 @@
           <a href="table_of_contents.html">Table of Contents (TOC)</a>
         </li>
         <li>
-          <a href="metadata_editor.html">Metadata Editor</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="find_replace.html">Find &amp; Replace</a>
+          <a href="validation.html">Validation</a>
         </li>
         <li>
-          <a href="saved_searches.html">Saved Searches</a>
-        </li>
-        <li>
-          <a href="clips.html">Clips</a>
-        </li>
-        <li>
-          <a href="index_editor.html">Index Editor</a>
-        </li>
-        <li>
-          <a href="reports.html">Reports</a>
+          <a href="spellcheck.html">Spellcheck</a>
         </li>
         <li>
           <a href="images.html">Images</a>
@@ -343,10 +331,31 @@
           <a href="splitting_and_merging.html">Splitting and Merging</a>
         </li>
         <li>
-          <a href="spellcheck.html">Spell Check</a>
+          <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="validation.html">Validate and Clean</a>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
         </li>
       </ul>
     </li>
@@ -363,24 +372,24 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html#tips">Tips</a>
+          <a href="tutorial_tips.html">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html#faq">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <ul>
         <li>
-          <a href="faq.html#faq_starting_sigil">Most Common</a>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
@@ -397,7 +406,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
     </li>
   </ul>
 </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Embedding Fonts</title>
+    <title>Include Custom Fonts</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    version 0.6.0 draft
+    0.6.0 draft
 
   </div>
 </div>
@@ -50,38 +50,32 @@
     
 
     
-  <h2 id="fonts" class="calibre8">Embed Fonts</h2>
+  <h2 id="fonts" class="calibre6">Include Custom Fonts</h2>
 
-  <p class="h2subheading">— Using Custom Fonts In Your Book —</p>
+  <p class="h2subheading">— Embedding Fonts In Your Book —</p>
 
   <p class="calibre1">This tutorial shows you how to use custom fonts in your EPUB.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">One of the benefits of ereaders is that you can choose your own font, so its usually best to just use embedded fonts to highlight specific types of text such as chapter headings, quotes, etc. and not to change the font of the entire book.</p>
   </div>
 
   <p class="calibre1">To use a font in an EPUB you must first load the font into the EPUB, define a style for the font, and then apply the style to your text.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">You will need to know about stylesheets to embed fonts so you should read through the <a href="../Text/tutorial_stylesheets.html">Stylesheets</a> chapter first.</p>
   </div>
 
   <h3 class="sigilnotintoc">Adding Fonts to your EPUB</h3>
 
-  <p class="calibre1">To add fonts to your book, use <span class="menuitem">File→New→Add Existing Files</span>, or right click in the Book Browser and select Add Existing Files from the context menu. This will display a dialog allowing you to select one or more files from your computer. Select as many font files as you want.</p>
+  <p class="calibre1">To add fonts to your book, use <span class="shortcut">File→New→Add Existing Files</span>, or right click in the Book Browser and select Add Existing Files from the context menu. This will display a dialog allowing you to select one or more files from your computer. Select as many font files as you want.</p>
 
   <p class="calibre1">The fonts will be added to the Fonts folder in the Book Browser. However, they are not yet actually used anywhere in your book – they are just available to use.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">Many fonts are not free. Before you include fonts in your EPUB please make sure that you have a license or permission to use them. There are many free fonts available online if you search for them.</p>
 
-    <p class="tiptext">Fonts files must be either OpenType (<span class="example">.otf</span>) or TrueType (<span class="example">.ttf</span>) format. All ereaders should support <span class="example">otf</span> but most will likely support both formats.</p>
+    <p class="tiptext">Fonts files must be either OpenType (<span class="example2">.otf</span>) or TrueType (<span class="example2">.ttf</span>) format. All ereaders should support <span class="example2">otf</span> but most will likely support both formats.</p>
   </div>
 
   <h3 class="sigilnotintoc" id="inserting_images">Defining Styles for Your Font</h3>
@@ -107,8 +101,6 @@
 </pre>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">You must define one @font-face rule for each style of font (normal, bold, italics, etc.).</p>
 
     <p class="tiptext">When using font-family in @font-face and later, the font name must either be quoted or unquoted every time you use it, but not both. Always using quotes around the font name makes things more consistent and avoids having to check if a name is valid without quotes.</p>
@@ -136,14 +128,10 @@
 }</pre>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">The font-family rule above says to use your font if possible for the text, but if its not possible use a generic serif font.</p>
   </div>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">You may need to save your EPUB and then re-open it in Sigil to make sure Sigil reads your new style.</p>
 
     <p class="tiptext">Due to a bug in the Qt libraries used by Sigil, fonts may not display correctly in Sigil so you will may have to test them on your target ereaders.</p>
@@ -157,7 +145,7 @@
 
   <p class="calibre1">To use font obfuscation, right click on your fonts in the Book Browser window, right-click and select Font Obfuscation from the menu and choose a method to use for obfuscation.</p>
 
-  <div class="image"><img alt="" src="../Images/fonts_obfuscation_menu.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/fonts_obfuscation_menu.png" class="calibre3"/></div>
 
   <h3 class="sigilnotintoc">Testing Your Font</h3>
 
@@ -173,16 +161,25 @@
      <div>
   <ul>
     <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Titlepage</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
           <a href="whats_new.html">What's New</a>
         </li>
         <li>
-          <a href="introduction_about_sigil.html">About Sigil</a>
+          <a href="about_sigil.html">About Sigil</a>
         </li>
         <li>
-          <a href="introduction_about_epub.html">About EPUB</a>
+          <a href="about_epub.html">About EPUB</a>
         </li>
       </ul>
     </li>
@@ -210,7 +207,7 @@
           <a href="preferences.html">Preferences</a>
         </li>
         <li>
-          <a href="open_and_save_files.html">Open and Save Files</a>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
         </li>
         <li>
           <a href="book_view.html">Book View</a>
@@ -228,22 +225,13 @@
           <a href="table_of_contents.html">Table of Contents (TOC)</a>
         </li>
         <li>
-          <a href="metadata_editor.html">Metadata Editor</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="find_replace.html">Find &amp; Replace</a>
+          <a href="validation.html">Validation</a>
         </li>
         <li>
-          <a href="saved_searches.html">Saved Searches</a>
-        </li>
-        <li>
-          <a href="clips.html">Clips</a>
-        </li>
-        <li>
-          <a href="index_editor.html">Index Editor</a>
-        </li>
-        <li>
-          <a href="reports.html">Reports</a>
+          <a href="spellcheck.html">Spellcheck</a>
         </li>
         <li>
           <a href="images.html">Images</a>
@@ -255,10 +243,31 @@
           <a href="splitting_and_merging.html">Splitting and Merging</a>
         </li>
         <li>
-          <a href="spellcheck.html">Spell Check</a>
+          <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="validation.html">Validate and Clean</a>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
         </li>
       </ul>
     </li>
@@ -275,24 +284,24 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html#tips">Tips</a>
+          <a href="tutorial_tips.html">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html#faq">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <ul>
         <li>
-          <a href="faq.html#faq_starting_sigil">Most Common</a>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
@@ -309,7 +318,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
     </li>
   </ul>
 </div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Getting Started Tutorial</title>
+    <title>Create an EPUB</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    version 0.6.0 draft
+    0.6.0 draft
 
   </div>
 </div>
@@ -50,94 +50,92 @@
     
 
     
-  <h2 id="tutorial" class="calibre8">Create an EPUB</h2>
+  <h2 id="tutorial" class="calibre6">Create an EPUB</h2>
 
-  <p class="h2subheading">— Convert an HTML File To EPUB —</p>
+  <p class="h2subheading">— Your First Book —</p>
 
-  <p class="calibre1">This tutorial shows you how to create an EPUB ebook from a document or file.</p>
+  <p class="calibre1">This tutorial shows you how to take your manuscript and turn it into an EPUB ebook. Of course, you can do all kinds of other things with Sigil, but creating your first EPUB is a good way to see the features of Sigil.</p>
 
-  <p class="calibre1">Creating an EPUB consists of loading your document or entering text, and then adding information about the book, a cover and a table of contents, and then checking your EPUB for errors. The steps in the tutorial will walk you through many of the features of Sigil.</p>
+  <p class="calibre1">Creating an EPUB can be done with a the following steps:</p>
 
-  <p class="calibre1">If you already have an HTML or EPUB file you can skip the conversion step and open your file directly in Sigil. If you are going to write in Sigil, then you can skip the conversion and opening file steps.</p>
+  <ul class="calibre4">
+    <li class="calibre5">Loading your document into Sigil</li>
 
-  <h3 class="sigilnotintoc">Convert Your Files To HTML</h3>
+    <li class="calibre5">Adding Author and Title information</li>
+
+    <li class="calibre5">Adding a cover</li>
+
+    <li class="calibre5">Adding a table of contents</li>
+
+    <li class="calibre5">Checking your EPUB for errors</li>
+  </ul>
+
+  <h3 class="sigilnotintoc">Convert Your File To HTML</h3>
+
+  <p class="calibre1">If you already have an HTML or EPUB file you can skip this step.</p>
 
   <p class="calibre1">If you are starting with a document created by one of the many available word processor programs, the first thing you need to do is convert your document to HTML so that you can import it into Sigil.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">Sigil only supports importing HTML files since converting from other formats is actually quite specialized and best left to other tools.</p>
   </div>
 
   <p class="calibre1">Although conversion is not part of Sigil, here are some suggestions for converting files to HTML:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6"><span class="listheading">Microsoft Word file:</span> use the MS Word menu option <span class="menuitem">File→Save As Filtered HTML</span>. Or use the <a href="http://www.mobileread.com/forums/showthread.php?t=142530">MS Word Macro @ MobileRead</a>. Both approaches try to reduce the amount of extra code used by MS Word so that your HTML file is cleaner and simpler to edit in Sigil.</li>
+  <ul class="calibre4">
+    <li class="calibre5"><span class="listheading">Microsoft Word file:</span> use the MS Word menu option <span class="shortcut">File→Save As Filtered HTML</span>. Or use the <a href="http://www.mobileread.com/forums/showthread.php?t=142530">MS Word Macro @ MobileRead</a>. Both approaches try to reduce the amount of extra code included by MS Word so that your HTML file is cleaner and simpler to edit in Sigil. You really want to have your code as clean as possible.</li>
 
-    <li class="calibre6"><span class="listheading">Text file:</span> try renaming the file to end in <span class="example">.html</span>, or load into into MS Word, OpenOffice or LibreOffice and save as HTML. Text files usually don't convert well due to difficulty in identify the start and end of paragraphs.</li>
+    <li class="calibre5"><span class="listheading">Text file:</span> try renaming the file to end in <span class="example">.html</span>, or load into into MS Word, OpenOffice or LibreOffice and save as HTML. Text files usually don't convert well due to difficulty in identify the start and end of paragraphs.</li>
 
-    <li class="calibre6"><span class="listheading">RTF file:</span> try the rtf2epub tool at <a href="http://code.google.com/p/epub-tools/downloads/list">http://code.google.com/p/epub-tools/downloads/list</a>.</li>
+    <li class="calibre5"><span class="listheading">RTF file:</span> try the rtf2epub tool at <a href="http://code.google.com/p/epub-tools/downloads/list">http://code.google.com/p/epub-tools/downloads/list</a>.</li>
 
-    <li class="calibre6"><span class="listheading">PDF file:</span> use Adobe Acrobat <span class="menuitem">File→Save as HTML</span> menu option, or use <a href="http://pdftohtml.sourceforge.net/">http://pdftohtml.sourceforge.net/</a>. PDF files usually don't convert well since they were built for a fixed layout.</li>
+    <li class="calibre5"><span class="listheading">PDF file:</span> use Adobe Acrobat <span class="shortcut">File→Save as HTML</span> menu option, or use <a href="http://pdftohtml.sourceforge.net/">http://pdftohtml.sourceforge.net/</a>. PDF files usually don't convert well since they were built for a fixed layout. Avoid if possible.</li>
+
+    <li class="calibre5"><span class="listheading">Mobi file:</span> Unzip the .azw or .prc into a directory. Then open the HTML file in Sigil.</li>
   </ul>
-
-  <div class="tip">
-    <p class="tipheader">Tip</p>
-
-    <p class="tiptext">You can also use <a href="http://calibre-ebook.com/">calibre</a> to convert many different formats to HTML, and can convert EPUB files to many other formats. Although it can convert files to EPUB, its best to use an HTML source file if you have one.</p>
-  </div>
 
   <h3 class="sigilnotintoc">Start Sigil</h3>
 
   <p class="calibre1">When you first start Sigil you will be shown a screen with several windows. The Book Browser window is on the left (which is used to access all the files in your EPUB), an editor Window is in the center and set to Book View (to edit your book as it appears), and a Table of Contents window is on the right (to show you any chapter titles you've defined).</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_start_sigil.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/book-view-labelled.png" class="calibre3"/></div>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">See the <a href="../Text/user_interface.html">User Interface</a> chapter for more details.</p>
   </div>
 
   <h3 class="sigilnotintoc">Open Your File</h3>
 
-  <p class="calibre1">A blank EPUB book is loaded when Sigil is first opened, but since you already have an existing file you can just load your file.</p>
+  <p class="calibre1">To open your EPUB or HTML file, use the menu option <span class="shortcut">File→Open</span>:</p>
 
-  <p class="calibre1">To open your EPUB or HTML file, use the menu option <span class="menuitem">File→Open</span>:</p>
-
-  <div class="image"><img alt="" src="../Images/tutorial_open_menu_choice.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_open_menu_choice.png" class="calibre3"/></div>
 
   <p class="calibre1">Select the file you want to open from your file manager.</p>
 
   <p class="calibre1">You will now see your file in the Book Browser window under the Text folder on the left, and the file will be opened in the Book View editor in the middle with its filename showing on the tab header:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_opened_file.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_opened_file.png" class="calibre3"/></div>
 
   <p class="calibre1">Your HTML file is now part of the EPUB ebook. From now on you you are editing your EPUB and not just an HTML file.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
     <p class="tiptext">If your file includes any images or stylesheets, Sigil will attempt to load them as well.</p>
 
-    <p class="tiptext">When converting your file to EPUB or loading an EPUB Sigil may add some necessary details and re-organize your files into standard folder names.</p>
+    <p class="tiptext">When converting your file to EPUB or loading an EPUB Sigil may add some necessary details and re-organize your files into standard folder names but it won't change your text.</p>
   </div>
 
   <h3 class="sigilnotintoc">Save Your EPUB</h3>
 
   <p class="calibre1">Now that you've loaded your file, you should save your new EPUB. You should do this right after loading your file to make sure there are no problems.</p>
 
-  <p class="calibre1">To save your EPUB, use the menu option <span class="menuitem">File→Save As:</span></p>
+  <p class="calibre1">To save your EPUB, use the menu option <span class="shortcut">File→Save As:</span></p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_save_as_menu_choice.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_save_as_menu_choice.png" class="calibre3"/></div>
 
   <p class="calibre1">Enter a name for you file in your file manager. It will be given a <span class="example">.epub</span> extension since it will be saved as an EPUB file.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
-    <p class="tiptext">You can now use <span class="menuitem">File→Save</span> to save your EPUB at any time – and you should save often.</p>
+    <p class="tiptext">You can now use the button <img alt="" src="../Images/button-save.png" class="calibre3"/> to save your EPUB at any time – and you should save often.</p>
   </div>
 
   <p class="calibre1">To make sure your ebook conforms to EPUB standards, you need to add a bit more information.</p>
@@ -146,40 +144,40 @@
 
   <p class="calibre1">If you need to make any basic changes to your text, you can just edit your book in the Book View editor.</p>
 
+  <p class="calibre1">To open specific pages in your book, just double-click them in the Book Browser.</p>
+
   <p class="calibre1">You can then follow the remaining steps to create a complete EPUB ebook. You can always make more changes once you've created your EPUB – read through the User Guide for more details on editing, working with files, images and formatting.</p>
 
   <h3 class="sigilnotintoc">Add Details About Your Book</h3>
 
   <p class="calibre1">In addition to the actual content of your book, EPUB files also contain information that is useful for your readers such as book details like Title and Author.</p>
 
-  <p class="calibre1">To add details about your book (called metadata) to your EPUB, use the menu option <span class="menuitem">Edit→Metadata Editor:</span></p>
+  <p class="calibre1">To add details about your book (called metadata) to your EPUB, use the button <img alt="" src="../Images/button-metadata-editor.png" class="calibre3"/> or the menu option <span class="shortcut">Tools→Metadata Editor:</span></p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_metadata_menu_choice.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_metadata_menu_choice.png" class="calibre3"/></div>
 
   <p class="calibre1">The Metadata Editor window will be displayed:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_metadata_blank.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_metadata_blank.png" class="calibre3"/></div>
 
-  <p class="calibre1">You now have to add the Title, Author, and Language to your book in order to have a valid EPUB:</p>
+  <p class="calibre1">You can now add your Title, Author, and Language to your book:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6"><span class="listheading">Title:</span> the full title of your book</li>
+  <ul class="calibre4">
+    <li class="calibre5"><span class="listheading">Title:</span> the full title of your book</li>
 
-    <li class="calibre6"><span class="listheading">Author:</span> for example enter <span class="example">Carroll, Lewis</span></li>
+    <li class="calibre5"><span class="listheading">Author:</span> for example enter <span class="example">Carroll, Lewis</span></li>
 
-    <li class="calibre6"><span class="listheading">Language:</span> the language the book was written in</li>
+    <li class="calibre5"><span class="listheading">Language:</span> the language the book was written in</li>
   </ul>
 
-  <div class="image"><img alt="" src="../Images/tutorial_metadata_required.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_metadata_required.png" class="calibre3"/></div>
 
-  <p class="calibre1">Once you've updated the information, you can select <span class="example">OK</span> and then save your EPUB again.</p>
+  <p class="calibre1">Once you have updated the information, you can select <span class="buttonbox"><span class="buttontext">OK</span></span> and then save your EPUB again.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
+    <p class="tiptext">You may have noticed that there is a lot of room for other values in the Metadata Editor. Only the Title, Author, and Language are required for EPUBs, but if you want to add more values using the <span class="buttonbox"><span class="buttontext1">Add Basic</span></span> or <span class="buttonbox"><span class="buttontext1">Add Role</span></span> buttons you can.</p>
 
-    <p class="tiptext">You may have noticed that there is a lot of room for other values in the Metadata Editor. Only the Title, Author, and Language are required for EPUBs, but if you want to add more values using the <span class="example">Add Basic</span> or <span class="example">Add Role</span> buttons you can.</p>
-
-    <p class="tiptext">See the <a href="../Text/metadata_editor.html">Metadata Editor</a> chapter for more details.</p>
+    <p class="tiptext">See the <a href="../Text/metadata.html">Metadata Editor</a> chapter for more details.</p>
   </div>
 
   <h3 class="sigilnotintoc">Add a Cover Image</h3>
@@ -190,19 +188,17 @@
 
   <h4 class="sigilnotintoc1" id="tutorial_add_cover_image">Add Your Cover Image to Your EPUB</h4>
 
-  <p class="calibre1">To select the image you want as your cover, use <span class="menuitem">File→New→Add Existing Files</span>:</p>
+  <p class="calibre1">To select the image you want as your cover, use <span class="shortcut">File→New→Add Existing Files</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_image_add_existing_menu.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_image_add_existing_menu.png" class="calibre3"/></div>
 
   <p class="calibre1">Select your cover image from your file manager.</p>
 
   <p class="calibre1">Your EPUB now contains your cover image:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_image_in_browser.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_image_in_browser.png" class="calibre3"/></div>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">You can double click your image file to display it in the main window.</p>
   </div>
 
@@ -212,45 +208,45 @@
 
   <p class="calibre1">You need to create an HTML file and insert your cover image into the file.</p>
 
-  <p class="calibre1">Create a new HTML file in your EPUB by right clicking on a file name in the Book Browser and selecting the menu option <span class="menuitem">Add Blank Section</span>:</p>
+  <p class="calibre1">Create a new HTML file in your EPUB by right clicking on a file name in the Book Browser and selecting the menu option <span class="shortcut">Add Blank Section</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_context_add_blank.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_context_add_blank.png" class="calibre3"/></div>
 
   <p class="calibre1">A new HTML file will be created in your Text folder:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_blank_file_added.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_blank_file_added.png" class="calibre3"/></div>
 
   <p class="calibre1">Rename the file so you know what it is by right-clicking on the filename and selecting Rename from the menu:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_rename_menu.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_file_rename_menu.png" class="calibre3"/></div>
 
   <p class="calibre1">Enter <span class="example">cover.xhtml</span> as the new name (you can just type <span class="example">cover</span> – the extension will not change by default):</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_renamed.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_file_renamed.png" class="calibre3"/></div>
 
   <p class="calibre1">Move the file to the top of the Text folder since a cover should be the first file of a book. You can drag-and-drop the file to its new position (click on the filename and hold the mouse down while you move it to its new position):</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_at_top.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_file_at_top.png" class="calibre3"/></div>
 
   <p class="calibre1">Now that we have an HTML file, we need to put your cover image into it.</p>
 
   <p class="calibre1">Double-click on the <span class="example">cover.xhtml</span> file to open it in the Book View editor window (you will see <span class="example">cover.xhtml</span> as the title of the open tab in the editor window), click somewhere in the blank window to start editing.</p>
 
-  <p class="calibre1"><img alt="" src="../Images/tutorial_cover_click_here.png" class="calibre7"/></p>
+  <p class="calibre1"><img alt="" src="../Images/tutorial_cover_click_here.png" class="calibre3"/></p>
 
-  <p class="calibre1">Use <span class="menuitem">Edit→Insert Image</span> to select your image from the Images folder, or use the Insert Image icon on the toolbar:</p>
+  <p class="calibre1">Use <span class="shortcut">Edit→Insert Image</span> to select your image from the Images folder, or use the Insert Image icon on the toolbar:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_image_icon.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_image_icon.png" class="calibre3"/></div>
 
   <p class="calibre1">This will display the Insert Images window:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_insert_image.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_insert_image.png" class="calibre3"/></div>
 
   <p class="calibre1">Select your image from the list of images in your EPUB.</p>
 
   <p class="calibre1">Your cover image will now appear in the file:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_inserted.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_inserted.png" class="calibre3"/></div>
 
   <h4 class="sigilnotintoc1">Mark your Cover Files as a Cover</h4>
 
@@ -258,19 +254,17 @@
 
   <p class="calibre1">To mark the HTML file as a cover right-click on <span class="example">cover.xhtml</span> in the Book Browser window, select the menu item Add Semantics, then choose the Cover entry:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_semantics.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_file_semantics.png" class="calibre3"/></div>
 
   <p class="calibre1">And to mark the image as a cover image right-click on the cover image in the Book Browser window, select the menu item Add Semantics, then choose the Cover entry. You must set both the image and the HTML file to type Cover to make sure all ereaders recognize the cover.</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_image_semantics.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_cover_image_semantics.png" class="calibre3"/></div>
 
   <p class="calibre1">Your EPUB now has a cover defined (if you look at the Add Semantics menu again for the files you will see the Cover items now have a checkmark next to them).</p>
 
   <p class="calibre1">You should save your book if you haven't already.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">See the <a href="../Text/images.html">Images</a> chapter for more details.</p>
   </div>
 
@@ -280,21 +274,19 @@
 
   <p class="calibre1">Sigil will display the current TOC in a separate window. If you haven't defined any text as a chapter heading, then the Table of Contents window will be blank – except for the Start placeholder text and two buttons for generating a new Table of Contents:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_toc_empty.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_toc_empty.png" class="calibre3"/></div>
 
   <h4 class="sigilnotintoc1">Mark Your Chapter Headings</h4>
 
   <p class="calibre1">In order to tell Sigil what your chapter headings are you need to highlight the text in your files (e.g. <span class="example">Chapter 1</span>) and then click on the Paragraph Format icon (which will probably list Normal on the button if you have selected some standard text) at the top of the Book View window:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_toc_heading_select.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_toc_heading_select.png" class="calibre3"/></div>
 
   <p class="calibre1">Select <span class="example">Heading 1</span> for a top level heading. This will mark the the text as a heading at level 1 – you can see that the format of the text and the dropdown menu has changed:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_toc_heading_after.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_toc_heading_after.png" class="calibre3"/></div>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">When you click on a heading in your text the Paragraph Format menu will change to show the heading level.</p>
   </div>
 
@@ -302,31 +294,27 @@
 
   <h4 class="sigilnotintoc1">Generate the TOC</h4>
 
-  <p class="calibre1">Once you have marked all your chapter headings you can click the <span class="example">Generate TOC from headings</span> button on the Table of Contents window:</p>
+  <p class="calibre1">Once you have marked all your chapter headings you can click the <span class="buttonbox"><span class="buttontext">Generate Table Of Contents</span></span> button on the Table of Contents window:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_toc_generate_toc_button.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_toc_generate_toc_button.png" class="calibre3"/></div>
 
   <p class="calibre1">This will open the Heading Selector dialog:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_toc_generate.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_toc_generate.png" class="calibre3"/></div>
 
   <p class="calibre1">The dialog allows you to mark which headings to include or not include in your Table of Contents. Click OK when you are finished.</p>
 
   <p class="calibre1">The Table of Contents window has now been updated to show your current TOC – which includes the headings you selected:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_toc_with_chapters.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_toc_with_chapters.png" class="calibre3"/></div>
 
   <p class="calibre1">You should save your book if you haven't already.</p>
 
   <div class="tip">
-    <p class="tipheader">Note</p>
-
-    <p class="tiptext">You can also use Sigil to create create an inline TOC page using the <span class="example">Generate Inline HTML TOC</span> button. This is not required or usually used in EPUBs, but if you convert to other formats or want a fancy TOC then its available.</p>
+    <p class="tiptext">You can also use Sigil to create create an inline TOC page using the <span class="buttonbox"><span class="buttontext1">Generate Inline HTML TOC</span></span> button. This is not required or usually used in EPUBs, but if you convert to other formats or want a fancy TOC then its available.</p>
   </div>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">See the <a href="../Text/table_of_contents.html">Table of Contents</a> chapter for more details.</p>
   </div>
 
@@ -337,8 +325,6 @@
   <p class="calibre1">If you loaded an HTML file into Sigil, this usually means all of your text and chapters are in one large file. This is okay, but the standard practice with EPUBs is to put each chapter in your book into a separate HTML file. This makes it much easier to edit.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">Since most ereaders start a new file in the EPUB on a new page, it means your chapters will also start on a new page.</p>
   </div>
 
@@ -350,33 +336,31 @@
 
   <p class="calibre1">For each chapter heading in your book, click just to the left of the chapter heading so that your cursor is at the start of the line:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_split_insert_cursor.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_split_insert_cursor.png" class="calibre3"/></div>
 
-  <p class="calibre1">Now select <span class="menuitem">Edit→Insert Chapter Marker</span> to insert a marker in your text:</p>
+  <p class="calibre1">Now select <span class="shortcut">Edit→Insert Chapter Marker</span> to insert a marker in your text:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_split_insert_marker.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_split_insert_marker.png" class="calibre3"/></div>
 
   <p class="calibre1">The marker will appear as a horizontal line:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_split_marker.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_split_marker.png" class="calibre3"/></div>
 
   <p class="calibre1">Do this for every chapter in your book.</p>
 
   <h4 class="sigilnotintoc1" id="tutorial_split_book">Split Your Book</h4>
 
-  <p class="calibre1">Once you have inserted all your Chapter Markers into your file, you need to run <span class="menuitem">Edit→Split at Chapter Markers</span>:</p>
+  <p class="calibre1">Once you have inserted all your Chapter Markers into your file, you need to run <span class="shortcut">Edit→Split at Chapter Markers</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_split_split_markers.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_split_split_markers.png" class="calibre3"/></div>
 
   <p class="calibre1">Your book will now be split into separate files as shown in the Book Browser:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_split_browser.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_split_browser.png" class="calibre3"/></div>
 
   <p class="calibre1">You can rename the chapters, and you should save your book once you have made your changes.</p>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">See the <a href="../Text/splitting_and_merging.html">Splitting and Merging</a> chapter for more details.</p>
   </div>
 
@@ -384,19 +368,17 @@
 
   <p class="calibre1">Your book is almost ready. You just need to check your EPUB to see if there are any issues that might cause problems for ereaders. This can range from missing or extra files, or broken links, etc. This may be unlikely for your first file, but its good practice to do the checks to make sure your EPUB is standard.</p>
 
-  <p class="calibre1">To check or validate your book, use <span class="menuitem">File→Validate</span>. This will open a window just below your document and list any problems that were found. For instance, if you forgot to enter the Title of the book in the Metadata Editor you might see:</p>
+  <p class="calibre1">To check or validate your book, use <span class="shortcut">File→Validate</span>. This will open a window just below your document and list any problems that were found. For instance, if you forgot to enter the Title of the book in the Metadata Editor you might see:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_validate_results.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_validate_results.png" class="calibre3"/></div>
 
   <p class="calibre1">It can be difficult to interpret exactly what the issues are sometimes, but you should read through them to see if there is anything that you recognize and can fix.</p>
 
   <p class="calibre1">Once you've fixed all the errors Validate will confirm everything is okay:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_validate_no_problems.png" class="calibre7"/></div>
+  <div class="image"><img alt="" src="../Images/tutorial_validate_no_problems.png" class="calibre3"/></div>
 
   <div class="tip">
-    <p class="tipheader">Tip</p>
-
     <p class="tiptext">See the <a href="../Text/validation.html">Validate and Clean</a> chapter for more details.</p>
   </div>
 
@@ -414,16 +396,25 @@
      <div>
   <ul>
     <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Titlepage</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
           <a href="whats_new.html">What's New</a>
         </li>
         <li>
-          <a href="introduction_about_sigil.html">About Sigil</a>
+          <a href="about_sigil.html">About Sigil</a>
         </li>
         <li>
-          <a href="introduction_about_epub.html">About EPUB</a>
+          <a href="about_epub.html">About EPUB</a>
         </li>
       </ul>
     </li>
@@ -451,7 +442,7 @@
           <a href="preferences.html">Preferences</a>
         </li>
         <li>
-          <a href="open_and_save_files.html">Open and Save Files</a>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
         </li>
         <li>
           <a href="book_view.html">Book View</a>
@@ -469,22 +460,13 @@
           <a href="table_of_contents.html">Table of Contents (TOC)</a>
         </li>
         <li>
-          <a href="metadata_editor.html">Metadata Editor</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="find_replace.html">Find &amp; Replace</a>
+          <a href="validation.html">Validation</a>
         </li>
         <li>
-          <a href="saved_searches.html">Saved Searches</a>
-        </li>
-        <li>
-          <a href="clips.html">Clips</a>
-        </li>
-        <li>
-          <a href="index_editor.html">Index Editor</a>
-        </li>
-        <li>
-          <a href="reports.html">Reports</a>
+          <a href="spellcheck.html">Spellcheck</a>
         </li>
         <li>
           <a href="images.html">Images</a>
@@ -496,10 +478,31 @@
           <a href="splitting_and_merging.html">Splitting and Merging</a>
         </li>
         <li>
-          <a href="spellcheck.html">Spell Check</a>
+          <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="validation.html">Validate and Clean</a>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
         </li>
       </ul>
     </li>
@@ -516,24 +519,24 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html#tips">Tips</a>
+          <a href="tutorial_tips.html">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html#faq">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <ul>
         <li>
-          <a href="faq.html#faq_starting_sigil">Most Common</a>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
@@ -550,7 +553,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
     </li>
   </ul>
 </div>

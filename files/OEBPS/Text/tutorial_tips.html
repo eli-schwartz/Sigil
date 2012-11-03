@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    version 0.6.0 draft
+    0.6.0 draft
 
   </div>
 </div>
@@ -50,79 +50,41 @@
     
 
     
-  <h2 id="tips" class="calibre8">Tips</h2>
-
-  <p class="h2subheading">— Advice On Using Sigil —</p>
-
-  <p class="calibre1">This chapter is a list of tips from experienced users of Sigil.</p>
-
-  <p class="calibre1">Everyone uses Sigil differently but the tips may still be helpful to you. Keep in mind that Sigil is used by people making only a few occasional updates to books as well as people converting or cleaning up books professionally on a daily basis.</p>
-
-  <p class="calibre1">When you start to use Sigil more often you may find some of these suggestions useful:</p>
-
-  <ul class="calibre5">
-    <li class="calibre6">Save often to allow automatic error checking and cleanup to run – to catch issues before they become larger.</li>
-
-    <li class="calibre6">Make backup copies of your file as you edit, especially before doing major changes.</li>
-
-    <li class="calibre6">Learn about stylesheets (CSS) and use them to control formatting instead of inline styles. This will make formatting your book much easier in the long run.</li>
-
-    <li class="calibre6">Use Code View for editing. Book View works great, especially for quick word corrections and some basic styling like headers, but if you want to format a lot of text or to control the exact styles used, then use Code View to avoid Book View using its own styles or inserting extra blank spaces, etc. And since many of Sigil's advanced functions are only available in Code View you should become familiar with it sooner rather than later.</li>
-
-    <li class="calibre6">Set Clean Source to Pretty Print instead of the default Tidy setting. Then exit and restart Sigil. This will help to clean up the spacing of code without changing styles or the code itself. Using Tidy can be helpful for a lot of people, but once you start editing your HTML code directly you won't want it creating inline style tags or making other changes. If you really don't want your code changed at all, then turn Clean Source off.</li>
-
-    <li class="calibre6">Keep the Well-Formed check turned on. If this is turned off then Sigil will automatically correct errors when you switch views or save – which could mean deleting some of your text. Leaving it on means you will be prompted to fix any errors.</li>
-  </ul>
+  <h2 id="tips" class="calibre6">Tips</h2>
 
   <p class="calibre1">When you have finished editing, consider following this checklist:</p>
 
-  <ul class="calibre5">
-    <li class="calibre6">Validate to check for errors then fix them.</li>
+  <ul class="calibre4">
+    <li class="calibre5">Validate to check for errors; then fix them. See <a href="../Text/validation.html">Validation</a> for typical error messages and what to do about them.</li>
 
-    <li class="calibre6">Spell Check, and consider creating a separate dictionary for your book if it has lots of unique words.</li>
+    <li class="calibre5">Spell Check, and consider creating a separate dictionary for your book if it has lots of unique words.</li>
 
-    <li class="calibre6">Set Title, Author, Language, Copyright and, if you want, Publication Date, Subject, Description, Copyright and ISBN if there is one.</li>
+    <li class="calibre5">Use Metadata Editor to set your Title, Author, Language, and Copyright. And if you want, also set the Publication Date, Subject, Description, Copyright and ISBN if there is one.</li>
 
-    <li class="calibre6">Use Add Semantics to set your cover image and cover file (if you have one) as type Cover.</li>
+    <li class="calibre5">Use Add Semantics to set your cover image and cover file (if you have one) as type Cover.</li>
 
-    <li class="calibre6">Set your first text file (where the book will open) as semantic type Text.</li>
+    <li class="calibre5">Set your first text file (where the book will open) as semantic type Text.</li>
 
-    <li class="calibre6">Test your text links or footnote links work as expected.</li>
+    <li class="calibre5">Test your text links or footnotes work as expected.</li>
 
-    <li class="calibre6">Regenerate your TOC or check that it's up to date and working, and regenerate your inline TOC if there is one.</li>
+    <li class="calibre5">Regenerate your TOC, and re-create your HTML TOC if there is one.</li>
 
-    <li class="calibre6">Test your TOC links work as expected.</li>
+    <li class="calibre5">Test your TOC links work as expected.</li>
 
-    <li class="calibre6">Link your stylesheets to all files that need them.</li>
+    <li class="calibre5">Link your stylesheets to all files that need them. Use Reports to check for missing links.</li>
 
-    <li class="calibre6">Search for and remove or update text like &amp;nbsp;, &amp;quot;, &lt;br /&gt;, empty paragraphs &lt;p&gt;&amp;nbsp;&lt;/p&gt;, empty &lt;div&gt; tags, src="", href="", - to ndash, etc..</li>
+    <li class="calibre5">Search for and remove if necessary text like &amp;nbsp;, &amp;quot;, &lt;br /&gt;, empty paragraphs &lt;p&gt;&amp;nbsp;&lt;/p&gt;, empty &lt;div&gt; tags, src="", href="", change - to ndash, etc..</li>
 
-    <li class="calibre6">Search for sgc- classes, &lt;style&gt; tags or style= attributes and convert them CSS files.</li>
+    <li class="calibre5">Search for sgc- classes, &lt;style&gt; tags or style= attributes and convert them CSS files.</li>
 
-    <li class="calibre6">Scan your book in Code View line by line for unexpected formatting, especially if you've used Book View to make updates.</li>
+    <li class="calibre5">Remove unused images or unused style classes using the built in tools.</li>
 
-    <li class="calibre6">Validate again.</li>
+    <li class="calibre5">Scan your book in Code View line by line for unexpected formatting, especially if you've used Book View to make updates.</li>
 
-    <li class="calibre6">Proofread on actual ereaders. Sigil can only give an approximation of what your book will look like. There are lots of ereaders and not all software or devices support all EPUB features and formatting in the same way.</li>
+    <li class="calibre5">Validate again. Use the W3C CSS validator function to check your stylesheets as well.</li>
+
+    <li class="calibre5">Proofread on actual ereaders. Sigil can only give an approximation of what your book will look like. There are lots of ereaders and not all software or devices support all EPUB features and formatting in the same way.</li>
   </ul>
-
-  <div class="calibre4">
-    Features you might have missed:
-  </div>
-
-  <div class="calibre4">
-    <ul class="calibre5">
-      <li class="calibre6">Ctrl-Space removes formatting.  In Code View it removes all tags/attributes for the selection, but leaves your text.  Select text, use Ctrl-Space, then use one of the heading buttons or Clip Editor clips to modify the selected text.</li>
-
-      <li class="calibre6">When using Clip Editor to paste in text you can have it add tags at the start and end of your selected text by using \1 to represent your text.</li>
-
-      <li class="calibre6">Hold the Ctrl key down while clicking on any Find &amp; Replace or Search Editor action and your command will only be run on the Current File.  So you can leave it set to All HTML Files and just switch to the current file temporarily by using Ctrl.</li>
-
-      <li class="calibre6">Hold the Ctrl key down while pasting with Clip Editor and the code tags won't be removed when pasting.</li>
-
-      <li class="calibre6"><br class="calibre4"/></li>
-    </ul>
-  </div>
 
 
 
@@ -134,16 +96,25 @@
      <div>
   <ul>
     <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Titlepage</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
           <a href="whats_new.html">What's New</a>
         </li>
         <li>
-          <a href="introduction_about_sigil.html">About Sigil</a>
+          <a href="about_sigil.html">About Sigil</a>
         </li>
         <li>
-          <a href="introduction_about_epub.html">About EPUB</a>
+          <a href="about_epub.html">About EPUB</a>
         </li>
       </ul>
     </li>
@@ -171,7 +142,7 @@
           <a href="preferences.html">Preferences</a>
         </li>
         <li>
-          <a href="open_and_save_files.html">Open and Save Files</a>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
         </li>
         <li>
           <a href="book_view.html">Book View</a>
@@ -189,22 +160,13 @@
           <a href="table_of_contents.html">Table of Contents (TOC)</a>
         </li>
         <li>
-          <a href="metadata_editor.html">Metadata Editor</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="find_replace.html">Find &amp; Replace</a>
+          <a href="validation.html">Validation</a>
         </li>
         <li>
-          <a href="saved_searches.html">Saved Searches</a>
-        </li>
-        <li>
-          <a href="clips.html">Clips</a>
-        </li>
-        <li>
-          <a href="index_editor.html">Index Editor</a>
-        </li>
-        <li>
-          <a href="reports.html">Reports</a>
+          <a href="spellcheck.html">Spellcheck</a>
         </li>
         <li>
           <a href="images.html">Images</a>
@@ -216,10 +178,31 @@
           <a href="splitting_and_merging.html">Splitting and Merging</a>
         </li>
         <li>
-          <a href="spellcheck.html">Spell Check</a>
+          <a href="find_replace.html">Find &amp; Replace</a>
         </li>
         <li>
-          <a href="validation.html">Validate and Clean</a>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
         </li>
       </ul>
     </li>
@@ -236,24 +219,24 @@
           <a href="tutorial_regex.html">Use Regular Expressions</a>
         </li>
         <li>
-          <a href="tutorial_links.html#links">Create Links and Footnotes</a>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
         </li>
         <li>
-          <a href="tutorial_stylesheets.html#sigil_toc_id_3">Use Stylesheets</a>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
         </li>
         <li>
-          <a href="tutorial_embed_fonts.html#fonts">Embed Fonts</a>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_tips.html#tips">Tips</a>
+          <a href="tutorial_tips.html">Tips</a>
         </li>
       </ul>
     </li>
     <li>
-      <a href="faq.html#faq">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <ul>
         <li>
-          <a href="faq.html#faq_starting_sigil">Most Common</a>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
@@ -270,7 +253,7 @@
       </ul>
     </li>
     <li>
-      <a href="contributing_to_sigil.html#developer">Contributing to Sigil</a>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
     </li>
   </ul>
 </div>
