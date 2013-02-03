@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Indexes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0 Beta
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="styles.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="reports.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="indexes" class="calibre5">Indexes</h2>
+
+  <p class="h2subheading">— Create an Index For Your Book —</p>
+
+  <p class="calibre1">If you want to create an Index for your book, you can use Sigil to identify what to index and then to automatically create a new HTML page containing the index.</p>
+
+  <p class="calibre1">You can mark individual words in your text for indexing, or use the Index Editor to make sure every occurrence of the word is indexed.</p>
+
+  <h3 class="sigilnotintoc">Mark Entries for Indexing</h3>
+
+  <p class="calibre1">The first way to identify entries to include in the index is to mark specific words or phrases in your text. Only the occurrence of the word or phrase you mark will be included in the Index – if you need all occurrences use the Index Editor.</p>
+
+  <p class="calibre1">Highlight a word or phrase in either Book View or Code View and then select the menu item <span class="shortcut">Tools→Index→Mark For Index</span> or its keyboard shortcut (which you can change). This will then open a prompt for you to enter how you want these words to appear in the index:</p>
+
+  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre7"/></div>
+
+  <p class="calibre1">The text you enter as the name to use in the Index will be show up in the Index as follows:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">[blank]:</span> If you leave the name empty, then the exact words you highlighted will be used in the index.</li>
+
+    <li class="calibre4"><span class="listheading">words:</span> If you enter a word or phrase, then that word or phrase will be used (e.g. Oak instead of oak).</li>
+
+    <li class="calibre4"><span class="listheading">heading/words:</span> If you use a "/" in the name then a hierarchical group will be created (e.g. Forest/Tree/Oak will create an entry Oak filed under Tree filed under Forest).</li>
+
+    <li class="calibre4"><span class="listheading">entrya;entryb:</span> If you use a ";" then multiple entries will be created for this word or phrase.</li>
+  </ul>
+
+  <p class="calibre1">When you mark text for indexing, it just adds add some Sigil-specific HTML code that tells Sigil to include these words when you create the index. In code view it might appear as follows:</p>
+  <pre class="example1">&lt;a class="sigil_index_marker" title="Character/Alice"&gt;Alice&lt;/a&gt;
+</pre>
+
+  <p class="calibre1">If you no longer want a word or phrase to be indexed by Sigil, you will need to delete the special HTML tags around the word.</p>
+
+  <div class="tip">
+    <p class="tiptext">To find indexed words you can search in Code View. Or you can highlight them in Book View in color by adding the following CSS temporarily to your stylesheet:</p>
+    <pre class="calibre13">[class="sigil_index_marker"] { color:#335500; }</pre>
+  </div>
+
+  <h3 class="sigilnotintoc">Add Entries to Index Editor</h3>
+
+  <p class="calibre1">The second way identify words to index is to add the words to a list. Then when you create the index every occurrence of that word will be included in the index automatically. You can use words marked for indexing and a list of words to index at the same time.</p>
+
+  <p class="calibre1">To add specific words to the index list while in Book View or Code View, highlight the word or phrase, and then select the menu item <span class="shortcut">Tools→Index→Add To Index Editor</span>.</p>
+
+  <p class="calibre1">This will bring up the Index Editor with the word added to the list of entries to index. You can also enter words directly in the Index Editor as described below.</p>
+
+  <h3 class="sigilnotintoc">Create the Index</h3>
+
+  <p class="calibre1">To actually create your index once you have marked words and/or added them to the list just select the menu item <span class="shortcut">Tools→Index→Create Index</span>.</p>
+
+  <p class="calibre1">This will, eventually, create or update an HTML page called <span class="shortcut">Index.xhtml</span>. It will be marked with the semantic type "index". Entries are listed alphabetically with indentation for hierarchical entries, and extra spacing between entries that start with different letters.</p>
+
+  <div class="tip">
+    <p class="tiptext">You can edit the index page as with any HTML page, but if you re-create the index your changes will be over-written.</p>
+  </div>
+
+  <h3 class="sigilnotintoc">Index Editor</h3>
+
+  <p class="calibre1">The Index Editor is used to manage the list of entries that will be included in the index. It does not include the words you marked for indexing – they are included automatically.</p>
+
+  <p class="calibre1">To open the Index Editor select the menu item <span class="shortcut">Tools→Index→Index Editor</span> or its keyboard shortcut:</p>
+
+  <div class="image"><img alt="index-editor" src="../Images/index-editor.png" class="calibre7"/></div>
+
+  <h4 class="sigilnotintoc1">Text To Include</h4>
+
+  <p class="calibre1">The "Text To Include" column is a list of words you want Sigil to search for in your text and then to create an Index entry for using the format in the "Index Entries" column. Entries in the "Text To Include" column can use the following formats:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">words:</span> The words in the book must exactly match the listed words (case-sensitive).</li>
+
+    <li class="calibre4"><span class="listheading">wordsa;wordsb:</span> Separating words by a ";" means either word can match for this entry (e.g. Gutenberg;gutenberg).</li>
+
+    <li class="calibre4"><span class="listheading">Regex:</span> You can enter most regex patterns (e.g. [Gg]utenberg).</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext">You can paste text into the Text To Include field – e.g. from a file containing a list of words – and the text will be automatically split into separate entries for each line.</p>
+
+    <p class="tiptext">You can also use Open to open a text file of words or entries.</p>
+  </div>
+
+  <h4 class="sigilnotintoc1">Index Entries</h4>
+
+  <p class="calibre1">The "Index Entries" column is what will actually appear in the Index for words matching the "Text To Include" column.</p>
+
+  <p class="calibre1">Entries in the "Index Entries" column can use the following formats:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">words:</span> If you enter a word or phrase, then that word or phrase will be used (e.g. Oak instead of oak).</li>
+
+    <li class="calibre4"><span class="listheading">heading/words:</span> If you use a "/" in your name then a hierarchical group will be created (e.g. Forest/Tree/Oak will create an entry Oak filed under Tree filed under Forest).</li>
+
+    <li class="calibre4"><span class="listheading">entrya;entryb:</span> If you use a ";" then multiple entries will be created for this word or phrase.</li>
+  </ul>
+
+  <h4 class="sigilnotintoc1">Context Menu</h4>
+
+  <p class="calibre1">Most actions concerning editing clips can be done by using the context menu.</p>
+
+  <p class="calibre1">Select one or more entries then right-click on the selection for the following options:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Add Entry:</span> Add a blank search under the entry you clicked.</li>
+
+    <li class="first"><span class="listheading">Edit:</span> Edit the entry.</li>
+
+    <li class="first"><span class="listheading">Cut:</span> Delete one or more entries that can be pasted later.</li>
+
+    <li class="calibre4"><span class="listheading">Copy:</span> Copy one or more entries that can be pasted later.</li>
+
+    <li class="calibre4"><span class="listheading">Paste:</span> Paste any cut/copied entries.</li>
+
+    <li class="first"><span class="listheading">Delete:</span> Delete entries.</li>
+
+    <li class="first"><span class="listheading">Open:</span> Replace the current Index List with entries from a file (either an index file or a text file).</li>
+
+    <li class="calibre4"><span class="listheading">Reload:</span> Restore the list from the last saved state.</li>
+
+    <li class="first"><span class="listheading">Save As:</span> Save all entries to a file for keeping a per-book list of index entries.</li>
+
+    <li class="first"><span class="listheading">Autofill:</span> Fill the list with every word in the book.</li>
+
+    <li class="first"><span class="listheading">Select All:</span> Select all entries (for easy deletion).</li>
+  </ul>
+
+  <h4 class="sigilnotintoc1">Save</h4>
+
+  <p class="calibre1">To save your entries to disk, click <span class="buttonbox">Save</span>.</p>
+
+  <p class="calibre1">To exit without saving your entries you can just close the window (with the close button or the <span class="shortcut">Esc</span> key). You can also use the context menu <span class="shortcut">Reload</span> to reload your entries from disk – which will delete your current entries.</p>
+
+  <div class="tip">
+    <p class="tiptext">If you save and are running more than one copy of Sigil, then the other instances of Sigil will automatically reload the newly saved index entries to keep all copies in sync.</p>
+  </div>
+
+  <h4 class="sigilnotintoc1">Filter</h4>
+
+  <p class="calibre1">You can use the filter text box to restrict the list of searches shown to make it easier to find a search.</p>
+
+  <h4 class="sigilnotintoc1">Opening or Importing Text Files</h4>
+
+  <p class="calibre1">The <span class="shortcut">Open</span> context menu item can be used to open saved Index files, but it can also open text files.</p>
+
+  <p class="calibre1">You can list just the Text To Include words in the text file – one per line. Or you can include both the Text To Include and Index Entry values by separating them with a tab – one per line.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
+        <li>
+          <a href="about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.html">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+      <ul>
+        <li>
+          <a href="features.html">Features</a>
+        </li>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview.html">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents</a>
+        </li>
+        <li>
+          <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="validation.html">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.html">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.html">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.html">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.html">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.html">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_files.html">Add More text Files</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.html">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+        </li>
+        <li>
+          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_publish.html">Publish Your Book</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.html">Edit In Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="styles.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="reports.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

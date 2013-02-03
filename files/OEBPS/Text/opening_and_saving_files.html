@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Opening and Saving Files</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0 Beta
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="preferences.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="book_view.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="opening_and_saving_files" class="calibre5">Opening and Saving Files</h2>
+
+  <p class="h2subheading">— Load and Save Your Books —</p>
+
+  <p class="calibre1">Sigil supports opening EPUB files and reading HTML files. When Sigil saves your book it saves in the EPUB format: the EPUB file will contain all of your HTML files, images, stylesheets, fonts, etc. zipped up into one file.</p>
+
+  <div class="tip">
+    <p class="tiptext">Save early, save often, and make backup copies!</p>
+
+    <p class="tiptext">Always close Sigil before you open your EPUB in another program – or the other program will lock the file and prevent you from saving in Sigil.</p>
+  </div>
+
+  <h3 class="sigilnotintoc">Opening and Adding Documents</h3>
+
+  <h4 class="sigilnotintoc1">Open Files</h4>
+
+  <p class="calibre1">To open a file, click the Open button <img alt="" src="../Images/document-open_22px.png" class="calibre7"/>, or select the menu item <span class="shortcut">File→Open</span> or its keyboard shortcut then choose the file you want to open:</p>
+
+  <div class="indent1">
+    <p class="calibre1">EPUB Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Everything in the EPUB file is loaded automatically: HTML files, images, stylesheets, metadata, etc..</li>
+
+      <li class="calibre4">Sigil will organise your files into standard folders as shown in the Book Browser.</li>
+
+      <li class="calibre4">If the EPUB contains common errors Sigil will try to correct them.</li>
+
+      <li class="calibre4">Depending on your preferences, Sigil will format or clean the HTML files.</li>
+
+      <li class="calibre4">If the EPUB still contains invalid HTML files after cleaning, Sigil will still load the file and report the errors that need to be fixed.</li>
+    </ul>
+
+    <p class="calibre1">HTML Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">The HTML file and any linked files and stylesheets are imported if possible and placed into the appropriate folders.</li>
+
+      <li class="calibre4">The metadata in the HTML file will be loaded into the metadata for the book.</li>
+
+      <li class="calibre4">Depending on your preferences, Sigil will format or clean the files.</li>
+
+      <li class="calibre4">If the HTML file is still invalid after cleaning, Sigil will report the error but may not load the file. You may have to fix the errors outside of Sigil.</li>
+    </ul>
+  </div>
+
+  <h4 class="sigilnotintoc1">Add Files</h4>
+
+  <p class="calibre1">Add files to your EPUB by clicking the Add Existing Files button <img alt="" src="../Images/document-add_22px.png" class="calibre7"/>, selecting the menu item <span class="shortcut">File→Add</span>→Existing Files, or right-clicking on a file in the Book Browser and choose <span class="shortcut">Add Existing Files</span>:</p>
+
+  <div class="indent1">
+    <p class="calibre1">HTML Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Metadata is not loaded from the file (unlike when you use Open).</li>
+
+      <li class="calibre4">Sigil will attempt to load files that are referenced.</li>
+
+      <li class="calibre4">Files will be placed into their appropriate folder.</li>
+    </ul>
+
+    <p class="calibre1">Image Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Files will be placed into the Images folder.</li>
+    </ul>
+
+    <p class="calibre1">Video Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Files will be placed into the Video folder.</li>
+    </ul>
+
+    <p class="calibre1">Audio Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Files will be placed into the Audio folder.</li>
+    </ul>
+
+    <p class="calibre1">Stylesheet Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Files will be placed into the Styles folder.</li>
+    </ul>
+
+    <p class="calibre1">Font Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">Files will be placed into the Fonts folder.</li>
+    </ul>
+
+    <p class="calibre1">Other Files</p>
+
+    <ul class="calibre3">
+      <li class="calibre4">All other files will be placed in the Misc folder as they are not usually used in an EPUB, although certain text files in the Misc folder can be edited in Sigil.</li>
+    </ul>
+  </div>
+
+  <h4 class="sigilnotintoc1">Add Blank Files</h4>
+
+  <div class="calibre8">
+    You can also create new empty files in Sigil. Select the menu item <span class="shortcut">File-&gt;Add</span> and choose from blank HTML page, blank CSS stylesheet, or blank SVG image (a special image format). You can also do this using this Book Browser, or even add a keyboard shortcut in Preferences.
+  </div>
+
+  <h3 class="sigilnotintoc" id="saving_your_book">Saving Your Book</h3>
+
+  <p class="calibre1">Save your book by clicking the Save button <img alt="" src="../Images/document-save_22px.png" class="calibre7"/>, or selecting the menu item <span class="shortcut">File→Save</span> or its shortcut. You should always save your document before doing major edits in case you want to undo them.</p>
+
+  <p class="calibre1">Your saved EPUB file contains all the files that make up your book – your text, images, stylesheets, embedded fonts, table of contents, metadata, etc.</p>
+
+  <div class="tip">
+    <p class="tiptext">If you edit any text in your document, an asterisk ( <b class="listheading">*</b> ) is added to the file's name in the titlebar.</p>
+  </div>
+
+  <p class="calibre1">When you save your book Sigil will check it for certain errors and warn you if you need to fix anything. But you should always run <span class="shortcut">Validate EPUB with FlightCrew</span> to check for typical EPUB issues.</p>
+
+  <div class="tip">
+    <p class="tiptext">Sigil will not always be able to save an EPUB that contains errors, so frequent saves will make it easier to identify if there are errors that you need to correct.</p>
+
+    <p class="calibre1">Sigil will also clean your source code according to your preferences when saving the file.</p>
+  </div>
+
+  <h4 class="sigilnotintoc1" id="save_a_copy">Save a Copy</h4>
+
+  <p class="calibre1">You can select <span class="shortcut">File→Save A Copy</span> to save a copy of your EPUB to a different filename. The difference between Save or Save As is that the current book you are working on is not renamed. So you can use this feature to save your EPUB without changing the name of your book or the directory you save files to.</p>
+
+  <div class="tip">
+    <p class="tiptext">Use <span class="menuitem">File→Save A Copy</span> for quick backups.</p>
+  </div>
+
+  <h3 class="sigilnotintoc" id="saving_files">Saving Individual Files</h3>
+
+  <p class="calibre1">You can also right-click on a file name in the Book Browser and select <span class="shortcut">Save As</span> from the context menu. You can then name and save the specific file to a directory on your computer. If you select more than one file, all files will be saved to your chosen directory. This is a quick way to share a specific file with someone without sharing the EPUB, or to create a template file you can use for other books.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
+        <li>
+          <a href="about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.html">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+      <ul>
+        <li>
+          <a href="features.html">Features</a>
+        </li>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview.html">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents</a>
+        </li>
+        <li>
+          <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="validation.html">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.html">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.html">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.html">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.html">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.html">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_files.html">Add More text Files</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.html">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+        </li>
+        <li>
+          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_publish.html">Publish Your Book</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.html">Edit In Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="preferences.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="book_view.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

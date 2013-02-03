@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Splitting and Merging</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0 Beta
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="special_characters.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="find_replace.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="splitting_and_merging" class="calibre5">Splitting and Merging</h2>
+
+  <p class="h2subheading">— Working with Chapters and Files —</p>
+
+  <p class="calibre1">An EPUB can consist of one large HTML file with all of your text, or multiple files each containing part of your book. In most EPUBs each main Chapter is stored in its own HTML file in the EPUB. This isn't required, but it makes it easier to work with the book and can make reading and editing quicker since the files are smaller. All of your files can be accessed using the <a href="../Text/book_browser.html">Book Browser</a>.</p>
+
+  <p class="calibre1">If you have loaded an HTML file into Sigil and want to divide it into separate files, then you can use Sigil's Split functions. And if you have several smaller files that you want to combine into a larger file, then you can use the Merge function.</p>
+
+  <div class="tip">
+    <p class="tiptext">Most ereaders start each new HTML file on a new page – giving you automatic page breaks between chapters if you split your Chapters into separate files.</p>
+  </div>
+
+  <h3 class="sigilnotintoc">Split One File</h3>
+
+  <p class="calibre1">You can split a file into 2 files at your cursor position immediately by clicking the Split At Cursor button <img alt="" src="../Images/split-section_22px.png" class="calibre7"/> or selecting the menu item <span class="shortcut">Edit→Split At Cursor</span>.</p>
+
+  <p class="calibre1">This is the easiest way to split a single file. Simply click in your document exactly where you want the file to be split, e.g. at the beginning of a chapter name:</p>
+
+  <div class="image"><img alt="split-start" src="../Images/split-start.png" class="calibre7"/></div>
+
+  <p class="calibre1">Then click <img alt="" src="../Images/split-section_22px.png" class="calibre7"/> to split the file:</p>
+
+  <div class="image"><img alt="split-after2" src="../Images/split-after1.png" class="calibre7"/></div>
+
+  <div class="image"><img alt="split-after" src="../Images/split-after2.png" class="calibre7"/></div>
+
+  <p class="calibre1">Everything from the beginning of the original file up to the point where you clicked is kept in the first file, and everything after the point you clicked on is put into a new file. Note that the first file kept its name, and a new file with a new name was created to hold the second file. You can rename and edit the files as necessary.</p>
+
+  <h3 class="sigilnotintoc">Split Multiple Files</h3>
+
+  <p class="calibre1">If you want to split several files or a large file into many files, then you can use the file marking approach.</p>
+
+  <p class="calibre1">1. Scroll through your file, and wherever you want a new chapter to start click in the document to set your cursor position. Then select the menu item <span class="shortcut">Insert→Split Marker or its shortcut</span>. This will insert code into your document telling Sigil to remember that you want a new chapter to begin here – you will see a horizontal line in Book View exactly where you inserted the marker:</p>
+
+  <div class="image"><img alt="" src="../Images/tutorial_split_marker.png" class="calibre7"/></div>
+
+  <p class="calibre1">2. When you have marked all your chapters, use <span class="shortcut">Edit→Split At Markers</span>. This will automatically split all of your files into as many files as you marked. If you decide not to split the file, you can delete the horizontal marker lines.</p>
+
+  <p class="calibre1">Once you have split your files you can rename them. And you can even Merge some or all of them together again.</p>
+
+  <div class="tip">
+    <p class="tiptext">If you split a file, any header information is copied to the new file.</p>
+  </div>
+
+  <h3 class="sigilnotintoc">Merging Files</h3>
+
+  <p class="calibre1">If you want to combine two or more files into one file, you can use Merge.</p>
+
+  <p class="calibre1">To Merge two adjacent files, right-click on the second file and then select the menu item <span class="shortcut">Merge</span>, or select the second file and use the Merge shortcut. The second file will be merged into the first file (the file above). You will not be prompted to confirm the merge.</p>
+
+  <p class="calibre1">To Merge more than two files, select all the files you want to merge, then right-click on the selection and choose <span class="shortcut">Merge</span>. You will be prompted to confirm the merge:</p>
+
+  <div class="image"><img alt="split-merge-warning" src="../Images/split-merge-warning.png" class="calibre7"/></div>
+
+  <p class="calibre1">Once you confirm OK, your files will be combined into the first file.</p>
+
+  <div class="tip">
+    <p class="tiptext">Save your EPUB before Splitting or Merging!</p>
+  </div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
+        <li>
+          <a href="about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.html">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+      <ul>
+        <li>
+          <a href="features.html">Features</a>
+        </li>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview.html">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents</a>
+        </li>
+        <li>
+          <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="validation.html">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.html">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.html">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.html">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.html">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.html">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_files.html">Add More text Files</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.html">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+        </li>
+        <li>
+          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_publish.html">Publish Your Book</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.html">Edit In Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="special_characters.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="find_replace.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

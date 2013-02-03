@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Reports</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0 Beta
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="indexes.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="external_editors.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="find_and_replace" class="calibre5">Reports</h2>
+
+  <p class="h2subheading">— View Details About Your Book —</p>
+
+  <p class="calibre1">Sigil provides several reports that list details about the files and styles in your book.</p>
+
+  <p class="calibre1">You can usually double-click on an entry in the report to jump to the filename listed.</p>
+
+  <div class="tip">
+    <p class="tiptext">Some entries have tooltip information. For instance in the Image Report the number of times used column shows which files use the image.</p>
+  </div>
+
+  <p class="calibre1">Use <span class="shortcut">Tools→Reports</span> to generate the reports and then select which report to view:</p>
+
+  <h3 class="sigilnotintoc">All Files</h3>
+
+  <p class="calibre1">This report lists all of the files in the EPUB, the size of the file, and the type of the file.</p>
+
+  <div class="image"><img alt="reports-all-files" src="../Images/reports-all-files.png" class="calibre7"/></div>
+
+  <h3 class="sigilnotintoc">HTML Files</h3>
+
+  <p class="calibre1">This report lists all of your HTML files and details about the files.</p>
+
+  <div class="image"><img alt="reports-html-files" src="../Images/reports-html-files.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can delete files from the EPUB while in the report by right-clicking on selected files and choosing <span class="shortcut">Delete From Book</span>.</p>
+
+  <h3 class="sigilnotintoc">Image Files</h3>
+
+  <p class="calibre1">This report lists all of your images and indicates whether or not they were used in the book and how many times. You can double-click on an entry to jump to the first occurrence of the image in your HTML files (not images in CSS files).</p>
+
+  <div class="image"><img alt="reports-image-files" src="../Images/reports-image-files.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can delete files from the EPUB while in the report by right-clicking on selected files and choosing <span class="shortcut">Delete From Book</span>.</p>
+
+  <h3 class="sigilnotintoc">CSS Files</h3>
+
+  <p class="calibre1">This report lists all of your CSS Stylesheets and indicates whether or not they were linked to and how many times.</p>
+
+  <div class="image"><img alt="reports-css-files" src="../Images/reports-css-files.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can delete files from the EPUB while in the report by right-clicking on selected files and choosing <span class="shortcut">Delete From Book</span>.</p>
+
+  <h3 class="sigilnotintoc">Style Classes in HTML Files</h3>
+
+  <p class="calibre1">This report scans the HTML files in your book and extracts a list of style class names that are used in the files. For each class name it lists whether or not it was found in a CSS Stylesheet or an Inline Style.</p>
+
+  <div class="image"><img alt="reports-styles-in-html" src="../Images/reports-styles-in-html.png" class="calibre7"/></div>
+
+  <h3 class="sigilnotintoc">Style Classes in CSS Files</h3>
+
+  <p class="calibre1">This report scans the CSS stylesheets in your book and for each style that uses a class name it lists whether it was used in the book or not.</p>
+
+  <div class="image"><img alt="reports-styles-in-css" src="../Images/reports-styles-in-css.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can delete specific style classes from the stylesheets while in the report by right-clicking on selected styles and choosing <span class="shortcut">Delete From Stylesheet</span>.</p>
+
+  <h3 class="sigilnotintoc">Links And Footnotes</h3>
+
+  <p class="calibre1">This report lists every hyperlink (href) found in your HTML files. These are the "&lt;a&gt;" tags in your code. It includes whether the link has an id, what the target of the link is, and whether that target exists.</p>
+
+  <p class="calibre1">In addition, to help with footnotes, it checks for reverse links. A reverse link is a link from a target that points back to the original link. In other words, if you create links like this for footnotes the report can confirm if they both link to each other:</p>
+  <pre class="example1">Link in text:      &lt;a id="t1" target="../Text/footfile1.xhtml#f1"&gt;text to footnote&lt;/a&gt;
+Link in footnote: &lt;a id="f1" target="../Text/file1.xhtml#t1"&gt;footnote back to text&lt;/a&gt;</pre>
+
+  <p class="calibre1">This only works if you use ids within the anchor ("a") tag.</p>
+
+  <div class="image"><img alt="reports-links" src="../Images/reports-links.png" class="calibre7"/></div>
+
+  <h3 class="sigilnotintoc">Characters in HTML Files</h3>
+
+  <p class="calibre1">This report extracts a list of all the characters that are used in your HTML files. More specifically, it lists any character that is displayed in Book View. HTML entity codes are listed if they exist for the character, along with their decimal and hexadecimal codes. And all characters are listed at the bottom for easy cut and paste.</p>
+
+  <p class="calibre1">This report can be used to identify if extra characters are being used in the book unexpectedly, and it may be of assistance if you are subsetting fonts.</p>
+
+  <div class="image"><img alt="reports-characters" src="../Images/reports-characters.png" class="calibre7"/></div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.html">What's New</a>
+        </li>
+        <li>
+          <a href="about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.html">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+      <ul>
+        <li>
+          <a href="features.html">Features</a>
+        </li>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview.html">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents</a>
+        </li>
+        <li>
+          <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="validation.html">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.html">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.html">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.html">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.html">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.html">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_files.html">Add More text Files</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.html">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+        </li>
+        <li>
+          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_publish.html">Publish Your Book</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.html">Edit In Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="indexes.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="external_editors.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>
