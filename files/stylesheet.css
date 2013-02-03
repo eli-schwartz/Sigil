@@ -13,9 +13,7 @@
 .buttonbox {
     border-color: #777;
     border-style: solid;
-    border-width: 1px
-    }
-.buttontext {
+    border-width: 1px;
     font-family: monotype, sans-serif;
     font-size: 0.875em;
     font-weight: bold;
@@ -23,7 +21,10 @@
     margin-left: 0.5em;
     margin-right: 0.5em
     }
-.buttontext1 {
+.buttonbox1 {
+    border-color: #777;
+    border-style: solid;
+    border-width: 1px;
     font-family: monotype, sans-serif;
     font-size: 0.85714em;
     font-weight: bold;
@@ -72,15 +73,6 @@
     margin-top: 1em;
     white-space: pre
     }
-.calibre14 {
-    display: block;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em;
-    text-align: center;
-    text-indent: 0
-    }
 .calibre2 {
     display: block;
     font-family: "SmallCaps", sans-serif;
@@ -91,15 +83,10 @@
     margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1em;
+    margin-top: 0;
     text-align: center
     }
 .calibre3 {
-    height: auto;
-    max-width: 100%;
-    width: auto
-    }
-.calibre4 {
     display: block;
     list-style-type: disc;
     margin-bottom: 1em;
@@ -107,10 +94,11 @@
     margin-right: 0;
     margin-top: 1em
     }
-.calibre5 {
-    display: list-item
+.calibre4 {
+    display: list-item;
+    text-align: left
     }
-.calibre6 {
+.calibre5 {
     display: block;
     font-family: "SmallCaps", sans-serif;
     font-size: 1.5em;
@@ -120,19 +108,24 @@
     margin-bottom: 0.7em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 2em;
+    margin-top: 0;
     text-align: center
     }
-.calibre7 {
-    display: block
-    }
-.calibre8 {
+.calibre6 {
     display: block;
     list-style-type: circle;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0
+    }
+.calibre7 {
+    height: auto;
+    max-width: 100%;
+    width: auto
+    }
+.calibre8 {
+    display: block
     }
 .calibre9 {
     display: block;
@@ -141,13 +134,6 @@
 .coverimage {
     display: block;
     text-align: center
-    }
-.dropcap {
-    float: left;
-    font-size: 1.5em;
-    line-height: 0.8em;
-    margin-bottom: -0.1em;
-    margin-right: 3pt
     }
 .example {
     font-family: courier, sans-serif;
@@ -177,7 +163,8 @@
     }
 .first {
     display: list-item;
-    margin-top: 1em
+    margin-top: 1em;
+    text-align: left
     }
 .h1subheading {
     display: block;
@@ -218,12 +205,12 @@
     display: block;
     margin-bottom: 1.5em;
     margin-top: 1em;
-    page-break-inside: avoid;
     text-align: center
     }
 .indent {
     display: list-item;
-    margin-left: 1em
+    margin-left: 1em;
+    text-align: left
     }
 .indent1 {
     display: block
@@ -257,7 +244,7 @@
     margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1em;
+    margin-top: 0;
     text-align: center
     }
 .rights {
@@ -290,21 +277,20 @@
     font-variant: small-caps;
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: 0.5 em;
+    margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
     margin-top: 1.5em;
     text-align: left
     }
 .tip {
-    background-color: #f0f0f0;
     border-style: solid;
     border-width: 1px;
     display: block;
     margin-bottom: 2em;
+    margin-left: 1em;
     margin-right: 1em;
     margin-top: 2em;
-    page-break-inside: avoid;
     text-align: center
     }
 .tiptext {
@@ -333,8 +319,7 @@
     }
 .toolbar {
     display: block;
-    margin-top: 2em;
-    page-break-inside: avoid
+    margin-top: 2em
     }
 .version {
     display: block;

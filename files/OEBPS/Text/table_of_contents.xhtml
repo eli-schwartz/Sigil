@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Table of Contents</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0 Beta
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="metadata.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="validation.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="table_of_contents" class="calibre5">Table of Contents</h2>
+
+  <p class="h2subheading">— A Map Of Your Book —</p>
+
+  <p class="calibre1">EPUB supports a Table of Contents (abbreviated as TOC) to help readers navigate their way around your book. Typically EPUB ereaders provide a button or menu option to open the TOC.</p>
+
+  <p class="calibre1">Sigil provides several ways to work with a TOC. The Table of Contents window in Sigil gives you a dynamic view of your TOC – you can view exactly what your TOC looks like, and select entries to jump to. The Generate TOC function can create a new TOC based on the headings in your document. The Edit TOC function allows you to update an existing TOC when you can't or don't want to use Generate TOC. And Create HTML TOC can create a new HTML page in your document showing what is in the EPUB TOC.</p>
+
+  <h3 class="sigilnotintoc">View the TOC</h3>
+
+  <p class="calibre1">To open the TOC window if it isn't already open select the menu item <span class="shortcut">View→Table of Contents</span>:</p>
+
+  <div class="image"><img alt="toc-main" src="../Images/toc-main.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can single-click on an entry to jump to its location in the book, and expand or collapse entries by clicking on the icons to the left of the chapter names if there are sub-chapters.</p>
+
+  <div class="tip">
+    <p class="tiptext">Use the right-click context menu to select <span class="menuitem">Collapse All</span> or <span class="menuitem">Expand All</span> to quickly show or hide sub-chapters.</p>
+  </div>
+
+  <p class="calibre1">An EPUB Table of Contents is stored in the <span class="example">toc.ncx</span> file listed in the Book Browser.</p>
+
+  <h3 class="sigilnotintoc">Generate Table of Contents</h3>
+
+  <p class="calibre1">In order to create a Table of Contents automatically you first need to define the headings or chapters in your book.</p>
+
+  <p class="calibre1">In Book View you can create the your headings by selecting the text you want to make into a heading, and then selecting the level of the heading you want from the <span class="shortcut">Format→Heading</span> menu, or more easily using the buttons on the toolbar, in Book View or Code View:</p>
+
+  <div class="image"><img alt="" src="../Images/headings.png" class="calibre7"/></div>
+
+  <div class="tip">
+    <p class="tiptext">If your chapter names do not use heading tags (<span class="example2">h1</span>, <span class="example2">h2</span>, etc.) as described above, then you will not be able to generate a TOC automatically.</p>
+  </div>
+
+  <p class="calibre1">Start your TOC generation by clicking the Generate Table of Contents button <img alt="generate-toc_22px" src="../Images/generate-toc_22px.png" class="calibre7"/>, or selecting the menu item <span class="shortcut">Tools→Table Of Contents→Generate Table Of Contents</span> then select the headings you want included in the book's Table of Contents:</p>
+
+  <div class="image"><img alt="toc-generate-toc" src="../Images/toc-generate-toc.png" class="calibre7"/></div>
+
+  <p class="calibre1">Check any name that you want to be included in the Table of Contents, and uncheck any entry that you don't want included.</p>
+
+  <div class="tip">
+    <p class="tiptext">When you use Generate Table Of Contents Sigil will update not only your TOC, but also your HTML documents – to make sure that the information you enter can be used again when you next generate the TOC.</p>
+  </div>
+
+  <p class="calibre1">You can use the <span class="buttonbox">Show TOC Items Only</span> checkbox to show or hide entries that will not be included in the TOC. This does not affect your TOC, only what you see in the dialog. You can also use the <span class="buttonbox">Select headings to include in TOC</span> drop-down menu to quickly select or unselect headings of a certain type, and then fine tune the selections manually.</p>
+
+  <p class="calibre1">You can rename the TOC entry by clicking <span class="buttonbox">Rename</span>. This will also change your HTML code to set the "title" attribute of your heading.</p>
+
+  <p class="calibre1">You can change the level of your Headings using the left and right arrow keys. This will also change the level of the headings in your HTML code.</p>
+
+  <div class="tip">
+    <p class="tiptext">The tooltip for each title (just move your mouse over the title and leave it for a few seconds) will show you which file the heading is in and its HTML code.</p>
+  </div>
+
+  <p class="calibre1">The tooltip for the headings of table will show you the number of headings of each type:</p>
+
+  <div class="image"><img alt="toc-tooltip" src="../Images/toc-tooltip.png" class="calibre7"/></div>
+
+  <p class="calibre1">When you select <span class="buttonbox">OK</span>, Sigil will add or update automatically generated IDs to any headings you have selected if they don't have regular IDs already. It will then create a new <span class="example">toc.ncx</span> file containing links to your chapters. If your heading is "near" the beginning of your HTML file, Sigil will link directly to the file and not to the heading ID. This is because on some ereaders linking directly to an element slows down the display of the TOC.</p>
+
+  <div class="tip">
+    <p class="tiptext">Generating the TOC automatically will overwrite any existing TOC in the <span class="example2">toc.ncx</span> file.</p>
+  </div>
+
+  <h3 class="sigilnotintoc" id="edit_toc">Edit Table of Contents</h3>
+
+  <p class="calibre1">If you can't or don't want to generate the TOC from the headings in the document, you can use Edit Table Of Contents to make changes to the existing TOC. Any changes made to the TOC will not affect your HTML files, and all changes would be lost if you use Generate TOC.</p>
+
+  <div class="image"><img alt="edit-toc" src="../Images/edit-toc.png" class="calibre7"/></div>
+
+  <p class="calibre1">You can edit an entry by double-clicking on it. You can add new entries or delete existing ones. Use the arrows to increase or decrease the heading level of an entry.</p>
+
+  <p class="calibre1">To change what a TOC entry points to you can type in the target destination directly, or use the <span class="buttonbox">Select Target</span> button. This will open the Insert Hyperlink dialog where you can choose which location to point the TOC entry to:</p>
+
+  <div class="image"><img alt="select-target" src="../Images/select-target.png" class="calibre7"/></div>
+
+  <p class="calibre1">The right-click context menu allows you to delete or rename entries, or expand or collapse the list.</p>
+
+  <div class="tip">
+    <p class="tiptext">TOC entries must point to a valid target. If you just want a heading in the TOC, point it to the next valid entry.</p>
+  </div>
+
+  <h3 class="sigilnotintoc" id="generate_html_toc">Generate HTML Table of Contents</h3>
+
+  <p class="calibre1">You can use the menu <span class="shortcut">Tools→Table Of Contents→Generate HTML Table of Contents</span> to create an Inline HTML TOC for your EPUB.</p>
+
+  <div class="image"><img alt="toc-html" src="../Images/toc-html.png" class="calibre7"/></div>
+
+  <p class="calibre1">An inline TOC is just another HTML page in the EPUB that contains the Table of Contents in text format with links that can be used to jump to specific chapters.</p>
+
+  <p class="calibre1">For most EPUB ereaders, the TOC that is automatically generated from Generate Table Of Contents or stored in <span class="example">toc.ncx</span> is used to display the TOC. However, there are times when an inline TOC is desired in an EPUB or when it is temporarily needed because the EPUB will be converted to another ebook format that does not use the EPUB TOC file.</p>
+
+  <p class="calibre1">The Generate HTML Table of Contents menu item will overwrite any existing HTML TOC file (if it has a semantic type of TOC). If no such file exists it will create an HTML file called <span class="example">TOC.xhtml</span> and mark its semantic type as TOC. If <span class="example">TOC.xhtml</span> already exists it will be replaced.</p>
+
+  <div class="tip">
+    <p class="tiptext">You can change the style of the inline TOC once you've created it – but remember to do this each time you create the TOC.</p>
+  </div>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.xhtml">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.xhtml">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.xhtml">Copyright</a>
+    </li>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.xhtml">What's New</a>
+        </li>
+        <li>
+          <a href="about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.xhtml">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="features.xhtml">Features</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.xhtml">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview.xhtml">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents</a>
+        </li>
+        <li>
+          <a href="metadata.xhtml">Metadata</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.xhtml">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.xhtml">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.xhtml">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.xhtml">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.xhtml">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.xhtml">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.xhtml">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.xhtml">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_what_is_epub.xhtml">What is EPUB?</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.xhtml">Convert Your File For Import</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.xhtml">Load Your File Into Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.xhtml">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.xhtml">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_files.xhtml">Add More text Files</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.xhtml">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit in Book View</a>
+        </li>
+        <li>
+          <a href="tutorial_create_toc.xhtml">Mark Your Chapter Headings</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.xhtml">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_split.xhtml">Split Your Chapters Into Files</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.xhtml">Check For EPUB Errors</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.xhtml">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_publish.xhtml">Publish Your Book</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.xhtml">Edit In Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.xhtml">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.xhtml">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_regex.xhtml">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="metadata.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="validation.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

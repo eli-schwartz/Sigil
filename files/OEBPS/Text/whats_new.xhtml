@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>What's New</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0 Beta
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="introduction.xhtml" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="about_sigil.xhtml" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 id="whats_new" class="calibre5">What's New</h2>
+
+  <p class="calibre1">The latest versions of Sigil contain hundreds of changes, bug fixes and new features while still retaining the same easy to use interface of earlier versions. Almost all of Sigil's code has been updated and improved with particular focus on the following areas:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Stability:</span> All known crashes and related bugs from previous versions have been identified and fixed – making Sigil completely stable for updating your EPUBs.</li>
+
+    <li class="calibre4"><span class="listheading">Robustness:</span> Sigil can correct even more common problems when reading files, and will no longer exit when opening invalid EPUBs. Saving has been enhanced to perform more integrity checks. Splits and merges can now be done exactly where you want without potential data loss. The cursor position is correctly updated when you switch views, and Find &amp; Replaces work consistently and accurately over one or all files.</li>
+
+    <li class="calibre4"><span class="listheading">Performance:</span> Sigil is now significantly faster in many areas: opening and changing tabs, generating a TOC, merging files, bulk renaming, replacing text, etc.</li>
+
+    <li class="calibre4"><span class="listheading">Flexibility:</span> More preferences, options and features were added to let you use Sigil the way you want.</li>
+  </ul>
+
+  <p class="calibre1">New features in 0.7.0 include:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Qt5:</span> An upgrade to the latest graphics framework provides a number of fixes and enhancements.</li>
+
+    <li class="calibre4"><span class="listheading">Audio/Video Support:</span> Insert, play and manage audio and video files. (Requires a compatible ereader to view as audio/video is not supported in EPUB 2).</li>
+
+    <li class="calibre4"><span class="listheading">Live Preview:</span> A new Preview window that dynamically updates as you edit in Code View or in CSS stylesheets – replacing Preview View and the old Split View.</li>
+
+    <li class="calibre4"><span class="listheading">Spellcheck Enhancements:</span> See and mark all misspelled words in one dialog. Select one or more active dictionaries to allow combining separate lists of words.</li>
+
+    <li class="calibre4"><span class="listheading">Edit TOC:</span> Directly edit the Table Of Contents without having to generate the TOC.</li>
+
+    <li class="calibre4"><span class="listheading">Clip Bar and Clips Window:</span> An optional Clip Bar to show toolbar buttons for the first 20 Clips, and a dockable window listing all Clips for quick selection.</li>
+
+    <li class="calibre4"><span class="listheading">Updated Reports:</span> New reports include All Files, Links &amp; Footnotes, and Characters used in the book.</li>
+
+    <li class="calibre4"><span class="listheading">Find &amp; Replace Wrap:</span> Allow searching to wrap or not wrap to the other end of the file or book.</li>
+
+    <li class="calibre4"><span class="listheading">Embedded Fonts:</span> Multiple embedded fonts now display correctly thanks to Qt5.</li>
+  </ul>
+
+  <p class="calibre1">Other changes in 0.7.x include:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">An Autofill option in Clips that creates entries based on your CSS files.</li>
+
+    <li class="calibre4">Basic clips (such as &lt;span&gt;) can now be used in Book View.</li>
+
+    <li class="calibre4">Saved Searches will now use the options set in Find &amp; Replaces when run.</li>
+
+    <li class="calibre4">Metadata Editor can stay open while editing.</li>
+
+    <li class="calibre4">Index Editor can import tab separated entries.</li>
+
+    <li class="calibre4">Spellcheck preferences can add lists of words pasted into a dictionary.</li>
+
+    <li class="calibre4">Replace All should work without having to be run twice.</li>
+
+    <li class="calibre4">Generate TOC no longer creates ids when they aren't used for headings at the top of files.</li>
+
+    <li class="calibre4">Random highlighting of text in Book View is now, mostly, gone in Book View due to Qt5.</li>
+
+    <li class="calibre4">Well-Formed checks are only done when absolutely necessary.</li>
+
+    <li class="calibre4">CSS validation uses CSS 2.1 profile instead of CSS 3 as it's closer to EPUB 2 standards.</li>
+
+    <li class="calibre4">Cursor position should not move to the end of a page when a book is saved.</li>
+
+    <li class="calibre4">Updated internal regex usage to use Qt5 QRegularExpression.</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext">Preferences have moved to a new location for Linux users – so Linux users must copy old preference files to the new location.</p>
+  </div>
+
+  <p class="calibre1">New features in 0.6.x include:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">Saved Searches:</span> Never forget a frequently used Find &amp; Replace search again. Edit and organize searches, run a group of searches, and quickly access searches using right-click in the Find &amp; Replace text boxes.</li>
+
+    <li class="calibre4"><span class="listheading">Go To Links Or Styles:</span> Quickly jump to the CSS style used for your HTML or to links, and go Back to your starting point.</li>
+
+    <li class="calibre4"><span class="listheading">Edit Files Externally:</span> Open your HTML, Image or Stylesheet files with an external editor and Sigil will update your book as soon as you save in the other application.</li>
+
+    <li class="calibre4"><span class="listheading">Clip Editor:</span> Store and share common text or formatting. Edit and group clips, apply starting and ending tags to text, and quickly access clips using right-click in Book View or Code View editors.</li>
+
+    <li class="calibre4"><span class="listheading">Indexes:</span> Automatically create an Index by marking text or listing phrases to index.</li>
+
+    <li class="calibre4"><span class="listheading">HTML Table Of Contents:</span> Convert your TOC into an HTML page.</li>
+
+    <li class="calibre4"><span class="listheading">Reports:</span> View details about your files, images, styles – including word counts and file and image sizes.</li>
+
+    <li class="calibre4"><span class="listheading">Delete Unused Images Or Styles:</span> Automatically remove unlinked images or unreferenced CSS classes.</li>
+
+    <li class="calibre4"><span class="listheading">Clipboard History:</span> Quickly access your recently copied text.</li>
+
+    <li class="calibre4"><span class="listheading">Spellcheck:</span> Step through misspelled words in addition to highlighting them, with improved word recognition.</li>
+
+    <li class="calibre4"><span class="listheading">Preferences:</span> Customise Sigil even more by changing Sigil's fonts and level of automatic source cleanup.</li>
+
+    <li class="calibre4"><span class="listheading">Special Characters:</span> Insert from a list of common special characters.</li>
+
+    <li class="calibre4"><span class="listheading">Insert Hyperlinks And IDs:</span> Create footnotes and links to chapters or anything else.</li>
+
+    <li class="calibre4"><span class="listheading">Link Stylesheets:</span> Quickly link and unlink stylesheets to your HTML files.</li>
+
+    <li class="calibre4"><span class="listheading">Validate CSS Stylesheets:</span> Check your stylesheet pages using the W3C web service with a simple click.</li>
+
+    <li class="calibre4"><span class="listheading">Edit Headings In Generate TOC:</span> Change the title and the level of any heading entry when using Generate TOC for quick corrections. Use the tooltips to see the actual HTML code for your heading.</li>
+
+    <li class="calibre4"><span class="listheading">Find &amp; Replace:</span> Use the new Replace button to replace without moving to the next match, or the new options to make using regex easier (click on the chevron icon on the lower left of Find &amp; Replace to hide/show options).</li>
+
+    <li class="calibre4"><span class="listheading">Clean Source Preferences:</span> Control exactly when and what type of cleaning, if any, should be done. (0.6.1)</li>
+
+    <li class="calibre4"><span class="listheading">Invalid EPUB Support:</span> Invalid EPUBs can now be opened so that you can correct them in Sigil. (0.6.1)</li>
+
+    <li class="calibre4"><span class="listheading">Audio/Video Files:</span> Audio and Video files are now moved to separate folders, their links are updated as needed, and their tags left intact. (0.6.1)</li>
+  </ul>
+
+  <p class="calibre1">Other changes in 0.6.x include:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">Support in Code View for using the formatting buttons.</li>
+
+    <li class="calibre4">Insert Image improvements – insert directly from disk, display thumbnails, view image size details.</li>
+
+    <li class="calibre4">Metadata Editor redesigned for simpler access and more control.</li>
+
+    <li class="calibre4">Change Case buttons to change the case of words.</li>
+
+    <li class="calibre4">Text direction buttons (use View→Toolbars to show them).</li>
+
+    <li class="calibre4">Automatic Well-Formed Checking – your code is now checked for errors only when necessary so you no longer need to turn it off then on to do complex replaces.</li>
+
+    <li class="calibre4">Updated icons and streamlined menus for easier access to functions.</li>
+
+    <li class="calibre4">Save a copy of your EPUB (without renaming your current file), or save individual files from your EPUB.</li>
+
+    <li class="calibre4">Easily insert closing tags with <span class="shortcut">Ctrl+.</span>, or delete selected tags and attributes in Code View with <span class="shortcut">Ctrl+Space</span></li>
+
+    <li class="calibre4">Quickly see the HTML code of selected text in Book View using Format→Show Tag.</li>
+
+    <li class="calibre4">Ctrl-click on a link in Code View to go to any link internal or external to the book.</li>
+
+    <li class="calibre4">Ctrl-click on an opening tag in Code View to jump to its stylesheet style.</li>
+
+    <li class="calibre4">Hold the Ctrl key while clicking Find/Replace/etc. (in Find &amp; Replace or Saved Searches) to temporarily use Current File.</li>
+
+    <li class="calibre4">Hold the Ctrl key while clicking a Special Character to close the dialog after inserting the character.</li>
+
+    <li class="calibre4">Hold the Ctrl key while pasting a Clip and it will cut the tags in the selected text before applying the Clip.</li>
+
+    <li class="calibre4">Toggle between Book View and Code view using <span class="shortcut">F2</span> or double-clicking the tab header.</li>
+
+    <li class="calibre4">Right-click on a tab header to select close all other tabs.</li>
+
+    <li class="calibre4">Split all files with a split marker not just the current one.</li>
+
+    <li class="calibre4">Locate your Preferences files with the click of a button.</li>
+
+    <li class="calibre4">Use and assign keyboard shortcuts for even more functions.</li>
+
+    <li class="calibre4">Sigil will now restart in whichever view you were using when it was last closed.</li>
+
+    <li class="calibre4">All third party software has been updated to their current versions, including Qt 4.8.3.</li>
+
+    <li class="calibre4">XPGT files are no longer supported and are treated as any other unknown file type.</li>
+
+    <li class="calibre4">Index Editor can load a list of words or phrases to index from a file. (0.6.1)</li>
+
+    <li class="calibre4">Print any type of file that displays in the editor. (0.6.1)</li>
+
+    <li class="calibre4">Bulk rename can change just the file extension. (0.6.1)</li>
+
+    <li class="calibre4">Display counts of book browser and TOC entries as tooltips. (0.6.1)</li>
+
+    <li class="calibre4">Reports can now be saved, or left onscreen while editing files. (0.6.1)</li>
+
+    <li class="calibre4">Deleting unused files or images allows you to select which to delete. (0.6.1)</li>
+
+    <li class="calibre4">And numerous other tweaks and polishing to make Sigil easier and more fun to use.</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext">Replace can only be done in Code View since it was not reliable in Book View.</p>
+
+    <p class="tiptext">Clean Source is set to Pretty Print Tidy when you use Sigil for the first time, but can be changed in Preferences.</p>
+  </div>
+
+  <p class="calibre1">For a detailed list of all the change made to Sigil, see the software <a href="http://sigil.googlecode.com/git/ChangeLog.txt">Changelog</a>. All of the new features, along with all features and functionality, are of course described in this completely updated Sigil User Guide.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.xhtml">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.xhtml">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.xhtml">Copyright</a>
+    </li>
+    <li>
+      <a href="introduction.xhtml">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.xhtml">What's New</a>
+        </li>
+        <li>
+          <a href="about_sigil.xhtml">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.xhtml">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.xhtml">Installation</a>
+      <ul>
+        <li>
+          <a href="features.xhtml">Features</a>
+        </li>
+        <li>
+          <a href="user_interface.xhtml">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.xhtml">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.xhtml">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.xhtml">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.xhtml">Code View</a>
+        </li>
+        <li>
+          <a href="preview.xhtml">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.xhtml">Book Browser</a>
+        </li>
+        <li>
+          <a href="table_of_contents.xhtml">Table of Contents</a>
+        </li>
+        <li>
+          <a href="metadata.xhtml">Metadata</a>
+        </li>
+        <li>
+          <a href="validation.xhtml">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.xhtml">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.xhtml">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.xhtml">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.xhtml">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.xhtml">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.xhtml">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.xhtml">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.xhtml">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.xhtml">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.xhtml">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.xhtml">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.xhtml">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.xhtml">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.xhtml">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_what_is_epub.xhtml">What is EPUB?</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.xhtml">Convert Your File For Import</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.xhtml">Load Your File Into Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.xhtml">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.xhtml">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_files.xhtml">Add More text Files</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.xhtml">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_edit_epub.xhtml">Edit in Book View</a>
+        </li>
+        <li>
+          <a href="tutorial_create_toc.xhtml">Mark Your Chapter Headings</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.xhtml">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_split.xhtml">Split Your Chapters Into Files</a>
+        </li>
+        <li>
+          <a href="tutorial_links.xhtml">Create Links and Footnotes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.xhtml">Check For EPUB Errors</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.xhtml">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_publish.xhtml">Publish Your Book</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.xhtml">Edit In Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.xhtml">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.xhtml">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.xhtml">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.xhtml">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_regex.xhtml">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.xhtml">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.xhtml">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.xhtml#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_starting_sigil">Starting Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.xhtml#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.xhtml">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="introduction.xhtml" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="about_sigil.xhtml" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>
