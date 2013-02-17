@@ -5,7 +5,7 @@
     <title>Indexes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -64,7 +64,7 @@
 
   <p class="calibre1">Highlight a word or phrase in either Book View or Code View and then select the menu item <span class="shortcut">Tools→Index→Mark For Index</span> or its keyboard shortcut (which you can change). This will then open a prompt for you to enter how you want these words to appear in the index:</p>
 
-  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre7"/></div>
+  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre8"/></div>
 
   <p class="calibre1">The text you enter as the name to use in the Index will be show up in the Index as follows:</p>
 
@@ -101,11 +101,17 @@
 
   <p class="calibre1">To actually create your index once you have marked words and/or added them to the list just select the menu item <span class="shortcut">Tools→Index→Create Index</span>.</p>
 
-  <p class="calibre1">This will, eventually, create or update an HTML page called <span class="shortcut">Index.xhtml</span>. It will be marked with the semantic type "index". Entries are listed alphabetically with indentation for hierarchical entries, and extra spacing between entries that start with different letters.</p>
+  <p class="calibre1">This will create or update an HTML page called i<span class="shortcut">ndex.xhtml</span>. It will be marked with the semantic type "index". Entries are listed alphabetically, and, using the default styling, look like this:</p>
+
+  <div class="image"><img alt="index-html" src="../Images/index-html.png" class="calibre8"/></div>
 
   <div class="tip">
     <p class="tiptext">You can edit the index page as with any HTML page, but if you re-create the index your changes will be over-written.</p>
   </div>
+
+  <h4 class="sigilnotintoc1">Index Stylesheet</h4>
+
+  <p class="calibre1">The index page uses a separate CSS file ("sgc-index.css") to format the index. If the file already exists in your book it will not be overwritten (so you can customise it without losing your changes). But if it does not exist, it will look for "sgc-index.css" in your preferences directory and use that as the default file. If there is no file in your preferences directory, then Sigil will create a default stylesheet for the index.</p>
 
   <h3 class="sigilnotintoc">Index Editor</h3>
 
@@ -113,7 +119,7 @@
 
   <p class="calibre1">To open the Index Editor select the menu item <span class="shortcut">Tools→Index→Index Editor</span> or its keyboard shortcut:</p>
 
-  <div class="image"><img alt="index-editor" src="../Images/index-editor.png" class="calibre7"/></div>
+  <div class="image"><img alt="index-editor-main" src="../Images/index-editor-main.png" class="calibre8"/></div>
 
   <h4 class="sigilnotintoc1">Text To Include</h4>
 
@@ -216,10 +222,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -231,10 +240,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -257,10 +266,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -310,13 +319,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -325,37 +334,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -367,10 +367,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -385,9 +385,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>

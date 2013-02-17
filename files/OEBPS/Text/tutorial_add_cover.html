@@ -5,7 +5,7 @@
     <title>Create an EPUB</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -40,11 +40,11 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="tutorial_add_files.html" class="calibreAPrev">previous page</a>
+          <a href="tutorial_metadata.html" class="calibreAPrev">previous page</a>
         
 
         
-          <a href="tutorial_edit_epub.html" class="calibreANext"> next page</a>
+          <a href="tutorial_split.html" class="calibreANext"> next page</a>
         
       </div>
     
@@ -54,99 +54,105 @@
 
   <p class="calibre1">Every book should have a cover image, and Sigil can help you add one to your EPUB. You will need to have an existing cover image available to use (and have permission to use it). The exact size of the cover is up to you and the guidelines for your device.</p>
 
-  <p class="calibre1">In order to define an EPUB cover you will need to follow these steps:</p>
+  <div class="tip">
+    <p class="tiptext">There are many ways to modify how the cover is displayed, so these instructions will just describe a basic cover. See covers in other EPUBs for examples.</p>
+  </div>
+
+  <p class="calibre1">To setup an EPUB cover you will need to follow these steps:</p>
 
   <ul class="calibre3">
-    <li class="calibre4">Create an HTML page for your cover</li>
+    <li class="calibre4">Create a new HTML page to hold your cover.</li>
 
-    <li class="calibre4">Insert your cover image into the HTML page</li>
+    <li class="calibre4">Insert your cover image into the HTML page.</li>
 
-    <li class="calibre4">Mark your image file and HTML file as covers</li>
+    <li class="calibre4">Mark your image file and HTML file as covers.</li>
   </ul>
 
-  <p class="calibre1">Create an HTML File For Your Cover</p>
+  <p class="calibre1">As part of this tutorial you will also learn how to insert images, add files to your EPUB, rename files, and access more commands using context menus.</p>
+
+  <h3 class="sigilnotintoc">Create an HTML File For Your Cover</h3>
 
   <p class="calibre1">In order for the EPUB to know where in your book to put your cover, you need to create a new HTML file in your EPUB then insert your cover image into the file.</p>
 
-  <p class="calibre1">You can create a new HTML file in your EPUB by right-clicking on a file name in the Book Browser and selecting the menu option <span class="shortcut">Add Blank Section</span>:</p>
+  <p class="calibre1">You can create a new HTML file in your EPUB by right-clicking on a file name in the Book Browser and selecting the menu item <span class="shortcut">Add Blank HTML File</span>:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_context_add_blank.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-add-blank-html" src="../Images/tutorial-add-blank-html.png" class="calibre8"/></div>
 
-  <p class="calibre1">A new HTML file will be created in your Text folder:</p>
+  <p class="calibre1">A new HTML file called <span class="example">Section0001.html</span> will be created in your Text folder:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_blank_file_added.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-new-blank-file" src="../Images/tutorial-new-blank-file.png" class="calibre8"/></div>
 
   <p class="calibre1">Rename the file so you know what it is by right-clicking on the filename and selecting Rename from the menu:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_rename_menu.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-bb-rename" src="../Images/tutorial-bb-rename.png" class="calibre8"/></div>
 
-  <p class="calibre1">Enter <span class="example">cover.xhtml</span> as the new name (it must be "cover" or "Cover") (you can just type <span class="example">cover</span> – the extension will not change by default):</p>
+  <p class="calibre1">Enter <span class="example">Cover.html</span> as the new name (it must be "cover" or "Cover") (you can just type <span class="example">Cover</span> – the extension will not change by default):</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_renamed.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-bb-cover-rename" src="../Images/tutorial-bb-cover-rename.png" class="calibre8"/></div>
 
-  <p class="calibre1">Move the file to the top of the Text folder since a cover should be the first file of a book. You can drag-and-drop the file to its new position (click on the filename and hold the mouse down while you move it to its new position):</p>
+  <div class="tip">
+    <p class="tiptext">Chapters and pages are shown to the reader in the order they appear in the Book Browser.</p>
+  </div>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_at_top.png" class="calibre7"/></div>
+  <p class="calibre1">Of course, since a cover should be at the front of the book, you need to move the cover file to the top of the Text folder.</p>
+
+  <p class="calibre1">You can drag-and-drop the file to its new position (click on the filename and hold the mouse down while you move it to its new position):</p>
+
+  <div class="image"><img alt="tutorial-cover-at-top" src="../Images/tutorial-cover-at-top.png" class="calibre8"/></div>
 
   <h3 class="sigilnotintoc">Insert Your Cover Image</h3>
 
   <p class="calibre1">Now that you have an empty HTML file, you need to put your cover image into it.</p>
 
-  <p class="calibre1">Open the HTML page you created to hold the cover by double-clicking on the <span class="example">cover.xhtml</span> file. This will open it in the Book View editor window and you will see <span class="example">cover.xhtml</span> as the title of the open tab in the editor window.</p>
+  <p class="calibre1">Open the HTML page you created to hold the cover by double-clicking on the <span class="example">Cover.html</span> file. This will open it in the Book View editor window and you will see <span class="example">Cover.html</span> as the title of the open tab in the editor window.</p>
 
   <p class="calibre1">Click somewhere in the blank window to start editing:</p>
 
-  <p class="calibre1"><img alt="" src="../Images/tutorial_cover_click_here.png" class="calibre7"/></p>
+  <p class="calibre1"><img alt="tutorial-click-here" src="../Images/tutorial-click-here.png" class="calibre8"/></p>
 
-  <p class="calibre1">Click on the Insert Image button <img alt="insert-image_22px" src="../Images/insert-image_22px.png" class="calibre7"/> on the toolbar. This will display the Insert Images window:</p>
+  <p class="calibre1">Click on the Insert Image button <img alt="insert-image_22px" src="../Images/insert-image_22px.png" class="calibre8"/> on the toolbar. This will display the Insert Images window:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_insert_image.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-insert-file" src="../Images/tutorial-insert-file.png" class="calibre8"/></div>
 
-  <p class="calibre1">The Insert Images window shows you a list of images already in your EPUB. But since you haven't loaded your image yet, it's not shown.</p>
+  <p class="calibre1">The Insert Images window shows you a list of images already in your EPUB. But since you haven’t loaded any images yet, it’s empty.</p>
 
-  <p class="calibre1">You can insert the image into your EPUB and into your HTML file in one step by clicking on the Other Images button.</p>
-
-  <p class="calibre1">Click on Other Images to choose your cover image.</p>
+  <p class="calibre1">You can insert the image into your EPUB and into your HTML file in one step by clicking on the <span class="buttonbox">Other Files</span> button.</p>
 
   <p class="calibre1">Select your cover image from your filesystem and click OK.</p>
 
   <p class="calibre1">Your cover image will now appear in the file:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_inserted.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-sigil-cover" src="../Images/tutorial-sigil-cover.png" class="calibre8"/></div>
 
   <p class="calibre1">Notice that your image file is now shown in the Book Browser:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_image_in_browser.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-bb-cover-entry" src="../Images/tutorial-bb-cover-entry.png" class="calibre8"/></div>
 
   <div class="tip">
     <p class="tiptext">You can double-click your image file to display it in the main window.</p>
   </div>
 
-  <p class="calibre1">However, there are still a few steps needed to identify it as a cover in the EPUB.</p>
+  <p class="calibre1">There are still a few steps needed to identify your image as a cover in the EPUB.</p>
 
-  <h4 class="sigilnotintoc1">Mark Your Cover Files</h4>
+  <h3 class="sigilnotintoc">Mark Your Cover Files</h3>
 
-  <p class="calibre1">Now that you have both a cover image and an HTML file with a cover in it, you need to mark both as Covers to make sure the various ereaders can recognize the cover (some readers just look for the cover image file, and some look for the HTML file containing your image).</p>
+  <p class="calibre1">Now that you have both a cover image and an HTML file with a cover in it, you need to mark both as Covers to make sure the various ereaders can recognise the cover (some readers just look for the cover image file, and some look for the HTML file containing your image).</p>
 
   <p class="calibre1">To mark the HTML file as a cover right-click on <span class="example">cover.xhtml</span> in the Book Browser window, select the menu item Add Semantics, then choose the Cover entry:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_file_semantics.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-add-semantic-cover-file" src="../Images/tutorial-add-semantic-cover-file.png" class="calibre8"/></div>
 
   <p class="calibre1">And to mark the image as a cover image right-click on <span class="example">cover.png</span> file in the Book Browser window, select the menu item Add Semantics, then choose the Cover entry.</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_cover_image_semantics.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-add-semantic-image" src="../Images/tutorial-add-semantic-image.png" class="calibre8"/></div>
 
   <div class="tip">
-    <p class="tiptext">You must set both the image file and the HTML file to type Cover to make sure all ereaders recognize the cover.</p>
+    <p class="tiptext">You must set both the image file and the HTML file to type Cover to make sure all ereaders recognise the cover.</p>
   </div>
 
   <p class="calibre1">Your EPUB now has a cover defined (if you look at the Add Semantics menu again for the files you will see the Cover items now have a checkmark next to them).</p>
 
-  <p class="calibre1">You should save your book if you haven't already.</p>
-
-  <div class="tip">
-    <p class="tiptext">See the <a href="../Text/media_files.html">Images</a> chapter for more details.</p>
-  </div>
+  <p class="calibre1">You should Save <img alt="button-save" src="../Images/button-save.png" class="calibre8"/> your book.</p>
 
 
 
@@ -167,10 +173,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -182,10 +191,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -208,10 +217,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -261,13 +270,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -276,37 +285,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -318,10 +318,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -336,9 +336,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>
@@ -360,13 +357,13 @@
 
   <div class="calibreEbNav">
     
-      <a href="tutorial_add_files.html" class="calibreAPrev">previous page</a>
+      <a href="tutorial_metadata.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="tutorial_edit_epub.html" class="calibreANext"> next page</a>
+      <a href="tutorial_split.html" class="calibreANext"> next page</a>
     
   </div>
 

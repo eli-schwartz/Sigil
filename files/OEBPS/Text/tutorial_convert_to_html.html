@@ -5,7 +5,7 @@
     <title>Create an EPUB</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -40,7 +40,7 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="tutorial_what_is_epub.html" class="calibreAPrev">previous page</a>
+          <a href="tutorial_getting_started_with_epub.html" class="calibreAPrev">previous page</a>
         
 
         
@@ -50,46 +50,52 @@
     
 
     
-  <h2 id="tutorial" class="calibre5">Convert Your File For Import</h2>
+  <h2 id="tutorial" class="calibre5">Prepare Your File For Sigil</h2>
 
-  <p class="calibre1">If you already have an EPUB or HTML file you can skip this step.</p>
+  <p class="calibre1">If you already have an EPUB or HTML file, or are writing from scratch in Sigil, you can skip this step.</p>
 
-  <p class="calibre1">If you are starting with a document created by one of the many available word processor programs, then the first thing you need to do is convert your document to HTML so that you can import it into Sigil.</p>
+  <p class="calibre1">If you are starting with a document created by a word processor, then the first thing you need to do is convert your document to HTML so that you can import it into Sigil. Some programs can generate EPUB files as output. And some programs have add-ons or features to cleanup their HTML output. Whether you use the HTML or EPUB (or even plain text) output of these programs depends on the program – you can always test differerent ways to see what works best.</p>
 
   <div class="tip">
-    <p class="tiptext">The "cleaner" your HTML file is, the easier it will be to turn it into an EPUB and the more likely it will display correctly on multiple devices. This means not using too many fancy formats in your document, and preferably using styles for formatting.</p>
+    <p class="tiptext">The "cleaner" your HTML file is, the easier it will be to turn it into an EPUB and the more likely it will display correctly on multiple devices. This means using styles for formatting and not using too many fancy formats and layouts.</p>
+
+    <p class="tiptext">Do not expect an EPUB to look like a printed book – EPUB is designed so that the reader can control how the book is displayed.</p>
   </div>
 
-  <p class="calibre1">Although conversion is not part of Sigil, here are some suggestions for converting files for import into Sigil.</p>
+  <p class="calibre1">Although conversion is not part of Sigil, here are some suggestions for converting files for importing into Sigil.</p>
 
-  <h3 class="sigilnotintoc">Convert Word to HTML</h3>
+  <h3 class="sigilnotintoc">Word Documents</h3>
 
-  <p class="calibre1">Use the MS Word menu option <span class="shortcut">File→Save As Filtered HTML</span>. Or use the <a href="http://www.mobileread.com/forums/showthread.php?t=142530">MS Word Macro @ MobileRead</a>.</p>
+  <p class="calibre1">Use the MS Word menu item <span class="shortcut">File→Save As Filtered HTML</span>. Or use the <a href="http://www.mobileread.com/forums/showthread.php?t=142530">MS Word Macro @ MobileRead</a>.</p>
 
   <p class="calibre1">Both approaches try to reduce the amount of extra code exported by MS Word so that your HTML file is cleaner and simpler to edit in Sigil. You really want to have your code as clean as possible since Word adds lots of extra HTML tags that you will probably want to delete at some point.</p>
 
   <p class="calibre1">When using Word or any word processor, you should always try to use styles to format your code instead of just making some text bold, some larger, etc. Styles are also an important concept when formatting EPUBs.</p>
 
-  <h3 class="sigilnotintoc">Convert Text to HTML</h3>
+  <h3 class="sigilnotintoc">Text Files</h3>
 
-  <p class="calibre1">It's not strictly necessary to convert text files to HTML. You can just paste the text into Sigil's Book View. In fact, Sigil can also directly open .txt files.</p>
+  <p class="calibre1">It is not strictly necessary to convert text files to HTML. Sigil can directly open .txt files.</p>
 
-  <p class="calibre1">But it's worth noting that the problem with text files is that they don't always convert well because the paragraph separations are not clear. This lack of formatting means you can end up with lots of run-on paragraphs, etc. leaving you to do a lot of cleanup work. Text files are still a better source than some formats since they at least have fewer unnecessary HTML tags.</p>
+  <div class="tip">
+    <p class="tiptext">Text files must have a blank line between paragraphs so that Sigil can split them into separate paragraphs.</p>
+  </div>
 
-  <h3 class="sigilnotintoc">Convert Mobi to HTML</h3>
+  <p class="calibre1">Text files are not an ideal source, but they can still be better than some formats as they will have fewer unnecessary HTML tags. They may be worth using if you have lots of issues with other formats.</p>
 
-  <p class="calibre1">The Mobi/KF8 format is actually an HTML file inside of a zip file. So 'converting' it is actually quite easy – as long as the files are not protected with DRM.</p>
+  <h3 class="sigilnotintoc">Mobi or KF8</h3>
+
+  <p class="calibre1">The Mobi/KF8 format is actually an HTML file inside of a zip file. So "converting" it is actually quite easy – as long as the files are not protected with DRM!</p>
 
   <p class="calibre1">Simply unzip the .prc, .azw, .azw3 file into a directory. You can now access the HTML file.</p>
 
-  <h3 class="sigilnotintoc">Convert Other Formats</h3>
+  <h3 class="sigilnotintoc">Other Formats</h3>
 
-  <p class="calibre1">You can also convert other formats to HTML or EPUB using other software such as Calibre.</p>
+  <p class="calibre1">Many other word processors, such as LibreOffice, also have a save-as or export to HTML or even EPUB function that you can try. You can also convert other formats to HTML or EPUB using other software such as Calibre.</p>
 
   <p class="calibre1">Note that any automatic conversion of your files will introduce lots of extra code. If you are just formatting a book for personal use you may not be concerned with this. But if you are formatting books for professional purposes or want as little extra code in your EPUB as possible, then it should be avoided.</p>
 
   <div class="tip">
-    <p class="tiptext">Sigil only supports importing HTML files since converting from other formats is actually quite specialized and best left to other tools.</p>
+    <p class="tiptext">Sigil only supports importing HTML files since converting from other formats is actually quite specialised and best left to other tools.</p>
   </div>
 
 
@@ -111,10 +117,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -126,10 +135,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -152,10 +161,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -205,13 +214,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -220,37 +229,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -262,10 +262,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -280,9 +280,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>
@@ -304,7 +301,7 @@
 
   <div class="calibreEbNav">
     
-      <a href="tutorial_what_is_epub.html" class="calibreAPrev">previous page</a>
+      <a href="tutorial_getting_started_with_epub.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>

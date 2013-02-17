@@ -7,8 +7,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 4em;
-    text-align: center;
-    text-indent: 0
+    text-align: center
     }
 .buttonbox {
     border-color: #777;
@@ -17,9 +16,7 @@
     font-family: monotype, sans-serif;
     font-size: 0.875em;
     font-weight: bold;
-    line-height: 1.2;
-    margin-left: 0.5em;
-    margin-right: 0.5em
+    line-height: 1.2
     }
 .buttonbox1 {
     border-color: #777;
@@ -27,9 +24,7 @@
     border-width: 1px;
     font-family: monotype, sans-serif;
     font-size: 0.85714em;
-    font-weight: bold;
-    margin-left: 0.5em;
-    margin-right: 0.5em
+    font-weight: bold
     }
 .calibre {
     display: block;
@@ -47,18 +42,14 @@
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1em;
-    text-indent: 0
+    margin-top: 1em
     }
 .calibre10 {
-    font-style: italic
+    display: block;
+    page-break-after: always
     }
 .calibre11 {
-    display: block;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1em
+    font-style: italic
     }
 .calibre12 {
     display: block;
@@ -120,16 +111,19 @@
     margin-top: 0
     }
 .calibre7 {
+    font-family: SmallCaps, sans-serif;
+    font-size: 1.25em;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2
+    }
+.calibre8 {
     height: auto;
     max-width: 100%;
     width: auto
     }
-.calibre8 {
-    display: block
-    }
 .calibre9 {
-    display: block;
-    page-break-after: always
+    display: block
     }
 .coverimage {
     display: block;
@@ -176,8 +170,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 0.5em;
-    text-align: center;
-    text-indent: 0
+    text-align: center
     }
 .h2subheading {
     display: block;
@@ -189,8 +182,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 0.5em;
-    text-align: center;
-    text-indent: 0
+    text-align: center
     }
 .heading {
     display: block;
@@ -198,8 +190,7 @@
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1.5em;
-    text-indent: 0
+    margin-top: 1.5em
     }
 .image {
     display: block;
@@ -213,7 +204,8 @@
     text-align: left
     }
 .indent1 {
-    display: block
+    display: block;
+    margin-left: 1em
     }
 .listheading {
     font-weight: bold
@@ -224,6 +216,7 @@
     }
 .narrow {
     border: 1px inset;
+    border-bottom: solid 2px #000;
     color: gray;
     display: block;
     height: 2px;
@@ -250,6 +243,22 @@
 .rights {
     display: block;
     margin-top: 4em;
+    text-align: center
+    }
+.sgc-toc-level {
+    display: block;
+    margin-left: 0
+    }
+.sgc-toc-level1 {
+    display: block;
+    margin-left: 2em
+    }
+.sgc-toc-title {
+    display: block;
+    font-face: bold;
+    font-size: 1.5em;
+    line-height: 1.2;
+    margin-bottom: 1em;
     text-align: center
     }
 .shortcut {
@@ -301,8 +310,7 @@
     margin-left: 1em;
     margin-right: 1em;
     margin-top: 1em;
-    text-align: center;
-    text-indent: 0
+    text-align: center
     }
 .title {
     display: block;
@@ -314,8 +322,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 1em;
-    text-align: center;
-    text-indent: 0
+    text-align: center
     }
 .toolbar {
     display: block;
@@ -330,6 +337,5 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 1em;
-    text-align: center;
-    text-indent: 0
+    text-align: center
     }

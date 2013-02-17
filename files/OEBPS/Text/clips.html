@@ -5,7 +5,7 @@
     <title>Clips</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -60,13 +60,13 @@
 
   <p class="calibre1">To open the Clip Editor, select the menu item <span class="shortcut">Tools→Clip Editor</span> or its keyboard shortcut:</p>
 
-  <div class="image"><img alt="clip-editor-main" src="../Images/clip-editor-main.png" class="calibre7"/></div>
+  <div class="image"><img alt="clip-editor-main" src="../Images/clip-editor-main.png" class="calibre8"/></div>
 
   <h4 class="sigilnotintoc1">Context Menu</h4>
 
   <p class="calibre1">Most actions concerning editing clips are accessed using the right-click context menu:</p>
 
-  <div class="image"><img alt="clip-editor-context-menu" src="../Images/clip-editor-context-menu.png" class="calibre7"/></div>
+  <div class="image"><img alt="clip-editor-context-menu" src="../Images/clip-editor-context-menu.png" class="calibre8"/></div>
 
   <p class="calibre1">Select one or more entries then right-click on the selection for the following options:</p>
 
@@ -100,11 +100,13 @@
     <li class="calibre4"><span class="listheading">Expand All:</span> Expand the display of all groups.</li>
   </ul>
 
+  <p class="calibre1">You can also use the <span class="buttonbox">Add Entry</span> or <span class="buttonbox">Add Group</span> buttons to add new items.</p>
+
   <h4 class="sigilnotintoc1">Save</h4>
 
   <p class="calibre1">To save your entries to disk, click <span class="buttonbox">Save</span>.</p>
 
-  <p class="calibre1">To exit without saving your entries you can just close the window (with the <span class="buttonbox">Close</span> button or the <span class="shortcut">Esc</span> key) and confirming you don't want to save if prompted. You can also use the context menu <span class="shortcut">Reload</span> to reload your entries from disk – which will delete your current entries.</p>
+  <p class="calibre1">To exit without saving your entries you can just close the window (with the <span class="buttonbox">Close</span> button or the <span class="shortcut">Esc</span> key) and confirming you don’t want to save if prompted. You can also use the context menu <span class="shortcut">Reload</span> to reload your entries from disk – which will delete your current entries.</p>
 
   <p class="calibre1">You can use the <span class="shortcut">Export</span> and <span class="shortcut">Import</span> context menu items to save your searches so that they can be shared with others.</p>
 
@@ -136,7 +138,7 @@
 
   <h4 class="sigilnotintoc1">Autofilling CSS Entries</h4>
 
-  <p class="calibre1">The Autofill context menu option will scan your CSS stylesheets and create a clip entry for each simple selector it finds.</p>
+  <p class="calibre1">The Autofill context menu item will scan your CSS stylesheets and create a clip entry for each simple selector it finds.</p>
 
   <p class="calibre1">For example, if you have the selector or style "p.first" then Autofill will create a clip for it as follows:</p>
   <pre class="example1">&lt;p class="first"&gt;\1&lt;/p&gt;</pre>
@@ -149,9 +151,9 @@
 
   <p class="calibre1">The Clip Bar is an optional toolbar that will show buttons for the first 20 clips that are not in a group. You can display the Clip Bar by selecting the menu View→Toolbars→Clips:</p>
 
-  <div class="image"><img alt="clips-clip-bar" src="../Images/clips-clip-bar.png" class="calibre7"/></div>
+  <div class="image"><img alt="clips-clip-bar" src="../Images/clips-clip-bar.png" class="calibre8"/></div>
 
-  <p class="calibre1">The buttons will show the clip's name, so you may want to keep the names short. You can use them as shortcuts for your own styles or even for common special characters.</p>
+  <p class="calibre1">The buttons will show the clip’s name, so you may want to keep the names short. You can use them as shortcuts for your own styles or even for common special characters.</p>
 
   <div class="tip">
     <p class="tiptext">Clips can also have keyboard shortcuts – see <span class="menuitem">Insert→Clip</span></p>
@@ -161,7 +163,7 @@
 
   <p class="calibre1">The Clips window is a dockable window that shows all your Clips in a list and allows you to click an entry to paste it into your text. You can display the Clips window by selecting the menu View→Clips:</p>
 
-  <div class="image"><img alt="clips-clips-window" src="../Images/clips-clips-window.png" class="calibre7"/></div>
+  <div class="image"><img alt="clips-clips-window" src="../Images/clips-clips-window.png" class="calibre8"/></div>
 
   <h3 class="sigilnotintoc">Using Clips to Format Text</h3>
 
@@ -178,7 +180,7 @@
   <p class="calibre1">Then when you apply the clip the text will be changed to</p>
   <pre class="example1">&lt;span class="name"&gt;Hello World&lt;/span&gt;</pre>
 
-  <p class="calibre1">You can use this to build up a library of styles and formatting that can be applied quickly. Any text can be used in Code View. But in Book View only limited clips can be used – in particular span tags. This is because you will be inserting into an existing paragraph – and you can't insert certain tags inside a paragraph tag.</p>
+  <p class="calibre1">You can use this to build up a library of styles and formatting that can be applied quickly. Any text can be used in Code View. But in Book View only limited clips can be used – in particular span tags. This is because you will be inserting into an existing paragraph – and you can’t insert certain tags inside a paragraph tag.</p>
 
   <p class="calibre1">You can use other regex commands in your clip, although complex regex statements might not work.</p>
 
@@ -205,10 +207,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -220,10 +225,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -246,10 +251,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -299,13 +304,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -314,37 +319,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -356,10 +352,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -374,9 +370,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>

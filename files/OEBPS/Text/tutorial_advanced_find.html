@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Edit an EPUB</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
+
+  
+
+
+<link href="../../calibreHtmlOutBasicCss.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="calibreMeta">
+  <div class="calibreMetaTitle">
+  
+  
+    
+    <h1>
+      <a href="../../../index.html">Sigil User Guide
+</a>
+    </h1>
+    
+    
+  
+  </div>
+  <div class="calibreMetaAuthor">
+    0.7.0
+
+  </div>
+</div>
+
+<div class="calibreMain">
+
+  <div class="calibreEbookContent">
+    
+      <div class="calibreEbNavTop">
+        
+          <a href="tutorial_embed_fonts.html" class="calibreAPrev">previous page</a>
+        
+
+        
+          <a href="tutorial_regex_reference.html" class="calibreANext"> next page</a>
+        
+      </div>
+    
+
+    
+  <h2 class="calibre5">Advanced Find &amp; Replace – Regex</h2>
+
+  <p class="calibre1">The real power of Find &amp; Replace in Sigil is provided by its support of Regular Expressions (also called regex). Regex is basically using patterns instead of plain text for searches to make matching text more flexible.</p>
+
+  <p class="calibre1">You can use regex in Find &amp; Replace by changing the mode of the search from Normal to Regex.</p>
+
+  <div class="image"><img alt="tutorial-find-adv-regex" src="../Images/tutorial-find-adv-regex.png" class="calibre8"/></div>
+
+  <p class="calibre1">Regex is a very important tool in Sigil, but only a very brief introduction can be given in this tutorial. See the next chapter for a reference list of regular expressions.</p>
+
+  <p class="calibre1">For example, instead of searching for very specific text to replace or delete, such as "Page 123", it would be much more useful to search for text that contains "Page" followed by a number – that’s exactly what regular expressions can provide.</p>
+
+  <p class="calibre1">Instead of putting your actual text into the Find or Replace boxes, you can substitute it with special regex codes. So in the example above you could search for "Page \d+" instead of "Page 123" because "\d+" is a regex code that means any digit (the "\d") repeated at least once (the "+").</p>
+
+  <div class="image"><img alt="tutorial-find-adv-page" src="../Images/tutorial-find-adv-page.png" class="calibre8"/></div>
+
+  <h3 class="sigilnotintoc">Using Regex to Replace Text</h3>
+
+  <p class="calibre1">But even more useful is that you can use regex to help with replacing text as well. In the example above, you might want to keep the page numbers but replace the word "Page". You could use then use something like:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">
+      <span class="listheading">Find:</span>
+      <pre class="example1">Page (\d+)</pre>
+    </li>
+
+    <li class="calibre4">
+      <span class="listheading">Replace:</span>
+      <pre class="example1">This is page number \1</pre>
+    </li>
+  </ul>
+
+  <div class="image"><img alt="tutorial-find-adv-replace" src="../Images/tutorial-find-adv-replace.png" class="calibre8"/></div>
+
+  <p class="calibre1">This will replace any occurrence of "Page" followed by a number with "This is page" followed by the same number:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">
+      <span class="listheading">Before:</span>
+      <pre class="example1">Page 418</pre>
+    </li>
+
+    <li class="calibre4">
+      <span class="listheading">After:</span>
+      <pre class="example1">This is page 418</pre>
+    </li>
+  </ul>
+
+  <p class="calibre1">The first point to note about this replacement is the use of the regex code <span class="example">(\d+)</span> in the Find box. The <span class="example">\d+</span> code tells the search to look for numbers as above. But the use of parenthesis around the code tells the search to remember what those numbers were – to remember anything matched in the parenthesis. The other point to note is the use of the regex code <span class="example">\1</span> in the Replace box, which tells Replace to substitute the characters remembered in the Find statement for the string <span class="example">\1</span> wherever it finds it.</p>
+
+  <h3 class="sigilnotintoc" id="tutorial_regex_formatting">Using Regex to Change Formatting</h3>
+
+  <p class="calibre1">As a further example of regex, this is how you might change the formatting of certain text into chapter headings.</p>
+
+  <p class="calibre1">Let’s say that you have an imported HTML file that contains lots of chapter headings, but none of them are marked using the <span class="example">h1</span> heading tag. Instead they are all marked as paragraphs like this:</p>
+  <pre class="example1">&lt;p&gt;CHAPTER 7&lt;/p&gt;
+</pre>
+
+  <p class="calibre1">Assuming every paragraph like this is a chapter heading, you could use this regex:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">
+      <span class="listheading">Find:</span>
+      <pre class="example1">&lt;p&gt;\sCHAPTER\s(\d+)\s&lt;/p&gt;</pre>
+    </li>
+
+    <li class="calibre4">
+      <span class="listheading">Replace:</span>
+      <pre class="example1">&lt;h1&gt;Chapter \1&lt;/h1&gt;</pre>
+    </li>
+  </ul>
+
+  <div class="image"><img alt="" src="../Images/tutorial_find_regex_chapter.png" class="calibre8"/></div>
+
+  <p class="calibre1">That’s quite a lot to digest, but if you look carefully you can see that it’s very similar to the Page number example above in that it’s remembering the digits in the chapter name and using them in the replace.</p>
+
+  <p class="calibre1">It's the Find that is the most interesting. It breaks down like this:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="example">&lt;p&gt;</span> – Look for a starting paragraph tag.</li>
+
+    <li class="calibre4"><span class="example">\s</span> – Regex code to match any white space (blanks, tabs, etc.).</li>
+
+    <li class="calibre4"><span class="example">CHAPTER</span> – Match the word CHAPTER (Regex is case-sensitive by default).</li>
+
+    <li class="calibre4"><span class="example">\s</span> – Regex code to match any white space.</li>
+
+    <li class="calibre4"><span class="example">(\d+)</span> – Regex code to match any number of digits in a row and remember them.</li>
+
+    <li class="calibre4"><span class="example">\s</span> – Regex code to match any white space.</li>
+
+    <li class="calibre4"><span class="example">&lt;/p&gt;</span> – Look for an end paragraph tag.</li>
+  </ul>
+
+  <p class="calibre1">You could just use a space instead of <span class="example">\s</span> but <span class="example">\s</span> is more flexible since it will match any number of blank spaces and tabs.</p>
+
+  <p class="calibre1">So the results of that search could be:</p>
+
+  <ul class="calibre3">
+    <li class="calibre4">
+      <span class="listheading">Before:</span>
+      <pre class="example1">&lt;p&gt;  CHAPTER    14&lt;/p&gt;</pre>
+    </li>
+
+    <li class="calibre4">
+      <span class="listheading">After:</span>
+      <pre class="example1">&lt;h1&gt;Chapter 14&lt;h1&gt;</pre>
+    </li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext">It becomes more difficult to use regex if the formatting used in a file is not consistent – in these cases you may have to do several Find &amp; Replace passes and even resort to making the updates one by one manually.</p>
+  </div>
+
+  <p class="calibre1">This is only a very basic description of what regex is, but it gives you an idea of what is possible. The trick with regex is getting the right find and replace strings, and that only comes from reading, asking questions, and testing.</p>
+
+  <h3 class="sigilnotintoc">Helpful Options</h3>
+
+  <p class="calibre1">You may have noticed the extra Options in Find &amp; Replace: DotAll, Minimal Match, and Auto-Tokenise. All of these options are useful when using Regex. If you are starting out using regex, then the recommendation is to check each of the boxes:</p>
+
+  <div class="image"><img alt="tutorial-find-adv-options" src="../Images/tutorial-find-adv-options.png" class="calibre8"/></div>
+
+  <p class="calibre1">This is what each of the options is used for:</p>
+
+  <p class="calibre1"/>
+
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">DotAll:</span> This regex option prepends (?s) to all regex searches and is used when you want the ".*" pattern to match across separate lines.</li>
+
+    <li class="calibre4"><span class="listheading">Minimal Match:</span> This regex option prepends (?U) to all regex searches and is used when you want a pattern to match the shortest occurrence instead of the longest match.</li>
+
+    <li class="calibre4"><span class="listheading">Auto-Tokenise:</span> When using Ctrl-F on selected text to add text to Find &amp; Replace, this will convert spaces to \s and escape certain characters so they are suitable for regex.</li>
+  </ul>
+
+  <p class="calibre1">See the <a href="../Text/tutorial_regex_reference.html">Regular Expression Reference</a> chapter for more details.</p>
+
+
+
+  </div>
+
+  
+  <div class="calibreToc">
+    <h2><a href="../../../index.html"> Table of contents</a></h2>
+     <div>
+  <ul>
+    <li>
+      <a href="cover_picture.html">Cover</a>
+    </li>
+    <li>
+      <a href="titlepage.html">Title Page</a>
+    </li>
+    <li>
+      <a href="rights.html">Copyright</a>
+    </li>
+    <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
+      <a href="introduction.html">Introduction</a>
+      <ul>
+        <li>
+          <a href="whats_new.html">What’s New</a>
+        </li>
+        <li>
+          <a href="about_sigil.html">About Sigil</a>
+        </li>
+        <li>
+          <a href="about_epub.html">About EPUB</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
+      <ul>
+        <li>
+          <a href="user_interface.html">User Interface</a>
+        </li>
+        <li>
+          <a href="preferences.html">Preferences</a>
+        </li>
+        <li>
+          <a href="opening_and_saving_files.html">Opening and Saving Files</a>
+        </li>
+        <li>
+          <a href="book_view.html">Book View</a>
+        </li>
+        <li>
+          <a href="code_view.html">Code View</a>
+        </li>
+        <li>
+          <a href="preview.html">Preview</a>
+        </li>
+        <li>
+          <a href="book_browser.html">Book Browser</a>
+        </li>
+        <li>
+          <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="table_of_contents.html">Table of Contents</a>
+        </li>
+        <li>
+          <a href="validation.html">Validation</a>
+        </li>
+        <li>
+          <a href="spellcheck.html">Spellcheck</a>
+        </li>
+        <li>
+          <a href="media_files.html">Images, Video, Audio</a>
+        </li>
+        <li>
+          <a href="special_characters.html">Special Characters</a>
+        </li>
+        <li>
+          <a href="splitting_and_merging.html">Splitting and Merging</a>
+        </li>
+        <li>
+          <a href="find_replace.html">Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="saved_searches.html">Saved Searches</a>
+        </li>
+        <li>
+          <a href="clips.html">Clips</a>
+        </li>
+        <li>
+          <a href="clipboard_history.html">Clipboard History</a>
+        </li>
+        <li>
+          <a href="links.html">Links and IDs</a>
+        </li>
+        <li>
+          <a href="styles.html">Styles</a>
+        </li>
+        <li>
+          <a href="indexes.html">Indexes</a>
+        </li>
+        <li>
+          <a href="reports.html">Reports</a>
+        </li>
+        <li>
+          <a href="external_editors.html">External Editors</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="tutorials.html">Tutorials</a>
+      <ul>
+        <li>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
+        </li>
+        <li>
+          <a href="tutorial_save.html">Save Your EPUB File</a>
+        </li>
+        <li>
+          <a href="tutorial_metadata.html">Add the Author and Title</a>
+        </li>
+        <li>
+          <a href="tutorial_add_cover.html">Add a Cover Image</a>
+        </li>
+        <li>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
+        </li>
+        <li>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
+        </li>
+        <li>
+          <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
+        </li>
+        <li>
+          <a href="tutorial_links.html">Create Links and Notes</a>
+        </li>
+        <li>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
+        </li>
+        <li>
+          <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
+        </li>
+        <li>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
+        </li>
+        <li>
+          <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
+        </li>
+        <li>
+          <a href="tutorial_stylesheets.html">Use Stylesheets</a>
+        </li>
+        <li>
+          <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
+        </li>
+        <li>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
+        </li>
+        <li>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+        </li>
+        <li>
+          <a href="tutorial_tips.html">Tips</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="faq.html">FAQ</a>
+      <ul>
+        <li>
+          <a href="faq.html#faq_common_questions">Common Questions</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_questions">Where to Get Help</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_using_sigil">Using Sigil</a>
+        </li>
+        <li>
+          <a href="faq.html#faq_formatting">Formatting and Styles</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="contributing_to_sigil.html">Contributing to Sigil</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+  
+
+  <div class="calibreEbNav">
+    
+      <a href="tutorial_embed_fonts.html" class="calibreAPrev">previous page</a>
+    
+
+    <a href="../../../index.html" class="calibreAHome"> start</a>
+
+    
+      <a href="tutorial_regex_reference.html" class="calibreANext"> next page</a>
+    
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
     <title>Edit an EPUB</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -40,7 +40,7 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="tutorial_code_view.html" class="calibreAPrev">previous page</a>
+          <a href="tutorial_validate.html" class="calibreAPrev">previous page</a>
         
 
         
@@ -54,55 +54,61 @@
 
   <p class="calibre1">In Sigil, Find &amp; Replace can be used to find any text in any of your files. And even more important, it can be used to change text – but only in Code View.</p>
 
-  <p class="calibre1">To open the Find &amp; Replace, use <span class="shortcut">Search<span class="menuitem">→</span>Find / Replace</span>. The window will remain open and below the editing window until you close it.</p>
+  <div class="tip">
+    <p class="tiptext">You can only search for text in the current file in Book View. All other Find &amp; Replace actions will switch you to Code View.</p>
+  </div>
 
-  <p class="calibre1">This is the Find &amp; Replace window in Book View:</p>
+  <p class="calibre1">To open the Find &amp; Replace, use <span class="shortcut">Search<span class="menuitem">→</span>Find &amp; Replace</span> or its shortcut. The Find &amp; Replace window will open just below your editing window, and will stay there until you close it:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_find_book_view.png" class="calibre7"/></div>
+  <div class="image"><img alt="find-replace-options" src="../Images/find-replace-options.png" class="calibre8"/></div>
 
-  <p class="calibre1">As you can see, in Book View you only have the option to Find text.</p>
+  <p class="calibre1">There are quite a few option, so if you want to hide some of them you can click on the show/hide chevron on the lower left to hide the Options line (click again to show them again):</p>
 
-  <p class="calibre1">You need to switch to Code View to see the full set of options available in Find &amp; Replace.</p>
-
-  <h4 class="sigilnotintoc1">Find &amp; Replace in Code View</h4>
-
-  <p class="calibre1">In Code View, to open Find &amp; Replace use <span class="shortcut">Search<span class="menuitem">→</span>Find / Replace</span> or the <span class="shortcut">Ctrl+F</span> keyboard shortcut:</p>
-
-  <div class="image"><img alt="" src="../Images/tutorial_find_empty.png" class="calibre7"/></div>
+  <div class="image"><img alt="find-replace-basic" src="../Images/find-replace-basic.png" class="calibre8"/></div>
 
   <div class="tip">
-    <p class="tiptext">The Find and Replace text boxes are where you enter what to look for and change. The four buttons on the right (Find, Count All, Replace, Replace All) are used to run your search. The Mode dropdown boxes on the bottom allow you to change what to search for, where to search, and which direction to search in.</p>
+    <p class="tiptext">The Find and Replace text boxes are where you enter what to look for and change. The buttons on the right (Find, Replace, Replace/Find, Replace All, and Count All) are used to run your search. The Mode dropdown boxes on the bottom allow you to change what to search for, where to search, and which direction to search in.</p>
 
     <p class="tiptext">Each dropdown and button has a tooltip with more details.</p>
   </div>
 
-  <p class="calibre1">To make a simple change enter some text to search for in the Find box, and what to replace it with in the Replace box, then click Replace:</p>
+  <h3 class="sigilnotintoc">Using Find &amp; Replace</h3>
 
-  <div class="image"><img alt="" src="../Images/tutorial_find_text.png" class="calibre7"/></div>
+  <p class="calibre1">To make a simple change enter some text to search for in the Find box, and in the Replace box enter the new text to replace it with:</p>
 
-  <p class="calibre1">Or click on Count All to show how many matches there are:</p>
+  <div class="image"><img alt="tutorial-find-start" src="../Images/tutorial-find-start.png" class="calibre8"/></div>
 
-  <div class="image"><img alt="" src="../Images/tutorial_find_count.png" class="calibre7"/></div>
+  <p class="calibre1">Click on <span class="buttonbox">Count All</span> to show how many matches there are for the text in the Find box (Count and Find ignore what is in the Replace box):</p>
 
-  <p class="calibre1">To test Find, enter a search string and click Find a few times (any text in the Replace box is ignored if you are just doing a Find or Count All). Your matched text will be highlighted in the Code View window.</p>
+  <div class="image"><img alt="tutorial-find-count" src="../Images/tutorial-find-count.png" class="calibre8"/></div>
 
-  <p class="calibre1">Now click on Replace.</p>
+  <p class="calibre1">You’ll notice that you switched to Code View if you weren’t already using it! This is because all major searches are done in Code View. You should stay in Code View for this tutorial.</p>
 
-  <p class="calibre1">Since your matched text was already highlighted, Sigil has replaced it with your new text (which could be empty if you wanted to delete that text in your document) and then automatically found and highlighted the next match. If matching text wasn't highlighted already, then Replace would have just found and highlighted the next match without replacing it.</p>
+  <p class="calibre1">Note that the number of matches is shown on the bottom right.</p>
 
-  <p class="calibre1">You can scroll back to verify your text was replaced.</p>
+  <p class="calibre1">Now click on <span class="buttonbox">Find</span>. The next occurrence of the word in the Find box will be highlighted:</p>
 
-  <p class="calibre1">If you are satisfied that the Replace is working okay, you can use Replace All to update all the matching text in your document at once instead of one at a time.</p>
+  <div class="image"><img alt="tutorial-find-the" src="../Images/tutorial-find-the.png" class="calibre8"/></div>
+
+  <p class="calibre1">Click on <span class="buttonbox">Replace</span> – this changes the text to what is in the Replace box and leaves the new text highlighted:</p>
+
+  <div class="image"><img alt="tutorial-find-test" src="../Images/tutorial-find-test.png" class="calibre8"/></div>
+
+  <p class="calibre1">To make it a little easier to find and replace one occurrence after another, you can use the <span class="buttonbox">Replace/Find</span> button. When you click on this button Sigil will replace the selected text if it matches, and then find and highlight the next match.</p>
+
+  <p class="calibre1">If you are satisfied that the Replace is working okay, you can use <span class="buttonbox">Replace All</span> to update all the matching text in your document at once instead of one at a time.</p>
 
   <div class="tip">
     <p class="tiptext">Always use Count All and possibly a few Replace commands before using Replace All – to make sure you have entered your find and replace strings correctly.</p>
   </div>
 
-  <p class="calibre1">You may have noticed the selection box containing Current HTML File. If you change Current HTML File to All HTML Files, your Find or Replace will be done across every HTML file in your EPUB:</p>
+  <p class="calibre1">You may have noticed the selection box containing "Current HTML File". If you change "Current HTML File" to "All HTML Files", your Find or Replace will be done across every HTML file in your EPUB:</p>
 
-  <div class="image"><img alt="" src="../Images/tutorial_find_empty_all.png" class="calibre7"/></div>
+  <div class="image"><img alt="tutorial-find-all" src="../Images/tutorial-find-all.png" class="calibre8"/></div>
 
   <p class="calibre1">This is why editing in Sigil can be done quickly.</p>
+
+  <p class="calibre1">The last main part of Find &amp; Replace is its ability to use Regular Expressions – but see the <a href="../Text/tutorial_advanced_find.html">Advanced Find &amp; Replace</a> chapter for more details.</p>
 
 
 
@@ -123,10 +129,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -138,10 +147,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -164,10 +173,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -217,13 +226,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -232,37 +241,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -274,10 +274,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -292,9 +292,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>
@@ -316,7 +313,7 @@
 
   <div class="calibreEbNav">
     
-      <a href="tutorial_code_view.html" class="calibreAPrev">previous page</a>
+      <a href="tutorial_validate.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>

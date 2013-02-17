@@ -5,7 +5,7 @@
     <title>FAQ</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -40,7 +40,7 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="tutorial_advanced_regex.html" class="calibreAPrev">previous page</a>
+          <a href="tutorial_tips.html" class="calibreAPrev">previous page</a>
         
 
         
@@ -58,7 +58,7 @@
 
   <h3 class="sigilnotintoc">Does Sigil Support EPUB 3?</h3>
 
-  <p class="calibre1">Sigil is an EPUB 2 editor and does not currently support all the features of EPUB 3. However it does support audio and video files which are the most often requested parts of EPUB 3, and does allow you to preserve EPUB 3 tags. A future version may support EPUB 3, but there are many other features still to be worked on, and full EPUB 3 ereaders are not in common use yet.</p>
+  <p class="calibre1">Sigil is an EPUB 2 editor and does not currently support all the features of EPUB 3. However it does support audio and video files which are the most often requested parts of EPUB 3, and does allow you to preserve EPUB 3 tags. A future version may support EPUB 3, but EPUB 3 ereaders are not common yet, even though some ereaders support certain parts of EPUB 3.</p>
 
   <h3 class="sigilnotintoc">Why does my book look okay in Sigil but not on my device?</h3>
 
@@ -66,7 +66,7 @@
 
   <h3 class="sigilnotintoc">What are all these "&amp;nbsp;" words in my code?</h3>
 
-  <p class="calibre1">&amp;nbsp; is a non-breaking space. If you edit in Book View you may end up with these HTML entities in your code because Book View will create them anytime it thinks you wanted one (e.g. if you type two spaces in a row it will convert one to &amp;nbsp; so that it is not lost – multiple spaces are reduced to one space by ereaders). You can replace them with a normal space if you don't actually need them for your text.</p>
+  <p class="calibre1">&amp;nbsp; is a non-breaking space. If you edit in Book View you may end up with these HTML entities in your code because Book View will create them anytime it thinks you wanted one (e.g. if you type two spaces in a row it will convert one to &amp;nbsp; so that it is not lost – multiple spaces are reduced to one space by ereaders). You can replace them with a normal space if you don’t actually need them for your text.</p>
 
   <h2 id="faq_questions" class="calibre5">Where to Get Help</h2>
 
@@ -82,29 +82,19 @@
 
   <p class="calibre1">Read the <a href="http://code.google.com/p/sigil/wiki/ReportingIssues">Reporting Issues</a> information to submit a bug report or feature request.</p>
 
-  <h2 id="faq_starting_sigil" class="calibre5">Starting Sigil</h2>
-
-  <h3 class="sigilnotintoc">Sigil does not start on my 32 bit Windows OS?</h3>
-
-  <p class="calibre1">If you are running a 32 bit version of Windows make sure you downloaded the 32 bit version of Sigil and not the 64 bit version.</p>
+  <h2 id="faq_using_sigil" class="calibre5">Using Sigil</h2>
 
   <h3 class="sigilnotintoc">Sigil does not start on MAC OS 10.6?</h3>
 
-  <p class="calibre1">Sigil on the MAC requires x64 bit cpus and MAC OS 10.7 (Mountain Lion) or later.</p>
-
-  <h3 class="sigilnotintoc">Sigil does not start on Linux?</h3>
-
-  <p class="calibre1">You need to use a version of Sigil packaged for your version of Linux – go to the <a href="http://code.google.com/p/sigil/wiki/LinuxDistroPackages">Linux Distro Packages</a> page to see if Sigil is packaged for your Linux version. Or you can compile the source yourself.</p>
-
-  <h2 id="faq_using_sigil" class="calibre5">Using Sigil</h2>
+  <p class="calibre1">Sigil on the MAC requires MAC OS 10.7 or later.</p>
 
   <h3 class="sigilnotintoc">Is there a tutorial or manual for Sigil?</h3>
 
-  <p class="calibre1">Yes – in Sigil use Help-&gt;User Guide to see an HTML version of the Sigil User Guide which also includes tutorials. Or visit the <a href="http://code.google.com/p/sigil/">Sigil home page</a> for a link to the HTML and EPUB versions.</p>
+  <p class="calibre1">Yes – in Sigil use <span class="shortcut">Help→User Guide</span> to see an HTML version of the Sigil User Guide which also includes tutorials. Or visit the <a href="http://code.google.com/p/sigil/">Sigil home page</a> for a link to the HTML and EPUB versions.</p>
 
   <h3 class="sigilnotintoc">Can I write my book using Sigil?</h3>
 
-  <p class="calibre1">Yes, you can, but Sigil is primarily an editing program for books that have already been written in one of the many existing word processors. You are probably better off writing your book in your favourite editor, exporting it to HTML, and then using Sigil to format it for EPUB. But if you really want to write and edit it in Sigil, then you certainly can.</p>
+  <p class="calibre1">Yes, you can, but Sigil is primarily an editing program for books that have already been written in one of the many existing word processors. You may prefer to write using your favourite editor, export it to HTML, and then use Sigil to format it for EPUB. But if you really want to write and edit it in Sigil, then you certainly can – the Sigil User Guide was written completely using Sigil.</p>
 
   <h3 class="sigilnotintoc">Are DOC, Mobi, KF8 formats supported?</h3>
 
@@ -112,17 +102,15 @@
 
   <p class="calibre1">There are a lot of formats out there, and converting from one format to another is not a trivial issue. Since there are already excellent tools for converting from one format to another, Sigil will remain focused on being the best EPUB editor available.</p>
 
-  <p class="calibre1">For exporting Word files to HTML for import into Sigil, use Word's <span class="shortcut">Save As Filtered HTML</span> open, or refer to <a href="http://www.mobileread.com/forums/showthread.php?t=142530">Save as HTML Word macro</a>.</p>
+  <p class="calibre1">See the <a href="../Text/tutorial_convert_to_html.html">Prepare Your File For Sigil</a> chapter for more information.</p>
 
-  <p class="calibre1">To convert Mobi to HTML you can use <a href="http://calibre-ebook.com/">calibre</a> to unpack the Mobi file to access the HTML file inside, or convert Mobi to HTML.</p>
-
-  <p class="calibre1">For converting EPUB to Mobi or KF8 you should use Kindle tools, or use calibre to convert to other formats.</p>
+  <p class="calibre1">To convert EPUB to Mobi or KF8 you should use Kindle tools.</p>
 
   <h3 class="sigilnotintoc">How do I use Regex?</h3>
 
   <p class="calibre1">See the <a href="../Text/tutorial_regex_reference.html">Regular Expressions</a> chapter in the User Guide for more details and tips on using Regex.</p>
 
-  <h3 class="sigilnotintoc">Sigil won't import my file?</h3>
+  <h3 class="sigilnotintoc">Sigil won’t import my file?</h3>
 
   <p class="calibre1">Sigil can only import or open valid HTML and EPUB files. It will try to recover from some common problems in files, but if there is a significant issue (missing standard code or files) then it may be unable to open the file.</p>
 
@@ -130,13 +118,15 @@
 
   <p class="calibre1">If you want to report a problem with a file that cannot load and crashes Sigil, then you must attach the EPUB file to your bug report. You can set bug reports to private so that non-developers cannot see your file. But in most cases you will need to correct the file.</p>
 
-  <h3 class="sigilnotintoc">Spell Check does not handle quotes or dashes correctly?</h3>
+  <h3 class="sigilnotintoc">Spellcheck does not handle quotes or dashes correctly?</h3>
 
-  <p class="calibre1">If you install your own dictionary and it isn’t recognizing curly quotes, em-dashes, etc. then you may need additional hyphenation dictionary files. See <a href="../Text/preferences.html#preferences_spellcheck_dictionaries">Spellcheck Dictionary preferences</a> in the User Guide for more details.</p>
+  <p class="calibre1">If you install your own hunspell dictionary and it isn’t recognizing curly quotes, em-dashes, etc. then you may need additional hyphenation dictionary files. See <a href="../Text/preferences.html#preferences_spellcheck_dictionaries">Spellcheck Dictionary preferences</a> in the User Guide for more details.</p>
 
-  <h3 class="sigilnotintoc">I pasted some richly formatted text into Sigil but it’s only pasted as plain text?</h3>
+  <h3 class="sigilnotintoc">Text pasted into Sigil does not look right?</h3>
 
   <p class="calibre1">Pasting rich text into Sigil may not work very well. You can try to export (or convert) your text to HTML and then import the new file directly. This may preserve the formatting.</p>
+
+  <p class="calibre1">If you want to paste something as plain text, you may need to paste it into Code View to avoid preserving formatting tags.</p>
 
   <h2 id="faq_formatting" class="calibre5">Formatting and Styles</h2>
 
@@ -146,7 +136,7 @@
 
   <p class="calibre1">It may also be because ADE cannot perform font substitution.</p>
 
-  <p class="calibre1">In Sigil, if the font you are using does not have the required <a href="http://en.wikipedia.org/wiki/Glyph">glyphs</a> to render a character present in the text, glyphs from a different font that <em class="calibre10">can</em> render it are used. This is called font substitution. So as long as <em class="calibre10">some</em> fonts on your computer can display these characters, so can Sigil.</p>
+  <p class="calibre1">In Sigil, if the font you are using does not have the required <a href="http://en.wikipedia.org/wiki/Glyph">glyphs</a> to render a character present in the text, glyphs from a different font that <em class="calibre11">can</em> render it are used. This is called font substitution. So as long as <em class="calibre11">some</em> fonts on your computer can display these characters, so can Sigil.</p>
 
   <p class="calibre1">ADE on the other hand only displays a small subset of Unicode characters by default. The supported characters are listed in the <a href="http://www.adobe.com/devnet/pdf/pdf_reference_archive.html">Adobe PDF Reference v1.7</a>, Appendix D, tables D.1 and D.3.</p>
 
@@ -156,7 +146,7 @@
 
   <p class="calibre1">Read the <a href="../Text/tutorial_stylesheets.html">Stylesheet</a> tutorial in the User Guide – you’ll need it to make use of many of the answers in this section.</p>
 
-  <p class="calibre1">Note that ereaders may support displaying formats or styles differently and how text is display in one reader, or in Sigil, may be slightly different to how it's displayed in another ereader.</p>
+  <p class="calibre1">Note that ereaders may support displaying formats or styles differently and how text is display in one reader, or in Sigil, may be slightly different to how it’s displayed in another ereader.</p>
 
   <h3 class="sigilnotintoc">What are stylesheets and CSS?</h3>
 
@@ -172,11 +162,11 @@
 
   <h3 class="sigilnotintoc">Why does my code have <span class="example3">&amp;nbsp;</span> and <span class="example3">&lt;p&gt;&amp;nbsp;&lt;/p&gt;</span> entries in it?</h3>
 
-  <p class="calibre1">If you edit in Book View it may insert blank spaces or lines based on what you edited. You can replace these entries with spaces using Find &amp; Replace in Code View.</p>
+  <p class="calibre1">If you edit in Book View it may insert blank spaces or other formatting text you weren’t expecting. Book View is generally for basic editing. To avoid unexpected characters you can edit in Code View, or use Find &amp; Replace to remove/change any unexpected text.</p>
 
   <h3 class="sigilnotintoc">How do I add blank lines?</h3>
 
-  <p class="calibre1">Don't. Its much better to use stylesheets to define the amount of space above or below your special sections using a style definition. For instance to leave 1.5 lines of space above a paragraph you can use this style class:</p>
+  <p class="calibre1">Don’t. Its much better to use stylesheets to define the amount of space above or below your special sections using a style definition. For instance to leave 1.5 lines of space above a paragraph you can use this style class:</p>
   <pre class="example1">p.blankabove { margin-top: 1.5em; }</pre>
 
   <p class="calibre1">and in your text use the class with your paragraph:</p>
@@ -188,7 +178,7 @@
   <p class="calibre1">or an empty paragraph:</p>
   <pre class="example1">&lt;p&gt;&amp;nbsp;&lt;/p&gt;</pre>
 
-  <p class="calibre1">For multiple blank lines,it's best to use a style to define the amount of space you want to leave.</p>
+  <p class="calibre1">For multiple blank lines,it’s best to use a style to define the amount of space you want to leave.</p>
 
   <h3 class="sigilnotintoc">How do I start a new page?</h3>
 
@@ -207,6 +197,8 @@
   <p class="calibre1">You can even use heading tags with no text in your document if you just want a Chapter entry:</p>
   <pre class="example1">&lt;h2 title="Chapter Subsection"&gt;&lt;/h2&gt;</pre>
 
+  <p class="calibre1">But it's probably easier just to link the TOC to the file if the image is at the top.</p>
+
   <h3 class="sigilnotintoc">How do I add margins to my text?</h3>
 
   <p class="calibre1">Add this text with your preferred left and right margins to your CSS definitions:</p>
@@ -223,7 +215,7 @@
     padding: 0;
 }</pre>
 
-  <p class="calibre1">This will affect <em class="calibre10">only</em> the paragraph spacing (the <em class="calibre10">p</em> means paragraph). To remove <em class="calibre10">all</em> the whitespace between the various elements and make the document look more “book like”, use this code:</p>
+  <p class="calibre1">This will affect <em class="calibre11">only</em> the paragraph spacing (the <em class="calibre11">p</em> means paragraph). To remove <em class="calibre11">all</em> the whitespace between the various elements and make the document look more “book like”, use this code:</p>
   <pre class="example1">body, div, p, h1, h2, h3, h4 { margin: 0; padding: 0; }</pre>
 
   <h3 class="sigilnotintoc">How do I add a “drop cap”?</h3>
@@ -251,7 +243,7 @@
 
   <p class="calibre1">You might need to adjust the values for font-size, line-height and margin-bottom to get the effect you want. Sigil’s Book View may not show exactly how it’ll appear on all ereaders, but it’s pretty close.</p>
 
-  <h3 class="sigilnotintoc">Why doesn't my font show up in iBooks?</h3>
+  <h3 class="sigilnotintoc">Why doesn’t my font show up in iBooks?</h3>
 
   <p class="calibre1">If you embed a font in your EPUB, iBooks requires a non-standard file in the EPUB to tell it to use your font. This cannot be done in Sigil.</p>
 
@@ -264,6 +256,10 @@
 &lt;/display_options&gt;</pre>
 
   <p class="calibre1">Then use an archive manager to unzip or access the EPUB file. Add the <span class="example">xml</span> file you created to your EPUB in the <span class="example">META-INF</span> directory, then re-zip your EPUB.</p>
+
+  <h3 class="sigilnotintoc">Why doesn’t my file pass EPUBCHECK due to plist?</h3>
+
+  <p class="calibre1">If you open your EPUB in iTunes it will automatically add an extra .plist file to the top of the EPUB. This will cause it to fail EPUBCHECK. Do not open your EPUB in iTunes if you intend to use it elsewhere. You can unzip the EPUB and remove the file, then re-zip the file.</p>
 
 
 
@@ -284,10 +280,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -299,10 +298,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -325,10 +324,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -378,13 +377,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -393,37 +392,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -435,10 +425,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -453,9 +443,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>
@@ -477,7 +464,7 @@
 
   <div class="calibreEbNav">
     
-      <a href="tutorial_advanced_regex.html" class="calibreAPrev">previous page</a>
+      <a href="tutorial_tips.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>

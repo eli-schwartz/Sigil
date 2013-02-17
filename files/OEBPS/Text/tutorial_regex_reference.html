@@ -5,7 +5,7 @@
     <title>Use Regular Expressions</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -40,11 +40,11 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="tutorial_embed_fonts.html" class="calibreAPrev">previous page</a>
+          <a href="tutorial_advanced_find.html" class="calibreAPrev">previous page</a>
         
 
         
-          <a href="tutorial_advanced_regex.html" class="calibreANext"> next page</a>
+          <a href="tutorial_tips.html" class="calibreANext"> next page</a>
         
       </div>
     
@@ -54,7 +54,7 @@
 
   <p class="h2subheading">— Regex Reference —</p>
 
-  <p class="calibre1">This tutorial is basically a quick reference for Regex. You should read <a href="../Text/tutorial_edit_epub.html">Edit an EPUB</a> first as an introduction to Regular Expressions.</p>
+  <p class="calibre1">This tutorial is basically a quick reference for Regex.</p>
 
   <p class="calibre1">Regex is a very powerful way for you to edit and cleanup your EPUB when using Find &amp; Replace. However, when you first start using regex it can be confusing because there are a lot of commands you can use. This is a brief summary of some basic regex commands.</p>
 
@@ -79,9 +79,9 @@
   <p class="calibre1">An example Find &amp; Replace command using regex might be to change all level 1 headings to level 2 headings:</p>
 
   <ul class="calibre3">
-    <li class="calibre4"><span class="listheading">Find:</span><span class="example">&lt;h1(.*?)&lt;/h1&gt;</span></li>
+    <li class="calibre4"><span class="listheading">Find:</span> <span class="example">&lt;h1(.*?)&lt;/h1&gt;</span></li>
 
-    <li class="calibre4"><span class="listheading">Replace:</span><span class="example">&lt;h2\1&lt;/h2&gt;</span></li>
+    <li class="calibre4"><span class="listheading">Replace:</span> <span class="example">&lt;h2\1&lt;/h2&gt;</span></li>
   </ul>
 
   <p class="calibre1">where the Find command searches for any text between the h1 start and end tags, and using () to save the text. (The start tag is left open in order to catch any class definitions, and the ? tells .* to do minimal matching). The Replace command is used to replace the matched text with the saved text (indicated by \1) surrounded by the h2 start and end tags.</p>
@@ -93,9 +93,9 @@
   <p class="calibre1">You can put these commands at the start of any regex to modify how the expression behaves:</p>
 
   <ul class="calibre3">
-    <li class="calibre4"><span class="example">(?s)</span> – search across lines when using <span class="example">.*</span> since by default <span class="example">.*</span> only matches within a line of text.</li>
+    <li class="calibre4"><span class="example">(?s)</span> – search across lines when using <span class="example">.*</span> since by default <span class="example">.*</span> only matches within a line of text. This is done by the DotAll option in Find &amp; Replace.</li>
 
-    <li class="calibre4"><span class="example">(?U)</span> – match the first occurrence of your string (also called minimal or ungreedy matching). This is very useful when using <span class="example">.*</span> to avoid matching too much.</li>
+    <li class="calibre4"><span class="example">(?U)</span> – match the first occurrence of your string (also called minimal or ungreedy matching). This is very useful when using <span class="example">.*</span> to avoid matching too much. This is done by the Minimal Match option in Find &amp; Replace.</li>
 
     <li class="calibre4"><span class="example">(?i)</span> – ignore case when matching.</li>
   </ul>
@@ -181,10 +181,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -196,10 +199,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -222,10 +225,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -275,13 +278,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -290,37 +293,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -332,10 +326,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -350,9 +344,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>
@@ -374,13 +365,13 @@
 
   <div class="calibreEbNav">
     
-      <a href="tutorial_embed_fonts.html" class="calibreAPrev">previous page</a>
+      <a href="tutorial_advanced_find.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="tutorial_advanced_regex.html" class="calibreANext"> next page</a>
+      <a href="tutorial_tips.html" class="calibreANext"> next page</a>
     
   </div>
 

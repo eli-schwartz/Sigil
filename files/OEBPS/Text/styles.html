@@ -5,7 +5,7 @@
     <title>Styles</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
-<link href="../../page_styles.css" type="text/css" rel="stylesheet"/>
+<link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
 
   
 
@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0 Beta
+    0.7.0
 
   </div>
 </div>
@@ -58,7 +58,7 @@
 
   <p class="calibre1">Styles can be inserted in your individual HTML files, but the usual approach is to define a stylesheet containing your styles and then link that file to your HTML files.</p>
 
-  <div class="image"><img alt="styles-tab" src="../Images/styles-tab.png" class="calibre7"/></div>
+  <div class="image"><img alt="styles-tab" src="../Images/styles-tab.png" class="calibre8"/></div>
 
   <h3 class="sigilnotintoc">Creating Stylesheets</h3>
 
@@ -72,7 +72,7 @@
 
   <p class="calibre1">You can easily link your stylesheets to your HTML files by right-clicking on them in the Book Browser and selecting <span class="shortcut">Link Stylesheets</span> then choosing which stylesheet to link or unlink.</p>
 
-  <div class="image"><img alt="book-browser-link-stylesheets" src="../Images/book-browser-link-stylesheets.png" class="calibre7"/></div>
+  <div class="image"><img alt="book-browser-link-stylesheets" src="../Images/book-browser-link-stylesheets.png" class="calibre8"/></div>
 
   <h3 class="sigilnotintoc">Navigating Styles</h3>
 
@@ -80,16 +80,18 @@
 
   <p class="calibre1">While in Code View hold the <span class="shortcut">Ctrl</span> key down and click on an HTML tag, or select the menu item <span class="shortcut">Search→Go To Link Or Style</span> or its keyboard shortcut. You will immediately be taken to the exact location of the style used for the HTML tag you are in – if one exists.</p>
 
-  <p class="calibre1">To return to where you were, just click the Back button <img alt="" src="../Images/back-to-link-style_22px.png" class="calibre7"/> or select the menu item <span class="shortcut">Go Back to Link or Style</span> or its keyboard shortcut.</p>
+  <p class="calibre1">To return to where you were, just click the Back button <img alt="" src="../Images/back-to-link-style_22px.png" class="calibre8"/> or select the menu item <span class="shortcut">Go Back to Link or Style</span> or its keyboard shortcut.</p>
 
   <h3 class="sigilnotintoc">Deleting Styles</h3>
 
   <p class="calibre1">You can select the menu item <span class="shortcut">Tools→Delete Unused Stylesheet Classes</span> to automatically delete any unused classes in stylesheets. Sigil will present you a list of class names in your stylesheets that do not have any references to them from your HTML files and then allow you to confirm or cancel deleting them.</p>
 
-  <div class="image"><img alt="styles-delete-styles" src="../Images/styles-delete-styles.png" class="calibre7"/></div>
+  <div class="image"><img alt="styles-delete-styles" src="../Images/styles-delete-styles.png" class="calibre8"/></div>
 
   <div class="tip">
     <p class="tiptext">While Sigil makes several checks to ensure the style is not used, if a particular complicated CSS declaration is used it may list the tag incorrectly so you should check the styles carefully.</p>
+
+    <p class="tiptext">You can double-click on a style to show that style in the CSS stylesheet.</p>
   </div>
 
   <h3 class="sigilnotintoc">Context Menu and Formatting Styles</h3>
@@ -116,7 +118,7 @@
 
   <p class="calibre1">Although most stylesheets are formatted with multiple lines per style, the single lines per style would look like this:</p>
 
-  <div class="image"><img alt="styles-single-line" src="../Images/styles-single-line.png" class="calibre7"/></div>
+  <div class="image"><img alt="styles-single-line" src="../Images/styles-single-line.png" class="calibre8"/></div>
 
   <h3 class="sigilnotintoc">Viewing Styles</h3>
 
@@ -143,10 +145,13 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
+      <a href="TOC.xhtml">Table of Contents</a>
+    </li>
+    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
-          <a href="whats_new.html">What's New</a>
+          <a href="whats_new.html">What’s New</a>
         </li>
         <li>
           <a href="about_sigil.html">About Sigil</a>
@@ -158,10 +163,10 @@
     </li>
     <li>
       <a href="installation.html">Installation</a>
+    </li>
+    <li>
+      <a href="features.html">Features</a>
       <ul>
-        <li>
-          <a href="features.html">Features</a>
-        </li>
         <li>
           <a href="user_interface.html">User Interface</a>
         </li>
@@ -184,10 +189,10 @@
           <a href="book_browser.html">Book Browser</a>
         </li>
         <li>
-          <a href="table_of_contents.html">Table of Contents</a>
+          <a href="metadata.html">Metadata</a>
         </li>
         <li>
-          <a href="metadata.html">Metadata</a>
+          <a href="table_of_contents.html">Table of Contents</a>
         </li>
         <li>
           <a href="validation.html">Validation</a>
@@ -237,13 +242,13 @@
       <a href="tutorials.html">Tutorials</a>
       <ul>
         <li>
-          <a href="tutorial_what_is_epub.html">What is EPUB?</a>
+          <a href="tutorial_getting_started_with_epub.html">Getting Started With EPUB</a>
         </li>
         <li>
-          <a href="tutorial_convert_to_html.html">Convert Your File For Import</a>
+          <a href="tutorial_convert_to_html.html">Prepare Your File For Sigil</a>
         </li>
         <li>
-          <a href="tutorial_load_file.html">Load Your File Into Sigil</a>
+          <a href="tutorial_load_file.html">Open Your File With Sigil</a>
         </li>
         <li>
           <a href="tutorial_save.html">Save Your EPUB File</a>
@@ -252,37 +257,28 @@
           <a href="tutorial_metadata.html">Add the Author and Title</a>
         </li>
         <li>
-          <a href="tutorial_add_files.html">Add More text Files</a>
-        </li>
-        <li>
           <a href="tutorial_add_cover.html">Add a Cover Image</a>
         </li>
         <li>
-          <a href="tutorial_edit_epub.html">Edit in Book View</a>
+          <a href="tutorial_split.html">Create Files For Each Chapter</a>
         </li>
         <li>
-          <a href="tutorial_create_toc.html">Mark Your Chapter Headings</a>
+          <a href="tutorial_mark_chapters.html">Identify Your Chapters</a>
         </li>
         <li>
           <a href="tutorial_generate_toc.html">Generate A Table of Contents</a>
         </li>
         <li>
-          <a href="tutorial_split.html">Split Your Chapters Into Files</a>
+          <a href="tutorial_links.html">Create Links and Notes</a>
         </li>
         <li>
-          <a href="tutorial_links.html">Create Links and Footnotes</a>
-        </li>
-        <li>
-          <a href="tutorial_validate.html">Check For EPUB Errors</a>
+          <a href="tutorial_code_view.html">A Quick Introduction To Code View</a>
         </li>
         <li>
           <a href="tutorial_spelling.html">Check For Spelling Mistakes</a>
         </li>
         <li>
-          <a href="tutorial_publish.html">Publish Your Book</a>
-        </li>
-        <li>
-          <a href="tutorial_code_view.html">Edit In Code View</a>
+          <a href="tutorial_validate.html">Check For Errors In Your EPUB</a>
         </li>
         <li>
           <a href="tutorial_find_replace.html">Edit With Find &amp; Replace</a>
@@ -294,10 +290,10 @@
           <a href="tutorial_embed_fonts.html">Include Custom Fonts</a>
         </li>
         <li>
-          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
+          <a href="tutorial_advanced_find.html">Advanced Find &amp; Replace – Regex</a>
         </li>
         <li>
-          <a href="tutorial_advanced_regex.html">Advanced Find &amp; Replace – Regex</a>
+          <a href="tutorial_regex_reference.html">Regular Expression Reference</a>
         </li>
         <li>
           <a href="tutorial_tips.html">Tips</a>
@@ -312,9 +308,6 @@
         </li>
         <li>
           <a href="faq.html#faq_questions">Where to Get Help</a>
-        </li>
-        <li>
-          <a href="faq.html#faq_starting_sigil">Starting Sigil</a>
         </li>
         <li>
           <a href="faq.html#faq_using_sigil">Using Sigil</a>
