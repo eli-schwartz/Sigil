@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.0
+    0.7.1
 
   </div>
 </div>
@@ -64,7 +64,7 @@
 
   <p class="calibre1">Highlight a word or phrase in either Book View or Code View and then select the menu item <span class="shortcut">Tools→Index→Mark For Index</span> or its keyboard shortcut (which you can change). This will then open a prompt for you to enter how you want these words to appear in the index:</p>
 
-  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre8"/></div>
+  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre9"/></div>
 
   <p class="calibre1">The text you enter as the name to use in the Index will be show up in the Index as follows:</p>
 
@@ -93,7 +93,7 @@
 
   <p class="calibre1">The second way identify words to index is to add the words to a list. Then when you create the index every occurrence of that word will be included in the index automatically. You can use words marked for indexing and a list of words to index at the same time.</p>
 
-  <p class="calibre1">To add specific words to the index list while in Book View or Code View, highlight the word or phrase, and then select the menu item <span class="shortcut">Tools→Index→Add To Index Editor</span>.</p>
+  <p class="calibre1">To add specific words to the index list while in Book View or Code View, highlight the word or phrase, and then select the menu item <span class="shortcut">Tools→Index→Add To Index Editor</span>. If your selected text includes any HTML tags, you should remove them.</p>
 
   <p class="calibre1">This will bring up the Index Editor with the word added to the list of entries to index. You can also enter words directly in the Index Editor as described below.</p>
 
@@ -103,7 +103,7 @@
 
   <p class="calibre1">This will create or update an HTML page called i<span class="shortcut">ndex.xhtml</span>. It will be marked with the semantic type "index". Entries are listed alphabetically, and, using the default styling, look like this:</p>
 
-  <div class="image"><img alt="index-html" src="../Images/index-html.png" class="calibre8"/></div>
+  <div class="image"><img alt="index-html" src="../Images/index-html.png" class="calibre9"/></div>
 
   <div class="tip">
     <p class="tiptext">You can edit the index page as with any HTML page, but if you re-create the index your changes will be over-written.</p>
@@ -119,24 +119,22 @@
 
   <p class="calibre1">To open the Index Editor select the menu item <span class="shortcut">Tools→Index→Index Editor</span> or its keyboard shortcut:</p>
 
-  <div class="image"><img alt="index-editor-main" src="../Images/index-editor-main.png" class="calibre8"/></div>
+  <div class="image"><img alt="index-editor" src="../Images/index-editor.png" class="calibre9"/></div>
 
   <h4 class="sigilnotintoc1">Text To Include</h4>
 
-  <p class="calibre1">The "Text To Include" column is a list of words you want Sigil to search for in your text and then to create an Index entry for using the format in the "Index Entries" column. Entries in the "Text To Include" column can use the following formats:</p>
+  <p class="calibre1">The "Text To Include" column is a list of patterns you want Sigil to search for in your text and then to create an Index entry for using the format in the "Index Entries" column. Entries in the "Text To Include" column can use the following formats:</p>
 
   <ul class="calibre3">
-    <li class="calibre4"><span class="listheading">words:</span> The words in the book must exactly match the listed words (case-sensitive).</li>
+    <li class="calibre4"><span class="listheading">words:</span> The words in the book must exactly match the listed words (case-sensitive).  Do not include any HTML tags, just the words as they appear in Book View.</li>
 
-    <li class="calibre4"><span class="listheading">wordsa;wordsb:</span> Separating words by a ";" means either word can match for this entry (e.g. Gutenberg;gutenberg).</li>
-
-    <li class="calibre4"><span class="listheading">Regex:</span> You can enter most regex patterns (e.g. [Gg]utenberg).</li>
+    <li class="calibre4"><span class="listheading">Regex:</span> You can enter most regex patterns - they will be match on a paragraph by paragraph basis.  For example, to match words while ignoring case sensitivity you can use "<span class="example">[Gg]utenberg</span>" or "<span class="example">(?i)Gutenberg</span>".<br class="calibre6"/></li>
   </ul>
 
   <div class="tip">
     <p class="tiptext">You can paste text into the Text To Include field – e.g. from a file containing a list of words – and the text will be automatically split into separate entries for each line.</p>
 
-    <p class="tiptext">You can also use Open to open a text file of words or entries.</p>
+    <p class="tiptext">You can also use Open to open a text file of words (and entries separated by tabs).</p>
   </div>
 
   <h4 class="sigilnotintoc1">Index Entries</h4>
@@ -146,11 +144,13 @@
   <p class="calibre1">Entries in the "Index Entries" column can use the following formats:</p>
 
   <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">blank:</span> If you leave the entry blank, then the words entered in the Text to Include column will be used for the entry's name.</li>
+
     <li class="calibre4"><span class="listheading">words:</span> If you enter a word or phrase, then that word or phrase will be used (e.g. Oak instead of oak).</li>
 
     <li class="calibre4"><span class="listheading">heading/words:</span> If you use a "/" in your name then a hierarchical group will be created (e.g. Forest/Tree/Oak will create an entry Oak filed under Tree filed under Forest).</li>
 
-    <li class="calibre4"><span class="listheading">entrya;entryb:</span> If you use a ";" then multiple entries will be created for this word or phrase.</li>
+    <li class="calibre4"><span class="listheading">heading/:</span> If you use a "/" at the end of the entry name, then a hierarchical group will be created and the words in the Text to Include column will be used as a sub-entry.</li>
   </ul>
 
   <h4 class="sigilnotintoc1">Context Menu</h4>
