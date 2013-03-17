@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.1
+    0.7.2
 
   </div>
 </div>
@@ -64,7 +64,7 @@
 
   <p class="calibre1">Highlight a word or phrase in either Book View or Code View and then select the menu item <span class="shortcut">Tools→Index→Mark For Index</span> or its keyboard shortcut (which you can change). This will then open a prompt for you to enter how you want these words to appear in the index:</p>
 
-  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre9"/></div>
+  <div class="image"><img alt="index-mark" src="../Images/index-mark.png" class="calibre8"/></div>
 
   <p class="calibre1">The text you enter as the name to use in the Index will be show up in the Index as follows:</p>
 
@@ -103,15 +103,15 @@
 
   <p class="calibre1">This will create or update an HTML page called i<span class="shortcut">ndex.xhtml</span>. It will be marked with the semantic type "index". Entries are listed alphabetically, and, using the default styling, look like this:</p>
 
-  <div class="image"><img alt="index-html" src="../Images/index-html.png" class="calibre9"/></div>
+  <div class="image"><img alt="index-html" src="../Images/index-html.png" class="calibre8"/></div>
 
   <div class="tip">
     <p class="tiptext">You can edit the index page as with any HTML page, but if you re-create the index your changes will be over-written.</p>
   </div>
 
-  <h4 class="sigilnotintoc1">Index Stylesheet</h4>
+  <h4 class="sigilnotintoc1">Custom Index Stylesheet</h4>
 
-  <p class="calibre1">The index page uses a separate CSS file ("sgc-index.css") to format the index. If the file already exists in your book it will not be overwritten (so you can customise it without losing your changes). But if it does not exist, it will look for "sgc-index.css" in your preferences directory and use that as the default file. If there is no file in your preferences directory, then Sigil will create a default stylesheet for the index.</p>
+  <p class="calibre1">The index page uses a separate CSS file (<span class="example">sgc-index.css</span>) to format the index. If the file already exists in your book it will not be overwritten (so you can customise it without losing your changes). But if it does not exist, it will look for <span class="example">sgc-index.css</span> in your preferences directory and use that as the default file. If there is no file in your preferences directory, then Sigil will create a default stylesheet for the index.</p>
 
   <h3 class="sigilnotintoc">Index Editor</h3>
 
@@ -119,16 +119,16 @@
 
   <p class="calibre1">To open the Index Editor select the menu item <span class="shortcut">Tools→Index→Index Editor</span> or its keyboard shortcut:</p>
 
-  <div class="image"><img alt="index-editor" src="../Images/index-editor.png" class="calibre9"/></div>
+  <div class="image"><img alt="index-editor" src="../Images/index-editor.png" class="calibre8"/></div>
 
   <h4 class="sigilnotintoc1">Text To Include</h4>
 
   <p class="calibre1">The "Text To Include" column is a list of patterns you want Sigil to search for in your text and then to create an Index entry for using the format in the "Index Entries" column. Entries in the "Text To Include" column can use the following formats:</p>
 
   <ul class="calibre3">
-    <li class="calibre4"><span class="listheading">words:</span> The words in the book must exactly match the listed words (case-sensitive).  Do not include any HTML tags, just the words as they appear in Book View.</li>
+    <li class="calibre4"><span class="listheading">words:</span> The words in the book must exactly match the listed words (case-sensitive). Do not include any HTML tags, just the words as they appear in Book View.</li>
 
-    <li class="calibre4"><span class="listheading">Regex:</span> You can enter most regex patterns - they will be match on a paragraph by paragraph basis.  For example, to match words while ignoring case sensitivity you can use "<span class="example">[Gg]utenberg</span>" or "<span class="example">(?i)Gutenberg</span>".<br class="calibre6"/></li>
+    <li class="calibre4"><span class="listheading">Regex:</span> You can enter most regex patterns - they will be match on a paragraph by paragraph basis. For example, to match words while ignoring case sensitivity you can use "<span class="example">[Gg]utenberg</span>" or "<span class="example">(?i)Gutenberg</span>".</li>
   </ul>
 
   <div class="tip">
@@ -222,9 +222,6 @@
       <a href="rights.html">Copyright</a>
     </li>
     <li>
-      <a href="TOC.xhtml">Table of Contents</a>
-    </li>
-    <li>
       <a href="introduction.html">Introduction</a>
       <ul>
         <li>
@@ -267,6 +264,9 @@
         </li>
         <li>
           <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="add_cover.html">Add Cover</a>
         </li>
         <li>
           <a href="table_of_contents.html">Table of Contents</a>

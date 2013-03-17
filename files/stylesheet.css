@@ -103,9 +103,6 @@
     text-align: center
     }
 .calibre6 {
-    display: block
-    }
-.calibre7 {
     display: block;
     list-style-type: circle;
     margin-bottom: 0;
@@ -113,17 +110,20 @@
     margin-right: 0;
     margin-top: 0
     }
-.calibre8 {
+.calibre7 {
     font-family: SmallCaps, sans-serif;
     font-size: 1.25em;
     font-variant: small-caps;
     font-weight: bold;
     line-height: 1.2
     }
-.calibre9 {
+.calibre8 {
     height: auto;
     max-width: 100%;
     width: auto
+    }
+.calibre9 {
+    display: block
     }
 .coverimage {
     display: block;

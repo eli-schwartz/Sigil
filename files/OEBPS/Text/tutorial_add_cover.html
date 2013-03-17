@@ -29,7 +29,7 @@
   
   </div>
   <div class="calibreMetaAuthor">
-    0.7.1
+    0.7.2
 
   </div>
 </div>
@@ -52,107 +52,23 @@
     
   <h2 class="calibre5">Add a Cover Image</h2>
 
-  <p class="calibre1">Every book should have a cover image, and Sigil can help you add one to your EPUB. You will need to have an existing cover image available to use (and have permission to use it). The exact size of the cover is up to you and the guidelines for your device.</p>
+  <p class="calibre1">Every book should have a cover image, and Sigil can make adding one to your EPUB easy. You will need to have an existing cover image available to use (and have permission to use it). The exact size of the cover is up to you and the guidelines for your device.</p>
 
-  <div class="tip">
-    <p class="tiptext">There are many ways to modify how the cover is displayed, so these instructions will just describe a basic cover. See covers in other EPUBs for examples.</p>
-  </div>
+  <p class="calibre1">To add a cover, just select the menu item <span class="shortcut">Add Cover</span>:</p>
 
-  <p class="calibre1">To setup an EPUB cover you will need to follow these steps:</p>
+  <div class="image"><img alt="tutorial-add-cover" src="../Images/tutorial-add-cover.png" class="calibre8"/></div>
 
-  <ul class="calibre3">
-    <li class="calibre4">Create a new HTML page to hold your cover.</li>
+  <p class="calibre1">The Add Cover window shows you a list of images already in your EPUB. But since you haven’t loaded any images yet, it’s empty.</p>
 
-    <li class="calibre4">Insert your cover image into the HTML page.</li>
-
-    <li class="calibre4">Mark your image file and HTML file as covers.</li>
-  </ul>
-
-  <p class="calibre1">As part of this tutorial you will also learn how to insert images, add files to your EPUB, rename files, and access more commands using context menus.</p>
-
-  <h3 class="sigilnotintoc">Create an HTML File For Your Cover</h3>
-
-  <p class="calibre1">In order for the EPUB to know where in your book to put your cover, you need to create a new HTML file in your EPUB then insert your cover image into the file.</p>
-
-  <p class="calibre1">You can create a new HTML file in your EPUB by right-clicking on a file name in the Book Browser and selecting the menu item <span class="shortcut">Add Blank HTML File</span>:</p>
-
-  <div class="image"><img alt="tutorial-add-blank-html" src="../Images/tutorial-add-blank-html.png" class="calibre9"/></div>
-
-  <p class="calibre1">A new HTML file called <span class="example">Section0001.html</span> will be created in your Text folder:</p>
-
-  <div class="image"><img alt="tutorial-new-blank-file" src="../Images/tutorial-new-blank-file.png" class="calibre9"/></div>
-
-  <p class="calibre1">Rename the file so you know what it is by right-clicking on the filename and selecting Rename from the menu:</p>
-
-  <div class="image"><img alt="tutorial-bb-rename" src="../Images/tutorial-bb-rename.png" class="calibre9"/></div>
-
-  <p class="calibre1">Enter <span class="example">Cover.html</span> as the new name (it must be "cover" or "Cover") (you can just type <span class="example">Cover</span> – the extension will not change by default):</p>
-
-  <div class="image"><img alt="tutorial-bb-cover-rename" src="../Images/tutorial-bb-cover-rename.png" class="calibre9"/></div>
-
-  <div class="tip">
-    <p class="tiptext">Chapters and pages are shown to the reader in the order they appear in the Book Browser.</p>
-  </div>
-
-  <p class="calibre1">Of course, since a cover should be at the front of the book, you need to move the cover file to the top of the Text folder.</p>
-
-  <p class="calibre1">You can drag-and-drop the file to its new position (click on the filename and hold the mouse down while you move it to its new position):</p>
-
-  <div class="image"><img alt="tutorial-cover-at-top" src="../Images/tutorial-cover-at-top.png" class="calibre9"/></div>
-
-  <h3 class="sigilnotintoc">Insert Your Cover Image</h3>
-
-  <p class="calibre1">Now that you have an empty HTML file, you need to put your cover image into it.</p>
-
-  <p class="calibre1">Open the HTML page you created to hold the cover by double-clicking on the <span class="example">Cover.html</span> file. This will open it in the Book View editor window and you will see <span class="example">Cover.html</span> as the title of the open tab in the editor window.</p>
-
-  <p class="calibre1">Click somewhere in the blank window to start editing:</p>
-
-  <p class="calibre1"><img alt="tutorial-click-here" src="../Images/tutorial-click-here.png" class="calibre9"/></p>
-
-  <p class="calibre1">Click on the Insert Image button <img alt="insert-image_22px" src="../Images/insert-image_22px.png" class="calibre9"/> on the toolbar. This will display the Insert Images window:</p>
-
-  <div class="image"><img alt="tutorial-insert-file" src="../Images/tutorial-insert-file.png" class="calibre9"/></div>
-
-  <p class="calibre1">The Insert Images window shows you a list of images already in your EPUB. But since you haven’t loaded any images yet, it’s empty.</p>
-
-  <p class="calibre1">You can insert the image into your EPUB and into your HTML file in one step by clicking on the <span class="buttonbox">Other Files</span> button.</p>
+  <p class="calibre1">You can insert the image into your EPUB and make it the cover in one step by clicking on the <span class="buttonbox">Other Files</span> button.</p>
 
   <p class="calibre1">Select your cover image from your filesystem and click OK.</p>
 
-  <p class="calibre1">Your cover image will now appear in the file:</p>
+  <p class="calibre1">And that's it. Sigil has added your image to the EPUB and marked it as the cover image. It has also created an HTML file at the start of your book and inserted your cover image into the file so that it will be displayed at the start of the book:</p>
 
-  <div class="image"><img alt="tutorial-sigil-cover" src="../Images/tutorial-sigil-cover.png" class="calibre9"/></div>
+  <div class="image"><img alt="tutorial-add-cover-browser" src="../Images/tutorial-add-cover-browser.png" class="calibre8"/></div>
 
-  <p class="calibre1">Notice that your image file is now shown in the Book Browser:</p>
-
-  <div class="image"><img alt="tutorial-bb-cover-entry" src="../Images/tutorial-bb-cover-entry.png" class="calibre9"/></div>
-
-  <div class="tip">
-    <p class="tiptext">You can double-click your image file to display it in the main window.</p>
-  </div>
-
-  <p class="calibre1">There are still a few steps needed to identify your image as a cover in the EPUB.</p>
-
-  <h3 class="sigilnotintoc">Mark Your Cover Files</h3>
-
-  <p class="calibre1">Now that you have both a cover image and an HTML file with a cover in it, you need to mark both as Covers to make sure the various ereaders can recognise the cover (some readers just look for the cover image file, and some look for the HTML file containing your image).</p>
-
-  <p class="calibre1">To mark the HTML file as a cover right-click on <span class="example">cover.xhtml</span> in the Book Browser window, select the menu item Add Semantics, then choose the Cover entry:</p>
-
-  <div class="image"><img alt="tutorial-add-semantic-cover-file" src="../Images/tutorial-add-semantic-cover-file.png" class="calibre9"/></div>
-
-  <p class="calibre1">And to mark the image as a cover image right-click on <span class="example">cover.png</span> file in the Book Browser window, select the menu item Add Semantics, then choose the Cover entry.</p>
-
-  <div class="image"><img alt="tutorial-add-semantic-image" src="../Images/tutorial-add-semantic-image.png" class="calibre9"/></div>
-
-  <div class="tip">
-    <p class="tiptext">You must set both the image file and the HTML file to type Cover to make sure all ereaders recognise the cover.</p>
-  </div>
-
-  <p class="calibre1">Your EPUB now has a cover defined (if you look at the Add Semantics menu again for the files you will see the Cover items now have a checkmark next to them).</p>
-
-  <p class="calibre1">You should Save <img alt="button-save" src="../Images/button-save.png" class="calibre9"/> your book.</p>
+  <p class="calibre1">You should Save <img alt="button-save" src="../Images/button-save.png" class="calibre8"/> your book.</p>
 
 
 
@@ -171,9 +87,6 @@
     </li>
     <li>
       <a href="rights.html">Copyright</a>
-    </li>
-    <li>
-      <a href="TOC.xhtml">Table of Contents</a>
     </li>
     <li>
       <a href="introduction.html">Introduction</a>
@@ -218,6 +131,9 @@
         </li>
         <li>
           <a href="metadata.html">Metadata</a>
+        </li>
+        <li>
+          <a href="add_cover.html">Add Cover</a>
         </li>
         <li>
           <a href="table_of_contents.html">Table of Contents</a>

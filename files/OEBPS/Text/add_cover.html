@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-    <title>Spell Check</title>
+    <title>Add Cover</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="../../stylesheet.css" type="text/css" rel="stylesheet"/>
 <link href="../../page_styles1.css" type="text/css" rel="stylesheet"/>
@@ -40,91 +40,81 @@
     
       <div class="calibreEbNavTop">
         
-          <a href="validation.html" class="calibreAPrev">previous page</a>
+          <a href="metadata.html" class="calibreAPrev">previous page</a>
         
 
         
-          <a href="media_files.html" class="calibreANext"> next page</a>
+          <a href="table_of_contents.html" class="calibreANext"> next page</a>
         
       </div>
     
 
     
-  <h2 id="spellcheck" class="calibre5">Spellcheck</h2>
+  <h2 id="add-cover" class="calibre5">Add Cover</h2>
 
-  <p class="h2subheading">— Checking and Correcting Spelling —</p>
+  <p class="h2subheading">— Pick a cover for your book —</p>
 
-  <p class="calibre1">Sigil provides several ways to check your spelling – highlighting misspelled words, finding words one at a time, or showing all misspelled words at once. You can choose a standard dictionary to use, and create personal user dictionaries with your own words.</p>
+  <p class="calibre1">The Add Cover feature allows you to pick an image for your cover and have Sigil automatically make the necessary updates to mark the image as your cover.</p>
 
-  <div class="tip">
-    <p class="tiptext">Spellcheck uses Code View to show misspelled words.</p>
-  </div>
+  <p class="calibre1">Add a cover by selecting the menu item <span class="shortcut">Search→Add Cover</span> or its keyboard shortcut:</p>
 
-  <h3 class="sigilnotintoc" id="spellcheck_configuration">Configure Spellchecking</h3>
+  <div class="image"><img alt="add-cover" src="../Images/add-cover.png" class="calibre8"/></div>
 
-  <p class="calibre1">You can set the spell checking preferences that you want – including which main dictionary to use, and which personal user dictionaries to use if any. You can setup user dictionaries for different types of books or individual books, or use only the default user dictionary. You can change user dictionaries at any time.</p>
+  <p class="calibre1">You can pick an image in your epub, or use <span class="buttonbox">Other Files</span> to pick one from your computer.</p>
 
-  <div class="tip">
-    <p class="tiptext">Set up your dictionaries in <a href="../Text/preferences.html#preferences_spellcheck_dictionaries">Preferences</a>.</p>
-  </div>
+  <h3 class="sigilnotintoc">Details</h3>
 
-  <h3 class="sigilnotintoc">Automatic Spellchecking</h3>
-
-  <p class="calibre1">Code View will highlight any misspelled words with a wavy red underline when automatic spell checking is enabled in Preferences or using <span class="shortcut">Tools→Spellcheck→Highlight Misspelled Words</span>:</p>
-
-  <div class="image"><img alt="" src="../Images/spellcheck_misspelled.png" class="calibre8"/></div>
-
-  <p class="calibre1">You can then right-click on the misspelled word to bring up a list of choices:</p>
-
-  <div class="image"><img alt="spellcheck-context-suggestion" src="../Images/spellcheck-context-suggestion.png" class="calibre8"/></div>
+  <p class="calibre1">Sigil makes the following changes when you add a cover:</p>
 
   <ul class="calibre3">
-    <li class="calibre4"><span class="listheading">Suggested Words:</span> A list of alternative words to choose from – selecting one will replace the misspelled word.</li>
+    <li class="calibre4">Creates a <span class="example">cover.xhtml</span> file if one does not exist. If it does exist, it will use the file. If another file with a semantic of Cover exists, it will use that file.</li>
 
-    <li class="calibre4"><span class="listheading">Add To Default Dictionary:</span> Add this word to your current default user dictionary.</li>
+    <li class="calibre4">Inserts the necessary HTML code to display and resize your image into the HTML file.</li>
 
-    <li class="calibre4"><span class="listheading">Add To Dictionary:</span> Add this word to the dictionary you select from the list.</li>
+    <li class="calibre4">Marks the HTML cover file with the semantic of Cover.</li>
 
-    <li class="calibre4"><span class="listheading">Ignore:</span> Ignores the spelling of this word in the entire document until you restart Sigil.</li>
+    <li class="calibre4">Marks the image file with the semantic of Cover.</li>
   </ul>
 
-  <h3 class="sigilnotintoc" id="spellcheck_find">Finding Misspelled Words</h3>
+  <h3 class="sigilnotintoc">Custom HTML Cover File</h3>
 
-  <p class="calibre1">Find the next misspelled word in Code View by selecting the menu item <span class="shortcut">Tools→Spellcheck→Find Next Misspelled Word</span> or using its shortcut. You will be switched to Code View automatically if you are not in it already, and the next misspelled word will be highlighted each time you search for the next word.</p>
+  <p class="calibre1">Sigil inserts code in the HTML cover file that allows your cover to be re-sized and displayed on most ereaders, but you may want to use different code. You can edit the code after the file is created, or provide your own code for Sigil to use.</p>
 
-  <p class="calibre1">In order to be able to right-click on the misspelled word to select a suggested word or add it to the dictionary you must have <span class="shortcut">Tools→Spellcheck→Highlight Misspelled Words</span> enabled.</p>
+  <p class="calibre1">This is the HTML code Sigil inserts into the cover file by default:</p>
+  <pre class="example1">
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no" ?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+  &lt;title&gt;Cover&lt;/title&gt;
+&lt;/head&gt;
 
-  <h3 class="sigilnotintoc" id="spellcheck_editor">Spellcheck</h3>
+&lt;body&gt;
+  &lt;div style="text-align: center; padding: 0pt; margin: 0pt;"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" height="100%"
+    preserveAspectRatio="xMidYMid meet" version="1.1" 
+    viewBox="0 0 SGC_IMAGE_WIDTH SGC_IMAGE_HEIGHT" width="100%" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+      &lt;image width="SGC_IMAGE_WIDTH" height="SGC_IMAGE_HEIGHT" 
+      xlink:href="SGC_IMAGE_FILENAME"/&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-  <p class="calibre1">To open the Spellcheck dialog, click the Spellcheck button <img alt="" src="../Images/document-spellcheck_22px.png" class="calibre8"/>, or use the menu item <span class="shortcut">Tools→Spellcheck→Spellcheck</span>.</p>
+  <p class="calibre1">To modify the template Sigil uses for the HTML cover file, create a file in your Preferences directory called <span class="example">cover.xhtml</span></p>
 
-  <div class="image"><img alt="spellcheck-main" src="../Images/spellcheck-main.png" class="calibre8"/></div>
+  <p class="calibre1">You can use certain placeholders in your text and Sigil will replace them with the appropriate values:</p>
 
-  <p class="calibre1">Words are shown with the number of times they occur in the book and if they are misspelled. Select a word to perform an action.</p>
+  <ul class="calibre3">
+    <li class="calibre4"><span class="listheading">SGC_IMAGE_FILENAME:</span> this will be replaced by the path to the image in your EPUB.</li>
 
-  <div class="tip">
-    <p class="tiptext">Selecting a word will also show the first occurrence of the word in Code View so you can view its context and change just the one occurrence if needed.</p>
+    <li class="calibre4"><span class="listheading">SGC_IMAGE_WIDTH:</span> this will be replaced by the width in pixels of your image.</li>
 
-    <p class="tiptext">Double-click a selected word to find the next occurrence of the word.</p>
-  </div>
-
-  <p class="calibre1">You can add words to a dictionary by clicking <span class="buttonbox">Add to Dictionary</span>. Select your user dictionary to add the word to from the dropdown list:</p>
-
-  <div class="image"><img alt="spellcheck-editor-dictionaries" src="../Images/spellcheck-editor-dictionaries.png" class="calibre8"/></div>
-
-  <p class="calibre1">To Ignore words, click <span class="buttonbox">Ignore</span>. The Misspelled Word column will update to "No" only if you have enabled the dictionary to be used in Preferences. To clear all ignored words use <span class="shortcut">Tools→Spellcheck→Clear Ignored Words. Ignored words are also cleared when you open a new book.</span></p>
-
-  <p class="calibre1">To correct the spelling of words, select one of the suggested words from the dropdown below click <span class="buttonbox">Change Selected Word To:</span> or type your own word in the box. Then click <span class="buttonbox">Change Selected Word To:</span>. This will change every occurrence of the selected word to the new word. It will also automatically refresh the list of words from the HTML files.</p>
-
-  <div class="image"><img alt="spellcheck-suggested-words" src="../Images/spellcheck-suggested-words.png" class="calibre8"/></div>
-
-  <p class="calibre1">You can see all words in your EPUB by selecting <span class="example">Show All Words</span>. In addition, the tooltip for the column names shows the number of words in your EPUB:</p>
-
-  <div class="image"><img alt="spellcheck-editor-tooltip" src="../Images/spellcheck-editor-tooltip.png" class="calibre8"/></div>
-
-  <p class="calibre1">If you enable <span class="example">Case-Insensitive Sort</span> then the words will be sorted as AaBbCc instead of ABCabc.</p>
-
-  <p class="calibre1">Use the <span class="buttonbox">Refresh</span> button if you edit your book while Spellcheck is open. You do not need to use it if you are just ignoring, adding, or changing a word.</p>
+    <li class="calibre4"><span class="listheading">SGC_IMAGE_HEIGHT:</span> this will be replaced by the height in pixels of your image.</li>
+  </ul>
 
 
 
@@ -329,13 +319,13 @@
 
   <div class="calibreEbNav">
     
-      <a href="validation.html" class="calibreAPrev">previous page</a>
+      <a href="metadata.html" class="calibreAPrev">previous page</a>
     
 
     <a href="../../../index.html" class="calibreAHome"> start</a>
 
     
-      <a href="media_files.html" class="calibreANext"> next page</a>
+      <a href="table_of_contents.html" class="calibreANext"> next page</a>
     
   </div>
 
