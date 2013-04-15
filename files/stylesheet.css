@@ -45,17 +45,13 @@
     margin-top: 1em
     }
 .calibre10 {
-    display: block;
-    page-break-after: always
-    }
-.calibre11 {
     font-style: italic
     }
-.calibre12 {
+.calibre11 {
     display: block;
     margin-left: 40px
     }
-.calibre13 {
+.calibre12 {
     display: block;
     font-family: monospace;
     margin-bottom: 1em;
@@ -111,19 +107,16 @@
     margin-top: 0
     }
 .calibre7 {
-    font-family: SmallCaps, sans-serif;
-    font-size: 1.25em;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2
-    }
-.calibre8 {
     height: auto;
     max-width: 100%;
     width: auto
     }
-.calibre9 {
+.calibre8 {
     display: block
+    }
+.calibre9 {
+    display: block;
+    page-break-after: always
     }
 .coverimage {
     display: block;
