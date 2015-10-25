@@ -18,6 +18,11 @@ if [ -z "$SIGIL_SHARE_PREFIX" ]; then
   export SIGIL_SHARE_PREFIX
 fi
 
+# Create an environment var for the system dictionaries location.
+if [ -z "$SIGIL_DICTIONARIES" ]; then
+  export SIGIL_DICTIONARIES="/usr/share/hunspell:/usr/share/hyphen"
+fi
+
 # Not really needed anymore but left in for fringe cases
 #if [ -z "$SIGIL_EXTRA_ROOT" ]; then
 #  SIGIL_EXTRA_ROOT="${SIGIL_SHARE_ROOT}"
@@ -27,4 +32,3 @@ fi
 export LD_LIBRARY_PATH
 
 exec ${CMAKE_INSTALL_PREFIX}/lib/sigil/sigil "$@"
-
