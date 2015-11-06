@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Metadata Editor</title>
+  <link href="../Styles/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2 id="metadata-editor">Metadata</h2>
+
+  <p class="h2subheading">— Edit details about your book —</p>
+
+  <p>The Metadata Editor allows you to add or edit details about your book – like Author, Title and Language, as well as hundreds of other entries defined by the EPUB standard.</p>
+
+  <p>Edit your book details by clicking the Metadata Editor button <img alt="" src="../Images/metadata-editor_22px.png" />, or selecting the menu item <span class="menuitem">Tools→Metadata Editor</span> or its keyboard shortcut:</p>
+
+  <div class="image"><img alt="metadata-editor-main" src="../Images/metadata-editor-main.png" /></div>
+
+  <p>All of the details about the book (called metadata) are stored in the <span class="example">contents.opf</span> file in the EPUB. You can edit this information manually, but the Metadata Editor allows you to edit it more easily.</p>
+
+  <h3 class="sigil_not_in_toc" id="metadata_required">Required Details</h3>
+
+  <p>The Metadata Editor shows the 3 fields required for an EPUB at the top – you must fill these in in order to create a valid EPUB:</p>
+
+  <ul>
+    <li><span class="listheading">Title:</span> The title of the book.</li>
+
+    <li><span class="listheading">Author:</span> The author of the book, usually in the form of "Firstname Lastname". You can add more authors using the fields below.</li>
+
+    <li><span class="listheading">Language:</span> The language the book is written in.</li>
+  </ul>
+
+  <div>
+    You can use the optional <span class="menuitem">File-As</span> field to list the author’s name for sorting purposes, usually of the form "Lastname, Firstname".
+  </div>
+
+  <h3 class="sigil_not_in_toc" id="metadata_optional">Optional Details</h3>
+
+  <p>You can add optional details using the <span class="buttonbox">Add Basic</span> or <span class="buttonbox">Add Role</span> buttons. These will be added to the table below the required fields. The table allows you to provide the following values for each entry:</p>
+
+  <ul>
+    <li><span class="listheading">Name:</span> The name of the field.</li>
+
+    <li><span class="listheading">Value:</span> The contents of the field.</li>
+
+    <li><span class="listheading">File As:</span> Some fields like author can or date have alternative values that are used for sorting, etc..</li>
+
+    <li><span class="listheading">Role Type:</span> All roles, like author, can be either a creator or contributor.</li>
+  </ul>
+
+  <p>The Add Basic metadata items include about 30 items such as:</p>
+
+  <ul>
+    <li><span class="listheading">Date: Publication</span></li>
+
+    <li><span class="listheading">Date: Creation</span></li>
+
+    <li><span class="listheading">Date (custom):</span> You can enter your own date type in the "File As" column.</li>
+
+    <li><span class="listheading">Identifier:</span> ISBN number.</li>
+
+    <li><span class="listheading">Identifier (custom):</span> You can enter your own identifier type in the "File As" column.</li>
+
+    <li><span class="listheading">Rights:</span> Copyright information such as Copyright 2012 An Author.</li>
+  </ul>
+
+  <div class="image"><img alt="metadata-add-basic" src="../Images/metadata-add-basic.png" /></div>
+
+  <p>The Add Role metadata contains hundreds of possible activities that people may have performed in the creation of this book such as Authors, Editor, Proofreader, etc.:</p>
+
+  <div class="image"><img alt="metadata-add-role" src="../Images/metadata-add-role.png" /></div>
+
+  <p>You can add the same type of field multiple times.</p>
+
+  <div class="tip">
+    <p class="tiptext">You can copy an entry by selecting it and clicking the <span class="buttonbox">Copy</span> button. You can then modify it as needed.</p>
+
+    <p class="tiptext">You can re-arrange the order of the entries (which may affect how ereaders display the information) by selecting the entries and clicking on the <span class="buttonbox">Up</span> or <span class="buttonbox">Down</span> buttons.</p>
+  </div>
+</body>
+</html>
