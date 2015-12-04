@@ -22,7 +22,6 @@
 #include <QDir>
 #include <QFile>
 #include <QStringList>
-#include <QStandardPaths>
 #include <QXmlStreamReader>
 
 #include "Misc/Plugin.h"
@@ -69,16 +68,16 @@ PluginDB::~PluginDB()
 
 QString PluginDB::pluginsPath()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/plugins";
+    return sigil_config_directory() + "/plugins";
 }
 
 
 QString PluginDB::buildBundledInterpPath()
 {
-  QString bundled_python3_path; 
+  QString bundled_python3_path;
 
 #ifdef Q_OS_MAC
-  // On Mac OS X QCoreApplication::applicationDirPath() points to Sigil.app/Contents/MacOS/ 
+  // On Mac OS X QCoreApplication::applicationDirPath() points to Sigil.app/Contents/MacOS/
   // is located, but the Python.framework dir is in Contents/Frameworks
   QDir execdir(QCoreApplication::applicationDirPath());
   execdir.cdUp();
@@ -88,7 +87,7 @@ QString PluginDB::buildBundledInterpPath()
 #else
   bundled_python3_path = QCoreApplication::applicationDirPath() + "/python3/bin/sigil-python3";
 #endif
-  
+
   QFileInfo checkPython3(bundled_python3_path);
   if (checkPython3.exists() && checkPython3.isFile() && checkPython3.isReadable() && checkPython3.isExecutable() ) {
     return bundled_python3_path;
@@ -108,12 +107,7 @@ QString PluginDB::launcherRoot()
 #elif defined(Q_OS_WIN32)
     launcher_roots.append(QCoreApplication::applicationDirPath() + "/plugin_launchers/");
 #elif !defined(Q_OS_WIN32) && !defined(Q_OS_MAC)
-    // user supplied environment variable to 'share/sigil' directory will overrides everything
-    if (!sigil_extra_root.isEmpty()) {
-        launcher_root = sigil_extra_root + "/plugin_launchers/";
-    } else {
-        launcher_roots.append(sigil_share_root + "/plugin_launchers/");
-    }
+    launcher_roots.append(sigil_share_root() + "/plugin_launchers/");
 #endif
 
     Q_FOREACH (QString s, launcher_roots) {

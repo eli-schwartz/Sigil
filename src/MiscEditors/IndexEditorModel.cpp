@@ -24,10 +24,10 @@
 #include <QByteArray>
 #include <QDataStream>
 #include <QtCore/QTime>
-#include <QtCore/QStandardPaths>
 
 #include "MiscEditors/IndexEditorModel.h"
 #include "Misc/Utility.h"
+#include "sigil_constants.h"
 
 static const QString SETTINGS_FILE          = "sigil_index.ini";
 static const QString SETTINGS_GROUP         = "index_entries";
@@ -56,7 +56,7 @@ IndexEditorModel::IndexEditorModel(QObject *parent)
       m_FSWatcher(new QFileSystemWatcher()),
       m_IsDataModified(false)
 {
-    m_SettingsPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + SETTINGS_FILE;
+    m_SettingsPath = sigil_config_directory() + "/" + SETTINGS_FILE;
     QStringList header;
     header.append(tr("Text to Include"));
     header.append(tr("Index Entries"));

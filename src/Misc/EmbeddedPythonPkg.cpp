@@ -27,7 +27,6 @@
 #include <QStringList>
 #include <QVariant>
 #include <QMetaType>
-#include <QStandardPaths>
 #include <QDir>
 #include "Misc/Utility.h"
 #include "sigil_constants.h"
@@ -80,14 +79,14 @@
  *      if (rv == 0) {
  *          // no errors
  *      } else {
- *         // error occured 
+ *         // error occured
  *      }
  *  }
  *
  *  // Where multiply.py is:
  *
  *  #!/usr/bin/env python3
- *                                                                                                           
+ *
  *  def multiply(a,b):
  *      print("Will compute", a, "times", b)
  *      c  = a * b
@@ -106,7 +105,7 @@
  *      QString v1 = QString("Hello");
  *      QList<QVariant> args;
  *      args.append(QVariant(v1));
- *  
+ *
  *      QVariant res = m_epp->runInPython( QString("multiply"),
  *                                         QString("get_object"),
  *                                         args,
@@ -146,13 +145,13 @@
  *     def __init__(self, storeme):
  *         self.storeme = storeme
  *         self.mylen = len(self.storeme)
- * 
+ *
  *     def get_me(self):
  *         return self.storeme
  *
  *     def get_len(self):
  *         return self.mylen
- * 
+ *
  * def get_object(v1):
  *     tme = TestMe(v1)
  *     return tme
@@ -177,7 +176,7 @@ EmbeddedPython::EmbeddedPython()
     // Build string list of paths that will
     // comprise the embedded Python's sys.path.
 #if defined(__APPLE__)
-    // On Mac OS X QCoreApplication::applicationDirPath() points to 
+    // On Mac OS X QCoreApplication::applicationDirPath() points to
     // whereever Sigil.app/Contents/MacOS/ is located
     // but the python3 dir is in Contents
     QDir execdir(QCoreApplication::applicationDirPath());
@@ -244,14 +243,9 @@ QString EmbeddedPython::embeddedRoot()
 #elif defined(Q_OS_WIN32)
     embedded_roots.append(QCoreApplication::applicationDirPath() + "/python3lib/");
 #elif !defined(Q_OS_WIN32) && !defined(Q_OS_MAC)
-    // all flavours of linux / unix
-    if (!sigil_extra_root.isEmpty()) {
-        embedded_roots.append(sigil_extra_root + "/python3lib/");
-    } else {
-        embedded_roots.append(sigil_share_root + "/python3lib/");
-    }
+    embedded_roots.append(sigil_share_root() + "/python3lib/");
 #endif
-    
+
     Q_FOREACH (QString s, embedded_roots) {
         if (d.exists(s)) {
             embedded_root = s;
@@ -267,7 +261,7 @@ bool EmbeddedPython::addToPythonSysPath(const QString &mpath)
 {
     EmbeddedPython::m_mutex.lock();
     PyGILState_STATE gstate = PyGILState_Ensure();
-        
+
     PyObject* sysPath    = NULL;
     PyObject* aPath = NULL;
     bool success = false;
@@ -287,18 +281,18 @@ bool EmbeddedPython::addToPythonSysPath(const QString &mpath)
     return success;
 }
 
-// run interpreter without initiating/locking/unlocking GIL 
+// run interpreter without initiating/locking/unlocking GIL
 // in a single thread at a time
-QVariant EmbeddedPython::runInPython(const QString &mname, 
-                                     const QString &fname, 
-                                     const QVariantList &args, 
-                                     int *rv, 
+QVariant EmbeddedPython::runInPython(const QString &mname,
+                                     const QString &fname,
+                                     const QVariantList &args,
+                                     int *rv,
                                      QString &tb,
                                      bool ret_python_object)
 {
     EmbeddedPython::m_mutex.lock();
     PyGILState_STATE gstate = PyGILState_Ensure();
-        
+
     QVariant  res        = QVariant(QString());
     PyObject *moduleName = NULL;
     PyObject *module     = NULL;
@@ -364,12 +358,12 @@ cleanup:
 }
 
 
-// given an existing python object instance, invoke one of its methods 
+// given an existing python object instance, invoke one of its methods
 // grabs mutex to prevent need for Python GIL
-QVariant EmbeddedPython::callPyObjMethod(PyObjectPtr &pyobj, 
-                                         const QString &methname, 
-                                         const QVariantList &args, 
-                                         int *rv, 
+QVariant EmbeddedPython::callPyObjMethod(PyObjectPtr &pyobj,
+                                         const QString &methname,
+                                         const QVariantList &args,
+                                         int *rv,
                                          QString &tb,
                                          bool ret_python_object)
 {
@@ -382,7 +376,7 @@ QVariant EmbeddedPython::callPyObjMethod(PyObjectPtr &pyobj,
     PyObject* pyargs     = NULL;
     PyObject* pyres      = NULL;
     int       idx        = 0;
-     
+
     func = PyObject_GetAttrString(obj,methname.toUtf8().constData());
     if (func == NULL) {
          *rv = -1;
@@ -426,11 +420,11 @@ QVariant EmbeddedPython::callPyObjMethod(PyObjectPtr &pyobj,
 }
 
 
-// *** below here all routines are private and only invoked 
+// *** below here all routines are private and only invoked
 // *** from runInPython and callPyObjMethod with lock held
 
 
-// Convert PyObject types to their QVariant equivalents 
+// Convert PyObject types to their QVariant equivalents
 // call recursively to allow populating QVariant lists and lists of lists
 QVariant EmbeddedPython::PyObjectToQVariant(PyObject *po, bool ret_python_object)
 {
@@ -491,7 +485,7 @@ QVariant EmbeddedPython::PyObjectToQVariant(PyObject *po, bool ret_python_object
         QVariant var;
         var.setValue(PyObjectPtr(po));
         res = var;
-    } else { 
+    } else {
        // do nothing here to return null value
     }
     return res;
@@ -583,7 +577,7 @@ QString EmbeddedPython::getPythonErrorTraceback(bool useMsgBox)
     PyObject     *mod        = NULL;
     PyObject     *elist      = NULL;
     QStringList  tblist;
-    
+
     PyErr_Fetch(&etype, &evalue, &etraceback);
     PyErr_NormalizeException(&etype, &evalue, &etraceback);
 

@@ -996,7 +996,7 @@ void MainWindow::clearMemoryCaches()
     // See https://bugreports.qt-project.org/browse/QTBUG-4350
     // QWebSettinbgs::clearMemoryCaches();
 
-    // replace the above with a similar sequence 
+    // replace the above with a similar sequence
     // that does not invalidate the fontCache
 
     // toggle memory caches to disable and then re-enable
@@ -1060,7 +1060,7 @@ void MainWindow::AddCover()
     // Populate the HTML cover file with the necessary text.
     // If a template file exists, use its text for the cover source.
     QString text = HTML_COVER_SOURCE;
-    QString cover_path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + HTML_COVER_FILENAME;
+    QString cover_path = sigil_config_directory() + "/" + HTML_COVER_FILENAME;
     if (QFile::exists(cover_path)) {
         text = Utility::ReadUnicodeTextFile(cover_path);
     }
@@ -1133,7 +1133,7 @@ void MainWindow::CreateIndex()
     // If Index CSS file does not exist look for a default file
     // in preferences directory and if none create one.
     if (!found_css) {
-        QString css_path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + SGC_INDEX_CSS_FILENAME;
+        QString css_path = sigil_config_directory() + "/" + SGC_INDEX_CSS_FILENAME;
         if (QFile::exists(css_path)) {
             m_BookBrowser->AddFile(css_path);
         } else {
@@ -2169,7 +2169,7 @@ void MainWindow::CreateHTMLTOC()
     // If HTML TOC CSS file does not exist look for a default file
     // in preferences directory and if none create one.
     if (!found_css) {
-        QString css_path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + SGC_TOC_CSS_FILENAME;
+        QString css_path = sigil_config_directory() + "/" + SGC_TOC_CSS_FILENAME;
         if (QFile::exists(css_path)) {
             // Need to make sure InitialLoad is done in newly added css resource object to prevent
             // blank css issues after a save to disk
@@ -4664,4 +4664,3 @@ void MainWindow::BreakTabConnections(ContentTab *tab)
     disconnect(tab,                                0, m_BookBrowser, 0);
     disconnect(tab,                                0, m_ClipboardHistorySelector, 0);
 }
-

@@ -7,7 +7,6 @@
 #include <QXmlStreamReader>
 #include <QXmlStreamAttributes>
 #include <QMessageBox>
-#include <QStandardPaths>
 #include "MainUI/MainWindow.h"
 #include "MainUI/BookBrowser.h"
 #include "Misc/Plugin.h"
@@ -19,6 +18,7 @@
 #include "BookManipulation/CleanSource.h"
 #include "BookManipulation/XhtmlDoc.h"
 #include "Dialogs/PluginRunner.h"
+#include "sigil_constants.h"
 
 const QString ADOBE_FONT_ALGO_ID         = "http://ns.adobe.com/pdf/enc#RC";
 const QString IDPF_FONT_ALGO_ID          = "http://www.idpf.org/2008/embedding";
@@ -125,7 +125,7 @@ int PluginRunner::exec(const QString &name)
         foreach(QString engine, engineList) {
             m_enginePath = pdb->get_engine_path(engine);
             if (!m_enginePath.isEmpty()) break;
-        } 
+        }
         if (m_enginePath.isEmpty()) {
             Utility::DisplayStdErrorDialog(tr("Error: Interpreter ") + m_engine + tr(" has no path set"));
             reject();
@@ -166,7 +166,7 @@ int PluginRunner::exec(const QString &name)
 void PluginRunner::writeSigilCFG()
 {
     QStringList cfg = QStringList() << QCoreApplication::applicationDirPath();
-    cfg << QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+    cfg << sigil_config_directory();
     QList <Resource *> selected_resources = m_bookBrowser->AllSelectedResources();
     foreach(Resource * resource, selected_resources) {
         cfg << resource->GetRelativePathToRoot();

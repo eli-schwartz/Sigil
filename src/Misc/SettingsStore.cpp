@@ -22,7 +22,6 @@
 
 #include <QtCore/QLocale>
 #include <QtCore/QCoreApplication>
-#include <QtCore/QStandardPaths>
 #include <QFile>
 #include <QDir>
 
@@ -87,7 +86,7 @@ static QString KEY_SPECIAL_CHARACTER_FONT_SIZE = SETTINGS_GROUP + "/" + "special
 
 
 SettingsStore::SettingsStore()
-    : QSettings(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/sigil.ini", QSettings::IniFormat)
+    : QSettings(sigil_config_directory() + "/sigil.ini", QSettings::IniFormat)
 {
 }
 

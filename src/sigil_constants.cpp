@@ -1,6 +1,22 @@
+#include <QStandardPaths>
 #include <QString>
 #include <QStringList>
 #include "sigil_constants.h"
+
+QString sigil_config_directory()
+{
+    // Prefer a runtime env var override for appdata
+    static QString env_config_dir = QString(getenv("SIGIL_CONFIG_DIRECTORY"));
+    // Otherwise rely on Qt's builtin standard value for appdata.
+    static QString appdata_config_dir = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+
+    if (!env_config_dir.isEmpty()) {
+        return env_config_dir;
+    }
+    else {
+        return appdata_config_dir;
+    }
+}
 
 #if _WIN32
 const QString PATH_LIST_DELIM = ";";
@@ -16,13 +32,27 @@ const QStringList PYTHON_SYS_PATHS = QStringList () << "/plat-darwin" << "/lib-d
 
 #if !defined(_WIN32) && !defined(__APPLE__)
 const QString PATH_LIST_DELIM = ":";
-// Runtime env var override of Sigil's 'share/sigil' directory
-const QString sigil_extra_root = QString(getenv("SIGIL_EXTRA_ROOT"));
-// Runtime env var override of hunspell dictionaries directory to use
-const QString system_hunspell_dicts = QString(getenv("SIGIL_DICTIONARIES"));
-// Standard build-time location of Sigil's 'share/sigil' directory. Set in src/CMakeLists.txt with the line:
+
+QString sigil_share_root() {
+    // Runtime env var override of Sigil's 'share/sigil' directory
+    const QString sigil_extra_root = QString(getenv("SIGIL_EXTRA_ROOT"));
+    // Standard build-time location of Sigil's 'share/sigil' directory. Set in src/CMakeLists.txt with the line:
+    // set_source_files_properties( sigil_constants.cpp PROPERTIES COMPILE_DEFINITIONS SIGIL_SHARE_ROOT="${SIGIL_SHARE_ROOT}" )
+    const QString share_install_root = QString(SIGIL_SHARE_ROOT);
+
+    if (!sigil_extra_root.isEmpty()) {
+        return sigil_extra_root;
+    }
+    else {
+        return share_install_root;
+    }
+}
+
+// Standard build-time location of Sigil's dictionaries directory. Set in src/CMakeLists.txt with the line:
 // set_source_files_properties( sigil_constants.cpp PROPERTIES COMPILE_DEFINITIONS SIGIL_SHARE_ROOT="${SIGIL_SHARE_ROOT}" )
-const QString sigil_share_root = QString(SIGIL_SHARE_ROOT);
+const QString hunspell_dict_dir = QString(HUNSPELL_DICT_DIR);
+const QString hyphen_dict_dir = QString(HYPHEN_DICT_DIR);
+
 const QString PYTHON_MAIN_PATH = "/python3/lib/python3.4";
 #if __x86_64__ || __ppc64__
 const QStringList PYTHON_SYS_PATHS = QStringList () << "/plat-x86_64-linux-gnu" << "/plat-linux" << "/lib-dynload" << "/site-packages";

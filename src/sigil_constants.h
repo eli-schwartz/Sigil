@@ -108,14 +108,15 @@ extern const QString SGC_INDEX_CSS_FILENAME;
 extern const QString HTML_COVER_FILENAME;
 extern const QString HTML_COVER_SOURCE;
 
+extern QString sigil_config_directory();
 extern const QString PATH_LIST_DELIM;
 extern const QString PYTHON_MAIN_PATH;
 extern const QStringList PYTHON_SYS_PATHS;
 
 #if !defined(_WIN32) && !defined(__APPLE__)
-extern const QString system_hunspell_dicts;
-extern const QString sigil_extra_root;
-extern const QString sigil_share_root;
+extern const QString hunspell_dict_dir;
+extern const QString hyphen_dict_dir;
+extern QString sigil_share_root();
 #endif
 
 #endif // SG_CONSTANTS_H

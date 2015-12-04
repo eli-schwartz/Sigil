@@ -25,7 +25,6 @@
 #include <QByteArray>
 #include <QDataStream>
 #include <QtCore/QTime>
-#include <QtCore/QStandardPaths>
 #include <QRegularExpression>
 
 #include "MiscEditors/ClipEditorModel.h"
@@ -59,7 +58,7 @@ ClipEditorModel::ClipEditorModel(QObject *parent)
       m_FSWatcher(new QFileSystemWatcher()),
       m_IsDataModified(false)
 {
-    m_SettingsPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + SETTINGS_FILE;
+    m_SettingsPath = sigil_config_directory() + "/" + SETTINGS_FILE;
     QStringList header;
     header.append(tr("Name"));
     header.append(tr("Text"));
@@ -507,13 +506,7 @@ void ClipEditorModel::AddExampleEntries()
 #elif defined(Q_OS_WIN32)
     examples_dir = QCoreApplication::applicationDirPath() + "/examples/";
 #else
-    // all flavours of linux / unix
-    // user supplied environment variable to 'share/sigil' directory will override everything
-    if (!sigil_extra_root.isEmpty()) {
-        examples_dir = sigil_extra_root + "/examples/";
-    } else {
-        examples_dir = sigil_share_root + "/examples/";
-    }
+    examples_dir = sigil_share_root() + "/examples/";
 #endif
     LoadData(examples_dir % CLIP_EXAMPLES_FILE);
 }

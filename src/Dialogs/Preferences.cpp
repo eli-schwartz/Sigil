@@ -21,11 +21,11 @@
 
 #include <QtCore/QDir>
 #include <QtCore/QUrl>
-#include <QtCore/QStandardPaths>
 #include <QtGui/QDesktopServices>
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QScrollArea>
 
+#include "sigil_constants.h"
 #include "Dialogs/Preferences.h"
 #include "Misc/SettingsStore.h"
 #include "PreferenceWidgets/AppearanceWidget.h"
@@ -156,7 +156,7 @@ bool Preferences::isRestartRequired()
 
 void Preferences::openPreferencesLocation()
 {
-    QUrl location = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+    QUrl location = QUrl::fromLocalFile(sigil_config_directory());
     QDesktopServices::openUrl(location);
 }
 
@@ -164,7 +164,7 @@ void Preferences::extendUI()
 {
     QPushButton *open_button = ui.buttonBox->button(QDialogButtonBox::Reset);
     open_button->setText(tr("Open Preferences Location"));
-    open_button->setToolTip(QDir::toNativeSeparators(QStandardPaths::writableLocation(QStandardPaths::DataLocation)));
+    open_button->setToolTip(QDir::toNativeSeparators(sigil_config_directory()));
 }
 
 void Preferences::connectSignalsSlots()
